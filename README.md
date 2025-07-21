@@ -1,1 +1,3 @@
-Remove this file and put your `typescript` template version of `shadcn`
+# pws-mg
+
+Public Website of Makiti Group
