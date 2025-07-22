@@ -16,6 +16,7 @@ import OurExpertiseSection from '@/components/organisms/home/OurExpertiseSection
 import NavBar from '@/components/organisms/Navbar'
 import OurTechnologyStackSection from '@/components/organisms/home/OurTechnologyStackSection'
 import Footer from '@/components/organisms/Footer'
+import HeroSection from '@/components/organisms/home/HeroSection'
 
 // interface InfoCardProps {
 // 	title: string
@@ -59,7 +60,7 @@ const Home: PageComponent = () => {
 			{/* === Main === */}
 			<main className="space-y-16">
 				{/* === Hero === */}
-				<section></section>
+				<HeroSection />
 
 				{/* === Our Expertise === */}
 				<OurExpertiseSection />

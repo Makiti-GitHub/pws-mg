@@ -203,4 +203,5 @@ html {
 	--color-outline: oklch(56.75% 0.009 253.9);
 	--color-on-surface: oklch(9.51% 0.006 243.12);
 	--color-outline-variant: oklch(82.82% 0.005 247.89);
+	--color-surface-variant: oklch(0.9146 0.0026 228.79);
 }

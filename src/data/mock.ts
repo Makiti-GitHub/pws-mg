@@ -394,3 +394,22 @@ export const technologiesMock: {
 		list: ['M365', 'G-Suite', 'Jira/Confluence'],
 	},
 ]
+
+export const statisticsMock: { count: number; label: string }[] = [
+	{
+		count: 100,
+		label: 'Projects Delivered',
+	},
+	{
+		count: 10,
+		label: 'Active Years',
+	},
+	{
+		count: 20,
+		label: 'Satisfied Clients',
+	},
+	{
+		count: 5,
+		label: 'Offices Globally',
+	},
+]
