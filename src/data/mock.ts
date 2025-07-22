@@ -264,3 +264,77 @@ export const testimonialsMock: {
 		},
 	},
 ]
+
+export const chooseReasonsMock: {
+	title: string
+	desc: string
+}[] = [
+	{
+		title: 'Agile Approach',
+		desc: 'Fast, iterative development with continuous feedback and rapid deployment cycles.',
+	},
+	{
+		title: 'Sustainable Design',
+		desc: 'Fast, iterative development with continuous feedback and rapid deployment cycles.',
+	},
+	{
+		title: 'Innovation Focus',
+		desc: 'Cutting-edge AI-driven solutions and innovative approaches to complex challenges.',
+	},
+	{
+		title: 'Expert Consulting',
+		desc: 'Strategic IT consulting with deep industry expertise and proven methodologies.',
+	},
+	{
+		title: 'Security First',
+		desc: 'Enterprise-grade security measures and compliance with international standards.',
+	},
+	{
+		title: '24/7 Support',
+		desc: 'Round-the-clock technical support and monitoring for mission-critical systems.',
+	},
+	{
+		title: 'Quality Assurance',
+		desc: 'Rigorous testing and quality control processes ensuring delivery excellence.',
+	},
+	{
+		title: 'Global Reach',
+		desc: 'International team with multilingual support and cross-cultural expertise.',
+	},
+]
+
+export const frequentlyAskedQuestionsMock: { question: string; answer: string }[] = [
+	{
+		question: 'What is IT Outsourcing and how does it work?',
+		answer: 'Our pricing structure is based on project size, complexity, and timeline. We offer flexible pricing options to suit your needs.',
+	},
+	{
+		question: 'Why should I choose IT outsourcing over hiring in-house developers?',
+		answer: 'Yes, we offer discounts for multiple projects or contracts. Please contact us for more information.',
+	},
+
+	{
+		question: 'How do you ensure data security and confidentiality?',
+		answer: 'Yes, we offer discounts for multiple projects or contracts. Please contact us for more information.',
+	},
+
+	{
+		question: 'How does communication work with outsourced teams?',
+		answer: 'Yes, we offer discounts for multiple projects or contracts. Please contact us for more information.',
+	},
+
+	{
+		question: 'What are your pricing models and how do you structure costs?',
+		answer: 'Yes, we offer discounts for multiple projects or contracts. Please contact us for more information.',
+	},
+
+	{
+		question: 'How long does it take to start a project and deliver results?',
+		answer: 'Yes, we offer discounts for multiple projects or contracts. Please contact us for more information.',
+	},
+
+	{
+		question: 'What technologies and skills do your teams specialize in?',
+		answer: 'Yes, we offer discounts for multiple projects or contracts. Please contact us for more information.',
+	},
+]
