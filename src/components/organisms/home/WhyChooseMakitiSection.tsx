@@ -4,7 +4,7 @@ import SectionHeader from '@/components/molecules/SectionHeader'
 
 const WhyChooseMakitiSection = () => {
 	return (
-		<section className="px-[120px] flex flex-col gap-[50px]">
+		<section className="px-[120px] flex flex-col gap-[50px] pb-16">
 			<SectionHeader
 				title="Why Choose Makiti Group"
 				subTitle="Partner with us for exceptional IT outsourcing solutions backed by expertise, innovation, and reliability."

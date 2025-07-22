@@ -58,7 +58,7 @@ const Home: PageComponent = () => {
 			{/* === Navigation  === */}
 			<NavBar />
 			{/* === Main === */}
-			<main className="space-y-16">
+			<main className="">
 				{/* === Hero === */}
 				<HeroSection />
 

@@ -6,7 +6,7 @@ import { ArrowRightIcon } from 'lucide-react'
 
 const SuccessStoriesSection = () => {
 	return (
-		<section className="flex flex-col gap-8 px-[120px]">
+		<section className="flex flex-col gap-8 px-[120px] pb-16">
 			<SectionHeader
 				title="Our Success Stories"
 				subTitle="Discover some of our recent projects and the impact we've made"

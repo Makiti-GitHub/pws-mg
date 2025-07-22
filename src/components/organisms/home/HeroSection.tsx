@@ -5,17 +5,17 @@ import { ArrowUpRightIcon } from 'lucide-react'
 
 const HeroSection = () => {
 	return (
-		<section className="space-y-24 bg-secondary w-screen">
+		<section className="space-y-24 bg-secondary w-screen pt-[71px] pb-16">
 			<div className="w-full grid grid-cols-2">
-				<div className="flex flex-col gap-10 bg-green-300 px-[120px] text-white">
+				<div className="flex flex-col gap-10  pl-[120px] text-white">
 					<span className="rounded-2xl w-max px-3 py-1.5 border-2 border-white">
 						IT OUTSOURCING
 					</span>
-					<div className="space-y-6">
+					<div className="space-y-6 ">
 						<h1 className="font-seravek_bold text-[80px] leading-20">
 							Your Strategic IT Outsourcing Partner
 						</h1>
-						<p className="font-seravek_bold text-[26px]">
+						<p className="font-seravek_bold text-[26px] leading-normal">
 							Transform your business with our expert IT outsourcing solutions. From
 							development to consulting, we deliver excellence across all technology
 							domains.

@@ -5,7 +5,7 @@ import { ArrowRightIcon } from 'lucide-react'
 
 const TalentProfileSection = () => {
 	return (
-		<section className="px-[120px] w-screen">
+		<section className="px-[120px] w-screen pb-16">
 			<div className="flex flex-col gap-8">
 				<SectionHeader
 					title="Find the Talent You Need"

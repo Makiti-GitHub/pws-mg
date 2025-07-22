@@ -3,7 +3,7 @@ import { expertisesMock, solutionsProcessStackMock } from '@/data/mock'
 
 const OurExpertiseSection = () => {
 	return (
-		<section className="px-[120px] w-screen">
+		<section className="px-[120px] w-screen bg-gradient-to-b from-secondary from-35% to-[#FCFCFC] to-60% pb-16">
 			<div className="flex flex-col p-6 gap-10 bg-[#FCFCFC] box_shadow_expertise_container rounded-2xl">
 				<SectionHeader
 					title="Our Expertise"

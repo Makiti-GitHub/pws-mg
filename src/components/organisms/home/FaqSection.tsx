@@ -12,7 +12,7 @@ import { ArrowUpRightIcon } from 'lucide-react'
 
 const FaqSection = () => {
 	return (
-		<section className="px-[120px] flex flex-col gap-[24px]">
+		<section className="px-[120px] flex flex-col gap-[24px] pb-16">
 			<SectionHeader
 				title="Frequently Asked Questions"
 				subTitle="Everything you need to know about our IT Outsourcing services"
