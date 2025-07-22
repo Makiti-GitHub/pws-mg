@@ -15,6 +15,7 @@ import TalentProfileSection from '@/components/organisms/home/TalentProfileSecti
 import OurExpertiseSection from '@/components/organisms/home/OurExpertiseSection'
 import NavBar from '@/components/organisms/Navbar'
 import OurTechnologyStackSection from '@/components/organisms/home/OurTechnologyStackSection'
+import Footer from '@/components/organisms/Footer'
 
 // interface InfoCardProps {
 // 	title: string
@@ -87,6 +88,8 @@ const Home: PageComponent = () => {
 				{/* === Start you project today  === */}
 				<StartProjectSection />
 			</main>
+
+			<Footer />
 		</section>
 	)
 }
