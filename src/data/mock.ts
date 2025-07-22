@@ -338,3 +338,59 @@ export const frequentlyAskedQuestionsMock: { question: string; answer: string }[
 		answer: 'Yes, we offer discounts for multiple projects or contracts. Please contact us for more information.',
 	},
 ]
+
+export const technologiesMock: {
+	techno: string
+	list: string[]
+}[] = [
+	{
+		techno: 'Frontend',
+		list: ['Angular', 'React.Js'],
+	},
+	{
+		techno: 'Native App',
+		list: ['Swift', 'Kotlin'],
+	},
+	{
+		techno: 'Backend',
+		list: ['Java Spring Boot', 'Node JS'],
+	},
+	{
+		techno: 'Testing',
+		list: ['JUnit/Jest', 'Cypress/Selenium'],
+	},
+
+	{
+		techno: 'Database',
+		list: ['PostgreSQL', 'MongoDB', 'Oracle'],
+	},
+	{
+		techno: 'CMS',
+		list: ['Strapi', 'WooCommerce', 'Wordpress'],
+	},
+	{
+		techno: 'Cross Platform App',
+		list: ['React Native', 'Flutter/Dart', 'Ionic Angular'],
+	},
+	{
+		techno: 'UX-/UI Design',
+		list: ['Adobe Creative Cloud', 'Figma', 'Behance'],
+	},
+
+	{
+		techno: 'Cloud',
+		list: ['AWS', 'GCP', 'Azure'],
+	},
+	{
+		techno: 'Testing Tools',
+		list: ['Postman', 'Newman', 'Soap UI'],
+	},
+	{
+		techno: 'Deployment',
+		list: ['Kubernetes', 'Docker', 'Ansible'],
+	},
+	{
+		techno: 'Organization',
+		list: ['M365', 'G-Suite', 'Jira/Confluence'],
+	},
+]

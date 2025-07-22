@@ -14,6 +14,7 @@ import SuccessStoriesSection from '@/components/organisms/home/SuccessStoriesSec
 import TalentProfileSection from '@/components/organisms/home/TalentProfileSection'
 import OurExpertiseSection from '@/components/organisms/home/OurExpertiseSection'
 import NavBar from '@/components/organisms/Navbar'
+import OurTechnologyStackSection from '@/components/organisms/home/OurTechnologyStackSection'
 
 // interface InfoCardProps {
 // 	title: string
@@ -72,7 +73,7 @@ const Home: PageComponent = () => {
 				<ProductsSection />
 
 				{/* === Our Technology Stack  === */}
-				<section></section>
+				<OurTechnologyStackSection />
 
 				{/* === What our clients says  === */}
 				<TestimonialSection />
