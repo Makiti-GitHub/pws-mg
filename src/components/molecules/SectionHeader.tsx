@@ -7,9 +7,9 @@ interface SectionHeaderProps {
 
 const SectionHeader: FC<SectionHeaderProps> = ({ title, subTitle }) => {
 	return (
-		<div className="text-center tracking-normal">
-			<h2 className="font-bold text-[#020304] text-5xl">{title}</h2>
-			<p className="text-xl font-normal text-[#44474A]">{subTitle}</p>
+		<div className="text-center tracking-normal space-y-3">
+			<h2 className="font-seravek_bold text-on-surface text-5xl">{title}</h2>
+			<p className="text-xl text-[#44474A]">{subTitle}</p>
 		</div>
 	)
 }

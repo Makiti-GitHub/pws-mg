@@ -9,6 +9,7 @@
     "serve": "rasengan-serve ./dist"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-slot": "^1.2.3",
     "@rasenganjs/image": "^1.0.0",
     "@rasenganjs/serve": "^1.0.0",
@@ -16,10 +17,14 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.6",
+    "i18next": "^25.3.2",
+    "i18next-browser-languagedetector": "^8.2.0",
+    "i18next-http-backend": "^3.0.2",
     "lucide-react": "^0.477.0",
     "rasengan": "^1.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^15.6.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.*",
     "zod": "^4.0.5"

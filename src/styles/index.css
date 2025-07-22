@@ -140,15 +140,67 @@ html {
 
 @layer base {
 	* {
-		@apply border-border outline-ring/50;
+		@apply scroll-smooth border-border outline-ring/50 p-0 m-0;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply m-0 p-0 bg-background text-foreground;
 	}
 }
 
 .box_shadow {
-	box-shadow: 4px 4px 12px -8px #00000033;
+	box-shadow: 4px 4px 12px -8px #00000033, -4px -4px 12px -8px #00000033;
+}
 
-	box-shadow: -4px -4px 12px -8px #00000033;
+.box_shadow_expertise_container {
+	box-shadow: 0px 4px 20px 4px #00000040;
+}
+
+.box_shadow_products_card {
+	box-shadow: 0.5px 0.5px 6px 0px #0000001a, -0.5px -0.5px 6px 2px #0000001a;
+}
+
+@font-face {
+	font-family: 'SeravekBold';
+	src: local('SeravekBold'),
+		url('../assets/fonts/Seravek/Seravek_Basic_Bold.otf') format('truetype');
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SeravekMedium';
+	src: local('SeravekMedium'),
+		url('../assets/fonts/Seravek/Seravek_Basic_Medium.otf') format('truetype');
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SeravekRegular';
+	src: local('SeravekRegular'),
+		url('../assets/fonts/Seravek/Seravek_Basic.otf') format('truetype');
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SeravekLight';
+	src: local('SeravekLight'),
+		url('../assets/fonts/Seravek/Seravek_Basic_Light.otf') format('truetype');
+	font-weight: 300;
+	font-display: swap;
+}
+
+@theme {
+	--font-seravek_light: SeravekLight, 'sans-serif';
+	--font-seravek_regular: SeravekRegular, 'sans-serif';
+	--font-seravek_medium: SeravekMedium, 'sans-serif';
+	--font-seravek_bold: SeravekBold, 'sans-serif';
+
+	--color-surface-container: oklch(95.74% 0.001 197.14);
+	--color-on-surface-variant: oklch(39.62% 0.006 247.99);
+	--color-success: oklch(66.29% 0.16 152.37);
+	--color-outline: oklch(56.75% 0.009 253.9);
+	--color-on-surface: oklch(9.51% 0.006 243.12);
+	--color-outline-variant: oklch(82.82% 0.005 247.89);
 }
