@@ -7,6 +7,8 @@ import useIsTouchDevice from '@/hooks/useIsTouchDevice'
 import useMouse from '@/hooks/useMouse'
 import { ArrowUpRightIcon } from 'lucide-react'
 
+import heroImage from '@/assets/images/Hero Section/Image 01.png'
+
 const HeroSection = () => {
 	const { isDesktop } = useIsTouchDevice()
 	const { handleMouseLeave, handleMouseMove, cursorPosition, isHovering } = useMouse()
@@ -45,6 +47,14 @@ const HeroSection = () => {
 						isDesktop ? 'custom-cursor' : ''
 					} overflow-hidden bg-transparent z-30`}
 				>
+					<div>
+						<img
+							src={heroImage}
+							alt="hero-image"
+							loading="lazy"
+							className="aspect-auto object-contain size-full"
+						/>
+					</div>
 					.
 					<CustomCursor position={cursorPosition} isVisible={isHovering} />
 				</div>
@@ -82,8 +92,9 @@ const HeroSection = () => {
 						</div>
 					</div>
 				</div>
-				<div className="w-full h-[70px] bg-red-300" />
-				<BrandsCarousel />
+				<div className="w-full">
+					<BrandsCarousel />
+				</div>
 				<div className="px-[120px]">
 					<Separator className="w-full bg-surface-variant" />
 				</div>
