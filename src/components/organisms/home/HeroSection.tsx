@@ -1,11 +1,18 @@
+import BrandsCarousel from '@/components/molecules/carousel/BrandsCarousel'
+import CustomCursor from '@/components/molecules/cursors/CustomCursor'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { statisticsMock } from '@/data/mock'
+import useIsTouchDevice from '@/hooks/useIsTouchDevice'
+import useMouse from '@/hooks/useMouse'
 import { ArrowUpRightIcon } from 'lucide-react'
 
 const HeroSection = () => {
+	const { isDesktop } = useIsTouchDevice()
+	const { handleMouseLeave, handleMouseMove, cursorPosition, isHovering } = useMouse()
+
 	return (
-		<section className="space-y-24 bg-secondary w-screen pt-[71px] pb-16">
+		<section className={`space-y-24 bg-secondary w-screen pt-[71px] pb-16`}>
 			<div className="w-full grid grid-cols-2">
 				<div className="flex flex-col gap-10  pl-[120px] text-white">
 					<span className="rounded-2xl w-max px-3 py-1.5 border-2 border-white">
@@ -24,14 +31,23 @@ const HeroSection = () => {
 
 					<Button
 						variant={'primary'}
-						className="gap-1 !px-8 !py-6 !h-max !m-0 rounded-[40px] hover:cursor-pointer"
+						className="gap-1 w-max !px-8 !py-6 !h-max !m-0 rounded-[40px] hover:cursor-pointer"
 					>
 						<span className="sr-only">Discover Our Outsourcing Solutions</span>
 						<span className="text-2xl">Discover Our Outsourcing Solutions</span>
 						<ArrowUpRightIcon className="size-6" />
 					</Button>
 				</div>
-				<div className="w-full bg-yellow-300" />
+				<div
+					onMouseMove={handleMouseMove}
+					onMouseLeave={handleMouseLeave}
+					className={`w-full relative hover:cursor-none ease-in ${
+						isDesktop ? 'custom-cursor' : ''
+					} overflow-hidden bg-transparent z-30`}
+				>
+					.
+					<CustomCursor position={cursorPosition} isVisible={isHovering} />
+				</div>
 			</div>
 			<div className="space-y-[60px]">
 				<div className="px-[120px]">
@@ -67,6 +83,7 @@ const HeroSection = () => {
 					</div>
 				</div>
 				<div className="w-full h-[70px] bg-red-300" />
+				<BrandsCarousel />
 				<div className="px-[120px]">
 					<Separator className="w-full bg-surface-variant" />
 				</div>

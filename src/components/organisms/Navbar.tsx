@@ -44,16 +44,24 @@ const NavBar = () => {
 			{/* === Menu === */}
 			<ul className="flex items-center gap-6 text-white text-lg">
 				<li>
-					<a href="#services">Services</a>
+					<a className="hover:text-primary hover:underline" href="#services">
+						Services
+					</a>
 				</li>
 				<li>
-					<a href="#portfolio">Porfolio</a>
+					<a className="hover:text-primary hover:underline" href="#portfolio">
+						Porfolio
+					</a>
 				</li>
 				<li>
-					<a href="#products">Products</a>
+					<a className="hover:text-primary hover:underline" href="#products">
+						Products
+					</a>
 				</li>
 				<li>
-					<a href="#about">About</a>
+					<a className="hover:text-primary hover:underline" href="#about">
+						About
+					</a>
 				</li>
 			</ul>
 

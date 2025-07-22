@@ -58,7 +58,7 @@ const Home: PageComponent = () => {
 			{/* === Navigation  === */}
 			<NavBar />
 			{/* === Main === */}
-			<main className="">
+			<main className="relative">
 				{/* === Hero === */}
 				<HeroSection />
 

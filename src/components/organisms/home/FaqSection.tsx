@@ -27,7 +27,7 @@ const FaqSection = () => {
 					>
 						{frequentlyAskedQuestionsMock.map((faq, index) => (
 							<AccordionItem
-								value={`question-${index + 1}`}
+								value={`question-${index + 1}-${faq.question}`}
 								className="box_shadow_products_card rounded-[8px] px-3 py-1.5"
 							>
 								<AccordionTrigger>

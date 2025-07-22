@@ -143,7 +143,7 @@ html {
 		@apply scroll-smooth border-border outline-ring/50 p-0 m-0;
 	}
 	body {
-		@apply m-0 p-0 bg-background text-foreground;
+		@apply m-0 p-0 bg-background text-foreground scroll-smooth;
 	}
 }
 
@@ -191,6 +191,33 @@ html {
 	font-display: swap;
 }
 
+@keyframes slide {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: -50%;
+	}
+}
+
+@keyframes accordion-down {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: var(--radix-accordion-content-height);
+	}
+}
+
+@keyframes accordion-up {
+	from {
+		height: var(--radix-accordion-content-height);
+	}
+	to {
+		height: 0;
+	}
+}
+
 @theme {
 	--font-seravek_light: SeravekLight, 'sans-serif';
 	--font-seravek_regular: SeravekRegular, 'sans-serif';
@@ -204,4 +231,35 @@ html {
 	--color-on-surface: oklch(9.51% 0.006 243.12);
 	--color-outline-variant: oklch(82.82% 0.005 247.89);
 	--color-surface-variant: oklch(0.9146 0.0026 228.79);
+
+	--animate-slide: slide 20s infinite linear; /* Define the animation with a duration and iteration count */
+
+	--animate-accordion-down: accordion-down 0.35s ease-out;
+	--animate-accordion-up: accordion-up 0.35s ease-out;
 }
+
+/* .reflection::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #b9fd50;
+	transform: perspective(10px) rotateX(10deg) scale(1, 0.2);
+	filter: blur(1em);
+	opacity: 0.5;
+}
+
+.reflection::after {
+	content: '';
+	position: absolute;
+	top: 0%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #b9fd50;
+	transform: rotate(10deg) scale(0.7, 0.8);
+	filter: blur(1em);
+	opacity: 0.5;
+} */
