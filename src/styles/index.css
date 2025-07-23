@@ -29,6 +29,10 @@ html {
 	overflow-x: hidden;
 }
 
+body {
+	background-color: var(--color-surface);
+}
+
 @theme inline {
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);
@@ -143,7 +147,7 @@ html {
 		@apply scroll-smooth border-border outline-ring/50 p-0 m-0;
 	}
 	body {
-		@apply m-0 p-0 bg-background text-foreground scroll-smooth;
+		@apply m-0 p-0 bg-background text-foreground scroll-smooth relative;
 	}
 }
 
@@ -191,39 +195,13 @@ html {
 	font-display: swap;
 }
 
-@keyframes slide {
-	0% {
-		left: 0;
-	}
-	100% {
-		left: -50%;
-	}
-}
-
-@keyframes accordion-down {
-	0% {
-		height: 0;
-	}
-	100% {
-		height: var(--radix-accordion-content-height);
-	}
-}
-
-@keyframes accordion-up {
-	from {
-		height: var(--radix-accordion-content-height);
-	}
-	to {
-		height: 0;
-	}
-}
-
 @theme {
 	--font-seravek_light: SeravekLight, 'sans-serif';
 	--font-seravek_regular: SeravekRegular, 'sans-serif';
 	--font-seravek_medium: SeravekMedium, 'sans-serif';
 	--font-seravek_bold: SeravekBold, 'sans-serif';
 
+	--color-surface: oklch(0.9911 0 0);
 	--color-surface-container: oklch(95.74% 0.001 197.14);
 	--color-on-surface-variant: oklch(39.62% 0.006 247.99);
 	--color-success: oklch(66.29% 0.16 152.37);
@@ -234,32 +212,109 @@ html {
 
 	--animate-slide: slide 20s infinite linear; /* Define the animation with a duration and iteration count */
 
+	--animate-animateImgBx: animateImgBx 15s infinite linear;
+
+	--animate-animateBx: animateBx 15s infinite linear;
+
 	--animate-accordion-down: accordion-down 0.35s ease-out;
 	--animate-accordion-up: accordion-up 0.35s ease-out;
+
+	@keyframes slide {
+		0% {
+			left: 0;
+		}
+		100% {
+			left: -50%;
+		}
+	}
+
+	@keyframes accordion-down {
+		0% {
+			height: 0;
+		}
+		100% {
+			height: var(--radix-accordion-content-height);
+		}
+	}
+
+	@keyframes accordion-up {
+		from {
+			height: var(--radix-accordion-content-height);
+		}
+		to {
+			height: 0;
+		}
+	}
+
+	@keyframes animateImgBx {
+		0% {
+			rotate: 0deg;
+		}
+		100% {
+			rotate: -360deg;
+		}
+	}
+
+	@keyframes animateBx {
+		0% {
+			rotate: 0deg;
+		}
+		100% {
+			rotate: 360deg;
+		}
+	}
 }
 
-/* .reflection::before {
-	content: '';
-	position: absolute;
-	top: 100%;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: #b9fd50;
-	transform: perspective(10px) rotateX(10deg) scale(1, 0.2);
-	filter: blur(1em);
-	opacity: 0.5;
+/* .glassy_navbar { */
+/* background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px); */
+/* -webkit-backdrop-filter: blur(10px); */
+/* background-color: var(--secondary);
+	border: transparent 10px solid;
+	background: radial-gradient(circle at 50% 250%, var(--primary), var(--secondary)) padding-box,
+		linear-gradient(var(--border-1), var(--border-2)) border-box; */
+/* background-origin: padding-box, border-box;
+	background-clip: padding-box, border-box; */
+/* } */
+
+.glassy_navbar {
+	/* background: rgba(255, 255, 255, 0.08); */
+
+	background: oklch(0.2844 0.0542 252.91 / 50%);
+	border: 1px solid transparent;
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6), 0 16px 32px rgba(0, 0, 0, 0.12);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
 }
 
-.reflection::after {
+.glassy_navbar2 {
+	background: rgba(255, 255, 255, 0.08);
+
+	/* background: oklch(0.2844 0.0542 252.91 / 50%); */
+	border: 1px solid transparent;
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6), 0 16px 32px rgba(0, 0, 0, 0.12);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+}
+
+/* .glassy_navbar {
+	--border-width: 1px;
+	position: relative;
+	background: oklch(0.2844 0.0542 252.91 / 50%);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+}
+
+.glassy_navbar::before {
+	--prim-500: hsl(259, 13%, 28%);
+	--prim-600: hsl(259, 9%, 22%);
 	content: '';
 	position: absolute;
-	top: 0%;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: #b9fd50;
-	transform: rotate(10deg) scale(0.7, 0.8);
-	filter: blur(1em);
-	opacity: 0.5;
+	z-index: -1;
+	inset: 0;
+	border-radius: inherit;
+	border: var(--border-width) solid transparent;
+	background: linear-gradient(var(--prim-500), var(--prim-600)) border-box;
+	mask: linear-gradient(black) border-box, linear-gradient(black) padding-box;
+	mask-composite: subtract;
 } */

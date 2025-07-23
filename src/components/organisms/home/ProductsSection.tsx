@@ -1,4 +1,5 @@
 import Banner from '@/components/molecules/banner/Banner'
+import ProductsCard from '@/components/molecules/cards/ProductsCard'
 import SectionHeader from '@/components/molecules/SectionHeader'
 import { Button } from '@/components/ui/button'
 import { ourLiveProductsMock } from '@/data/mock'
@@ -14,23 +15,7 @@ const ProductsSection = () => {
 				/>
 				<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
 					{ourLiveProductsMock.map((story, index) => (
-						<div
-							tabIndex={0}
-							role="button"
-							key={`success-story-${index}`}
-							className="w-full hover:cursor-pointer rounded-[20px] box_shadow_products_card"
-						>
-							<div className="w-full h-[250px] bg-red-300 rounded-t-[20px]" />
-							<div className="space-y-3 p-4">
-								<div className="space-y-1 font-seravek_medium">
-									<p className="text-xl text-on-surface">{story.title}</p>
-									<p className="text-base text-on-surface-variant">
-										{story.category}
-									</p>
-								</div>
-								<p className="text-base text-outline">{story.description}</p>
-							</div>
-						</div>
+						<ProductsCard key={`success-story-${index}`} story={story} />
 					))}
 				</div>
 			</div>

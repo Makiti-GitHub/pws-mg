@@ -8,13 +8,15 @@ import useMouse from '@/hooks/useMouse'
 import { ArrowUpRightIcon } from 'lucide-react'
 
 import heroImage from '@/assets/images/Hero Section/Image 01.png'
+import AnimatedCounter from '@/components/atoms/animations/AnimatedCounter'
+import MotionIconButton2 from '@/components/atoms/buttons/MotionIconButton2'
 
 const HeroSection = () => {
 	const { isDesktop } = useIsTouchDevice()
 	const { handleMouseLeave, handleMouseMove, cursorPosition, isHovering } = useMouse()
 
 	return (
-		<section className={`space-y-24 bg-secondary w-screen pt-[71px] pb-16`}>
+		<section className={`space-y-24 bg-secondary w-screen pt-[150px] pb-16`}>
 			<div className="w-full grid grid-cols-2">
 				<div className="flex flex-col gap-10  pl-[120px] text-white">
 					<span className="rounded-2xl w-max px-3 py-1.5 border-2 border-white">
@@ -31,31 +33,33 @@ const HeroSection = () => {
 						</p>
 					</div>
 
-					<Button
+					{/* <Button
 						variant={'primary'}
 						className="gap-1 w-max !px-8 !py-6 !h-max !m-0 rounded-[40px] hover:cursor-pointer"
 					>
 						<span className="sr-only">Discover Our Outsourcing Solutions</span>
 						<span className="text-2xl">Discover Our Outsourcing Solutions</span>
 						<ArrowUpRightIcon className="size-6" />
-					</Button>
+					</Button> */}
+
+					<MotionIconButton2 />
 				</div>
 				<div
 					onMouseMove={handleMouseMove}
 					onMouseLeave={handleMouseLeave}
 					className={`w-full relative hover:cursor-none ease-in ${
 						isDesktop ? 'custom-cursor' : ''
-					} overflow-hidden bg-transparent z-30`}
+					} overflow-hidden`}
 				>
-					<div>
+					<div className="relative">
 						<img
 							src={heroImage}
 							alt="hero-image"
 							loading="lazy"
 							className="aspect-auto object-contain size-full"
 						/>
+						<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-full scale-[140%] rounded-full bg-radial-[at_50%_50%] from-30% from-transparent to-secondary z-20 to-50%" />
 					</div>
-					.
 					<CustomCursor position={cursorPosition} isVisible={isHovering} />
 				</div>
 			</div>
@@ -81,7 +85,9 @@ const HeroSection = () => {
 									className="flex flex-col tracking-normal font-normal gap-1"
 								>
 									<p className="text-6xl text-primary">
-										<span className="">{statistic.count}</span>
+										<span className="text-primary">
+											<AnimatedCounter from={0} to={statistic.count} />
+										</span>
 										<span>+</span>
 									</p>
 									<p className="text-lg text-white whitespace-nowrap">

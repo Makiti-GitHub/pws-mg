@@ -8,8 +8,8 @@ import i18n from './i18n/i18n'
 
 export default function App({ Component, children }: AppProps) {
 	return (
-		<Component router={AppRouter}>
-			<I18nextProvider i18n={i18n}>{children}</I18nextProvider>
-		</Component>
+		<I18nextProvider i18n={i18n}>
+			<Component router={AppRouter}>{children}</Component>
+		</I18nextProvider>
 	)
 }

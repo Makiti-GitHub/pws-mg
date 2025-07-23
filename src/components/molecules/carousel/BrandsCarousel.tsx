@@ -49,7 +49,7 @@ const BrandsCarousel = ({ className, variant, ...props }: BrandsCarouselProps) =
 			>
 				{[...BrandsLogos, ...BrandsLogos, ...BrandsLogos].map((elmt, index) => (
 					<img
-						key={index + 10}
+						key={`partner-${index}`}
 						src={elmt}
 						alt="logo"
 						loading="lazy"

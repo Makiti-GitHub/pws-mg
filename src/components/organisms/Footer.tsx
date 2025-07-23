@@ -61,7 +61,8 @@ const Footer = () => {
 								>
 									{locations.map((location, index) => (
 										<AccordionItem
-											value={`location-${index + 1}`}
+											key={`location-item-${index}`}
+											value={`item-${index + 1}`}
 											className="rounded-none border-none"
 										>
 											<AccordionTrigger className="text-white rounded-none border-y border-white">
