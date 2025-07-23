@@ -1,11 +1,9 @@
 import BrandsCarousel from '@/components/molecules/carousel/BrandsCarousel'
 import CustomCursor from '@/components/molecules/cursors/CustomCursor'
-import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { statisticsMock } from '@/data/mock'
 import useIsTouchDevice from '@/hooks/useIsTouchDevice'
 import useMouse from '@/hooks/useMouse'
-import { ArrowUpRightIcon } from 'lucide-react'
 
 import heroImage from '@/assets/images/Hero Section/Image 01.png'
 import AnimatedCounter from '@/components/atoms/animations/AnimatedCounter'

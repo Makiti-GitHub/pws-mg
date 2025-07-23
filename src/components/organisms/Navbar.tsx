@@ -2,6 +2,7 @@ import { ArrowUpRightIcon } from 'lucide-react'
 import { Button } from '../ui/button'
 import makitiLogo from '../../assets/images/logo_makiti/Makiti Logo White.png'
 import { Link } from 'rasengan'
+import LanguageButton from '../atoms/buttons/LanguageButton'
 
 const NavBar = () => {
 	return (
@@ -48,9 +49,8 @@ const NavBar = () => {
 						<span className="sr-only">Let's talk</span> <span>Let's talk</span>{' '}
 						<ArrowUpRightIcon className="size-5" />
 					</Button>
-					<div>
-						<span className="text-white text-lg">EN</span>
-					</div>
+
+					<LanguageButton />
 				</div>
 			</nav>
 		</div>
