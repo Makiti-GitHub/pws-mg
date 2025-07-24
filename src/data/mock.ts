@@ -91,6 +91,23 @@ import image4 from '@/assets/images/Testimonial/Lisa Anderson.png'
 import image5 from '@/assets/images/Testimonial/Emily Carter.png'
 import image6 from '@/assets/images/Testimonial/Robert Wilson.png'
 
+/* Technologies Icons */
+import htmlIcon from '@/assets/images/Technologies icons/html.svg'
+import tailwindIcon from '@/assets/images/Technologies icons/tailwind.svg'
+import figmaIcon from '@/assets/images/Technologies icons/figma.svg'
+import jsIcon from '@/assets/images/Technologies icons/js.svg'
+import nextIcon from '@/assets/images/Technologies icons/next.svg'
+import reactIcon from '@/assets/images/Technologies icons/react.svg'
+
+export const techStackMock = {
+	html: htmlIcon,
+	tailwind: tailwindIcon,
+	figma: figmaIcon,
+	js: jsIcon,
+	next: nextIcon,
+	react: reactIcon,
+}
+
 export const ourTechnosLogos1 = [
 	{ id: 1, image: swiftLogo },
 	{ id: 2, image: Logo5 },
@@ -280,6 +297,7 @@ export const successStoriesMock: {
 	description: string
 	results: string[]
 	tags: string[]
+	techs?: (keyof typeof techStackMock)[]
 	image?: string
 }[] = [
 	{
@@ -294,6 +312,7 @@ export const successStoriesMock: {
 		],
 		tags: ['Transportation', 'Travel'],
 		image: portfolioImage1,
+		techs: ['figma', 'react', 'next'],
 	},
 	{
 		title: 'Lyssafi',
@@ -307,6 +326,7 @@ export const successStoriesMock: {
 		],
 		tags: ['Finance', 'Cross Platform'],
 		image: portfolioImage4,
+		techs: ['figma', 'react', 'html', 'tailwind'],
 	},
 	{
 		title: 'Inventory Stock Management',
@@ -320,6 +340,7 @@ export const successStoriesMock: {
 		],
 		tags: ['E-commerce', 'Logistics'],
 		image: portfolioImage2,
+		techs: ['figma', 'react', 'next', 'js'],
 	},
 	{
 		title: 'Matoa Agency Landing Page',
@@ -346,6 +367,7 @@ export const successStoriesMock: {
 		],
 		tags: ['Transportation', 'Travel'],
 		image: portfolioImage5,
+		techs: ['figma', 'react', 'html', 'tailwind'],
 	},
 
 	{
@@ -360,6 +382,7 @@ export const successStoriesMock: {
 		],
 		tags: ['Transportation', 'Travel'],
 		image: portfolioImage6,
+		techs: ['figma', 'html', 'js', 'tailwind'],
 	},
 	{
 		title: 'Young Agro Africa',
@@ -373,6 +396,7 @@ export const successStoriesMock: {
 		],
 		tags: ['Agriculture', 'Farming'],
 		image: portfolioImage7,
+		techs: ['figma', 'react', 'next', 'html', 'tailwind'],
 	},
 
 	{
@@ -387,6 +411,7 @@ export const successStoriesMock: {
 		],
 		tags: ['Agency', 'Travel'],
 		image: portfolioImage8,
+		techs: ['figma', 'react', 'next', 'html', 'tailwind'],
 	},
 ]
 
@@ -713,21 +738,60 @@ export const journeyListMock: {
 	},
 ]
 
-export const locationsMock: {
+export interface ILocation {
+	id?: string
 	name: string
-	description?: string
-}[] = [
+	enterprise?: string
+	coordinates: [number, number] // [lat, lng]
+	place?: string
+	phone?: string
+	whatsapp?: string
+	address?: string
+	arrondissement?: string
+	mail?: string
+	website?: string
+}
+
+export const locationsMock: ILocation[] = [
 	{
 		name: 'Paris - France',
-		description: '',
+		id: 'Paris',
+		coordinates: [40.7128, -74.006],
+		enterprise: 'MAKITI GROUP SARL',
+		place: '75008 Paris',
+		phone: '+33 6 84 08 36 84',
+		whatsapp: '+49 162 72 65 788',
+		address: 'CS 48756, Cedex 08, 75380 58 rue de Monceau',
+		arrondissement: '8 ème arrondissment',
+		mail: 'contact@makiti.de',
+		website: 'www.makiti-group.com',
 	},
 	{
 		name: 'Yaoundé - Cameroon',
-		description: '',
+		id: 'Yaoundé',
+		coordinates: [51.5074, -0.1278],
+		enterprise: 'MAKITI SARL',
+		place: 'B.P. 1011 Yaoundé',
+		phone: '+237 6 80 09 54 53',
+		whatsapp: '+237 6 80 09 54 53',
+		address: 'Santa Barbara, face sonel',
+		arrondissement: 'Arrondissment Yaoundé 1er',
+		mail: 'contact@makiti.cm',
+		website: 'www.makiti.cm',
 	},
 	{
 		name: 'Lagos - Nigeria',
-		description: '',
+		id: 'Lagos',
+		coordinates: [35.6762, 139.6503],
+		enterprise: 'MAKITI SARL',
+
+		place: 'Surulere, Lagos',
+		phone: '+234 701 247 2241',
+		whatsapp: '+234 701 247 2241',
+		address: 'Randle Avenue, Surulere',
+		// arrondissement: 'Arrondissment Yaoundé 1er',
+		mail: 'contact@makiti.cm',
+		website: 'www.makiti.cm',
 	},
 ]
 

@@ -9,8 +9,14 @@ import {
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
+import { FC } from 'react'
 
-const LanguageButton = () => {
+interface LanguageButtonProps {
+	className?: string
+	isScrolled?: boolean
+}
+
+const LanguageButton: FC<LanguageButtonProps> = ({ isScrolled }) => {
 	const intl = useIntlContext()
 	const { i18n, t } = useTranslation()
 
@@ -27,7 +33,11 @@ const LanguageButton = () => {
 								src={intl.getLangIcon(i18n.resolvedLanguage!)}
 								alt={i18n.resolvedLanguage}
 							/>
-							<span className={`font-sevarek_bold text-white uppercase`}>
+							<span
+								className={`font-sevarek_bold ${
+									isScrolled ? 'text-secondary' : 'text-white'
+								} uppercase`}
+							>
 								{i18n.resolvedLanguage}EN
 							</span>
 						</div>

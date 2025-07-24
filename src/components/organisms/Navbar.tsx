@@ -1,47 +1,99 @@
 import { ArrowUpRightIcon } from 'lucide-react'
 import { Button } from '../ui/button'
-import makitiLogo from '../../assets/images/logo_makiti/Makiti Logo White.png'
+import makitiLogoWhite from '@/assets/images/logo_makiti/Makiti Logo White.png'
+import makitiLogoDark from '@/assets/images/logo_makiti/Makiti Logo Colored.png'
 import { Link } from 'rasengan'
 import LanguageButton from '../atoms/buttons/LanguageButton'
+import { useEffect, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+
+const scrollThreshold = 1280 // Change this value to set when the background should change
+
+const links: {
+	label: string
+	href: string
+}[] = [
+	{
+		label: 'Services',
+		href: '#services',
+	},
+	{
+		label: 'Portfolio',
+		href: '/portfolio',
+	},
+	{
+		label: 'Products',
+		href: '/products',
+	},
+	{
+		label: 'About',
+		href: '/about',
+	},
+]
 
 const NavBar = () => {
+	const [isScrolled, setIsScrolled] = useState<boolean>(false)
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+			setIsScrolled(scrollTop > scrollThreshold)
+		}
+
+		// Add scroll event listener
+		window.addEventListener('scroll', handleScroll)
+
+		// Cleanup function to remove event listener
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [scrollThreshold])
+
 	return (
-		<div className="fixed left-0 w-full z-50">
-			<nav className="px-8 md:px-[80px] lg:px-[120px] py-5 w-full flex items-center justify-between bg-secondary glassy_navbar">
+		<div className="fixed left-0 right-0 w-full z-50">
+			<nav
+				className={`px-8 md:px-[80px] lg:px-[120px] py-5 w-full flex items-center justify-between bg-secondary ${
+					isScrolled ? 'glassy_navbar2' : 'glassy_navbar'
+				} `}
+			>
 				{/* === Logo === */}
 				<div className="w-[121px] h-[84px]">
 					{/* === Background Images === */}
 					{/* <Image */}
 					<Link to={'/'}>
-						<img
-							src={makitiLogo}
-							alt="shadcn logo"
-							className="size-full aspect-auto object-contain pointer-events-none select-none"
-						/>
+						<AnimatePresence>
+							{isScrolled && (
+								<motion.img
+									key={'makiti-logo-dark'}
+									alt="shadcn logo"
+									className="size-full aspect-auto object-contain pointer-events-none select-none"
+									src={makitiLogoDark}
+								/>
+							)}
+							{!isScrolled && (
+								<motion.img
+									key={'makiti-logo-white'}
+									alt="shadcn logo"
+									className="size-full aspect-auto object-contain pointer-events-none select-none"
+									src={makitiLogoWhite}
+								/>
+							)}
+						</AnimatePresence>
 					</Link>
 				</div>
 				{/* === Menu === */}
-				<ul className="hidden lg:flex flex-1 justify-center items-center gap-6 text-white text-lg">
-					<li>
-						<Link className="hover:text-primary hover:underline" to={'#services'}>
-							Services
-						</Link>
-					</li>
-					<li>
-						<Link to={'/portfolio'} className="hover:text-primary hover:underline">
-							Porfolio
-						</Link>
-					</li>
-					<li>
-						<Link className="hover:text-primary hover:underline" to={'/products'}>
-							Products
-						</Link>
-					</li>
-					<li>
-						<Link className="hover:text-primary hover:underline" to={'#about'}>
-							About
-						</Link>
-					</li>
+				<ul
+					className={`hidden lg:flex flex-1 justify-center items-center gap-6 ${
+						isScrolled ? 'text-secondary' : 'text-white'
+					} text-lg`}
+				>
+					{links.map((link, index) => (
+						<li key={`nav-link-${index}`}>
+							<Link className="hover:text-primary hover:underline" to={link.href}>
+								{link.label}
+							</Link>
+						</li>
+					))}
 				</ul>
 
 				<div className="flex items-center gap-4 lg:gap-8">
@@ -50,7 +102,7 @@ const NavBar = () => {
 						<ArrowUpRightIcon className="size-5" />
 					</Button>
 
-					<LanguageButton />
+					<LanguageButton isScrolled={isScrolled} />
 				</div>
 			</nav>
 		</div>

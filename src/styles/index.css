@@ -209,6 +209,7 @@ body {
 	--color-on-surface: oklch(9.51% 0.006 243.12);
 	--color-outline-variant: oklch(82.82% 0.005 247.89);
 	--color-surface-variant: oklch(0.9146 0.0026 228.79);
+	--color-inverse-surface: oklch(0.311 0.0055 236.69);
 
 	--animate-slide: slide 20s infinite linear; /* Define the animation with a duration and iteration count */
 

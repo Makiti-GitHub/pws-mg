@@ -1,5 +1,6 @@
 import '@rasenganjs/image/css'
 import '@/styles/index.css'
+import 'leaflet/dist/leaflet.css'
 
 import { type AppProps } from 'rasengan'
 import AppRouter from '@/app/app.router'

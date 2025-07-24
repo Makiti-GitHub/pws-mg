@@ -1,6 +1,18 @@
 // import { ArrowUpRightIcon } from 'lucide-react'
 // import { Button } from '../ui/button'
-import { ArrowRightIcon } from 'lucide-react'
+import {
+	ArrowRightIcon,
+	AtSignIcon,
+	GlobeIcon,
+	HouseIcon,
+	MapIcon,
+	MapPinIcon,
+	MessageSquareIcon,
+	MinusIcon,
+	PlusIcon,
+	SignpostIcon,
+	SmartphoneIcon,
+} from 'lucide-react'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Separator } from '../ui/separator'
@@ -12,8 +24,73 @@ import {
 } from '@/components/ui/accordion'
 import makitiLogoWhite from '@/assets/images/logo_makiti/Makiti Logo White.png'
 import { locationsMock, socialsMock } from '@/data/mock'
+import { Link } from 'rasengan'
+import { Fragment } from 'react'
+// import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
+// import { LatLngExpression } from 'leaflet'
+
+// Component to handle map updates
+// interface MapUpdaterProps {
+// 	center: LatLngExpression
+// 	zoom: number
+// }
+
+// const MapUpdater: React.FC<MapUpdaterProps> = ({ center, zoom }) => {
+// 	const map = useMap()
+
+// 	useEffect(() => {
+// 		map.setView(center, zoom)
+// 	}, [map, center, zoom])
+
+// 	return null
+// }
 
 const Footer = () => {
+	// const [currentLocation, setCurrentLocation] = useState<ILocation>(locationsMock[0])
+	// const [mapCenter, setMapCenter] = useState<LatLngExpression>(locationsMock[0].coordinates)
+	// const [mapZoom, setMapZoom] = useState<number>(10)
+	// const [customLat, setCustomLat] = useState<string>('')
+	// const [customLng, setCustomLng] = useState<string>('')
+
+	// // Function to jump to a specific location
+	// const jumpToLocation = (location: ILocation, zoom: number = 10) => {
+	// 	setCurrentLocation(location)
+	// 	setMapCenter(location.coordinates)
+	// 	setMapZoom(zoom)
+	// }
+
+	// // Function to jump to custom coordinates
+	// const jumpToCustomCoordinates = () => {
+	// 	const lat = parseFloat(customLat)
+	// 	const lng = parseFloat(customLng)
+
+	// 	if (isNaN(lat) || isNaN(lng)) {
+	// 		alert('Please enter valid latitude and longitude values')
+	// 		return
+	// 	}
+
+	// 	if (lat < -90 || lat > 90) {
+	// 		alert('Latitude must be between -90 and 90')
+	// 		return
+	// 	}
+
+	// 	if (lng < -180 || lng > 180) {
+	// 		alert('Longitude must be between -180 and 180')
+	// 		return
+	// 	}
+
+	// 	const customLocation: ILocation = {
+	// 		id: 'custom',
+	// 		name: 'Custom Location',
+	// 		coordinates: [lat, lng],
+	// 		address: `Custom coordinates: ${lat}, ${lng}`,
+	// 	}
+
+	// 	jumpToLocation(customLocation, 12)
+	// }
+
+	// const windowIsDefined = typeof window !== 'undefined'
+
 	return (
 		<footer className="px-8 md:px-[120px] pt-10 pb-5 w-full flex flex-col gap-10 bg-secondary mt-[60px]">
 			<div className="w-full flex flex-col lg:flex-row justify-between gap-12">
@@ -40,8 +117,69 @@ const Footer = () => {
 							</div>
 						</div>
 						<div className="flex flex-col md:flex-row items-start gap-5 max-w-[970px]">
-							<div className={`w-full lg:w-[450px] h-[250px] bg-white`} />
+							<div className={`w-full lg:w-[450px] h-[250px] bg-white`}>
+								{/* {windowIsDefined ? (
+									<div className="flex-1 relative">
+										<MapContainer
+											center={[7.3697, 12.3547]}
+											zoom={6}
+											className="size-full"
+											zoomControl={true}
+										>
+											<MapUpdater center={mapCenter} zoom={mapZoom} />
+
+											<TileLayer
+												attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+												url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+											/>
+
+											Markers for all locations 
+											{locationsMock.map((location) => (
+												<Marker
+													key={location.id}
+													position={location.coordinates}
+												>
+													<Popup>
+														<div className="text-center">
+															<h3 className="font-semibold">
+																{location.name}
+															</h3>
+															{location.address && (
+																<p className="text-sm text-gray-600">
+																	{location.address}
+																</p>
+															)}
+															<p className="text-xs text-gray-500 mt-1">
+																{location.coordinates[0].toFixed(4)}
+																,{' '}
+																{location.coordinates[1].toFixed(4)}
+															</p>
+														</div>
+													</Popup>
+												</Marker>
+											))}
+
+											 Marker for custom location if it exists 
+											{currentLocation.id === 'custom' && (
+												<Marker position={currentLocation.coordinates}>
+													<Popup>
+														<div className="text-center">
+															<h3 className="font-semibold">
+																{currentLocation.name}
+															</h3>
+															<p className="text-sm text-gray-600">
+																{currentLocation.address}
+															</p>
+														</div>
+													</Popup>
+												</Marker>
+											)}
+										</MapContainer>
+									</div>
+								) : null} */}
+							</div>
 							<div className="lg:max-w-[500px] w-full">
+								<Separator className="w-full bg-outline-variant" />
 								<Accordion
 									type="single"
 									collapsible
@@ -49,20 +187,93 @@ const Footer = () => {
 									defaultValue="item-1"
 								>
 									{locationsMock.map((location, index) => (
-										<AccordionItem
-											key={`location-item-${index}`}
-											value={`item-${index + 1}`}
-											className="rounded-none border-none"
-										>
-											<AccordionTrigger className="text-white rounded-none border-y border-white">
-												<span className="font-seravek_medium text-sm text-white">
-													{location.name}
-												</span>
-											</AccordionTrigger>
-											<AccordionContent className="flex flex-col gap-4 text-balance">
-												<p>{location.description}</p>
-											</AccordionContent>
-										</AccordionItem>
+										<Fragment key={`location-item-${index}`}>
+											<AccordionItem
+												value={`item-${index + 1}`}
+												className="rounded-none border-none"
+											>
+												<AccordionTrigger
+													icon={
+														<>
+															<PlusIcon className="group-[[data-state=open]]:hidden text-white pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
+															<MinusIcon className="hidden group-[[data-state=open]]:block text-white pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
+														</>
+													}
+													className="text-white rounded-none"
+												>
+													<span className="font-seravek_medium text-sm text-white">
+														{location.name}
+													</span>
+												</AccordionTrigger>
+												<AccordionContent className="flex flex-col gap-4 text-balance text-white">
+													<p>{location.enterprise}</p>
+
+													<div className="flex gap-2 text-outline-variant">
+														<div className="w-1/2 space-y-2">
+															{location.place ? (
+																<div className="flex gap-4 items-center">
+																	<HouseIcon className="size-6" />
+																	<span>{location.place}</span>
+																</div>
+															) : null}
+
+															{location.phone ? (
+																<div className="flex gap-4 items-center">
+																	<SmartphoneIcon className="size-6" />
+																	<span>{location.phone}</span>
+																</div>
+															) : null}
+
+															{location.whatsapp ? (
+																<div className="flex gap-4 items-center">
+																	<MessageSquareIcon className="size-6" />
+																	<span>{location.whatsapp}</span>
+																</div>
+															) : null}
+
+															{location.address ? (
+																<div className="flex gap-4 items-center">
+																	<MapPinIcon className="size-6" />
+																	<span>{location.address}</span>
+																</div>
+															) : null}
+														</div>
+														<div className="space-y-2 w-1/2">
+															{location.arrondissement ? (
+																<div className="flex gap-4 items-center">
+																	<SignpostIcon className="size-6" />
+																	<span>
+																		{location.arrondissement}
+																	</span>
+																</div>
+															) : null}
+
+															{location.mail ? (
+																<div className="flex gap-4 items-center">
+																	<AtSignIcon className="size-6" />
+																	<span>{location.mail}</span>
+																</div>
+															) : null}
+
+															{location.website ? (
+																<div className="flex gap-4 items-center">
+																	<GlobeIcon className="size-6" />
+																	<span>{location.website}</span>
+																</div>
+															) : null}
+
+															{location.address ? (
+																<div className="flex gap-4 items-center">
+																	<MapIcon className="size-6" />
+																	<span>Get Directions</span>
+																</div>
+															) : null}
+														</div>
+													</div>
+												</AccordionContent>
+											</AccordionItem>
+											<Separator className="w-full bg-outline-variant" />
+										</Fragment>
 									))}
 								</Accordion>
 							</div>
@@ -118,10 +329,16 @@ const Footer = () => {
 					</div>
 					<div className="text-base space-y-5 text-outline-variant">
 						<p className="font-seravek_medium">Company</p>
-						<div className="space-y-2.5">
-							<p>About</p>
-							<p>Team members</p>
-							<p>Careers</p>
+						<div className="gap-2.5 flex flex-col">
+							<Link to="/about" className="hover:text-white">
+								About
+							</Link>
+							<Link to="/about#teams" className="hover:text-white">
+								Team members
+							</Link>
+							<Link to="#talents" className="hover:text-white">
+								Careers
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -130,9 +347,15 @@ const Footer = () => {
 			<div className="w-full text-outline-variant text-base flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-2">
 				<p>© 2025 Makiti Group. All rights reserved.</p>
 				<div className="flex items-center justify-between gap-5">
-					<a href="">Privacy Policy</a>
-					<a href="">Terms of Service</a>
-					<a href="">Legal Notice</a>
+					<a href="" className="hover:text-white">
+						Privacy Policy
+					</a>
+					<a href="" className="hover:text-white">
+						Terms of Service
+					</a>
+					<a href="" className="hover:text-white">
+						Legal Notice
+					</a>
 				</div>
 			</div>
 		</footer>

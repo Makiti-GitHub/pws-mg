@@ -8,7 +8,7 @@ import {
 } from '@/components/ui/accordion'
 import { frequentlyAskedQuestionsMock } from '@/data/mock'
 import Banner from '@/components/molecules/banner/Banner'
-import { ArrowUpRightIcon } from 'lucide-react'
+import { ArrowUpRightIcon, AtSignIcon, ClockIcon, MapPinIcon, SmartphoneIcon } from 'lucide-react'
 
 const FaqSection = () => {
 	return (
@@ -20,10 +20,10 @@ const FaqSection = () => {
 			<div className="grid grid-cols-12 gap-4">
 				<div className="col-span-8">
 					<Accordion
-						type="single"
-						collapsible
+						type="multiple"
+						// collapsible={true}
 						className="w-full flex flex-col gap-4"
-						defaultValue="item-1"
+						defaultValue={['item-1']}
 					>
 						{frequentlyAskedQuestionsMock.map((faq, index) => (
 							<AccordionItem
@@ -65,7 +65,9 @@ const FaqSection = () => {
 					<div className="p-6 rounded-[12px] box_shadow_products_card">
 						<div className="space-y-4">
 							<div className="flex items-center gap-3">
-								<div className="size-8 rounded-[4px] bg-[#E8EFF8]" />
+								<div className="size-8 rounded-[4px] bg-[#E8EFF8] flex justify-center items-center">
+									<SmartphoneIcon className="size-[18px] text-secondary" />
+								</div>
 								<div className="space-y-1">
 									<p className="text-sm font-seravek_medium text-on-surface-variant">
 										Phone
@@ -74,7 +76,9 @@ const FaqSection = () => {
 								</div>
 							</div>
 							<div className="flex items-center gap-3">
-								<div className="size-8 rounded-[4px] bg-[#E8EFF8]" />
+								<div className="size-8 rounded-[4px] bg-[#E8EFF8] flex justify-center items-center">
+									<AtSignIcon className="size-[18px] text-secondary" />
+								</div>
 								<div className="space-y-1">
 									<p className="text-sm font-seravek_medium text-on-surface-variant">
 										Email
@@ -84,7 +88,9 @@ const FaqSection = () => {
 							</div>
 
 							<div className="flex items-center gap-3">
-								<div className="size-8 rounded-[4px] bg-[#E8EFF8]" />
+								<div className="size-8 rounded-[4px] bg-[#E8EFF8] flex justify-center items-center">
+									<MapPinIcon className="size-[18px] text-secondary" />
+								</div>
 								<div className="space-y-1">
 									<p className="text-sm font-seravek_medium text-on-surface-variant">
 										Location
@@ -94,7 +100,9 @@ const FaqSection = () => {
 							</div>
 
 							<div className="flex items-center gap-3">
-								<div className="size-8 rounded-[4px] bg-[#E8EFF8]" />
+								<div className="size-8 rounded-[4px] bg-[#E8EFF8] flex justify-center items-center">
+									<ClockIcon className="size-[18px] text-secondary" />
+								</div>
 								<div className="space-y-1">
 									<p className="text-sm font-seravek_medium text-on-surface-variant">
 										Business Hours
