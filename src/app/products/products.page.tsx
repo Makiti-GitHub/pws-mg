@@ -9,8 +9,17 @@ const Products: PageComponent = () => {
 	const navigate = useNavigate()
 
 	return (
-		<main className="flex flex-col gap-8 px-[120px] pt-[71px] relative">
+		<main className="flex flex-col gap-8 px-8 md:px-[80px] lg:px-[120px] pt-[150px] relative">
 			<div className="space-y-8 relative">
+				<Button
+					variant={'ghost'}
+					onClick={() => navigate('/')}
+					className="xl:absolute xl:left-0 xl:top-0 text-secondary !py-3 !px-5 !h-max hover:cursor-pointer bg-white box_shadow_products_card !font-seravek_medium !text-base"
+				>
+					<ArrowLeftIcon className="size-6" />
+					<span className="sr-only">Back to home</span>
+					<span>Back to home</span>
+				</Button>
 				<SectionHeader
 					title="Our Live Products"
 					subTitle="Explore the powerful products we’ve built to solve real-world challenges. Discover how our solutions drive performance, streamline operations, and deliver value across industries."
@@ -25,16 +34,6 @@ const Products: PageComponent = () => {
 						/>
 					))}
 				</div>
-
-				<Button
-					variant={'ghost'}
-					onClick={() => navigate('/')}
-					className="text-secondary !py-3 !px-5 !h-max hover:cursor-pointer bg-white box_shadow_products_card !font-seravek_medium !text-base absolute left-0 top-0"
-				>
-					<ArrowLeftIcon className="size-6" />
-					<span className="sr-only">Back to home</span>
-					<span>Back to home</span>
-				</Button>
 			</div>
 		</main>
 	)

@@ -29,10 +29,10 @@ const ProductsCard: FC<ProductsCardProps> = ({ story, withButton = false }) => {
 				{withButton && (
 					<Button
 						variant={'primary'}
-						className="gap-1 w-full !px-8 !py-2 !h-max !m-0 rounded-[40px] hover:cursor-pointer"
+						className="gap-1 w-full !px-8 !py-2 !h-max !m-0 !mt-[46px] rounded-[40px] hover:cursor-pointer"
 					>
-						<span className="sr-only">View the website</span>
-						<span className="text-lg">View the website</span>
+						<span className="sr-only">View Live website</span>
+						<span className="text-lg font-seravek_medium">View Live website</span>
 						<ArrowUpRightIcon className="size-6" />
 					</Button>
 				)}

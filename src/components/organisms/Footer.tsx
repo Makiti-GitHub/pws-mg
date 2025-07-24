@@ -10,30 +10,14 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from '@/components/ui/accordion'
-
-const locations: {
-	name: string
-	description?: string
-}[] = [
-	{
-		name: 'Paris - France',
-		description: '',
-	},
-	{
-		name: 'Yaoundé - Ca,eroon',
-		description: '',
-	},
-	{
-		name: 'Lagos - Nigeria',
-		description: '',
-	},
-]
+import makitiLogoWhite from '@/assets/images/logo_makiti/Makiti Logo White.png'
+import { locationsMock, socialsMock } from '@/data/mock'
 
 const Footer = () => {
 	return (
-		<footer className="px-[120px] pt-10 pb-5 w-full flex flex-col gap-10 bg-secondary mt-[60px]">
-			<div className="w-full flex justify-between">
-				<div className="flex flex-col gap-5">
+		<footer className="px-8 md:px-[120px] pt-10 pb-5 w-full flex flex-col gap-10 bg-secondary mt-[60px]">
+			<div className="w-full flex flex-col lg:flex-row justify-between gap-12">
+				<div className="flex flex-col gap-12 md:gap-5">
 					<div className="flex flex-col gap-6">
 						<div className="flex flex-col gap-6">
 							<div>
@@ -42,24 +26,29 @@ const Footer = () => {
 								</p>
 							</div>
 							<div className="flex gap-5 items-center">
-								{Array.from({ length: 6 }).map((_, index) => (
-									<div
-										className="size-6 rounded-xs bg-white"
-										key={`social-${index}`}
-									/>
+								{socialsMock.map((social, index) => (
+									<div className="size-6 rounded-xs" key={`social-${index}`}>
+										<a href={social.link}>
+											<img
+												src={social.icon}
+												alt={social.label}
+												className="size-full object-contain aspect-auto"
+											/>
+										</a>
+									</div>
 								))}
 							</div>
 						</div>
-						<div className="flex items-start gap-5 max-w-[970px]">
-							<div className={`w-[450px] h-[250px] bg-white`} />
-							<div className="">
+						<div className="flex flex-col md:flex-row items-start gap-5 max-w-[970px]">
+							<div className={`w-full lg:w-[450px] h-[250px] bg-white`} />
+							<div className="lg:max-w-[500px] w-full">
 								<Accordion
 									type="single"
 									collapsible
-									className="w-[500px] flex flex-col"
+									className="flex flex-col w-full"
 									defaultValue="item-1"
 								>
-									{locations.map((location, index) => (
+									{locationsMock.map((location, index) => (
 										<AccordionItem
 											key={`location-item-${index}`}
 											value={`item-${index + 1}`}
@@ -79,25 +68,29 @@ const Footer = () => {
 							</div>
 						</div>
 					</div>
-					<div className="max-w-[970px] flex justify-between">
-						<div className="flex items-center gap-6">
+					<div className="w-full lg:max-w-[970px] flex flex-col xl:flex-row justify-between gap-8">
+						<div className="flex-1 flex flex-col sm:flex-row sm:items-center gap-6">
 							{/* == Makiti logo ==  */}
-							<div className="w-[121px] h-[84px] bg-white" />
-							<p className="text-base text-outline-variant">
+							<img
+								src={makitiLogoWhite}
+								alt="shadcn logo"
+								className="w-[121px] pointer-events-none select-none"
+							/>
+							<p className="text-base text-outline-variant sm:flex-1">
 								Your strategic IT outsourcing partner, delivering excellence across
 								all technology domains with innovative solutions and expert teams.
 							</p>
 						</div>
-						<div>
+						<div className="w-full sm:w-[298px]">
 							<p className="font-seravek_medium text-base text-outline-variant">
 								Newsletter
 							</p>
 							<div className="flex gap-2 items-center">
 								<Input
 									placeholder="Your email"
-									className="border border-white placeholder:text-white"
+									className="border border-white placeholder:text-white flex-1"
 								/>
-								<Button className="bg-white text-secondary border border-secondary h-max rounded-[8px] px-3 py-2">
+								<Button className="bg-white text-secondary border border-white md:border-secondary h-max rounded-[8px] px-3 py-2">
 									<span className="sr-only">Subscribe</span>
 									<ArrowRightIcon className="w-4 h-3" />
 								</Button>
@@ -134,7 +127,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<Separator className="w-full bg-outline" />
-			<div className="w-full text-outline-variant text-base flex items-center justify-between gap-2">
+			<div className="w-full text-outline-variant text-base flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-2">
 				<p>© 2025 Makiti Group. All rights reserved.</p>
 				<div className="flex items-center justify-between gap-5">
 					<a href="">Privacy Policy</a>

@@ -1,6 +1,20 @@
-{
-	/** Home page data */
-}
+/** Why choose makiti icons */
+import wcmIcon1 from '@/assets/images/Why choose Makiti/ion_flash-outline.png'
+import wcmIcon2 from '@/assets/images/Why choose Makiti/ri_leaf-line.png'
+import wcmIcon3 from '@/assets/images/Why choose Makiti/famicons_bulb-outline.png'
+import wcmIcon4 from '@/assets/images/Why choose Makiti/Vector.png'
+import wcmIcon5 from '@/assets/images/Why choose Makiti/material-symbols_shield-outline.png'
+import wcmIcon6 from '@/assets/images/Why choose Makiti/lucide_clock.png'
+import wcmIcon7 from '@/assets/images/Why choose Makiti/carbon_badge.png'
+import wcmIcon8 from '@/assets/images/Why choose Makiti/streamline-plump_web.png'
+
+/** Socials icons */
+import linkedInLogo from '@/assets/icons/Socials Icons/cib_linkedin.svg'
+import youtubeLogo from '@/assets/icons/Socials Icons/mdi_youtube.svg'
+import twitterLogo from '@/assets/icons/Socials Icons/devicon_twitter.svg'
+import xingLogo from '@/assets/icons/Socials Icons/fa-brands_xing.svg'
+import instagramLogo from '@/assets/icons/Socials Icons/cib_instagram.svg'
+import githubLogo from '@/assets/icons/Socials Icons/formkit_github.svg'
 
 export const expertisesMock: {
 	title: string
@@ -268,38 +282,56 @@ export const testimonialsMock: {
 export const chooseReasonsMock: {
 	title: string
 	desc: string
+	icon?: string
+	color: string
 }[] = [
 	{
 		title: 'Agile Approach',
 		desc: 'Fast, iterative development with continuous feedback and rapid deployment cycles.',
+		icon: wcmIcon1,
+		color: '#DEEAFD',
 	},
 	{
 		title: 'Sustainable Design',
 		desc: 'Fast, iterative development with continuous feedback and rapid deployment cycles.',
+		icon: wcmIcon2,
+		color: '#E2FBE8',
 	},
 	{
 		title: 'Innovation Focus',
 		desc: 'Cutting-edge AI-driven solutions and innovative approaches to complex challenges.',
+		icon: wcmIcon3,
+		color: '#FDEDD7',
 	},
 	{
 		title: 'Expert Consulting',
 		desc: 'Strategic IT consulting with deep industry expertise and proven methodologies.',
+		icon: wcmIcon4,
+		color: '#F1E9FD',
 	},
 	{
 		title: 'Security First',
 		desc: 'Enterprise-grade security measures and compliance with international standards.',
+		icon: wcmIcon5,
+		color: '#FAE3E3',
 	},
 	{
 		title: '24/7 Support',
 		desc: 'Round-the-clock technical support and monitoring for mission-critical systems.',
+		icon: wcmIcon6,
+		color: '#E1E7FE',
 	},
 	{
 		title: 'Quality Assurance',
 		desc: 'Rigorous testing and quality control processes ensuring delivery excellence.',
+		icon: wcmIcon7,
+		color: '#F9E8F3',
 	},
 	{
 		title: 'Global Reach',
 		desc: 'International team with multilingual support and cross-cultural expertise.',
+		icon: wcmIcon8,
+		color: '#D5FAF2',
 	},
 ]
 
@@ -411,5 +443,76 @@ export const statisticsMock: { count: number; label: string }[] = [
 	{
 		count: 5,
 		label: 'Offices Globally',
+	},
+]
+
+export const journeyListMock: {
+	date: string
+	desc: string
+}[] = [
+	{
+		date: 'MAR. 2023',
+		desc: 'We founded the company with Headquater in Paris, France',
+	},
+	{
+		date: 'JAN. 2024',
+		desc: 'We opened a branch office in Yaoundé, Cameroun',
+	},
+	{
+		date: 'FEB. 2025',
+		desc: 'We opened a branch office in Lagos, Nigeria',
+	},
+	{
+		date: 'AUG. 2025',
+		desc: 'We launched our Products Matoa & Lyssafi',
+	},
+]
+
+export const locationsMock: {
+	name: string
+	description?: string
+}[] = [
+	{
+		name: 'Paris - France',
+		description: '',
+	},
+	{
+		name: 'Yaoundé - Cameroon',
+		description: '',
+	},
+	{
+		name: 'Lagos - Nigeria',
+		description: '',
+	},
+]
+
+export const socialsMock: {
+	label: string
+	icon: string
+	link?: string
+}[] = [
+	{
+		label: 'Instagram',
+		icon: instagramLogo,
+	},
+	{
+		label: 'Twitter',
+		icon: twitterLogo,
+	},
+	{
+		label: 'Linkedin',
+		icon: linkedInLogo,
+	},
+	{
+		label: 'Xing',
+		icon: xingLogo,
+	},
+	{
+		label: 'Github',
+		icon: githubLogo,
+	},
+	{
+		label: 'Youtube',
+		icon: youtubeLogo,
 	},
 ]

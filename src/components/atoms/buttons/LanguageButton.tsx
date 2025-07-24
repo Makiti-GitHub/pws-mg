@@ -14,6 +14,8 @@ const LanguageButton = () => {
 	const intl = useIntlContext()
 	const { i18n, t } = useTranslation()
 
+	console.log(i18n.resolvedLanguage)
+
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger className="cursor-pointer rounded-lg outline-none hover:bg-accent hover:text-accent-foreground focus-visible:bg-secondary">
