@@ -18,7 +18,7 @@ const SuccessStoriesSection = () => {
 
 			<div className="space-y-8">
 				<div className="space-y-6">
-					{successStoriesMock.map((story, index) => (
+					{successStoriesMock.slice(0, 3).map((story, index) => (
 						<SuccessStoryCard key={`success-story-${index}`} story={story} />
 					))}
 				</div>

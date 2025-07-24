@@ -1,13 +1,8 @@
+import { successStoriesMock } from '@/data/mock'
 import { FC } from 'react'
 
 interface SuccessStoryCardProps {
-	story: {
-		title: string
-		category: string
-		description: string
-		results: string[]
-		tags: string[]
-	}
+	story: (typeof successStoriesMock)[number]
 }
 
 const SuccessStoryCard: FC<SuccessStoryCardProps> = ({ story }) => {
@@ -15,10 +10,16 @@ const SuccessStoryCard: FC<SuccessStoryCardProps> = ({ story }) => {
 		<div
 			tabIndex={0}
 			role="button"
-			className="w-full hover:cursor-pointer grid grid-cols-2 gap-10 border rounded-[40px] p-3 border-outline-variant"
+			className="w-full hover:cursor-pointer grid lg:grid-cols-5 xl:grid-cols-2 gap-10 border rounded-[40px] p-3 border-outline-variant"
 		>
-			<div className="col-span-1 bg-red-300 rounded-[30px]" />
-			<div className="space-y-2 col-span-1">
+			<div className="col-span-1 lg:col-span-3 xl:col-span-1 w-full h-[365.2131652832031px] sm:h-auto bg-white-300 rounded-[30px]">
+				<img
+					src={story.image}
+					alt={story.title}
+					className="size-full aspect-auto object-cover rounded-[30px]"
+				/>
+			</div>
+			<div className="space-y-2 col-span-1 lg:col-span-2 xl:col-span-1">
 				<div className="flex">
 					{Array.from({ length: 4 }).map((_, index) => (
 						<div

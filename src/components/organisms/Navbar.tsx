@@ -23,24 +23,24 @@ const NavBar = () => {
 				{/* === Menu === */}
 				<ul className="hidden lg:flex flex-1 justify-center items-center gap-6 text-white text-lg">
 					<li>
-						<a className="hover:text-primary hover:underline" href="#services">
+						<Link className="hover:text-primary hover:underline" to={'#services'}>
 							Services
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a className="hover:text-primary hover:underline" href="#portfolio">
+						<Link to={'/portfolio'} className="hover:text-primary hover:underline">
 							Porfolio
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a className="hover:text-primary hover:underline" href="#products">
+						<Link className="hover:text-primary hover:underline" to={'/products'}>
 							Products
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a className="hover:text-primary hover:underline" href="#about">
+						<Link className="hover:text-primary hover:underline" to={'#about'}>
 							About
-						</a>
+						</Link>
 					</li>
 				</ul>
 

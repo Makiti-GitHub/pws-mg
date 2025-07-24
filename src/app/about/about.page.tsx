@@ -17,7 +17,7 @@ const About: PageComponent = () => {
 			<div className="space-y-8 relative">
 				<Button
 					variant={'ghost'}
-					onClick={() => navigate('/')}
+					onClick={() => navigate('/en/')}
 					className="xl:absolute xl:left-0 xl:top-0 text-secondary !py-3 !px-5 !h-max hover:cursor-pointer bg-white box_shadow_products_card !font-seravek_medium !text-base"
 				>
 					<ArrowLeftIcon className="size-6" />

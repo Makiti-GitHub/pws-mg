@@ -9,8 +9,17 @@ const Portfolio: PageComponent = () => {
 	const navigate = useNavigate()
 
 	return (
-		<main className="flex flex-col gap-8 px-[120px] pt-[71px] relative">
+		<main className="flex flex-col gap-8 px-8 md:px-[80px] lg:px-[60px] xl:px-[120px] pt-[150px] relative">
 			<div className="space-y-8 relative">
+				<Button
+					variant={'ghost'}
+					onClick={() => navigate('/')}
+					className="xl:absolute xl:left-0 xl:top-0 text-secondary !py-3 !px-5 !h-max hover:cursor-pointer bg-white box_shadow_products_card !font-seravek_medium !text-base"
+				>
+					<ArrowLeftIcon className="size-6" />
+					<span className="sr-only">Back to home</span>
+					<span>Back to home</span>
+				</Button>
 				<SectionHeader
 					title="Explore our portfolio"
 					subTitle="Don’t just take our word for it – explore the innovative solutions we’ve crafted for our clients. Read our case studies to see our impact across industries, and envision what we could achieve together."
@@ -40,16 +49,6 @@ const Portfolio: PageComponent = () => {
 						))}
 					</div>
 				</div>
-
-				<Button
-					variant={'ghost'}
-					onClick={() => navigate('/')}
-					className="text-secondary !py-3 !px-5 !h-max hover:cursor-pointer bg-white box_shadow_products_card !font-seravek_medium !text-base absolute left-0 top-0"
-				>
-					<ArrowLeftIcon className="size-6" />
-					<span className="sr-only">Back to home</span>
-					<span>Back to home</span>
-				</Button>
 			</div>
 		</main>
 	)

@@ -71,6 +71,26 @@ import uiUxIcon from '@/assets/images/Find the talent you need/fluent-emoji-high
 import testManagerIcon from '@/assets/images/Find the talent you need/tabler_test-pipe-2.svg'
 import scrumMasterIcon from '@/assets/images/Find the talent you need/f7_person-2.svg'
 
+/* Portfolio images */
+import portfolioImage1 from '@/assets/images/Portfolio/Image.png'
+import portfolioImage2 from '@/assets/images/Portfolio/Image-1.png'
+import portfolioImage3 from '@/assets/images/Portfolio/Image-2.png'
+import portfolioImage4 from '@/assets/images/Portfolio/Image-3.png'
+import portfolioImage5 from '@/assets/images/Portfolio/Image-4.png'
+import portfolioImage6 from '@/assets/images/Portfolio/Image-5.png'
+import portfolioImage7 from '@/assets/images/Portfolio/Image-6.png'
+import portfolioImage8 from '@/assets/images/Portfolio/Image-7.png'
+import portfolioImage9 from '@/assets/images/Portfolio/Image-8.png'
+import portfolioImage10 from '@/assets/images/Portfolio/Image-9.png'
+
+/* Testimonial Images  */
+import image1 from '@/assets/images/Testimonial/David Ngomdjom.png'
+import image2 from '@/assets/images/Testimonial/Sarah Johnson.png'
+import image3 from '@/assets/images/Testimonial/Michael Rodriguez.png'
+import image4 from '@/assets/images/Testimonial/Lisa Anderson.png'
+import image5 from '@/assets/images/Testimonial/Emily Carter.png'
+import image6 from '@/assets/images/Testimonial/Robert Wilson.png'
+
 export const ourTechnosLogos1 = [
 	{ id: 1, image: swiftLogo },
 	{ id: 2, image: Logo5 },
@@ -260,6 +280,7 @@ export const successStoriesMock: {
 	description: string
 	results: string[]
 	tags: string[]
+	image?: string
 }[] = [
 	{
 		title: 'Matoa Traveller App',
@@ -272,6 +293,7 @@ export const successStoriesMock: {
 			'An average rating of 4.75.',
 		],
 		tags: ['Transportation', 'Travel'],
+		image: portfolioImage1,
 	},
 	{
 		title: 'Lyssafi',
@@ -284,6 +306,7 @@ export const successStoriesMock: {
 			'An average rating of 4.75.',
 		],
 		tags: ['Finance', 'Cross Platform'],
+		image: portfolioImage4,
 	},
 	{
 		title: 'Inventory Stock Management',
@@ -296,6 +319,74 @@ export const successStoriesMock: {
 			'An average rating of 4.75.',
 		],
 		tags: ['E-commerce', 'Logistics'],
+		image: portfolioImage2,
+	},
+	{
+		title: 'Matoa Agency Landing Page',
+		category: 'SaaS',
+		description:
+			'This project focused on creating a website to promote a bus agency app, showcasing its features that help agencies track and manage bus trips efficiently.',
+		results: [
+			'Over 1 million visits.',
+			'A 150% increase in conversions.',
+			'An average rating of 4.75.',
+		],
+		tags: ['Agency', 'Travel'],
+		image: portfolioImage3,
+	},
+	{
+		title: 'Matoa Web Admin',
+		category: 'Web App',
+		description:
+			'This project aimed to develop a web app for bus agencies to efficiently track trips and manage routes in real time.',
+		results: [
+			'Over 1 million visits.',
+			'A 150% increase in conversions.',
+			'An average rating of 4.75.',
+		],
+		tags: ['Transportation', 'Travel'],
+		image: portfolioImage5,
+	},
+
+	{
+		title: 'Watat Bau',
+		category: 'Web App',
+		description:
+			'This project aimed to develop a web app for bus agencies to efficiently track trips and manage routes in real time.',
+		results: [
+			'Over 1 million visits.',
+			'A 150% increase in conversions.',
+			'An average rating of 4.75.',
+		],
+		tags: ['Transportation', 'Travel'],
+		image: portfolioImage6,
+	},
+	{
+		title: 'Young Agro Africa',
+		category: 'SaaS',
+		description:
+			'This project created a direct pipeline for local farmers to deliver fresh produce straight to consumers, streamlining the supply chain and supporting local agriculture.',
+		results: [
+			'Over 1 million visits.',
+			'A 150% increase in conversions.',
+			'An average rating of 4.75.',
+		],
+		tags: ['Agriculture', 'Farming'],
+		image: portfolioImage7,
+	},
+
+	{
+		title: 'ST Express Groupage',
+		category: 'SaaS',
+		description:
+			'A logistics company moving goods from Germany to Cameroon. This project involved redesigning flyers to enhance online visibility and accessibility, supporting broader digital marketing efforts.',
+		results: [
+			'Over 1 million visits.',
+			'A 150% increase in conversions.',
+			'An average rating of 4.75.',
+		],
+		tags: ['Agency', 'Travel'],
+		image: portfolioImage8,
 	},
 ]
 
@@ -303,24 +394,28 @@ export const ourLiveProductsMock: {
 	title: string
 	category: string
 	description: string
+	image?: string
 }[] = [
 	{
 		title: 'Inventory & Stock Management',
 		category: 'Mobile App for Business',
 		description:
 			'Track inventory, manage orders, and monitor stock levels with this user-friendly mobile solution.',
+		image: portfolioImage2,
 	},
 	{
 		title: 'Ticket Management System',
 		category: 'Multi Vendor Administration Platform',
 		description:
 			'Web platform for agencies to manage trips, vendors, and bookings with centralized control.',
+		image: portfolioImage3,
 	},
 	{
 		title: 'Inventory & Stock Management',
 		category: 'Vendor Administration Platform',
 		description:
 			'Vendor-focused platform for real-time stock tracking, order management, and inventory insights.',
+		image: portfolioImage9,
 	},
 
 	{
@@ -328,18 +423,21 @@ export const ourLiveProductsMock: {
 		category: 'Mobile App for End Users',
 		description:
 			'Mobile app for booking, managing, and tracking bus trips with real-time updates.',
+		image: portfolioImage1,
 	},
 	{
 		title: 'Payment Gateway System',
 		category: 'Multi Vendor Platform',
 		description:
 			'Universal payment platform enabling secure, multi-vendor transactions across all web interfaces.',
+		image: portfolioImage4,
 	},
 	{
 		title: 'Payment Gateway System',
 		category: 'Mobile App for End Users',
 		description:
 			'Mobile app for trip payments, scheduling, and seat tracking with a streamlined interface.',
+		image: portfolioImage10,
 	},
 ]
 
@@ -362,7 +460,7 @@ export const testimonialsMock: {
 		user: {
 			name: 'David Ngomdjom',
 			job: 'VP Technology, DataTech Analytics',
-			image: '',
+			image: image1,
 		},
 	},
 
@@ -374,7 +472,7 @@ export const testimonialsMock: {
 		user: {
 			name: 'Sarah Johnson',
 			job: 'Product Manager, Creative UX',
-			image: '',
+			image: image2,
 		},
 	},
 
@@ -386,7 +484,7 @@ export const testimonialsMock: {
 		user: {
 			name: 'Michael Rodriguez',
 			job: 'Marketing Director, EcoSmart',
-			image: '',
+			image: image3,
 		},
 	},
 
@@ -398,7 +496,7 @@ export const testimonialsMock: {
 		user: {
 			name: 'Lisa Anderson',
 			job: 'Operations Lead, CloudNext',
-			image: '',
+			image: image4,
 		},
 	},
 	{
@@ -409,7 +507,7 @@ export const testimonialsMock: {
 		user: {
 			name: 'Emily Carter',
 			job: 'Brand Manager, StyleWave',
-			image: '',
+			image: image5,
 		},
 	},
 
@@ -421,7 +519,7 @@ export const testimonialsMock: {
 		user: {
 			name: 'Robert Wilson',
 			job: 'CEO, MarketPro',
-			image: '',
+			image: image6,
 		},
 	},
 ]

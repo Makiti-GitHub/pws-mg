@@ -40,12 +40,12 @@ const MotionIconButton2 = () => {
 					{buttonState === 'hover' && (
 						<motion.div
 							key="copy"
-							initial={{ x: 80, width: 0, opacity: 0 }}
-							animate={{ x: 0, width: 20, opacity: 1 }}
-							exit={{ x: 80, width: 0, opacity: 0 }}
+							initial={{ width: 0, opacity: 0 }}
+							animate={{ width: 20, opacity: 1 }}
+							exit={{ width: 0, opacity: 0 }}
 							transition={{ duration: 0.4 }}
 						>
-							<Copy className="size-5" />
+							<ArrowUpRight className="size-5" />
 						</motion.div>
 					)}
 				</AnimatePresence>
@@ -54,9 +54,9 @@ const MotionIconButton2 = () => {
 					{buttonState === 'default' && (
 						<motion.div
 							key="mail"
-							initial={{ x: -80, width: 0, opacity: 0 }}
-							animate={{ x: 0, width: 20, opacity: 1 }}
-							exit={{ x: -80, width: 0, opacity: 0 }}
+							initial={{ width: 0, opacity: 0 }}
+							animate={{ width: 20, opacity: 1 }}
+							exit={{ width: 0, opacity: 0 }}
 							transition={{ duration: 0.4 }}
 						>
 							<ArrowUpRight className="size-5" />

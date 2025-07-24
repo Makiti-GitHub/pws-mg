@@ -14,7 +14,7 @@ const OurExpertiseSection = () => {
 					{expertisesMock.map((expertise, index) => (
 						<div
 							key={`expertise-item-${index}`}
-							className="box_shadow flex flex-col rounded-[12px] p-6 gap-[30px]"
+							className="box_shadow flex flex-col rounded-[12px] p-6 gap-[30px] hover:scale-105 hover:border hover:border-primary transition duration-300 ease-in-out"
 						>
 							<div className="flex flex-col gap-5">
 								<div

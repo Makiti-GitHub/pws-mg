@@ -1,17 +1,10 @@
+import { testimonialsMock } from '@/data/mock'
+import { QuoteIcon, Star } from 'lucide-react'
 import { FC } from 'react'
+import Image from '@rasenganjs/image'
 
 interface TestimonialProps {
-	testimonial: {
-		quote: string
-		category: string
-		duration: number
-		result: string
-		user: {
-			name: string
-			image: string
-			job: string
-		}
-	}
+	testimonial: (typeof testimonialsMock)[number]
 }
 
 const TestimonialCard: FC<TestimonialProps> = ({ testimonial }) => {
@@ -21,7 +14,17 @@ const TestimonialCard: FC<TestimonialProps> = ({ testimonial }) => {
 			role="button"
 			className="w-full hover:cursor-pointer p-6 flex flex-col gap-5 rounded-[12px] box_shadow_products_card"
 		>
-			<div className="w-full h-[50px] bg-red-300 rounded-t-[20px]" />
+			<div className="w-full flex items-center justify-between gap-4">
+				<QuoteIcon className="size-8 text-outline-variant" />
+				<div className="flex items-center">
+					{Array.from({ length: 5 }).map((_, index) => (
+						<Star
+							className="size-4 fill-[#E7B213] text-[#E7B213]"
+							key={`tech-${index}-star`}
+						/>
+					))}
+				</div>
+			</div>
 
 			<p className="text-base text-outline flex-1">{`"${testimonial.quote}"`}</p>
 
@@ -50,7 +53,14 @@ const TestimonialCard: FC<TestimonialProps> = ({ testimonial }) => {
 			</div>
 
 			<div className="flex items-center gap-2">
-				<div className="size-10 bg-red-300 rounded-full" />
+				<div className="size-10 bg-slate-300 rounded-full">
+					<Image
+						src={testimonial.user.image}
+						alt={testimonial.user.name}
+						width={40}
+						height={40}
+					/>
+				</div>
 				<div className="space-y-1 text-sm">
 					<p className="font-seravek_medium text-on-surface-variant text-sm">
 						{testimonial.user.name}
