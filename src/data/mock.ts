@@ -291,9 +291,12 @@ export const talentProfilesMock: {
 	},
 ]
 
+export type ProjectCategoryType = 'web_app' | 'mobile_app' | 'e_commerce' | 'saas' | 'all'
+
 export const successStoriesMock: {
 	title: string
 	category: string
+	categoryType: ProjectCategoryType
 	description: string
 	results: string[]
 	tags: string[]
@@ -303,6 +306,7 @@ export const successStoriesMock: {
 	{
 		title: 'Matoa Traveller App',
 		category: 'Mobile App',
+		categoryType: 'mobile_app',
 		description:
 			'This app simplifies booking bus trips, enabling users to plan and secure travel with route and schedule access.',
 		results: [
@@ -317,6 +321,7 @@ export const successStoriesMock: {
 	{
 		title: 'Lyssafi',
 		category: 'Web App',
+		categoryType: 'web_app',
 		description:
 			'This project involved designing a universal web application to offer a versatile payment solution, providing users with diverse payment methods for their convenience across all platforms.',
 		results: [
@@ -331,6 +336,7 @@ export const successStoriesMock: {
 	{
 		title: 'Inventory Stock Management',
 		category: 'Mobile App',
+		categoryType: 'mobile_app',
 		description:
 			'This app enables businesses to track inventory, manage orders, and generate real-time reports with user-friendly features.',
 		results: [
@@ -345,6 +351,7 @@ export const successStoriesMock: {
 	{
 		title: 'Matoa Agency Landing Page',
 		category: 'SaaS',
+		categoryType: 'saas',
 		description:
 			'This project focused on creating a website to promote a bus agency app, showcasing its features that help agencies track and manage bus trips efficiently.',
 		results: [
@@ -358,6 +365,7 @@ export const successStoriesMock: {
 	{
 		title: 'Matoa Web Admin',
 		category: 'Web App',
+		categoryType: 'web_app',
 		description:
 			'This project aimed to develop a web app for bus agencies to efficiently track trips and manage routes in real time.',
 		results: [
@@ -373,6 +381,7 @@ export const successStoriesMock: {
 	{
 		title: 'Watat Bau',
 		category: 'Web App',
+		categoryType: 'web_app',
 		description:
 			'This project aimed to develop a web app for bus agencies to efficiently track trips and manage routes in real time.',
 		results: [
@@ -387,6 +396,7 @@ export const successStoriesMock: {
 	{
 		title: 'Young Agro Africa',
 		category: 'SaaS',
+		categoryType: 'saas',
 		description:
 			'This project created a direct pipeline for local farmers to deliver fresh produce straight to consumers, streamlining the supply chain and supporting local agriculture.',
 		results: [
@@ -402,6 +412,7 @@ export const successStoriesMock: {
 	{
 		title: 'ST Express Groupage',
 		category: 'SaaS',
+		categoryType: 'saas',
 		description:
 			'A logistics company moving goods from Germany to Cameroon. This project involved redesigning flyers to enhance online visibility and accessibility, supporting broader digital marketing efforts.',
 		results: [
