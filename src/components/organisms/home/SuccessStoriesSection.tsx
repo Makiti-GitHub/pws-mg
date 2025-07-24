@@ -10,7 +10,7 @@ const SuccessStoriesSection = () => {
 	const navigate = useNavigate()
 
 	return (
-		<section className="flex flex-col gap-8 px-[120px] pb-16">
+		<section className="flex flex-col gap-8 px-8 md:px-[80px] lg:px-[120px] pb-16">
 			<SectionHeader
 				title="Our Success Stories"
 				subTitle="Discover some of our recent projects and the impact we've made"

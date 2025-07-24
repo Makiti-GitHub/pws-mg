@@ -16,12 +16,103 @@ import xingLogo from '@/assets/icons/Socials Icons/fa-brands_xing.svg'
 import instagramLogo from '@/assets/icons/Socials Icons/cib_instagram.svg'
 import githubLogo from '@/assets/icons/Socials Icons/formkit_github.svg'
 
+/** Our technologies icons */
+import swiftLogo from '@/assets/images/nuage_logos/swift.svg'
+import Logo5 from '@/assets/images/nuage_logos/5.svg'
+import cypressLogo from '@/assets/images/nuage_logos/cypress.svg'
+import leafLogo from '@/assets/images/nuage_logos/Container-10.svg'
+import postgresqlLogo from '@/assets/images/nuage_logos/PostgreSQL.svg'
+import angularLogo from '@/assets/images/nuage_logos/angular.svg'
+import woocommerceLogo from '@/assets/images/nuage_logos/WooCommerce.svg'
+import javaLogo from '@/assets/images/nuage_logos/java.svg'
+import jLogo from '@/assets/images/nuage_logos/Container-13.svg'
+import jsLogo from '@/assets/images/nuage_logos/javascript.svg'
+import behanceLogo from '@/assets/images/nuage_logos/behance.svg'
+import figmaLogo from '@/assets/images/nuage_logos/figma.svg'
+import dockerLogo from '@/assets/images/nuage_logos/docker.svg'
+import adobeCreativeCloudLogo from '@/assets/images/nuage_logos/Adobe Creative Cloud.svg'
+import flutterLogo from '@/assets/images/nuage_logos/Flutter.svg'
+import gcpLogo from '@/assets/images/nuage_logos/GCP.svg'
+import azureLogo from '@/assets/images/nuage_logos/Azure.svg'
+import kubernetesLogo from '@/assets/images/nuage_logos/kubernetes.svg'
+import leaf2Logo from '@/assets/images/nuage_logos/Container-2.svg'
+import reactLogo from '@/assets/images/nuage_logos/react.svg'
+import postmanLogo from '@/assets/images/nuage_logos/postman.svg'
+import ansibleLogo from '@/assets/images/nuage_logos/Ansible.svg'
+import jiraLogo from '@/assets/images/nuage_logos/jira.svg'
+import oracleLogo from '@/assets/images/nuage_logos/Oracle.svg'
+import upLogo from '@/assets/images/nuage_logos/Container-6.svg'
+import kotlinLogo from '@/assets/images/nuage_logos/Kotlin.svg'
+import nodejsLogo from '@/assets/images/nuage_logos/nodejs.svg'
+import wordpressLogo from '@/assets/images/nuage_logos/wordpress.svg'
+
+/** Our solutions icons  */
+import webConfigIcon from '@/assets/images/Our Solutions/web-configuration.svg'
+import uiuxIcon from '@/assets/images/Our Solutions/fluent-emoji-high-contrast_artist-palette.svg'
+import swDevIcon from '@/assets/images/Our Solutions/software-development.svg'
+import qualityAssuranceIcon from '@/assets/images/Our Solutions/carbon_ibm-cloud-security-compliance-center-workload-protection.svg'
+import devopsCiCdIcon from '@/assets/images/Our Solutions/ci_settings.svg'
+import performanceOptimizationIcon from '@/assets/images/Our Solutions/eos-icons_performance.svg'
+import cloudSolutionsIcon from '@/assets/images/Our Solutions/grommet-icons_storage.svg'
+
+/* Our expertise icons */
+import itIcon from '@/assets/images/Our Expertize/iconsax-keyboard-open.svg'
+import expSwDevIcon from '@/assets/images/Our Expertize/Clip path group.svg'
+import customerServiceIcon from '@/assets/images/Our Expertize/hugeicons_customer-service-01.svg'
+import cartIcon from '@/assets/images/Our Expertize/Clip path group-1.svg'
+import guardIcon from '@/assets/images/Our Expertize/Group.svg'
+import processorIcon from '@/assets/images/Our Expertize/Clip path group-2.svg'
+
+/* Our talents icons */
+import frontendDevIcon from '@/assets/images/Find the talent you need/material-symbols_developer-mode-tv-outline-rounded.svg'
+import backendDevIcon from '@/assets/images/Find the talent you need/fluent_developer-board-lightning-20-regular.svg'
+import devOpsIcon from '@/assets/images/Find the talent you need/ci_settings.svg'
+import uiUxIcon from '@/assets/images/Find the talent you need/fluent-emoji-high-contrast_artist-palette.svg'
+import testManagerIcon from '@/assets/images/Find the talent you need/tabler_test-pipe-2.svg'
+import scrumMasterIcon from '@/assets/images/Find the talent you need/f7_person-2.svg'
+
+export const ourTechnosLogos1 = [
+	{ id: 1, image: swiftLogo },
+	{ id: 2, image: Logo5 },
+	{ id: 3, image: cypressLogo },
+	{ id: 4, image: leafLogo },
+	{ id: 5, image: postgresqlLogo },
+	{ id: 6, image: angularLogo },
+	{ id: 7, image: woocommerceLogo },
+	{ id: 8, image: javaLogo },
+	{ id: 9, image: jLogo },
+	{ id: 10, image: jsLogo },
+	{ id: 11, image: behanceLogo },
+	{ id: 12, image: figmaLogo },
+]
+
+export const ourTechnosLogos2 = [
+	{ id: 1, image: dockerLogo },
+	{ id: 2, image: adobeCreativeCloudLogo },
+	{ id: 3, image: flutterLogo },
+	{ id: 4, image: gcpLogo },
+	{ id: 5, image: azureLogo },
+	{ id: 6, image: kubernetesLogo },
+	{ id: 7, image: leaf2Logo },
+	{ id: 8, image: reactLogo },
+	{ id: 9, image: postmanLogo },
+	{ id: 10, image: ansibleLogo },
+	{ id: 11, image: jiraLogo },
+	{ id: 12, image: oracleLogo },
+	{ id: 13, image: upLogo },
+	{ id: 14, image: kotlinLogo },
+	{ id: 15, image: nodejsLogo },
+	{ id: 16, image: wordpressLogo },
+]
+
 export const expertisesMock: {
 	title: string
 	content: {
 		description: string
 		list: string[]
 	}
+	icon?: string
+	color?: string
 }[] = [
 	{
 		title: 'IT Outsourcing',
@@ -29,6 +120,8 @@ export const expertisesMock: {
 			description: 'Complete IT outsourcing with dedicated teams',
 			list: ['Dedicated Teams', 'Project Management', 'CMS Solutions'],
 		},
+		icon: itIcon,
+		color: '#AACDFA',
 	},
 	{
 		title: 'Software Development',
@@ -36,6 +129,8 @@ export const expertisesMock: {
 			description: 'Agile development and sustainable UX/UI design',
 			list: ['Agile Development', 'UX/UI Design', 'Quality Assurance'],
 		},
+		icon: expSwDevIcon,
+		color: '#B3F2C0',
 	},
 	{
 		title: 'IT Consulting',
@@ -43,6 +138,8 @@ export const expertisesMock: {
 			description: 'AI-driven design and innovation strategies',
 			list: ['AI-Driven Design', 'Innovation Strategy', 'Technical Consulting'],
 		},
+		icon: customerServiceIcon,
+		color: '#FCE6C9',
 	},
 	{
 		title: 'E-Commerce & SaaS',
@@ -50,6 +147,8 @@ export const expertisesMock: {
 			description: 'Platform development and cloud solutions',
 			list: ['E-Commerce Platforms', 'SaaS Development', 'Cloud Integration'],
 		},
+		icon: cartIcon,
+		color: '#E8DCFA',
 	},
 	{
 		title: 'Security & Compliance',
@@ -57,6 +156,8 @@ export const expertisesMock: {
 			description: 'Comprehensive cybersecurity and regulatory compliance solutions',
 			list: ['Cybersecurity Audits', 'Data Protection', 'Compliance Solutions'],
 		},
+		icon: guardIcon,
+		color: '#F6D8D8',
 	},
 	{
 		title: 'Digital Solutions',
@@ -64,46 +165,92 @@ export const expertisesMock: {
 			description: 'Green digital marketing and app development',
 			list: ['Digital Marketing', 'Mobile Application', 'Cross-Platform'],
 		},
+		icon: processorIcon,
+		color: '#F4BBDF',
 	},
 ]
 
-export const solutionsProcessStackMock = [
-	'Requirement Engineering',
-	'UX/UI Design',
-	'Software Development',
-	'Quality Assurance',
-	'DevOps & CI/CD',
-	'Performance Optimization',
-	'Cloud Solutions',
+export const solutionsProcessStackMock: { label: string; icon: string }[] = [
+	{ label: 'Requirement Engineering', icon: webConfigIcon },
+	{ label: 'UX/UI Design', icon: uiuxIcon },
+	{ label: 'Software Development', icon: swDevIcon },
+	{ label: 'Quality Assurance', icon: qualityAssuranceIcon },
+	{ label: 'DevOps & CI/CD', icon: devopsCiCdIcon },
+	{ label: 'Performance Optimization', icon: performanceOptimizationIcon },
+	{
+		label: 'Cloud Solutions',
+		icon: cloudSolutionsIcon,
+	},
 ]
 
 export const talentProfilesMock: {
 	title: string
-	cost: number
+	hourCost: number
+	expYear: number
+	location: 'On Site' | 'Remote'
+	skills: string[]
+	description: string
+	icon?: string
 }[] = [
 	{
 		title: 'Frontend Developer',
-		cost: 45,
+		hourCost: 45,
+		location: 'Remote',
+		expYear: 5,
+		description:
+			'Expert frontend developers specialized in modern web technologies and responsive design',
+		skills: ['React', 'Vue.js', 'Typescript', 'Tailwind CSS', 'Next.js'],
+		icon: frontendDevIcon,
 	},
 	{
 		title: 'Backend Developer',
-		cost: 50,
+		hourCost: 50,
+		location: 'Remote',
+		expYear: 5,
+		description:
+			'Expert frontend developers specialized in modern web technologies and responsive design',
+		skills: ['React', 'Vue.js', 'Typescript', 'Tailwind CSS', 'Next.js'],
+		icon: backendDevIcon,
 	},
 	{
 		title: 'DevOps Engineer',
-		cost: 55,
+		hourCost: 55,
+		location: 'Remote',
+		expYear: 5,
+		description:
+			'Expert frontend developers specialized in modern web technologies and responsive design',
+		skills: ['React', 'Vue.js', 'Typescript', 'Tailwind CSS', 'Next.js'],
+		icon: devOpsIcon,
 	},
 	{
 		title: 'UX/UI Designer',
-		cost: 45,
+		hourCost: 45,
+		location: 'Remote',
+		expYear: 5,
+		description:
+			'Expert frontend developers specialized in modern web technologies and responsive design',
+		skills: ['React', 'Vue.js', 'Typescript', 'Tailwind CSS', 'Next.js'],
+		icon: uiUxIcon,
 	},
 	{
 		title: 'Test Manager',
-		cost: 40,
+		hourCost: 40,
+		location: 'Remote',
+		expYear: 5,
+		description:
+			'Expert frontend developers specialized in modern web technologies and responsive design',
+		skills: ['React', 'Vue.js', 'Typescript', 'Tailwind CSS', 'Next.js'],
+		icon: testManagerIcon,
 	},
 	{
 		title: 'Scrum Master',
-		cost: 45,
+		hourCost: 45,
+		location: 'Remote',
+		expYear: 5,
+		description:
+			'Expert frontend developers specialized in modern web technologies and responsive design',
+		skills: ['React', 'Vue.js', 'Typescript', 'Tailwind CSS', 'Next.js'],
+		icon: scrumMasterIcon,
 	},
 ]
 

@@ -13,7 +13,7 @@ const MotionIconButton2 = () => {
 			onMouseLeave={() => setButtonState('default')}
 			onClick={() => {}}
 		>
-			<div className="bg-primary hover:cursor-pointer border-2 border-primary hover:border-primary hover:bg-secondary text-secondary hover:text-primary rounded-[40px] !px-8 !py-6 !h-max !m-0 w-max flex items-center duration-300 ease-in-out">
+			<div className="bg-primary hover:cursor-pointer border-2 border-primary hover:border-primary hover:bg-secondary text-secondary hover:text-primary rounded-[40px] !px-4 !py-3 lg:!px-8 lg:!py-6 !h-max !m-0 w-max flex items-center duration-300 ease-in-out">
 				{/* <AnimatePresence initial={false} mode="wait">
 					{buttonState === 'copy' ? (
 						<motion.div
@@ -49,7 +49,7 @@ const MotionIconButton2 = () => {
 						</motion.div>
 					)}
 				</AnimatePresence>
-				<p className="text-2xl px-2 z-20">Discover Our Outsourcing Solutions</p>
+				<p className="text-xl lg:text-2xl px-2 z-20">Discover Our Outsourcing Solutions</p>
 				<AnimatePresence initial={false}>
 					{buttonState === 'default' && (
 						<motion.div

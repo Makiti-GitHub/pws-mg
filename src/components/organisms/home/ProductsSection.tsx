@@ -7,7 +7,10 @@ import { ArrowRightIcon } from 'lucide-react'
 
 const ProductsSection = () => {
 	return (
-		<section id="products" className="flex flex-col gap-8 px-[120px] pb-16">
+		<section
+			id="products"
+			className="flex flex-col gap-8 px-8 md:px-[80px] lg:px-[120px] pb-16"
+		>
 			<div className="space-y-8">
 				<SectionHeader
 					title="Our Live Products"

@@ -5,7 +5,7 @@ import Statistics from '@/components/organisms/Statistics'
 import { Button } from '@/components/ui/button'
 import { ArrowLeftIcon } from 'lucide-react'
 import circleIcon from '@/assets/images/Find the talent you need/Vector.svg'
-import bulbIcon from '@/assets/images/Why choose Makiti/famicons_bulb-outline.png'
+import bulbIcon from '@/assets/images/Find the talent you need/famicons_bulb-outline.svg'
 
 import { PageComponent, useNavigate } from 'rasengan'
 
@@ -73,9 +73,20 @@ const About: PageComponent = () => {
 								The year 2024 was marked by a significant development of our teams.
 								We recruited a diverse range of exceptional profiles: Java and React
 								Developers, Site & Reliability Engineers, UX/UI Designers, Graphic
-								Designers, and Test Automation Engineers. These talents have already
-								led to the realization of several innovative internal products, such
-								as MATOA and LYSSAFI.
+								Designers, and Test Automation Engineers.
+							</p>
+
+							<p>
+								These talents have already led to the realization of several
+								innovative internal products, such as{' '}
+								<a href="#" className="underline text-primary">
+									<span>MATOA</span>
+								</a>{' '}
+								and{' '}
+								<a href="#" className="underline text-primary">
+									<span>LYSSAFI</span>
+								</a>
+								.
 							</p>
 
 							<p>

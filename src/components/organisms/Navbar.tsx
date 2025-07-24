@@ -9,7 +9,7 @@ const NavBar = () => {
 		<div className="fixed left-0 w-full z-50">
 			<nav className="px-8 md:px-[80px] lg:px-[120px] py-5 w-full flex items-center justify-between bg-secondary glassy_navbar">
 				{/* === Logo === */}
-				<div className="w-[121px] h-[84px] bg-red-300">
+				<div className="w-[121px] h-[84px]">
 					{/* === Background Images === */}
 					{/* <Image */}
 					<Link to={'/'}>

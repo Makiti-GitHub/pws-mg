@@ -3,9 +3,17 @@ import { Button } from '@/components/ui/button'
 import { talentProfilesMock } from '@/data/mock'
 import { ArrowRightIcon } from 'lucide-react'
 
+import clockIcon from '@/assets/images/Find the talent you need/iconsax-clock.svg'
+import locationIcon from '@/assets/images/Find the talent you need/iconsax-location.svg'
+import { useState } from 'react'
+
 const TalentProfileSection = () => {
+	const [selectedTalent, setSelectedTalent] = useState<(typeof talentProfilesMock)[number]>(
+		talentProfilesMock[0],
+	)
+
 	return (
-		<section className="px-[120px] w-screen pb-16">
+		<section className="px-8 md:px-[80px] lg:px-[120px] w-screen pb-16">
 			<div className="flex flex-col gap-8">
 				<SectionHeader
 					title="Find the Talent You Need"
@@ -19,54 +27,80 @@ const TalentProfileSection = () => {
 								tabIndex={0}
 								role="button"
 								key={`talent-profile-${index}`}
+								onClick={() => setSelectedTalent(profile)}
 								className={`${
-									index === 0
-										? 'bg-[#F0F1F1] border-[#44474A]'
+									profile.title === selectedTalent.title
+										? 'bg-surface-container border-[#44474A]'
 										: 'border-[#C4C7CA]'
-								} px-6 hover:cursor-pointer hover:bg-[#F0F1F1] py-4 border-[0.75px] rounded-[12px] flex gap-2.5`}
+								} px-6 hover:cursor-pointer hover:bg-surface-container py-4 border-[0.75px] rounded-[12px] flex gap-2.5`}
 							>
-								<div className="size-8 bg-red-300" />
+								<img
+									src={profile.icon}
+									alt={profile.title}
+									className="size-8 object-contain aspect-auto"
+								/>
+
 								<div className="flex flex-col gap-2 text-x">
-									<p className="text-[#020304]">{profile.title}</p>
+									<p className="text-on-surface">{profile.title}</p>
 									<p className="text-[#73777C] font-seravek_mediuml">
-										From ${profile.cost}/hour
+										From ${profile.hourCost}/hour
 									</p>
 								</div>
 							</div>
 						))}
 					</aside>
 
-					<div className="col-span-6 lg:col-span-8 space-y-8 rounded-[12px] border-[0.75px] p-6 border-[#C4C7CA]">
+					<div className="col-span-6 lg:col-span-8 space-y-8 rounded-[12px] border-[0.75px] p-6 border-outline-variant">
 						<div className="flex gap-4">
-							<div className="size-8 bg-[#F0F1F1]" />
-							<div className="flex flex-col gap-2">
-								<p className="text-[#020304]">{talentProfilesMock[0].title}</p>
-								<p className="text-[#73777C] font-seravek_mediuml">
-									From ${talentProfilesMock[0].cost}/hour
-								</p>
+							<div className="p-2.5 rounded-[4px] bg-surface-container flex items-center justify-center">
+								<div className="size-8">
+									<img
+										src={selectedTalent.icon}
+										alt={selectedTalent.title}
+										className="size-full object-contain aspect-auto"
+									/>
+								</div>
+							</div>
+							<div className="flex flex-col gap-2 w-full">
+								<p className="text-on-surface">{selectedTalent.title}</p>
+								<div className="text-outline font-seravek_medium text-base gap-3.5 flex items-center">
+									<div className="flex items-center gap-2">
+										<img
+											src={clockIcon}
+											alt="clock icon"
+											className="size-5 object-contain aspect-auto"
+										/>
+										<span className="">{selectedTalent.expYear}+ years</span>
+									</div>
+									<div className="flex items-center gap-2">
+										<img
+											src={locationIcon}
+											alt="location icon"
+											className="size-5 object-contain aspect-auto"
+										/>
+										<span className="">{selectedTalent.location}</span>
+									</div>
+								</div>
 							</div>
 						</div>
 
-						<p className="font-seravek_medium text-base text-[#73777C]">
-							Expert frontend developers specialized in modern web technologies and
-							responsive design
+						<p className="font-seravek_medium text-base text-outline">
+							{selectedTalent.description}
 						</p>
 
 						<div className="space-y-4">
-							<p className="text-[#020304] text-2xl font-seravek_medium">
+							<p className="text-on-surface text-2xl font-seravek_medium">
 								Key Skills
 							</p>
 							<div className="flex flex-wrap gap-3">
-								{['React', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'Next.js'].map(
-									(skill, index) => (
-										<span
-											key={`talent-skill-${index}-${skill}`}
-											className="border-[0.5px] border-[#C4C7CA] px-3 py-1 rounded-[4px]"
-										>
-											{skill}
-										</span>
-									),
-								)}
+								{selectedTalent.skills.map((skill, index) => (
+									<span
+										key={`talent-skill-${index}-${skill}`}
+										className="border-[0.5px] border-outline-variant px-3 py-1 rounded-[4px]"
+									>
+										{skill}
+									</span>
+								))}
 							</div>
 						</div>
 
@@ -74,7 +108,9 @@ const TalentProfileSection = () => {
 							<div className="space-y-6">
 								<div className="space-y-1 font-seravek_medium">
 									<p className="text-[#73777C] text-base">Starting Price</p>
-									<p className="text-[32px] text-secondary">From $45/hour</p>
+									<p className="text-[32px] text-secondary">
+										From ${selectedTalent.hourCost}/hour
+									</p>
 								</div>
 
 								<Button
