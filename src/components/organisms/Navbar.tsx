@@ -1,9 +1,8 @@
-import { ArrowUpRightIcon } from 'lucide-react'
-import { Button } from '../ui/button'
 import makitiLogoWhite from '@/assets/images/logo_makiti/Makiti Logo White.png'
 // import makitiLogoDark from '@/assets/images/logo_makiti/Makiti Logo Colored.png'
 import { Link } from 'rasengan'
 import LanguageButton from '../atoms/buttons/LanguageButton'
+import MotionIconButton2 from '../atoms/buttons/MotionIconButton2'
 // import { useEffect, useState } from 'react'
 // import { AnimatePresence, motion } from 'framer-motion'
 
@@ -99,10 +98,14 @@ const NavBar = () => {
 				</ul>
 
 				<div className="flex items-center gap-4 lg:gap-8">
-					<Button variant="primary" className="rounded-4xl">
+					<MotionIconButton2
+						label="Let's talk"
+						className="rounded-[40px] px-2 py-1.5 h-max text-base"
+					/>
+					{/* <Button variant="primary" className="rounded-4xl">
 						<span className="sr-only">Let's talk</span> <span>Let's talk</span>{' '}
 						<ArrowUpRightIcon className="size-5" />
-					</Button>
+					</Button> */}
 
 					<LanguageButton />
 				</div>

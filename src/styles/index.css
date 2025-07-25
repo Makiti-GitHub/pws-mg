@@ -163,6 +163,10 @@ body {
 	box-shadow: 0.5px 0.5px 6px 0px #0000001a, -0.5px -0.5px 6px 2px #0000001a;
 }
 
+.box_shadow_language_container {
+	box-shadow: -1px -1px 8px 0px #0000001f, 1px 1px 8px 0px #0000001f;
+}
+
 @font-face {
 	font-family: 'SeravekBold';
 	src: local('SeravekBold'),

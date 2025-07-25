@@ -34,18 +34,22 @@ const ProductsCard: FC<ProductsCardProps> = ({ story, withButton = false }) => {
 					</div>
 					<p className="text-base text-outline">{story.description}</p>
 				</div>
-				{withButton && (
+				{withButton && story.link ? (
 					<div className="w-full">
-						<Button
-							variant={'primary'}
-							className="gap-1 w-full !px-8 !py-2 !h-max !m-0 rounded-[40px] hover:cursor-pointer"
-						>
-							<span className="sr-only">View Live website</span>
-							<span className="text-lg font-seravek_medium">View Live website</span>
-							<ArrowUpRightIcon className="size-6" />
-						</Button>
+						<a href={story.link}>
+							<Button
+								variant={'primary'}
+								className="gap-1 w-full !px-8 !py-2 !h-max !m-0 rounded-[40px] hover:cursor-pointer"
+							>
+								<span className="sr-only">View Live website</span>
+								<span className="text-lg font-seravek_medium">
+									View Live website
+								</span>
+								<ArrowUpRightIcon className="size-6" />
+							</Button>
+						</a>
 					</div>
-				)}
+				) : null}
 			</div>
 		</div>
 	)

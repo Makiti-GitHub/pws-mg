@@ -98,6 +98,14 @@ import figmaIcon from '@/assets/images/Technologies icons/figma.svg'
 import jsIcon from '@/assets/images/Technologies icons/js.svg'
 import nextIcon from '@/assets/images/Technologies icons/next.svg'
 import reactIcon from '@/assets/images/Technologies icons/react.svg'
+import adobeIllustratorIcon from '@/assets/images/Technologies icons/adobeIllustrator.svg'
+import photoshopIcon from '@/assets/images/Technologies icons/photoshop.svg'
+import wordpressIcon from '@/assets/images/Technologies icons/wordpress.svg'
+
+/** Hero images */
+import heroImage1 from '@/assets/images/Hero Section/image1.png'
+import heroImage2 from '@/assets/images/Hero Section/image2.png'
+import heroImage3 from '@/assets/images/Hero Section/image3.png'
 
 export const techStackMock = {
 	html: htmlIcon,
@@ -106,6 +114,9 @@ export const techStackMock = {
 	js: jsIcon,
 	next: nextIcon,
 	react: reactIcon,
+	adobeIllustrator: adobeIllustratorIcon,
+	photoshop: photoshopIcon,
+	wordpress: wordpressIcon,
 }
 
 export const ourTechnosLogos1 = [
@@ -243,20 +254,20 @@ export const talentProfilesMock: {
 		title: 'Backend Developer',
 		hourCost: 50,
 		location: 'Remote',
-		expYear: 5,
+		expYear: 6,
 		description:
-			'Expert frontend developers specialized in modern web technologies and responsive design',
-		skills: ['React', 'Vue.js', 'Typescript', 'Tailwind CSS', 'Next.js'],
+			'Senior backend developers with expertise in scalable architecture and cloud solutions.',
+		skills: ['Node.js', 'Python', 'Java', 'PostgreSQL', 'AWS'],
 		icon: backendDevIcon,
 	},
 	{
 		title: 'DevOps Engineer',
 		hourCost: 55,
 		location: 'Remote',
-		expYear: 5,
+		expYear: 7,
 		description:
-			'Expert frontend developers specialized in modern web technologies and responsive design',
-		skills: ['React', 'Vue.js', 'Typescript', 'Tailwind CSS', 'Next.js'],
+			'DevOps engineers focused on automation, CI/CD, and infrastructure optimization.',
+		skills: ['Docker', 'Kubernetes', 'AWS', 'Jenkins', 'Terraform'],
 		icon: devOpsIcon,
 	},
 	{
@@ -265,28 +276,28 @@ export const talentProfilesMock: {
 		location: 'Remote',
 		expYear: 5,
 		description:
-			'Expert frontend developers specialized in modern web technologies and responsive design',
-		skills: ['React', 'Vue.js', 'Typescript', 'Tailwind CSS', 'Next.js'],
+			'Creative UX/UI designers with focus on user-centered design and sustainability.',
+		skills: ['Figma', 'Adobe XD', 'Prototyping', 'User Research', 'Design Systems'],
 		icon: uiUxIcon,
 	},
 	{
 		title: 'Test Manager',
 		hourCost: 40,
 		location: 'Remote',
-		expYear: 5,
+		expYear: 4,
 		description:
-			'Expert frontend developers specialized in modern web technologies and responsive design',
-		skills: ['React', 'Vue.js', 'Typescript', 'Tailwind CSS', 'Next.js'],
+			'Test managers and QA engineers ensuring quality through comprehensive testing.',
+		skills: ['Selenium', 'Jest', 'Cypress', 'Test Automation', 'Quality Assurance'],
 		icon: testManagerIcon,
 	},
 	{
 		title: 'Scrum Master',
 		hourCost: 45,
 		location: 'Remote',
-		expYear: 5,
+		expYear: 8,
 		description:
-			'Expert frontend developers specialized in modern web technologies and responsive design',
-		skills: ['React', 'Vue.js', 'Typescript', 'Tailwind CSS', 'Next.js'],
+			'Certified Scrum Masters with extensive experience in agile project management.',
+		skills: ['Scrum', 'Agile', 'Jira', 'Team Leadership', 'Project Management'],
 		icon: scrumMasterIcon,
 	},
 ]
@@ -431,6 +442,7 @@ export const ourLiveProductsMock: {
 	category: string
 	description: string
 	image?: string
+	link?: string
 }[] = [
 	{
 		title: 'Inventory & Stock Management',
@@ -438,6 +450,7 @@ export const ourLiveProductsMock: {
 		description:
 			'Track inventory, manage orders, and monitor stock levels with this user-friendly mobile solution.',
 		image: portfolioImage2,
+		link: 'https://ism.cm',
 	},
 	{
 		title: 'Ticket Management System',
@@ -445,13 +458,15 @@ export const ourLiveProductsMock: {
 		description:
 			'Web platform for agencies to manage trips, vendors, and bookings with centralized control.',
 		image: portfolioImage3,
+		link: 'https://agency.matoa.io',
 	},
 	{
-		title: 'Inventory & Stock Management',
+		title: 'Inventory & Stock Management - VendorAdmin',
 		category: 'Vendor Administration Platform',
 		description:
 			'Vendor-focused platform for real-time stock tracking, order management, and inventory insights.',
 		image: portfolioImage9,
+		link: 'https://admin.ism.cm',
 	},
 
 	{
@@ -460,6 +475,7 @@ export const ourLiveProductsMock: {
 		description:
 			'Mobile app for booking, managing, and tracking bus trips with real-time updates.',
 		image: portfolioImage1,
+		link: 'https://matoa.io',
 	},
 	{
 		title: 'Payment Gateway System',
@@ -467,6 +483,7 @@ export const ourLiveProductsMock: {
 		description:
 			'Universal payment platform enabling secure, multi-vendor transactions across all web interfaces.',
 		image: portfolioImage4,
+		link: 'https://admin.lyssafi.com',
 	},
 	{
 		title: 'Payment Gateway System',
@@ -474,6 +491,7 @@ export const ourLiveProductsMock: {
 		description:
 			'Mobile app for trip payments, scheduling, and seat tracking with a streamlined interface.',
 		image: portfolioImage10,
+		link: 'https://lyssafi.com',
 	},
 ]
 
@@ -833,5 +851,31 @@ export const socialsMock: {
 	{
 		label: 'Youtube',
 		icon: youtubeLogo,
+	},
+]
+
+export const heroCarousel: {
+	title: string
+	desc: string
+	image: string
+	tag: string
+}[] = [
+	{
+		title: 'Your Strategic IT Outsourcing Partner',
+		desc: 'Transform your business with our expert IT outsourcing solutions. From development to consulting, we deliver excellence across all technology domains.',
+		tag: 'IT OUTSOURCING',
+		image: heroImage1,
+	},
+	{
+		title: 'Empower Growth with IT Transformation',
+		desc: 'Reimagine your technology landscape with our IT transformation expertise. From legacy modernization to digital strategy, we drive impactful change at scale.',
+		tag: 'IT Transformation & Audit',
+		image: heroImage2,
+	},
+	{
+		title: 'Accelerate Innovation with Agile Delivery',
+		desc: 'Deliver value faster with our agile software development services. Our adaptive teams bring speed, flexibility, and consistent quality to every sprint, helping you respond to change with confidence.',
+		tag: 'IT Transformation & Audit',
+		image: heroImage3,
 	},
 ]

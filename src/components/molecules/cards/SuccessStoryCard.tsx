@@ -22,25 +22,17 @@ const SuccessStoryCard: FC<SuccessStoryCardProps> = ({ story }) => {
 			</div>
 			<div className="space-y-2 col-span-1 lg:col-span-2 xl:col-span-1">
 				<div className="flex">
-					{/* {Array.from({ length: 4 }).map((_, index) => (
-						<div
-							key={`tech-${index}-${story.title}`}
-							className={`size-12 rounded-sm bg-[#F0F0F0] border-[1.5px] border-white ${
-								index % 2 === 0 ? 'rotate-6' : '-rotate-6'
-							}`}
-						/>
-					))} */}
 					{story.techs?.map((item, index) => (
 						<div
 							key={`tech-${index}-${story.title}`}
-							className={`size-12 rounded-sm bg-[#F0F0F0] border-[1.5px] border-white flex items-center justify-center ${
+							className={`size-12 rounded-sm bg-[#F0F0F0] border-[1.5px] flex items-center justify-center ${
 								index % 2 === 0 ? 'rotate-6' : '-rotate-6'
 							}`}
 						>
 							<Image
 								src={techStackMock[item]}
-								width={'60%'}
-								height={'80%'}
+								width={'100%'}
+								height={'100%'}
 								alt={`${item}`}
 								className="object-contain aspect-auto"
 							/>

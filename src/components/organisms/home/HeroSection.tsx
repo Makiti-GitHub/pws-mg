@@ -1,33 +1,103 @@
 import BrandsCarousel from '@/components/molecules/carousel/BrandsCarousel'
 import CustomCursor from '@/components/molecules/cursors/CustomCursor'
 import { Separator } from '@/components/ui/separator'
-import { statisticsMock } from '@/data/mock'
+import { heroCarousel, statisticsMock } from '@/data/mock'
 import useIsTouchDevice from '@/hooks/useIsTouchDevice'
 import useMouse from '@/hooks/useMouse'
-
-import heroImage from '@/assets/images/Hero Section/Image 01.png'
 import AnimatedCounter from '@/components/atoms/animations/AnimatedCounter'
 import MotionIconButton2 from '@/components/atoms/buttons/MotionIconButton2'
+import { useRef, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { ArrowLeftIcon, ArrowRightIcon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'
+import Image from '@rasenganjs/image'
+
+const slideVariants = {
+	hiddenRight: {
+		x: '100%',
+		opacity: 0,
+	},
+	hiddenLeft: {
+		x: '-100%',
+		opacity: 0,
+	},
+	visible: {
+		x: '0',
+		opacity: 1,
+		transition: {
+			duration: 0.6,
+		},
+	},
+	exit: {
+		opacity: 0,
+		scale: 0.8,
+		transition: {
+			duration: 0.6,
+		},
+	},
+}
+
+const slidersVariants = {
+	hover: {
+		scale: 1.2,
+	},
+}
+const dotsVariants = {
+	initial: {
+		y: 0,
+	},
+	active: {
+		backgroundColor: '#F9B122',
+		width: 30,
+	},
+	inactive: {
+		backgroundColor: '#C4C7CA',
+		//   transition: { type: "spring", stiffness: 1000, damping: "10" },
+		transition: { duration: 2 },
+	},
+	hover: {
+		scale: 1.1,
+		transition: { duration: 0.2 },
+	},
+}
 
 const HeroSection = () => {
 	const { isDesktop } = useIsTouchDevice()
 	const { handleMouseLeave, handleMouseMove, cursorPosition, isHovering } = useMouse()
+
+	const [currentIndex, setCurrentIndex] = useState(0)
+	const [direction, setDirection] = useState('left')
+
+	const handleNext = () => {
+		setDirection('right')
+		setCurrentIndex((prevIndex) => (prevIndex + 1 === heroCarousel.length ? 0 : prevIndex + 1))
+	}
+
+	const handlePrevious = () => {
+		setDirection('left')
+
+		setCurrentIndex((prevIndex) =>
+			prevIndex - 1 < 0 ? heroCarousel.length - 1 : prevIndex - 1,
+		)
+	}
+
+	const handleDotClick = (index: number) => {
+		setDirection(index > currentIndex ? 'right' : 'left')
+		setCurrentIndex(index)
+	}
 
 	return (
 		<section className={`space-y-24 bg-secondary w-screen pt-[150px] pb-16`}>
 			<div className="w-full grid grid-cols-4 lg:grid-cols-2">
 				<div className="flex flex-col gap-10 pl-8 md:px-[80px] lg:pl-[120px] lg:pr-0 text-white col-span-3 lg:col-span-1">
 					<span className="rounded-2xl w-max px-3 py-1.5 border-2 border-white">
-						IT OUTSOURCING
+						{heroCarousel[currentIndex].tag}
 					</span>
 					<div className="space-y-6 ">
 						<h1 className="font-seravek_bold text-5xl lg:text-7xl xl:text-[80px] leading-16 xl:leading-20">
-							Your Strategic IT Outsourcing Partner
+							{heroCarousel[currentIndex].title}
 						</h1>
 						<p className="font-seravek_bold text-xl lg:text-[26px] leading-normal">
-							Transform your business with our expert IT outsourcing solutions. From
-							development to consulting, we deliver excellence across all technology
-							domains.
+							{heroCarousel[currentIndex].desc}
 						</p>
 					</div>
 
@@ -44,6 +114,65 @@ const HeroSection = () => {
 						label="Discover Our Outsourcing Solutions"
 						className="rounded-[40px] px-4 py-3 lg:px-8 lg:py-6 h-max text-xl lg:text-2xl"
 					/>
+
+					<div>
+						<AnimatePresence>
+							{heroCarousel.length > 0 ? (
+								<div className="w-max flex gap-4 items-center justify-between">
+									<motion.div
+										variants={slidersVariants}
+										whileHover="hover"
+										role="button"
+										className="cursor-pointer"
+										onClick={(e) => {
+											handlePrevious()
+											e.preventDefault()
+											e.stopPropagation()
+										}}
+									>
+										<ArrowLeftIcon className="size-7 text-white" />
+									</motion.div>
+									<div className="flex gap-2">
+										{heroCarousel.map((_, index) => (
+											<motion.div
+												key={`carousel-dot-${index}`}
+												className={`size-3 rounded-[12px] ${
+													currentIndex === index
+														? 'bg-primary'
+														: 'bg-outline-variant'
+												}`}
+												onClick={(e) => {
+													handleDotClick(index)
+													e.stopPropagation()
+												}}
+												initial="initial"
+												animate={
+													currentIndex === index ? 'active' : 'inactive'
+												}
+												// animate="active"
+												whileHover="hover"
+												role="button"
+												variants={dotsVariants}
+											/>
+										))}
+									</div>
+									<motion.div
+										variants={slidersVariants}
+										whileHover="hover"
+										role="button"
+										className="cursor-pointer"
+										onClick={(e) => {
+											handleNext()
+											e.preventDefault()
+											e.stopPropagation()
+										}}
+									>
+										<ArrowRightIcon className="size-7 text-white" />
+									</motion.div>
+								</div>
+							) : null}
+						</AnimatePresence>
+					</div>
 				</div>
 				<div
 					onMouseMove={handleMouseMove}
@@ -53,10 +182,11 @@ const HeroSection = () => {
 					} overflow-hidden`}
 				>
 					<div className="relative">
-						<img
-							src={heroImage}
-							alt="hero-image"
-							loading="lazy"
+						<Image
+							src={heroCarousel[currentIndex].image}
+							alt={heroCarousel[currentIndex].title}
+							width={'100%'}
+							height={'100%'}
 							className="aspect-auto object-contain size-full"
 						/>
 						<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-full scale-[140%] rounded-full bg-radial-[at_50%_50%] from-30% from-transparent to-secondary z-20 to-50%" />

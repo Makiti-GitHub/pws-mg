@@ -25,7 +25,7 @@ const LanguageButton: FC<LanguageButtonProps> = ({ isScrolled }) => {
 
 	return (
 		<DropdownMenu>
-			<DropdownMenuTrigger className="cursor-pointer rounded-lg outline-none hover:bg-accent hover:text-accent-foreground focus-visible:bg-secondary">
+			<DropdownMenuTrigger className="cursor-pointer rounded-lg outline-none hover:bg-slate-300/50 hover:text-accent-foreground focus-visible:bg-slate-300/50">
 				<Tooltip>
 					<TooltipTrigger asChild>
 						<div className="flex gap-2 p-1">
@@ -50,21 +50,25 @@ const LanguageButton: FC<LanguageButtonProps> = ({ isScrolled }) => {
 					</TooltipContent>
 				</Tooltip>
 			</DropdownMenuTrigger>
-			<DropdownMenuContent side="bottom" align="end">
+			<DropdownMenuContent
+				side="bottom"
+				align="end"
+				className="bg-surface box_shadow_language_container"
+			>
 				<DropdownMenuLabel className="text-secondary">{t('languages')}</DropdownMenuLabel>
 				<DropdownMenuSeparator />
 				{Object.keys(intl.langs ?? {}).map((lng, index) => (
 					<DropdownMenuCheckboxItem
 						checked={i18n.resolvedLanguage === lng}
-						className={`flex w-full justify-start p-2 ${
+						className={`flex w-full justify-start p-2 gap-2 ${
 							i18n.resolvedLanguage === lng ? 'font-seravek_bold' : ''
-						} rounded-sm hover:cursor-pointer focus-visible:bg-transparent hover:bg-transparent`}
+						} rounded-sm hover:cursor-pointer focus-visible:bg-transparent hover:bg-black`}
 						onCheckedChange={() => intl.changeLanguage(lng)}
 						key={index}
 					>
 						<img className="ml-6 size-6" src={intl.getLangIcon(lng)} alt={lng} />
 						<span
-							className={`ml-2 text-secondary ${
+							className={`text-on-surface text-lg ${
 								i18n.resolvedLanguage === lng ? 'underline' : ''
 							}`}
 						>

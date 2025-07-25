@@ -22,7 +22,7 @@ const BrandsLogos = [
 	orangeLogo,
 ]
 
-const carouselVariants = cva('group/brands flex w-full mx-auto overflow-hidden', {
+const carouselVariants = cva('group/brands flex w-screen mx-auto overflow-hidden', {
 	variants: {
 		variant: {
 			default: '',
@@ -45,7 +45,7 @@ const BrandsCarousel = ({ className, variant, ...props }: BrandsCarouselProps) =
 	return (
 		<div className={cn(carouselVariants({ variant }), className)} {...props}>
 			<div
-				className={`group-hover/brands:paused flex animate-slide items-center gap-16 md:gap-20 py-4 shrink-0 w-[calc(2*var(5)*(theme(gap.16)+128px))] md:w-[calc(2*var(5)*(theme(gap.20)+144px))]`}
+				className={`group-hover/brands:paused flex animate-slide items-center gap-16 md:gap-20 py-4 shrink-0 w-[calc(2*var(9)*(theme(gap.16)+128px))] md:w-[calc(2*var(9)*(theme(gap.20)+144px))]`}
 			>
 				{[...BrandsLogos, ...BrandsLogos, ...BrandsLogos].map((elmt, index) => (
 					<img

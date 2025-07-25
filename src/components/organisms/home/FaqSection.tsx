@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button'
 import SectionHeader from '@/components/molecules/SectionHeader'
 import {
 	Accordion,
@@ -8,18 +7,18 @@ import {
 } from '@/components/ui/accordion'
 import { frequentlyAskedQuestionsMock } from '@/data/mock'
 import Banner from '@/components/molecules/banner/Banner'
-import { ArrowUpRightIcon, AtSignIcon, ClockIcon, MapPinIcon, SmartphoneIcon } from 'lucide-react'
+import { AtSignIcon, ClockIcon, MapPinIcon, SmartphoneIcon } from 'lucide-react'
 import MotionIconButton2 from '@/components/atoms/buttons/MotionIconButton2'
 
 const FaqSection = () => {
 	return (
-		<section className="px-[120px] flex flex-col gap-[24px] pb-16">
+		<section className="px-8 md:px-[80px] lg:px-[120px] screen flex flex-col gap-[24px] pb-16">
 			<SectionHeader
 				title="Frequently Asked Questions"
 				subTitle="Everything you need to know about our IT Outsourcing services"
 			/>
 			<div className="grid grid-cols-12 gap-4">
-				<div className="col-span-8">
+				<div className="col-span-7 md:col-span-8">
 					<Accordion
 						type="multiple"
 						// collapsible={true}
@@ -62,7 +61,7 @@ const FaqSection = () => {
 						))}
 					</Accordion>
 				</div>
-				<aside className="space-y-4 col-span-4 flex flex-col">
+				<aside className="space-y-4 col-span-5 md:col-span-4 flex flex-col">
 					<div className="p-6 rounded-[12px] box_shadow_products_card">
 						<div className="space-y-4">
 							<div className="flex items-center gap-3">

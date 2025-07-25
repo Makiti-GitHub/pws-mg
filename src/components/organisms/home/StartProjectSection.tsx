@@ -100,7 +100,7 @@ const StartProjectSection = () => {
 	}
 
 	return (
-		<section className="px-[120px] flex flex-col gap-8 w-full">
+		<section className="px-8 md:px-[80px] lg:px-[120px] flex flex-col gap-8 w-full">
 			<div className="space-y-[50px]">
 				<SectionHeader
 					title="Start Your Project Today"
