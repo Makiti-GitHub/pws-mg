@@ -15,6 +15,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
 	const languages = {
 		en: { nativeName: translator('language.en') },
 		fr: { nativeName: translator('language.fr') },
+		de: { nativeName: translator('language.de') },
 	}
 
 	/**

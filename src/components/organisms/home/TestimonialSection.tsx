@@ -1,3 +1,4 @@
+import MotionIconButton2 from '@/components/atoms/buttons/MotionIconButton2'
 import Banner from '@/components/molecules/banner/Banner'
 import TestimonialCard from '@/components/molecules/cards/TestimonialCard'
 import SectionHeader from '@/components/molecules/SectionHeader'
@@ -27,14 +28,20 @@ const TestimonialSection = () => {
 				desc="Let's discuss how we can help you achieve similar results with our
                                         expert IT outsourcing services."
 			>
-				<Button
+				<MotionIconButton2
+					label="Let's Talk"
+					className="rounded-4xl h-max px-4 py-3 gap-1 text-lg font-seravek_medium"
+					prefixIcon={<ArrowUpRightIcon className="size-6" />}
+					suffixIcon={<ArrowUpRightIcon className="size-6" />}
+				/>
+				{/* <Button
 					variant="primary"
 					className="rounded-4xl h-max px-5 py-3 gap-1 hover:cursor-pointer"
 				>
 					<span className="sr-only">Let's Talk</span>{' '}
 					<span className="text-lg font-seravek_medium">Let's Talk</span>{' '}
 					<ArrowUpRightIcon className="size-6" />
-				</Button>
+				</Button> */}
 			</Banner>
 		</section>
 	)

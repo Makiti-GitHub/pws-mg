@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next'
 import { useIntlContext } from '@/hooks/guard/ContextGuard'
 import {
 	DropdownMenu,
@@ -10,6 +9,8 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import { FC } from 'react'
+import { useTranslation } from 'react-i18next'
+// import i18n, { t } from 'i18next'
 
 interface LanguageButtonProps {
 	className?: string
@@ -38,19 +39,19 @@ const LanguageButton: FC<LanguageButtonProps> = ({ isScrolled }) => {
 									isScrolled ? 'text-secondary' : 'text-white'
 								} uppercase`}
 							>
-								{i18n.resolvedLanguage}EN
+								{i18n.resolvedLanguage}
 							</span>
 						</div>
 					</TooltipTrigger>
-					<TooltipContent>
+					<TooltipContent side="bottom">
 						<p className="text-secondary">
 							{intl.langs?.[i18n.resolvedLanguage!]?.nativeName}
 						</p>
 					</TooltipContent>
 				</Tooltip>
 			</DropdownMenuTrigger>
-			<DropdownMenuContent side="bottom" align="end" className="glassy_navbar2">
-				<DropdownMenuLabel className="text-white">{t('languages')}</DropdownMenuLabel>
+			<DropdownMenuContent side="bottom" align="end">
+				<DropdownMenuLabel className="text-secondary">{t('languages')}</DropdownMenuLabel>
 				<DropdownMenuSeparator />
 				{Object.keys(intl.langs ?? {}).map((lng, index) => (
 					<DropdownMenuCheckboxItem
@@ -63,7 +64,7 @@ const LanguageButton: FC<LanguageButtonProps> = ({ isScrolled }) => {
 					>
 						<img className="ml-6 size-6" src={intl.getLangIcon(lng)} alt={lng} />
 						<span
-							className={`ml-2 text-white ${
+							className={`ml-2 text-secondary ${
 								i18n.resolvedLanguage === lng ? 'underline' : ''
 							}`}
 						>

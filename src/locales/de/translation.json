@@ -1,1 +1,9 @@
-{}
+{
+    "hello": "Hello",
+    "languages": "Sprachen",
+    "language": {
+        "en": "Englisch",
+        "de": "Deutsch",
+        "fr": "Französisch"
+    }
+}

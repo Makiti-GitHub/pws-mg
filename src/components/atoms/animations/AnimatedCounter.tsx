@@ -15,8 +15,6 @@ const AnimatedCounter: FC<AnimatedCounterProps> = ({ from = 0, to, animationOpti
 	useIsomorphicLayoutEffect(() => {
 		const element = ref.current
 
-		console.log(inView, from, to, element)
-
 		if (!element) return
 		if (!inView) return
 

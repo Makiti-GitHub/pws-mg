@@ -9,6 +9,7 @@ import {
 import { frequentlyAskedQuestionsMock } from '@/data/mock'
 import Banner from '@/components/molecules/banner/Banner'
 import { ArrowUpRightIcon, AtSignIcon, ClockIcon, MapPinIcon, SmartphoneIcon } from 'lucide-react'
+import MotionIconButton2 from '@/components/atoms/buttons/MotionIconButton2'
 
 const FaqSection = () => {
 	return (
@@ -117,14 +118,19 @@ const FaqSection = () => {
 						title="Still have questions?"
 						desc="Our experts are ready to help you find the perfect outsourcing solution."
 					>
-						<Button
+						<MotionIconButton2
+							label="Let's Talk"
+							className="rounded-4xl h-max px-4 py-3 gap-1 text-lg font-seravek_medium"
+						/>
+
+						{/* <Button
 							variant="primary"
 							className="rounded-4xl h-max px-5 py-3 gap-1 hover:cursor-pointer"
 						>
 							<span className="sr-only">Let's Talk</span>{' '}
 							<span className="text-lg font-seravek_medium">Let's Talk</span>{' '}
 							<ArrowUpRightIcon className="size-6" />
-						</Button>
+						</Button> */}
 					</Banner>
 				</aside>
 			</div>

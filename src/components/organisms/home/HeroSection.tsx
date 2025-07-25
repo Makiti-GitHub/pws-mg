@@ -40,7 +40,10 @@ const HeroSection = () => {
 						<ArrowUpRightIcon className="size-6" />
 					</Button> */}
 
-					<MotionIconButton2 />
+					<MotionIconButton2
+						label="Discover Our Outsourcing Solutions"
+						className="rounded-[40px] px-4 py-3 lg:px-8 lg:py-6 h-max text-xl lg:text-2xl"
+					/>
 				</div>
 				<div
 					onMouseMove={handleMouseMove}

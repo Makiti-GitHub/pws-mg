@@ -619,36 +619,35 @@ export const chooseReasonsMock: {
 export const frequentlyAskedQuestionsMock: { question: string; answer: string }[] = [
 	{
 		question: 'What is IT Outsourcing and how does it work?',
-		answer: 'Our pricing structure is based on project size, complexity, and timeline. We offer flexible pricing options to suit your needs.',
+		answer: 'IT outsourcing is the practice of contracting external service providers to handle your IT functions and services. At Makiti SARL, we provide dedicated teams, project based development, and ongoing technical support. Our outsourcing model allows you to access expert talent, reduce cost and scale your operations efficiently while focusing on your core business activities',
 	},
 	{
 		question: 'Why should I choose IT outsourcing over hiring in-house developers?',
-		answer: 'Yes, we offer discounts for multiple projects or contracts. Please contact us for more information.',
+		answer: 'Unlock expert talent instantly with IT outsourcing. Enjoy up to 60% cost savings, scale effortlessly, and reduce hiring risks. Our seasoned teams accelerate your time-to-market--no recruitment headaches, training costs, or infrastucture worries. Flex your team size as your project evolves.',
 	},
 
 	{
 		question: 'How do you ensure data security and confidentiality?',
-		answer: 'Yes, we offer discounts for multiple projects or contracts. Please contact us for more information.',
+		answer: "Security is our top priority. We use enterprise-grade safeguards like encrypted communication, secure development environments, VPNs, multi-factor authentication, and routine security audits. Every team member signs strict NDAs and adheres to rigorous data handling protocols. We're fully compliant with GDPR, ISO 27001, and global security standards.",
 	},
 
 	{
 		question: 'How does communication work with outsourced teams?',
-		answer: 'Yes, we offer discounts for multiple projects or contracts. Please contact us for more information.',
+		answer: "We keep communication crystal clear and daily standups, weekly updates and monthly reviews. Using tools like Slack, Microsoft Teams, Jira, and Zoom, you stay connected at every step. You'll have direct access to your dedicated project manager and team--aligned to your time zone, your style, your schedule.",
 	},
 
 	{
 		question: 'What are your pricing models and how do you structure costs?',
-		answer: 'Yes, we offer discounts for multiple projects or contracts. Please contact us for more information.',
+		answer: "We offer flexible pricing tailored to your needs--hourly rates ($45-$60/hour), fixed price projects, or dedicated team models. Costs vary based on skill level, project complexity, and duration. You'll recieve transparent estimates upfront with no hidden fees. Long-term partners enjoy preferential rates and priority support.",
 	},
-
 	{
 		question: 'How long does it take to start a project and deliver results?',
-		answer: 'Yes, we offer discounts for multiple projects or contracts. Please contact us for more information.',
+		answer: "Project kickoff typically takes 2-3 weeks, covering team setup and requirement analysis. Delivery timelines depend on project scope: simple websites (4-8 weeks), complex apps (3-12 months), enterprise solutions (6-18 months). You'll get a detailed roadmap upfront, with consistent progress updates at every stage.",
 	},
 
 	{
 		question: 'What technologies and skills do your teams specialize in?',
-		answer: 'Yes, we offer discounts for multiple projects or contracts. Please contact us for more information.',
+		answer: 'Our teams are experts in modern tech stacks: Fronted (React, Vue.js, Angular), Backend (Node.js, Python, Java), Mobile (React Native, Flutter), Cloud (AWS, Azure, GCP), DevOps (Docker, Kubernetes), AI/ML (Tenserflow, PyTorch), and databases (ProgreSQL, MongoDB). We stay sharp by constantly evolving with the latest tools and best practices.',
 	},
 ]
 

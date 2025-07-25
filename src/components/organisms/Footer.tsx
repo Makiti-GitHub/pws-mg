@@ -23,9 +23,9 @@ import {
 	AccordionTrigger,
 } from '@/components/ui/accordion'
 import makitiLogoWhite from '@/assets/images/logo_makiti/Makiti Logo White.png'
-import { locationsMock, socialsMock } from '@/data/mock'
+import { ILocation, locationsMock, socialsMock } from '@/data/mock'
 import { Link } from 'rasengan'
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 // import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 // import { LatLngExpression } from 'leaflet'
 
@@ -46,7 +46,7 @@ import { Fragment } from 'react'
 // }
 
 const Footer = () => {
-	// const [currentLocation, setCurrentLocation] = useState<ILocation>(locationsMock[0])
+	const [currentLocation, setCurrentLocation] = useState<ILocation>(locationsMock[0])
 	// const [mapCenter, setMapCenter] = useState<LatLngExpression>(locationsMock[0].coordinates)
 	// const [mapZoom, setMapZoom] = useState<number>(10)
 	// const [customLat, setCustomLat] = useState<string>('')
@@ -117,7 +117,18 @@ const Footer = () => {
 							</div>
 						</div>
 						<div className="flex flex-col md:flex-row items-start gap-5 max-w-[970px]">
-							<div className={`w-full lg:w-[450px] h-[250px] bg-white`}>
+							<div
+								className={`w-full lg:w-[450px] h-[250px] bg-white relative overflow-hidden`}
+							>
+								<iframe
+									className="absolute top-0 left-0 size-full border-0"
+									title={currentLocation.enterprise?.toString()}
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.35721207169!2d126.9525508511284!3d37.49949233562292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1d7daa43d7b%3A0x101547c9adb8137c!2z7ISc7Jq467O47LmY6rO8!5e0!3m2!1sko!2sus!4v1603125402556!5m2!1sko!2sus"
+									// style={{ border: 0 }}
+									allowFullScreen
+									aria-hidden="false"
+									tabIndex={0}
+								/>
 								{/* {windowIsDefined ? (
 									<div className="flex-1 relative">
 										<MapContainer
