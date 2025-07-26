@@ -6,6 +6,7 @@ import { ArrowRightIcon } from 'lucide-react'
 import clockIcon from '@/assets/images/Find the talent you need/iconsax-clock.svg'
 import locationIcon from '@/assets/images/Find the talent you need/iconsax-location.svg'
 import { useState } from 'react'
+import { Link } from 'rasengan'
 
 const TalentProfileSection = () => {
 	const [selectedTalent, setSelectedTalent] = useState<(typeof talentProfilesMock)[number]>(
@@ -23,9 +24,10 @@ const TalentProfileSection = () => {
 				<div className="grid grid-cols-6 lg:grid-cols-12 gap-8">
 					<aside className="space-y-[26px] col-span-6 lg:col-span-4">
 						{talentProfilesMock.map((profile, index) => (
-							<div
-								tabIndex={0}
-								role="button"
+							<Link
+								to={`#talent`}
+								// tabIndex={0}
+								// role="button"
 								key={`talent-profile-${index}`}
 								onClick={() => setSelectedTalent(profile)}
 								className={`${
@@ -46,11 +48,14 @@ const TalentProfileSection = () => {
 										From ${profile.hourCost}/hour
 									</p>
 								</div>
-							</div>
+							</Link>
 						))}
 					</aside>
 
-					<div className="col-span-6 lg:col-span-8 space-y-8 rounded-xl border-[0.75px] p-6 border-outline-variant">
+					<div
+						id="talent"
+						className="col-span-6 lg:col-span-8 space-y-8 rounded-xl border-[0.75px] p-6 border-outline-variant"
+					>
 						<div className="flex gap-4">
 							<div className="p-2.5 rounded-sm bg-surface-container flex items-center justify-center">
 								<div className="size-8">
