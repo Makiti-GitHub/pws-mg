@@ -312,7 +312,7 @@ const Footer = () => {
 									placeholder="Your email"
 									className="border border-white placeholder:text-white flex-1"
 								/>
-								<Button className="bg-white text-secondary border border-white md:border-secondary h-max rounded-[8px] px-3 py-2">
+								<Button className="bg-white text-secondary border border-white md:border-secondary h-max rounded-lg px-3 py-2">
 									<span className="sr-only">Subscribe</span>
 									<ArrowRightIcon className="w-4 h-3" />
 								</Button>

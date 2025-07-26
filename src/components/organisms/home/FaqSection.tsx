@@ -29,7 +29,7 @@ const FaqSection = () => {
 							<AccordionItem
 								key={`question-${index + 1}-${faq.question}`}
 								value={`item-${index + 1}`}
-								className="box_shadow_products_card rounded-[8px] px-3 py-1.5"
+								className="box_shadow_products_card rounded-lg px-3 py-1.5"
 							>
 								<AccordionTrigger>
 									<p className="flex items-center gap-2.5">
@@ -62,10 +62,10 @@ const FaqSection = () => {
 					</Accordion>
 				</div>
 				<aside className="space-y-4 col-span-5 md:col-span-4 flex flex-col">
-					<div className="p-6 rounded-[12px] box_shadow_products_card">
+					<div className="p-6 rounded-xl box_shadow_products_card">
 						<div className="space-y-4">
 							<div className="flex items-center gap-3">
-								<div className="size-8 rounded-[4px] bg-[#E8EFF8] flex justify-center items-center">
+								<div className="size-8 rounded-sm bg-[#E8EFF8] flex justify-center items-center">
 									<SmartphoneIcon className="size-[18px] text-secondary" />
 								</div>
 								<div className="space-y-1">
@@ -76,7 +76,7 @@ const FaqSection = () => {
 								</div>
 							</div>
 							<div className="flex items-center gap-3">
-								<div className="size-8 rounded-[4px] bg-[#E8EFF8] flex justify-center items-center">
+								<div className="size-8 rounded-sm bg-[#E8EFF8] flex justify-center items-center">
 									<AtSignIcon className="size-[18px] text-secondary" />
 								</div>
 								<div className="space-y-1">
@@ -88,7 +88,7 @@ const FaqSection = () => {
 							</div>
 
 							<div className="flex items-center gap-3">
-								<div className="size-8 rounded-[4px] bg-[#E8EFF8] flex justify-center items-center">
+								<div className="size-8 rounded-sm bg-[#E8EFF8] flex justify-center items-center">
 									<MapPinIcon className="size-[18px] text-secondary" />
 								</div>
 								<div className="space-y-1">
@@ -100,7 +100,7 @@ const FaqSection = () => {
 							</div>
 
 							<div className="flex items-center gap-3">
-								<div className="size-8 rounded-[4px] bg-[#E8EFF8] flex justify-center items-center">
+								<div className="size-8 rounded-sm bg-[#E8EFF8] flex justify-center items-center">
 									<ClockIcon className="size-[18px] text-secondary" />
 								</div>
 								<div className="space-y-1">

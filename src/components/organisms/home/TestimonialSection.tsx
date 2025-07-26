@@ -15,7 +15,7 @@ import { ArrowUpRightIcon } from 'lucide-react'
 
 const TestimonialSection = () => {
 	return (
-		<section className="flex flex-col gap-8 px-8 md:px-[80px] lg:px-[120px] w-screen py-16">
+		<section className="flex flex-col gap-16 px-8 md:px-[80px] lg:px-[120px] w-screen py-16">
 			<div className="space-y-[50px]">
 				<SectionHeader
 					title="What Our Clients Say"

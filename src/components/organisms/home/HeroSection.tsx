@@ -136,7 +136,7 @@ const HeroSection = () => {
 										{heroCarousel.map((_, index) => (
 											<motion.div
 												key={`carousel-dot-${index}`}
-												className={`size-3 rounded-[12px] ${
+												className={`size-3 rounded-xl ${
 													currentIndex === index
 														? 'bg-primary'
 														: 'bg-outline-variant'

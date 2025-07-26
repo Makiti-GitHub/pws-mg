@@ -9,7 +9,7 @@ const SectionHeader: FC<SectionHeaderProps> = ({ title, subTitle }) => {
 	return (
 		<div className="text-center tracking-normal space-y-3 flex flex-col items-center">
 			<h2 className="font-seravek_bold text-on-surface text-5xl">{title}</h2>
-			<p className="text-xl text-[#44474A] max-w-[1000px]">{subTitle}</p>
+			<h3 className="text-xl text-[#44474A] max-w-[1000px]">{subTitle}</h3>
 		</div>
 	)
 }

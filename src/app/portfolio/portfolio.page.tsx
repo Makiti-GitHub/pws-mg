@@ -59,7 +59,7 @@ const Portfolio: PageComponent = () => {
 									selectedFilter === item.value
 										? 'bg-primary text-secondary'
 										: 'bg-surface-container text-on-surface-variant hover:bg-outline-variant'
-								} px-3 py-2 rounded-[12px] font-seravek_medium text-sm hover:cursor-pointer`}
+								} px-3 py-2 rounded-xl font-seravek_medium text-sm hover:cursor-pointer`}
 							>
 								{item.label}
 							</span>

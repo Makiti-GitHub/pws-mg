@@ -11,10 +11,10 @@ interface ServiceCardProps {
 
 const ServiceCard: FC<ServiceCardProps> = ({ service: { title, desc, icon, color } }) => {
 	return (
-		<div className="box_shadow flex flex-col rounded-[12px] p-6 gap-4">
+		<div className="box_shadow flex flex-col rounded-xl p-6 gap-4">
 			<div className="flex flex-col gap-5 items-center">
 				<div
-					className="size-[74px] rounded-[12px] flex items-center justify-center"
+					className="size-[74px] rounded-xl flex items-center justify-center"
 					style={{ backgroundColor: color }}
 				>
 					<div className="size-12">

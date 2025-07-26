@@ -32,7 +32,7 @@ const TalentProfileSection = () => {
 									profile.title === selectedTalent.title
 										? 'bg-surface-container border-[#44474A]'
 										: 'border-[#C4C7CA]'
-								} px-6 hover:cursor-pointer hover:bg-surface-container py-4 border-[0.75px] rounded-[12px] flex gap-2.5`}
+								} px-6 hover:cursor-pointer hover:bg-surface-container py-4 border-[0.75px] rounded-xl flex gap-2.5`}
 							>
 								<img
 									src={profile.icon}
@@ -50,9 +50,9 @@ const TalentProfileSection = () => {
 						))}
 					</aside>
 
-					<div className="col-span-6 lg:col-span-8 space-y-8 rounded-[12px] border-[0.75px] p-6 border-outline-variant">
+					<div className="col-span-6 lg:col-span-8 space-y-8 rounded-xl border-[0.75px] p-6 border-outline-variant">
 						<div className="flex gap-4">
-							<div className="p-2.5 rounded-[4px] bg-surface-container flex items-center justify-center">
+							<div className="p-2.5 rounded-sm bg-surface-container flex items-center justify-center">
 								<div className="size-8">
 									<img
 										src={selectedTalent.icon}
@@ -96,7 +96,7 @@ const TalentProfileSection = () => {
 								{selectedTalent.skills.map((skill, index) => (
 									<span
 										key={`talent-skill-${index}-${skill}`}
-										className="border-[0.5px] border-outline-variant px-3 py-1 rounded-[4px]"
+										className="border-[0.5px] border-outline-variant px-3 py-1 rounded-sm"
 									>
 										{skill}
 									</span>

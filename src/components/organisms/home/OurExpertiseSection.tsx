@@ -17,11 +17,11 @@ const OurExpertiseSection = () => {
 					{expertisesMock.map((expertise, index) => (
 						<div
 							key={`expertise-item-${index}`}
-							className="box_shadow flex flex-col rounded-[12px] p-6 gap-[30px] hover:scale-105 hover:border hover:border-primary transition duration-300 ease-in-out"
+							className="box_shadow flex flex-col rounded-xl p-6 gap-[30px] hover:scale-105 hover:border hover:border-primary transition duration-300 ease-in-out"
 						>
 							<div className="flex flex-col gap-5">
 								<div
-									className="size-[74px] rounded-[12px] flex items-center justify-center"
+									className="size-[74px] rounded-xl flex items-center justify-center"
 									style={{ backgroundColor: expertise.color }}
 								>
 									<div className="size-12">
@@ -67,7 +67,7 @@ const OurExpertiseSection = () => {
 										index === solutionsProcessStackMock.length - 2
 											? 'lg:col-span-2 2xl:col-span-1'
 											: ''
-									} bg-white rounded-[12px] py-5 px-6 flex flex-col items-center justify-between gap-7 h-full`}
+									} bg-white rounded-xl py-5 px-6 flex flex-col items-center justify-between gap-7 h-full`}
 							>
 								<div className="size-12">
 									<img

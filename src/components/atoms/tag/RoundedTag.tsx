@@ -8,10 +8,7 @@ interface RoundedTagProps {
 const RoundedTag: FC<RoundedTagProps> = ({ label, className }) => {
 	return (
 		<span
-			className={cn(
-				'border-[0.5px] border-outline-variant px-3 py-1 rounded-[4px]',
-				className,
-			)}
+			className={cn('border-[0.5px] border-outline-variant px-3 py-1 rounded-sm', className)}
 		>
 			{label}
 		</span>

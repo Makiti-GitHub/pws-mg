@@ -110,7 +110,7 @@ const StartProjectSection = () => {
 				<Form {...form}>
 					<form
 						onSubmit={form.handleSubmit(onSubmit)}
-						className="box_shadow_products_card p-6 flex flex-col gap-6 rounded-[12px]"
+						className="box_shadow_products_card p-6 flex flex-col gap-6 rounded-xl"
 					>
 						<div className="space-y-2">
 							<p className="font-seravek_medium text-on-surface-variant text-xl">

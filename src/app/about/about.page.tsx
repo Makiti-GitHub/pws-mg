@@ -104,7 +104,7 @@ const About: PageComponent = () => {
 				</div>
 
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-2.5 pb-8">
-					<div className="px-4 py-5 rounded-[12px] bg-white box_shadow_products_card">
+					<div className="px-4 py-5 rounded-xl bg-white box_shadow_products_card">
 						<div className="">
 							<div className="flex items-center gap-2">
 								<div className="size-9 rounded-[6px] bg-surface-variant flex items-center justify-center">
@@ -131,7 +131,7 @@ const About: PageComponent = () => {
 							</div>
 						</div>
 					</div>
-					<div className="px-4 py-5 rounded-[12px] bg-white box_shadow_products_card">
+					<div className="px-4 py-5 rounded-xl bg-white box_shadow_products_card">
 						<div className="">
 							<div className="flex items-center gap-2">
 								<div className="size-9 rounded-[6px] bg-surface-variant flex items-center justify-center">

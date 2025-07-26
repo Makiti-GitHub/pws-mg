@@ -9,11 +9,7 @@ interface TestimonialProps {
 
 const TestimonialCard: FC<TestimonialProps> = ({ testimonial }) => {
 	return (
-		<div
-			tabIndex={0}
-			role="button"
-			className="w-full hover:cursor-pointer p-6 flex flex-col gap-5 rounded-[12px] box_shadow_products_card"
-		>
+		<article className="w-full p-6 flex flex-col gap-5 rounded-xl box_shadow_products_card">
 			<div className="w-full flex items-center justify-between gap-4">
 				<QuoteIcon className="size-8 text-outline-variant" />
 				<div className="flex items-center">
@@ -28,7 +24,7 @@ const TestimonialCard: FC<TestimonialProps> = ({ testimonial }) => {
 
 			<p className="text-base text-outline flex-1">{`"${testimonial.quote}"`}</p>
 
-			<div className="rounded-[8px] p-3 space-y-4 text-sm bg-surface-container">
+			<div className="rounded-lg p-3 space-y-4 text-sm bg-surface-container">
 				<div className="flex gap-20">
 					<div className="space-y-1">
 						<p className="text-outline">Project</p>
@@ -68,7 +64,7 @@ const TestimonialCard: FC<TestimonialProps> = ({ testimonial }) => {
 					<p className="text-outline text-sm">{testimonial.user.job}</p>
 				</div>
 			</div>
-		</div>
+		</article>
 	)
 }
 

@@ -305,6 +305,7 @@ export const talentProfilesMock: {
 export type ProjectCategoryType = 'web_app' | 'mobile_app' | 'e_commerce' | 'saas' | 'all'
 
 export const successStoriesMock: {
+	id: string
 	title: string
 	category: string
 	categoryType: ProjectCategoryType
@@ -312,9 +313,34 @@ export const successStoriesMock: {
 	results: string[]
 	tags: string[]
 	techs?: (keyof typeof techStackMock)[]
-	image?: string
+	image: string
+	testimonial?: (typeof testimonialsMock)[number][]
+	resultsAchieved?: {
+		description: string
+		stats: {
+			count: number
+			label: string
+			color: '#27AE60' | '#087EA4' | '#9747FF' | '#FF7262'
+		}[]
+	}
+	challenges?: {
+		title: string
+		description: string
+		problems: string[]
+	}
+	solution?: {
+		description: string
+		achievements: string[]
+		phases: {
+			label: string
+			startDate: Date
+			endDate: Date
+			achievements: string[]
+		}[]
+	}
 }[] = [
 	{
+		id: '1',
 		title: 'Matoa Traveller App',
 		category: 'Mobile App',
 		categoryType: 'mobile_app',
@@ -328,8 +354,103 @@ export const successStoriesMock: {
 		tags: ['Transportation', 'Travel'],
 		image: portfolioImage1,
 		techs: ['figma', 'react', 'next'],
+		challenges: {
+			title: 'Seamless Travel Experience for Modern Explorers',
+			description:
+				'Matoa identified a growing need for a comprehensive travel companion app that simplifies trip planning and enhances the travel experience. The challenge was to create a robust, user-friendly mobile application that caters to diverse traveler needs, from itinerary management to secure booking and real-time information.',
+			problems: [
+				'Fragmented information: Travelers often juggle multiple apps for flights, hotels, and activities.',
+				'Lack of real-time updates: Information like gate changes or local events can be outdated.',
+				'Complex booking processes: Booking accommodations and tours can be cumbersome and time-consuming.',
+				'Limited personalization: Generic travel apps often fail to cater to individual preferences.',
+			],
+		},
+		resultsAchieved: {
+			description:
+				'We designed and implemented a complete mobile application tailored to modern travelers, focusing on intuitive design and robust functionality.',
+			stats: [
+				{
+					count: 200,
+					label: 'User Engagement Increase',
+					color: '#27AE60',
+				},
+				{
+					count: 75,
+					label: 'Reduced Average Booking Time',
+					color: '#087EA4',
+				},
+				{
+					count: 150,
+					label: 'Conversion Rate Increase',
+					color: '#9747FF',
+				},
+				{
+					count: 300,
+					label: 'Customer Satisfaction Score',
+					color: '#FF7262',
+				},
+			],
+		},
+		testimonial: [
+			{
+				quote: "Matoa's innovative app completely transformed our travel planning. The new platform not only solved our previous pain points but opened up new opportunities we never imagined. The team's expertise and dedication were exceptional!",
+				duration: 3,
+				user: {
+					image: image5,
+					name: 'Sarah Davies',
+					job: 'Product Manager, Creative UX',
+				},
+				category: '',
+				result: '',
+			},
+		],
+		solution: {
+			description:
+				'We designed and implemented a complete mobile application tailored to modern travelers, focusing on intuitive design and robust functionality.',
+			phases: [
+				{
+					label: 'Discovery & Planning',
+					startDate: new Date(),
+					endDate: new Date(),
+					achievements: [
+						'User Research & Persona Development',
+						'Feature Prioritization & Roadmapping',
+						'Market Analysis',
+						'UX/UI Prototyping',
+					],
+				},
+				{
+					label: 'Design & Development',
+					startDate: new Date(),
+					endDate: new Date(),
+					achievements: [
+						'Agile development sprints',
+						'Intuitive UI/UX Design',
+						'Cross-Platform Compatibility (iOS & Android)',
+						'API Integrations for Flights, Hotels, and Activities',
+					],
+				},
+				{
+					label: 'Launch & Optimization',
+					startDate: new Date(),
+					endDate: new Date(),
+					achievements: [
+						'Phased rollout',
+						'Performance monitoring',
+						'User feedback integration',
+						'Final optimizations',
+					],
+				},
+			],
+			achievements: [
+				'Achieved a 95% increase in user retention within the first 3 months',
+				'Rated 4.8/5 stars on app stores, with over 10,000 five-star reviews',
+				'Recipient of "Best Travel App of the Year 2026" award',
+			],
+		},
 	},
 	{
+		id: '2',
 		title: 'Lyssafi',
 		category: 'Web App',
 		categoryType: 'web_app',
@@ -345,6 +466,7 @@ export const successStoriesMock: {
 		techs: ['figma', 'react', 'html', 'tailwind'],
 	},
 	{
+		id: '3',
 		title: 'Inventory Stock Management',
 		category: 'Mobile App',
 		categoryType: 'mobile_app',
@@ -360,6 +482,7 @@ export const successStoriesMock: {
 		techs: ['figma', 'react', 'next', 'js'],
 	},
 	{
+		id: '4',
 		title: 'Matoa Agency Landing Page',
 		category: 'SaaS',
 		categoryType: 'saas',
@@ -374,6 +497,7 @@ export const successStoriesMock: {
 		image: portfolioImage3,
 	},
 	{
+		id: '5',
 		title: 'Matoa Web Admin',
 		category: 'Web App',
 		categoryType: 'web_app',
@@ -390,6 +514,7 @@ export const successStoriesMock: {
 	},
 
 	{
+		id: '6',
 		title: 'Watat Bau',
 		category: 'Web App',
 		categoryType: 'web_app',
@@ -405,6 +530,7 @@ export const successStoriesMock: {
 		techs: ['figma', 'html', 'js', 'tailwind'],
 	},
 	{
+		id: '7',
 		title: 'Young Agro Africa',
 		category: 'SaaS',
 		categoryType: 'saas',
@@ -421,6 +547,7 @@ export const successStoriesMock: {
 	},
 
 	{
+		id: '8',
 		title: 'ST Express Groupage',
 		category: 'SaaS',
 		categoryType: 'saas',
@@ -877,5 +1004,71 @@ export const heroCarousel: {
 		desc: 'Deliver value faster with our agile software development services. Our adaptive teams bring speed, flexibility, and consistent quality to every sprint, helping you respond to change with confidence.',
 		tag: 'IT Transformation & Audit',
 		image: heroImage3,
+	},
+]
+
+export type Member = {
+	name: string
+	role: string
+	roleDesc: string
+	image: string
+	experience: number
+	tags: string[]
+}
+
+export const teamMemberMock: Member[] = [
+	{
+		name: 'Ousmanou Aboubakar',
+		role: 'Chief Marketing Officer & Chief Financial Officer',
+		experience: 8,
+		image: '/static/images/teams/dilane-kombou.png',
+		tags: ['Business Development', 'Client Relations'],
+		roleDesc:
+			'Visionary leader with extensive experience in business strategy and client relations, driving company growth and innovation.',
+	},
+	{
+		name: 'Marie-Josée Mache',
+		role: 'Chief Technology Officer',
+		experience: 7,
+		image: '/static/images/teams/2.jpeg',
+		tags: ['Strategic Leadership', 'Software Architecture'],
+		roleDesc:
+			'Strategic technology leader with deep expertise in software architecture, driving innovative technical solutions and organizational growth.',
+	},
+	{
+		name: 'Ivan Axel Ngomdjom',
+		role: 'Project Analyst',
+		experience: 6,
+		image: '/static/images/teams/3.jpeg',
+		tags: ['Cross Platform', 'Marketing'],
+		roleDesc:
+			'Detail-oriented analyst with experience in cross-platform initiatives, leveraging marketing insights to optimize project outcomes.',
+	},
+	{
+		name: 'Armel Dilane Mbianda Kombou',
+		role: 'Software Developer',
+		experience: 4,
+		tags: ['Coding', 'Software Development'],
+		image: '/static/images/teams/5.jpeg',
+		roleDesc:
+			'Skilled software developer with robust coding abilities, building and maintaining high-quality software solutions.',
+	},
+	{
+		name: 'Virginie Ndjenaar Adama Mando',
+		role: 'Junior Key Account Manager & Executive assistant',
+		experience: 3,
+		tags: ['Marketing', 'Client Relations'],
+		roleDesc:
+			'Dynamic professional adept at client relations, supporting key accounts and contributing to marketing initiatives.',
+		image: '/static/images/teams/6.jpeg',
+	},
+	{
+		name: 'Lawal Michael Fuad',
+		role: 'Lead Designer',
+		tags: ['Prototyping', 'Software Design'],
+		experience: 2,
+		roleDesc:
+			'Creative lead designer specializing in prototyping and software design, crafting intuitive and engaging user experiences.',
+		image: '/static/images/teams/4.jpeg',
 	},
 ]

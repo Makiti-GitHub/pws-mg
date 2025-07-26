@@ -184,6 +184,15 @@ body {
 }
 
 @font-face {
+	font-family: 'SeravekMediumItalic';
+	src: local('SeravekMediumItalic'),
+		url('../assets/fonts/Seravek/Seravek_Basic_Medium_Italic.otf') format('truetype');
+	font-weight: 500;
+	font-display: swap;
+	font-style: italic;
+}
+
+@font-face {
 	font-family: 'SeravekRegular';
 	src: local('SeravekRegular'),
 		url('../assets/fonts/Seravek/Seravek_Basic.otf') format('truetype');
@@ -203,6 +212,7 @@ body {
 	--font-seravek_light: SeravekLight, 'sans-serif';
 	--font-seravek_regular: SeravekRegular, 'sans-serif';
 	--font-seravek_medium: SeravekMedium, 'sans-serif';
+	--font-seravek_medium_italic: SeravekMediumItalic, 'sans-serif';
 	--font-seravek_bold: SeravekBold, 'sans-serif';
 
 	--color-surface: oklch(0.9911 0 0);
@@ -323,3 +333,13 @@ body {
 	mask: linear-gradient(black) border-box, linear-gradient(black) padding-box;
 	mask-composite: subtract;
 } */
+
+.perspective-1000 {
+	perspective: 1000px;
+}
+.preserve-3d {
+	transform-style: preserve-3d;
+}
+.backface-hidden {
+	backface-visibility: hidden;
+}
