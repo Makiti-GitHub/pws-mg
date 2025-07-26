@@ -1,3 +1,4 @@
+import Image from '@rasenganjs/image'
 import { FC } from 'react'
 
 interface ServiceCardProps {
@@ -17,13 +18,22 @@ const ServiceCard: FC<ServiceCardProps> = ({ service: { title, desc, icon, color
 					className="size-[74px] rounded-xl flex items-center justify-center"
 					style={{ backgroundColor: color }}
 				>
-					<div className="size-12">
-						<img
+					{icon ? (
+						<div className="size-12">
+							<Image
+								src={icon}
+								alt={title}
+								width={'100%'}
+								height={'100%'}
+								className="size-full aspect-auto object-contain"
+							/>
+							{/* <img
 							src={icon}
 							alt={title}
 							className="size-full object-contain aspect-auto"
-						/>
-					</div>
+						/> */}
+						</div>
+					) : null}
 				</div>
 				<p className="text-2xl font-seravek_medium text-on-surface text-center">{title}</p>
 			</div>

@@ -26,6 +26,7 @@ import makitiLogoWhite from '@/assets/images/logo_makiti/Makiti Logo White.png'
 import { ILocation, locationsMock, socialsMock } from '@/data/mock'
 import { Link } from 'rasengan'
 import { Fragment, useState } from 'react'
+import Image from '@rasenganjs/image'
 // import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 // import { LatLngExpression } from 'leaflet'
 
@@ -106,7 +107,9 @@ const Footer = () => {
 								{socialsMock.map((social, index) => (
 									<div className="size-6 rounded-xs" key={`social-${index}`}>
 										<a href={social.link}>
-											<img
+											<Image
+												width={'100%'}
+												height={'100%'}
 												src={social.icon}
 												alt={social.label}
 												className="size-full object-contain aspect-auto"
@@ -129,65 +132,6 @@ const Footer = () => {
 									aria-hidden="false"
 									tabIndex={0}
 								/>
-								{/* {windowIsDefined ? (
-									<div className="flex-1 relative">
-										<MapContainer
-											center={[7.3697, 12.3547]}
-											zoom={6}
-											className="size-full"
-											zoomControl={true}
-										>
-											<MapUpdater center={mapCenter} zoom={mapZoom} />
-
-											<TileLayer
-												attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-												url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-											/>
-
-											Markers for all locations 
-											{locationsMock.map((location) => (
-												<Marker
-													key={location.id}
-													position={location.coordinates}
-												>
-													<Popup>
-														<div className="text-center">
-															<h3 className="font-semibold">
-																{location.name}
-															</h3>
-															{location.address && (
-																<p className="text-sm text-gray-600">
-																	{location.address}
-																</p>
-															)}
-															<p className="text-xs text-gray-500 mt-1">
-																{location.coordinates[0].toFixed(4)}
-																,{' '}
-																{location.coordinates[1].toFixed(4)}
-															</p>
-														</div>
-													</Popup>
-												</Marker>
-											))}
-
-											 Marker for custom location if it exists 
-											{currentLocation.id === 'custom' && (
-												<Marker position={currentLocation.coordinates}>
-													<Popup>
-														<div className="text-center">
-															<h3 className="font-semibold">
-																{currentLocation.name}
-															</h3>
-															<p className="text-sm text-gray-600">
-																{currentLocation.address}
-															</p>
-														</div>
-													</Popup>
-												</Marker>
-											)}
-										</MapContainer>
-									</div>
-								) : null} */}
 							</div>
 							<div className="lg:max-w-[500px] w-full">
 								<Separator className="w-full bg-outline-variant" />
@@ -210,6 +154,7 @@ const Footer = () => {
 															<MinusIcon className="hidden group-[[data-state=open]]:block text-white pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
 														</>
 													}
+													onClick={() => setCurrentLocation(location)}
 													className="text-white rounded-none"
 												>
 													<span className="font-seravek_medium text-sm text-white">
@@ -224,28 +169,36 @@ const Footer = () => {
 															{location.place ? (
 																<div className="flex gap-4 items-center">
 																	<HouseIcon className="size-6" />
-																	<span>{location.place}</span>
+																	<span className="flex-1">
+																		{location.place}
+																	</span>
 																</div>
 															) : null}
 
 															{location.phone ? (
 																<div className="flex gap-4 items-center">
 																	<SmartphoneIcon className="size-6" />
-																	<span>{location.phone}</span>
+																	<span className="flex-1">
+																		{location.phone}
+																	</span>
 																</div>
 															) : null}
 
 															{location.whatsapp ? (
 																<div className="flex gap-4 items-center">
 																	<MessageSquareIcon className="size-6" />
-																	<span>{location.whatsapp}</span>
+																	<span className="flex-1">
+																		{location.whatsapp}
+																	</span>
 																</div>
 															) : null}
 
 															{location.address ? (
 																<div className="flex gap-4 items-center">
 																	<MapPinIcon className="size-6" />
-																	<span>{location.address}</span>
+																	<span className="flex-1">
+																		{location.address}
+																	</span>
 																</div>
 															) : null}
 														</div>
@@ -253,7 +206,7 @@ const Footer = () => {
 															{location.arrondissement ? (
 																<div className="flex gap-4 items-center">
 																	<SignpostIcon className="size-6" />
-																	<span>
+																	<span className="flex-1">
 																		{location.arrondissement}
 																	</span>
 																</div>
@@ -262,21 +215,27 @@ const Footer = () => {
 															{location.mail ? (
 																<div className="flex gap-4 items-center">
 																	<AtSignIcon className="size-6" />
-																	<span>{location.mail}</span>
+																	<span className="flex-1">
+																		{location.mail}
+																	</span>
 																</div>
 															) : null}
 
 															{location.website ? (
 																<div className="flex gap-4 items-center">
 																	<GlobeIcon className="size-6" />
-																	<span>{location.website}</span>
+																	<span className="flex-1">
+																		{location.website}
+																	</span>
 																</div>
 															) : null}
 
 															{location.address ? (
 																<div className="flex gap-4 items-center">
 																	<MapIcon className="size-6" />
-																	<span>Get Directions</span>
+																	<span className="flex-1">
+																		Get Directions
+																	</span>
 																</div>
 															) : null}
 														</div>
@@ -293,11 +252,15 @@ const Footer = () => {
 					<div className="w-full lg:max-w-[970px] flex flex-col xl:flex-row justify-between gap-8">
 						<div className="flex-1 flex flex-col sm:flex-row sm:items-center gap-6">
 							{/* == Makiti logo ==  */}
-							<img
-								src={makitiLogoWhite}
-								alt="shadcn logo"
-								className="w-[121px] pointer-events-none select-none"
-							/>
+							<div className="w-[121px]">
+								<Image
+									src={makitiLogoWhite}
+									alt="Makiti logo"
+									width={'100%'}
+									height={'100%'}
+									className="size-full aspect-auto object-contain pointer-events-none select-none"
+								/>
+							</div>
 							<p className="text-base text-outline-variant sm:flex-1">
 								Your strategic IT outsourcing partner, delivering excellence across
 								all technology domains with innovative solutions and expert teams.

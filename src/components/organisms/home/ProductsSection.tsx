@@ -4,8 +4,10 @@ import SectionHeader from '@/components/molecules/SectionHeader'
 import { Button } from '@/components/ui/button'
 import { ourLiveProductsMock } from '@/data/mock'
 import { ArrowRightIcon } from 'lucide-react'
+import { useNavigate } from 'rasengan'
 
 const ProductsSection = () => {
+	const navigate = useNavigate()
 	return (
 		<section
 			id="products"
@@ -30,11 +32,11 @@ const ProductsSection = () => {
 								Outsourcing."
 			>
 				<Button
-					// variant="primary"
+					onClick={() => navigate('/products')}
 					className="rounded-4xl h-max py-3 px-5 hover:cursor-pointer border border-secondary text-secondary bg-transparent hover:bg-accent/5"
 				>
-					<span className="sr-only">View Portfolio</span>{' '}
-					<span className="text-lg font-seravek_medium">View Portfolio</span>{' '}
+					<span className="sr-only">Explore Products</span>{' '}
+					<span className="text-lg font-seravek_medium">Explore Products</span>{' '}
 					<ArrowRightIcon className="size-6" />
 				</Button>
 			</Banner>

@@ -3,6 +3,7 @@ import makitiLogoWhite from '@/assets/images/logo_makiti/Makiti Logo White.png'
 import { Link } from 'rasengan'
 import LanguageButton from '../atoms/buttons/LanguageButton'
 import MotionIconButton2 from '../atoms/buttons/MotionIconButton2'
+import Image from '@rasenganjs/image'
 // import { useEffect, useState } from 'react'
 // import { AnimatePresence, motion } from 'framer-motion'
 
@@ -58,12 +59,19 @@ const NavBar = () => {
 					{/* === Background Images === */}
 					{/* <Image */}
 					<Link to={'/'}>
-						<img
+						<Image
+							src={makitiLogoWhite}
+							alt="Makiti logo"
+							width={'100%'}
+							height={'100%'}
+							className="size-full aspect-auto object-contain pointer-events-none select-none"
+						/>
+						{/* <img
 							// key={'makiti-logo-white'}
 							alt="shadcn logo"
 							className="size-full aspect-auto object-contain pointer-events-none select-none"
 							src={makitiLogoWhite}
-						/>
+						/> */}
 						{/* <AnimatePresence>
 							{isScrolled && (
 								<motion.img

@@ -6,35 +6,35 @@ import useIsTouchDevice from '@/hooks/useIsTouchDevice'
 import useMouse from '@/hooks/useMouse'
 import AnimatedCounter from '@/components/atoms/animations/AnimatedCounter'
 import MotionIconButton2 from '@/components/atoms/buttons/MotionIconButton2'
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowLeftIcon, ArrowRightIcon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'
+import { ArrowLeftIcon, ArrowRightIcon } from 'lucide-react'
 import Image from '@rasenganjs/image'
 
-const slideVariants = {
-	hiddenRight: {
-		x: '100%',
-		opacity: 0,
-	},
-	hiddenLeft: {
-		x: '-100%',
-		opacity: 0,
-	},
-	visible: {
-		x: '0',
-		opacity: 1,
-		transition: {
-			duration: 0.6,
-		},
-	},
-	exit: {
-		opacity: 0,
-		scale: 0.8,
-		transition: {
-			duration: 0.6,
-		},
-	},
-}
+// const slideVariants = {
+// 	hiddenRight: {
+// 		x: '100%',
+// 		opacity: 0,
+// 	},
+// 	hiddenLeft: {
+// 		x: '-100%',
+// 		opacity: 0,
+// 	},
+// 	visible: {
+// 		x: '0',
+// 		opacity: 1,
+// 		transition: {
+// 			duration: 0.6,
+// 		},
+// 	},
+// 	exit: {
+// 		opacity: 0,
+// 		scale: 0.8,
+// 		transition: {
+// 			duration: 0.6,
+// 		},
+// 	},
+// }
 
 const slidersVariants = {
 	hover: {

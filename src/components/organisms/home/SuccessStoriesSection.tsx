@@ -31,8 +31,7 @@ const SuccessStoriesSection = () => {
 									strategic IT Outsourcing."
 				>
 					<Button
-						onClick={() => navigate('/en/portfolio')}
-						// variant="primary"
+						onClick={() => navigate('/portfolio')}
 						className="rounded-4xl !h-max !py-3 !px-5 hover:cursor-pointer border border-white text-white bg-transparent hover:bg-accent/5"
 					>
 						<span className="sr-only">View Portfolio</span>{' '}

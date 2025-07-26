@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { ourLiveProductsMock } from '@/data/mock'
+import Image from '@rasenganjs/image'
 import { ArrowUpRightIcon } from 'lucide-react'
 import { FC } from 'react'
 
@@ -16,11 +17,18 @@ const ProductsCard: FC<ProductsCardProps> = ({ story, withButton = false }) => {
 			className="w-full hover:cursor-pointer rounded-[20px] box_shadow_products_card"
 		>
 			<div className="w-full h-[250px] bg-slate-300 rounded-t-[20px]">
-				<img
+				<Image
+					width={'100%'}
+					height={'100%'}
+					src={story.image}
+					alt={story.title}
+					className="size-full object-cover aspect-auto rounded-t-[20px]"
+				/>
+				{/* <img
 					src={story.image}
 					alt={story.title}
 					className="size-full aspect-auto object-cover rounded-t-[20px]"
-				/>
+				/> */}
 			</div>
 			<div
 				className={`${
