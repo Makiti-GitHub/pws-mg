@@ -249,8 +249,8 @@ const HeroSection = () => {
 						</div>
 					</div>
 				</div>
-				<div className="w-full">
-					<BrandsCarousel />
+				<div className="w-full overflow-hidden">
+					<BrandsCarousel speed={25} pauseOnHover={true} />
 				</div>
 				<div className="px-8 md:px-[80px] lg:px-[120px]">
 					<Separator className="w-full bg-surface-variant" />
