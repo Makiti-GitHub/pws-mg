@@ -5,5 +5,73 @@
         "en": "Englisch",
         "de": "Deutsch",
         "fr": "Französisch"
+    },
+    "nav": {
+        "links": {
+            "services": "Dienstleistungen",
+            "portfolio": "Portfolio",
+            "products": "Produkte",
+            "about": "Über uns",
+            "contact": "Kontakt"
+        },
+        "cta": {
+            "letsTalk": "Lass uns sprechen"
+        }
+    },
+    "pages": {
+        "home": {
+            "sections": {
+                "startYourProjectToday": {
+                    "title": "Starten Sie Ihr Projekt heute",
+                    "subtitle": "Erzählen Sie uns von Ihren Projektanforderungen und lassen Sie uns gemeinsam etwas Außergewöhnliches schaffen.",
+                    "form": {
+                        "title": "Projektanforderungen",
+                        "indication": "Bitte füllen Sie dieses Formular mit so vielen Details wie möglich aus, um uns zu helfen, Ihre Projektbedürfnisse zu verstehen.",
+                        "fields": {
+                            "fullName": {
+                                "label": "Vollständiger Name",
+                                "placeholder": "Geben Sie Ihren vollständigen Namen ein"
+                            },
+                            "emailAddress": {
+                                "label": "E-Mail-Adresse",
+                                "placeholder": "Geben Sie Ihre E-Mail-Adresse ein"
+                            },
+                            "companyName": {
+                                "label": "Firmenname",
+                                "placeholder": "Optional"
+                            },
+                            "phoneNumber": {
+                                "label": "Telefonnummer",
+                                "placeholder": "Optional"
+                            },
+                            "projectType": {
+                                "label": "Projektart",
+                                "placeholder": "Wählen Sie eine Projektart"
+                            },
+                            "budgetRange": {
+                                "label": "Budgetbereich",
+                                "placeholder": "Wählen Sie einen Budgetbereich"
+                            },
+                            "projectTimeline": {
+                                "label": "Projektzeitplan",
+                                "placeholder": "Wählen Sie einen Zeitplan"
+                            },
+                            "technicalRequirements": {
+                                "label": "Technische Anforderungen",
+                                "placeholder": "Wählen Sie technische Anforderungen"
+                            },
+                            "preferredTeamSize": {
+                                "label": "Vorzugte Teamgröße",
+                                "placeholder": "Wählen Sie die Anzahl der Teammitglieder"
+                            },
+                            "projectDescription": {
+                                "label": "Projektbeschreibung",
+                                "placeholder": "Beschreiben Sie Ihr Projekt im Detail: Ziele, spezifische technische Anforderungen, Einschränkungen, die wir kennen sollten, und alle anderen Details..."
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

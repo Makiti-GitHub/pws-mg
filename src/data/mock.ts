@@ -1077,3 +1077,44 @@ export const teamMemberMock: Member[] = [
 		image: '/static/images/teams/4.jpeg',
 	},
 ]
+
+/* Form fields values */
+
+/* Project type */
+
+export const ProjectTypeCategoriesEnum = [
+	'web_app',
+	'mobile_app',
+	'e_commerce',
+	'saas',
+	'others',
+] as const
+
+export type ProjectTypeCategoriesType =
+	(typeof ProjectTypeCategoriesEnum)[keyof typeof ProjectTypeCategoriesEnum]
+
+export const formProjectTypes: {
+	label: string
+	type: ProjectTypeCategoriesType
+}[] = [
+	{
+		label: 'Web Development',
+		type: 'web_app',
+	},
+	{
+		label: 'Mobile Development',
+		type: 'mobile_app',
+	},
+	{
+		label: 'E-Commerce Platforms',
+		type: 'e_commerce',
+	},
+	{
+		label: 'SaaS Development',
+		type: 'saas',
+	},
+	{
+		label: 'Others',
+		type: 'others',
+	},
+]

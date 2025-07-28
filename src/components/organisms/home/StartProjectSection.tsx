@@ -23,6 +23,9 @@ import {
 } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
 import { Checkbox } from '@/components/ui/checkbox'
+import { formProjectTypes, ProjectTypeCategoriesEnum } from '@/data/mock'
+import { useTranslation } from 'react-i18next'
+import StartYourProjectMultiStepForm from './form/StartYourProjectForm'
 
 const items = [
 	{
@@ -74,7 +77,7 @@ const formSchema = z.object({
 	email: z.email(),
 	companyName: z.string().optional(),
 	phoneNumber: z.string().optional(),
-	projectType: z.string(),
+	projectType: z.enum(ProjectTypeCategoriesEnum),
 	budgetRange: z.string(),
 	projectTimeline: z.string(),
 	technicalRequirements: z.array(z.string()).refine((value) => value.some((item) => item), {
@@ -85,6 +88,7 @@ const formSchema = z.object({
 })
 
 const StartProjectSection = () => {
+	const { t } = useTranslation()
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
@@ -103,8 +107,8 @@ const StartProjectSection = () => {
 		<section className="px-8 md:px-[80px] lg:px-[120px] flex flex-col gap-8 w-full">
 			<div className="space-y-[50px]">
 				<SectionHeader
-					title="Start Your Project Today"
-					subTitle="Tell us about your project requirements and let's build something amazing together."
+					title={t('pages.home.sections.startYourProjectToday.title')}
+					subTitle={t('pages.home.sections.startYourProjectToday.subtitle')}
 				/>
 
 				<Form {...form}>
@@ -114,11 +118,10 @@ const StartProjectSection = () => {
 					>
 						<div className="space-y-2">
 							<p className="font-seravek_medium text-on-surface-variant text-xl">
-								Project Requirements
+								{t('pages.home.sections.startYourProjectToday.form.title')}
 							</p>
 							<p className="text-base text-outline">
-								Please fill out this form with as much detail as possible to help us
-								understand your project needs.
+								{t('pages.home.sections.startYourProjectToday.form.indication')}
 							</p>
 						</div>
 
@@ -129,11 +132,16 @@ const StartProjectSection = () => {
 								render={({ field }) => (
 									<FormItem className="w-1/2">
 										<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
-											Fullname*
+											{t(
+												'pages.home.sections.startYourProjectToday.form.fields.fullName.label',
+											)}
+											*
 										</FormLabel>
 										<FormControl>
 											<Input
-												placeholder="Enter your full name"
+												placeholder={t(
+													'pages.home.sections.startYourProjectToday.form.fields.fullName.placeholder',
+												)}
 												className="bg-surface-container px-3 py-2.5"
 												{...field}
 											/>
@@ -148,11 +156,16 @@ const StartProjectSection = () => {
 								render={({ field }) => (
 									<FormItem className="w-1/2">
 										<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
-											Email Address*
+											{t(
+												'pages.home.sections.startYourProjectToday.form.fields.emailAddress.label',
+											)}
+											*
 										</FormLabel>
 										<FormControl>
 											<Input
-												placeholder="Enter your email address"
+												placeholder={t(
+													'pages.home.sections.startYourProjectToday.form.fields.emailAddress.placeholder',
+												)}
 												className="bg-surface-container px-3 py-2.5"
 												{...field}
 											/>
@@ -166,15 +179,19 @@ const StartProjectSection = () => {
 						<div className="flex gap-5">
 							<FormField
 								control={form.control}
-								name="fullName"
+								name="companyName"
 								render={({ field }) => (
 									<FormItem className="w-1/2">
 										<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
-											Company name
+											{t(
+												'pages.home.sections.startYourProjectToday.form.fields.companyName.label',
+											)}
 										</FormLabel>
 										<FormControl>
 											<Input
-												placeholder="Optional"
+												placeholder={t(
+													'pages.home.sections.startYourProjectToday.form.fields.companyName.placeholder',
+												)}
 												{...field}
 												className="bg-surface-container px-3 py-2.5"
 											/>
@@ -185,15 +202,19 @@ const StartProjectSection = () => {
 							/>
 							<FormField
 								control={form.control}
-								name="email"
+								name="phoneNumber"
 								render={({ field }) => (
 									<FormItem className="w-1/2">
 										<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
-											Phone number
+											{t(
+												'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',
+											)}
 										</FormLabel>
 										<FormControl>
 											<Input
-												placeholder="Optional"
+												placeholder={t(
+													'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.placeholder',
+												)}
 												{...field}
 												className="bg-surface-container px-3 py-2.5"
 											/>
@@ -211,7 +232,10 @@ const StartProjectSection = () => {
 								render={({ field }) => (
 									<FormItem className="w-full">
 										<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
-											Project Type*
+											{t(
+												'pages.home.sections.startYourProjectToday.form.fields.projectType.label',
+											)}
+											*
 										</FormLabel>
 										<FormControl>
 											<Select
@@ -219,18 +243,22 @@ const StartProjectSection = () => {
 												defaultValue={field.value}
 											>
 												<SelectTrigger className="w-full bg-surface-container px-3 py-2.5">
-													<SelectValue placeholder="Select a project type" />
+													<SelectValue
+														placeholder={t(
+															'pages.home.sections.startYourProjectToday.form.fields.projectType.placeholder',
+														)}
+													/>
 												</SelectTrigger>
 												<SelectContent>
-													<SelectItem value="apple">Apple</SelectItem>
-													<SelectItem value="banana">Banana</SelectItem>
-													<SelectItem value="blueberry">
-														Blueberry
-													</SelectItem>
-													<SelectItem value="grapes">Grapes</SelectItem>
-													<SelectItem value="pineapple">
-														Pineapple
-													</SelectItem>
+													{formProjectTypes.map((projectType, index) => (
+														<SelectItem
+															key={`form-project-type-${projectType.type}-${index}`}
+															value={projectType.label}
+														>
+															{/* {t(projectType.label)} */}
+															{projectType.label}
+														</SelectItem>
+													))}
 												</SelectContent>
 											</Select>
 										</FormControl>
@@ -247,7 +275,10 @@ const StartProjectSection = () => {
 								render={({ field }) => (
 									<FormItem className="w-1/2">
 										<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
-											Budget Range*
+											{t(
+												'pages.home.sections.startYourProjectToday.form.fields.budgetRange.label',
+											)}
+											*
 										</FormLabel>
 										<FormControl>
 											<Select
@@ -255,7 +286,11 @@ const StartProjectSection = () => {
 												defaultValue={field.value}
 											>
 												<SelectTrigger className="w-full bg-surface-container px-3 py-2.5">
-													<SelectValue placeholder="Select a budget range" />
+													<SelectValue
+														placeholder={t(
+															'pages.home.sections.startYourProjectToday.form.fields.budgetRange.placeholder',
+														)}
+													/>
 												</SelectTrigger>
 												<SelectContent>
 													<SelectItem value="apple">Apple</SelectItem>
@@ -277,11 +312,14 @@ const StartProjectSection = () => {
 
 							<FormField
 								control={form.control}
-								name="budgetRange"
+								name="projectTimeline"
 								render={({ field }) => (
 									<FormItem className="w-1/2">
 										<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
-											Project Timeline*
+											{t(
+												'pages.home.sections.startYourProjectToday.form.fields.projectTimeline.label',
+											)}
+											*
 										</FormLabel>
 										<FormControl>
 											<Select
@@ -289,7 +327,11 @@ const StartProjectSection = () => {
 												defaultValue={field.value}
 											>
 												<SelectTrigger className="w-full bg-surface-container px-3 py-2.5">
-													<SelectValue placeholder="Select a timeline" />
+													<SelectValue
+														placeholder={t(
+															'pages.home.sections.startYourProjectToday.form.fields.projectTimeline.placeholder',
+														)}
+													/>
 												</SelectTrigger>
 												<SelectContent>
 													<SelectItem value="apple">Apple</SelectItem>
@@ -317,7 +359,9 @@ const StartProjectSection = () => {
 								render={() => (
 									<FormItem className="w-full">
 										<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
-											Technical Requirements
+											{t(
+												'pages.home.sections.startYourProjectToday.form.fields.technicalRequirements.label',
+											)}
 										</FormLabel>
 										<div className="grid grid-rows-5 grid-cols-2 gap-2">
 											{items.map((item) => (
@@ -372,7 +416,10 @@ const StartProjectSection = () => {
 								render={({ field }) => (
 									<FormItem className="w-full">
 										<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
-											Preferred Team Size*
+											{t(
+												'pages.home.sections.startYourProjectToday.form.fields.preferredTeamSize.label',
+											)}
+											*
 										</FormLabel>
 										<FormControl>
 											<Select
@@ -380,7 +427,11 @@ const StartProjectSection = () => {
 												defaultValue={field.value}
 											>
 												<SelectTrigger className="w-full bg-surface-container px-3 py-2.5">
-													<SelectValue placeholder="Select number of team members" />
+													<SelectValue
+														placeholder={t(
+															'pages.home.sections.startYourProjectToday.form.fields.preferredTeamSize.placeholder',
+														)}
+													/>
 												</SelectTrigger>
 												<SelectContent>
 													<SelectItem value="apple">Apple</SelectItem>
@@ -403,15 +454,20 @@ const StartProjectSection = () => {
 						<div className="">
 							<FormField
 								control={form.control}
-								name="preferredTeamSize"
+								name="projectDescription"
 								render={({ field }) => (
 									<FormItem className="w-full">
 										<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
-											Preferred Team Size*
+											{t(
+												'pages.home.sections.startYourProjectToday.form.fields.projectDescription.label',
+											)}
+											*
 										</FormLabel>
 										<FormControl>
 											<Textarea
-												placeholder="Describe your project in detail: goals, specific technology requirements, constraints we should know about, and any additional details..."
+												placeholder={t(
+													'pages.home.sections.startYourProjectToday.form.fields.projectDescription.placeholder',
+												)}
 												{...field}
 												rows={5}
 												className="bg-surface-container px-3 py-2.5"
@@ -436,6 +492,8 @@ const StartProjectSection = () => {
 						</Button>
 					</form>
 				</Form>
+
+				<StartYourProjectMultiStepForm />
 			</div>
 		</section>
 	)

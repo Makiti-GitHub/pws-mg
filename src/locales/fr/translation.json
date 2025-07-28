@@ -5,5 +5,73 @@
         "en": "Anglais",
         "de": "Allemand",
         "fr": "Français"
+    },
+    "nav": {
+        "links": {
+            "services": "Services",
+            "portfolio": "Portfolio",
+            "products": "Produits",
+            "about": "A propos",
+            "contact": "Contact"
+        },
+        "cta": {
+            "letsTalk": "Contactez-nous"
+        }
+    },
+    "pages": {
+        "home": {
+            "sections": {
+                "startYourProjectToday": {
+                    "title": "Démarrez votre projet aujourd'hui",
+                    "subtitle": "Parlez-nous de vos exigences de projet et construisons quelque chose d'incroyable ensemble.",
+                    "form": {
+                        "title": "Exigences de projet",
+                        "indication": "Veuillez remplir ce formulaire avec autant de détails que possible pour nous aider à comprendre vos besoins de projet.",
+                        "fields": {
+                            "fullName": {
+                                "label": "Nom complet",
+                                "placeholder": "Entrez votre nom complet"
+                            },
+                            "emailAddress": {
+                                "label": "Adresse e-mail",
+                                "placeholder": "Entrez votre adresse e-mail"
+                            },
+                            "companyName": {
+                                "label": "Nom de l'entreprise",
+                                "placeholder": "Facultatif"
+                            },
+                            "phoneNumber": {
+                                "label": "Numéro de téléphone",
+                                "placeholder": "Facultatif"
+                            },
+                            "projectType": {
+                                "label": "Type de projet",
+                                "placeholder": "Sélectionnez un type de projet"
+                            },
+                            "budgetRange": {
+                                "label": "Fourchette de budget",
+                                "placeholder": "Sélectionnez une fourchette de budget"
+                            },
+                            "projectTimeline": {
+                                "label": "Calendrier de projet",
+                                "placeholder": "Sélectionnez un calendrier"
+                            },
+                            "technicalRequirements": {
+                                "label": "Exigences techniques",
+                                "placeholder": "Sélectionnez des exigences techniques"
+                            },
+                            "preferredTeamSize": {
+                                "label": "Taille d'équipe préférée",
+                                "placeholder": "Sélectionnez le nombre de membres de l'équipe"
+                            },
+                            "projectDescription": {
+                                "label": "Description du projet",
+                                "placeholder": "Décrivez votre projet en détail : objectifs, exigences technologiques spécifiques, contraintes que nous devons connaître et tout autre détail..."
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

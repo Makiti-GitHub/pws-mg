@@ -4,6 +4,7 @@ import { Link } from 'rasengan'
 import LanguageButton from '../atoms/buttons/LanguageButton'
 import MotionIconButton2 from '../atoms/buttons/MotionIconButton2'
 import Image from '@rasenganjs/image'
+import { useTranslation } from 'react-i18next'
 // import { useEffect, useState } from 'react'
 // import { AnimatePresence, motion } from 'framer-motion'
 
@@ -14,24 +15,25 @@ const links: {
 	href: string
 }[] = [
 	{
-		label: 'Services',
+		label: 'services',
 		href: '#services',
 	},
 	{
-		label: 'Portfolio',
+		label: 'portfolio',
 		href: '/portfolio',
 	},
 	{
-		label: 'Products',
+		label: 'products',
 		href: '/products',
 	},
 	{
-		label: 'About',
+		label: 'about',
 		href: '/about',
 	},
 ]
 
 const NavBar = () => {
+	const { t } = useTranslation()
 	// const [isScrolled, setIsScrolled] = useState<boolean>(false)
 
 	// useEffect(() => {
@@ -98,8 +100,11 @@ const NavBar = () => {
 				>
 					{links.map((link, index) => (
 						<li key={`nav-link-${index}`}>
-							<Link className="hover:text-primary hover:underline" to={link.href}>
-								{link.label}
+							<Link
+								className="hover:text-primary hover:underline capitalize"
+								to={link.href}
+							>
+								{t(`nav.links.${link.label}`)}
 							</Link>
 						</li>
 					))}
@@ -107,7 +112,7 @@ const NavBar = () => {
 
 				<div className="flex items-center gap-4 lg:gap-8">
 					<MotionIconButton2
-						label="Let's talk"
+						label={t('nav.cta.letsTalk')}
 						className="rounded-[40px] px-2 py-1.5 h-max text-base"
 					/>
 					{/* <Button variant="primary" className="rounded-4xl">

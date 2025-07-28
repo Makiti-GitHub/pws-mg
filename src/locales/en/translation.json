@@ -5,5 +5,73 @@
         "en": "English",
         "de": "German",
         "fr": "French"
+    },
+    "nav": {
+        "links": {
+            "services": "Services",
+            "portfolio": "Portfolio",
+            "products": "Products",
+            "about": "About",
+            "contact": "Contact"
+        },
+        "cta": {
+            "letsTalk": "Let's Talk"
+        }
+    },
+    "pages": {
+        "home": {
+            "sections": {
+                "startYourProjectToday": {
+                    "title": "Start your project today",
+                    "subtitle": "Tell us about your project requirements and let's build something amazing together.",
+                    "form": {
+                        "title": "Project Requirements",
+                        "indication": "Please fill out this form with as much detail as possible to help us understand your project needs.",
+                        "fields": {
+                            "fullName": {
+                                "label": "Full Name",
+                                "placeholder": "Enter your full name"
+                            },
+                            "emailAddress": {
+                                "label": "Email Address",
+                                "placeholder": "Enter your email address"
+                            },
+                            "companyName": {
+                                "label": "Company Name",
+                                "placeholder": "Optional"
+                            },
+                            "phoneNumber": {
+                                "label": "Phone Number",
+                                "placeholder": "Optional"
+                            },
+                            "projectType": {
+                                "label": "Project Type",
+                                "placeholder": "Select a project type"
+                            },
+                            "budgetRange": {
+                                "label": "Budget Range",
+                                "placeholder": "Select a budget range"
+                            },
+                            "projectTimeline": {
+                                "label": "Project Timeline",
+                                "placeholder": "Select a timeline"
+                            },
+                            "technicalRequirements": {
+                                "label": "Technical Requirements",
+                                "placeholder": "Select technical requirements"
+                            },
+                            "preferredTeamSize": {
+                                "label": "Preferred Team Size",
+                                "placeholder": "Select number of team members"
+                            },
+                            "projectDescription": {
+                                "label": "Project Description",
+                                "placeholder": "Describe your project in detail: goals, specific technology requirements, constraints we should know about, and any additional details..."
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
