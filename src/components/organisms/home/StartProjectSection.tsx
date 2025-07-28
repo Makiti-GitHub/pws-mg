@@ -1,107 +1,107 @@
-import { Button } from '@/components/ui/button'
-import { SendIcon } from 'lucide-react'
+// import { Button } from '@/components/ui/button'
+// import { SendIcon } from 'lucide-react'
 import SectionHeader from '@/components/molecules/SectionHeader'
 
-import {
-	Form,
-	FormControl,
-	FormField,
-	FormItem,
-	FormLabel,
-	FormMessage,
-} from '@/components/ui/form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import { Input } from '@/components/ui/input'
-import {
-	Select,
-	SelectContent,
-	SelectItem,
-	SelectTrigger,
-	SelectValue,
-} from '@/components/ui/select'
-import { Textarea } from '@/components/ui/textarea'
-import { Checkbox } from '@/components/ui/checkbox'
-import { formProjectTypes, ProjectTypeCategoriesEnum } from '@/data/mock'
+// import {
+// 	Form,
+// 	FormControl,
+// 	FormField,
+// 	FormItem,
+// 	FormLabel,
+// 	FormMessage,
+// } from '@/components/ui/form'
+// import { zodResolver } from '@hookform/resolvers/zod'
+// import { useForm } from 'react-hook-form'
+// import { z } from 'zod'
+// import { Input } from '@/components/ui/input'
+// import {
+// 	Select,
+// 	SelectContent,
+// 	SelectItem,
+// 	SelectTrigger,
+// 	SelectValue,
+// } from '@/components/ui/select'
+// import { Textarea } from '@/components/ui/textarea'
+// import { Checkbox } from '@/components/ui/checkbox'
+// import { formProjectTypes, ProjectTypeCategoriesEnum } from '@/data/mock'
 import { useTranslation } from 'react-i18next'
 import StartYourProjectMultiStepForm from './form/StartYourProjectForm'
 
-const items = [
-	{
-		id: 'frontend-development',
-		label: 'Frontend Development',
-	},
-	{
-		id: 'database-design',
-		label: 'Database Design',
-	},
-	{
-		id: 'devops',
-		label: 'DevOps',
-	},
-	{
-		id: 'uxui-design',
-		label: 'UX/UI Design',
-	},
-	{
-		id: 'project-management',
-		label: 'Project Management',
-	},
-	{
-		id: 'backend-development',
-		label: 'Backend Development',
-	},
-	{
-		id: 'cloud-infrastructure',
-		label: 'Cloud Infrastructure',
-	},
-	{
-		id: 'mobile-development',
-		label: 'Mobile Development',
-	},
-	{
-		id: 'quality-assurance',
-		label: 'Quality Assurance',
-	},
-	{
-		id: 'technical-consulting',
-		label: 'Technical Consulting',
-	},
-] as const
+// const items = [
+// 	{
+// 		id: 'frontend-development',
+// 		label: 'Frontend Development',
+// 	},
+// 	{
+// 		id: 'database-design',
+// 		label: 'Database Design',
+// 	},
+// 	{
+// 		id: 'devops',
+// 		label: 'DevOps',
+// 	},
+// 	{
+// 		id: 'uxui-design',
+// 		label: 'UX/UI Design',
+// 	},
+// 	{
+// 		id: 'project-management',
+// 		label: 'Project Management',
+// 	},
+// 	{
+// 		id: 'backend-development',
+// 		label: 'Backend Development',
+// 	},
+// 	{
+// 		id: 'cloud-infrastructure',
+// 		label: 'Cloud Infrastructure',
+// 	},
+// 	{
+// 		id: 'mobile-development',
+// 		label: 'Mobile Development',
+// 	},
+// 	{
+// 		id: 'quality-assurance',
+// 		label: 'Quality Assurance',
+// 	},
+// 	{
+// 		id: 'technical-consulting',
+// 		label: 'Technical Consulting',
+// 	},
+// ] as const
 
-const formSchema = z.object({
-	fullName: z.string().min(2, {
-		message: 'Fullname must be at least 2 characters.',
-	}),
-	email: z.email(),
-	companyName: z.string().optional(),
-	phoneNumber: z.string().optional(),
-	projectType: z.enum(ProjectTypeCategoriesEnum),
-	budgetRange: z.string(),
-	projectTimeline: z.string(),
-	technicalRequirements: z.array(z.string()).refine((value) => value.some((item) => item), {
-		message: 'You have to select at least one item.',
-	}),
-	preferredTeamSize: z.string(),
-	projectDescription: z.string(),
-})
+// const formSchema = z.object({
+// 	fullName: z.string().min(2, {
+// 		message: 'Fullname must be at least 2 characters.',
+// 	}),
+// 	email: z.email(),
+// 	companyName: z.string().optional(),
+// 	phoneNumber: z.string().optional(),
+// 	projectType: z.enum(ProjectTypeCategoriesEnum),
+// 	budgetRange: z.string(),
+// 	projectTimeline: z.string(),
+// 	technicalRequirements: z.array(z.string()).refine((value) => value.some((item) => item), {
+// 		message: 'You have to select at least one item.',
+// 	}),
+// 	preferredTeamSize: z.string(),
+// 	projectDescription: z.string(),
+// })
 
 const StartProjectSection = () => {
 	const { t } = useTranslation()
-	const form = useForm<z.infer<typeof formSchema>>({
-		resolver: zodResolver(formSchema),
-		defaultValues: {
-			fullName: '',
-		},
-	})
+	// const form = useForm<z.infer<typeof formSchema>>({
+	// 	resolver: zodResolver(formSchema),
+	// 	defaultValues: {
+	// 		fullName: '',
+	// 	},
+	// })
 
-	// 2. Define a submit handler.
-	function onSubmit(values: z.infer<typeof formSchema>) {
-		// Do something with the form values.
-		// ✅ This will be type-safe and validated.
-		console.log(values)
-	}
+	// // 2. Define a submit handler.
+	// function onSubmit(values: z.infer<typeof formSchema>) {
+	// 	// Do something with the form values.
+	// 	// ✅ This will be type-safe and validated.
+	// 	console.log(values)
+	// }
 
 	return (
 		<section className="px-8 md:px-[80px] lg:px-[120px] flex flex-col gap-8 w-full">
@@ -111,7 +111,7 @@ const StartProjectSection = () => {
 					subTitle={t('pages.home.sections.startYourProjectToday.subtitle')}
 				/>
 
-				<Form {...form}>
+				{/* <Form {...form}>
 					<form
 						onSubmit={form.handleSubmit(onSubmit)}
 						className="box_shadow_products_card p-6 flex flex-col gap-6 rounded-xl"
@@ -255,7 +255,7 @@ const StartProjectSection = () => {
 															key={`form-project-type-${projectType.type}-${index}`}
 															value={projectType.label}
 														>
-															{/* {t(projectType.label)} */}
+															{/* {t(projectType.label)} 
 															{projectType.label}
 														</SelectItem>
 													))}
@@ -491,7 +491,7 @@ const StartProjectSection = () => {
 							</span>{' '}
 						</Button>
 					</form>
-				</Form>
+				</Form> */}
 
 				<StartYourProjectMultiStepForm />
 			</div>

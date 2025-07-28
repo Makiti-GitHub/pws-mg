@@ -5,10 +5,14 @@ import Image from '@rasenganjs/image'
 import {
 	ArrowLeftIcon,
 	ArrowUpRightIcon,
+	BoxesIcon,
+	CalendarIcon,
 	CircleCheckBigIcon,
 	CodeIcon,
+	DollarSignIcon,
 	StarIcon,
 	TrendingUpIcon,
+	UsersIcon,
 } from 'lucide-react'
 import { PageComponent, useNavigate, useParams } from 'rasengan'
 import { useMemo } from 'react'
@@ -22,9 +26,7 @@ const Project: PageComponent = () => {
 	const { id } = useParams()
 
 	const project = useMemo(() => {
-		if (id) {
-			return successStoriesMock.find((story) => story.id === id)
-		}
+		return successStoriesMock.find((story) => story.id === id)
 	}, [])
 
 	return (
@@ -42,24 +44,57 @@ const Project: PageComponent = () => {
 					</Button>
 
 					{project ? (
-						<div className="w-full grid lg:grid-cols-2 gap-[52px] pt-[61px] pb-[45px]">
-							<div className="flex flex-col gap-10 text-white">
-								<span className="rounded-2xl w-max px-3 py-1.5 border-2 border-white">
-									{project.category}
-								</span>
-								<div className="space-y-6">
-									<h1 className="font-seravek_medium text-5xl leading-16 xl:leading-20">
-										{project.title}
-									</h1>
-									<p className="text-lg leading-normal">{project.description}</p>
+						<div className="w-full grid xl:grid-cols-2 gap-[52px] pt-[61px] pb-[45px]">
+							<div className="flex flex-col gap-8 text-white">
+								<div className="flex flex-col gap-5">
+									<span className="rounded-2xl w-max px-3 py-1.5 border-2 border-white">
+										{project.category}
+									</span>
+									<div className="space-y-2">
+										<h1 className="font-seravek_medium text-5xl leading-16 xl:leading-20">
+											{project.title}
+										</h1>
+										<p className="text-lg leading-normal">
+											{project.description}
+										</p>
+									</div>
 								</div>
-								<div className="flex justify-between">
-									{Array.from({ length: 4 }, (_, index) => (
-										<div
-											className="size-20 rounded-xl bg-white"
-											key={`project-${index}-attrib`}
-										/>
-									))}
+								<div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-surface text-center">
+									<div className="flex flex-col gap-2 items-center">
+										<CalendarIcon className="size-8" />
+										<div className="space-y-1">
+											<p className="text-sm">Durée du projet</p>
+											<p className="font-seravek_bold text-base">6 Mois</p>
+										</div>
+									</div>
+
+									<div className="flex flex-col gap-2 items-center">
+										<UsersIcon className="size-8" />
+										<div className="space-y-1">
+											<p className="text-sm">Taille de l'équipe</p>
+											<p className="font-seravek_bold text-base">
+												4 Développeurs
+											</p>
+										</div>
+									</div>
+
+									<div className="flex flex-col gap-2 items-center">
+										<DollarSignIcon className="size-8" />
+										<div className="space-y-1">
+											<p className="text-sm">Investment</p>
+											<p className="font-seravek_bold text-base">$150,000</p>
+										</div>
+									</div>
+
+									<div className="flex flex-col gap-2 items-center">
+										<BoxesIcon className="size-8" />
+										<div className="space-y-1">
+											<p className="text-sm">Industry</p>
+											<p className="font-seravek_bold text-base">
+												Transportation
+											</p>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div className="">
@@ -89,7 +124,7 @@ const Project: PageComponent = () => {
 											className="size-full object-contain aspect-auto"
 										/>
 									</div>
-									<h2 className="text-on-surface text-[28px] flex-1">
+									<h2 className="text-on-surface text-xl md:text-2xl lg:text-[28px] flex-1">
 										<span className="font-seravek_medium">The Challenge:</span>{' '}
 										<span>{project.challenges.title}</span>
 									</h2>
@@ -100,14 +135,14 @@ const Project: PageComponent = () => {
 								</p>
 							</div>
 							<div className="space-y-6">
-								<h3 className="font-seravek_medium text-on-surface text-[28px]">
+								<h3 className="font-seravek_medium text-on-surface text-xl md:text-2xl lg:text-[28px]">
 									Key Problems Identified:
 								</h3>
 								<ul className="grid sm:grid-cols-2 gap-4">
 									{project.challenges.problems.map((achievement, index) => (
 										<li
 											key={`project-${id}-achievement-${index}`}
-											className="text-lg text-on-surface-variant gap-3 flex"
+											className="text-base sm:text-lg text-on-surface-variant gap-3 flex"
 										>
 											<div className="size-3 rounded-full bg-primary mt-0.5" />
 											<span className="leading-none flex-1">
@@ -123,7 +158,7 @@ const Project: PageComponent = () => {
 						<div className="space-y-6">
 							<div className="flex items-center gap-2">
 								<CodeIcon className="size-6 text-secondary" />
-								<h2 className="font-seravek_medium text-on-surface text-[28px]">
+								<h2 className="font-seravek_medium text-on-surface text-xl md:text-2xl lg:text-[28px]">
 									Our Solution
 								</h2>
 							</div>
@@ -142,10 +177,14 @@ const Project: PageComponent = () => {
 									key={`phase-${index}`}
 									className="p-5 space-y-6 rounded-xl border-[0.75px] border-outline-variant"
 								>
-									<div>
+									<div className="flex items-center justify-between">
 										<h4 className="font-seravek_medium text-on-surface-variant text-2xl">
 											{item.label}
 										</h4>
+
+										<span className="border-[0.5px] border-outline px-2 py-1 rounded-sm font-seravek_medium text-xl text-on-surface">
+											{item.duration} weeks
+										</span>
 									</div>
 									<ul className="grid sm:grid-cols-2 gap-4">
 										{item.achievements.map((achievement, index) => (

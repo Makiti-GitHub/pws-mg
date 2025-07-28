@@ -110,7 +110,7 @@ const NavBar = () => {
 					))}
 				</ul>
 
-				<div className="flex items-center gap-4 lg:gap-8">
+				<div className="flex items-center gap-4">
 					<MotionIconButton2
 						label={t('nav.cta.letsTalk')}
 						className="rounded-[40px] px-2 py-1.5 h-max text-base"

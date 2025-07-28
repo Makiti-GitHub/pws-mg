@@ -341,6 +341,7 @@ export const successStoriesMock: {
 			startDate: Date
 			endDate: Date
 			achievements: string[]
+			duration: number
 		}[]
 	}
 }[] = [
@@ -423,6 +424,7 @@ export const successStoriesMock: {
 						'Market Analysis',
 						'UX/UI Prototyping',
 					],
+					duration: 4,
 				},
 				{
 					label: 'Design & Development',
@@ -434,6 +436,7 @@ export const successStoriesMock: {
 						'Cross-Platform Compatibility (iOS & Android)',
 						'API Integrations for Flights, Hotels, and Activities',
 					],
+					duration: 8,
 				},
 				{
 					label: 'Launch & Optimization',
@@ -445,6 +448,7 @@ export const successStoriesMock: {
 						'User feedback integration',
 						'Final optimizations',
 					],
+					duration: 4,
 				},
 			],
 			achievements: [
@@ -910,6 +914,7 @@ export interface ILocation {
 	arrondissement?: string
 	mail?: string
 	website?: string
+	iframeLink: string
 }
 
 export const locationsMock: ILocation[] = [
@@ -925,6 +930,8 @@ export const locationsMock: ILocation[] = [
 		arrondissement: '8 ème arrondissment',
 		mail: 'contact@makiti.de',
 		website: 'www.makiti-group.com',
+		iframeLink:
+			'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.35721207169!2d126.9525508511284!3d37.49949233562292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1d7daa43d7b%3A0x101547c9adb8137c!2z7ISc7Jq467O47LmY6rO8!5e0!3m2!1sko!2sus!4v1603125402556!5m2!1sko!2sus',
 	},
 	{
 		name: 'Yaoundé - Cameroon',
@@ -938,6 +945,8 @@ export const locationsMock: ILocation[] = [
 		arrondissement: 'Arrondissment Yaoundé 1er',
 		mail: 'contact@makiti.cm',
 		website: 'www.makiti.cm',
+		iframeLink:
+			'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.35721207169!2d126.9525508511284!3d37.49949233562292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1d7daa43d7b%3A0x101547c9adb8137c!2z7ISc7Jq467O47LmY6rO8!5e0!3m2!1sko!2sus!4v1603125402556!5m2!1sko!2sus',
 	},
 	{
 		name: 'Lagos - Nigeria',
@@ -952,6 +961,8 @@ export const locationsMock: ILocation[] = [
 		// arrondissement: 'Arrondissment Yaoundé 1er',
 		mail: 'contact@makiti.cm',
 		website: 'www.makiti.cm',
+		iframeLink:
+			'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.35721207169!2d126.9525508511284!3d37.49949233562292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1d7daa43d7b%3A0x101547c9adb8137c!2z7ISc7Jq467O47LmY6rO8!5e0!3m2!1sko!2sus!4v1603125402556!5m2!1sko!2sus',
 	},
 ]
 
@@ -1118,3 +1129,91 @@ export const formProjectTypes: {
 		type: 'others',
 	},
 ]
+
+/** Technical Requirements */
+
+export const formTechnicalRequirements = [
+	{
+		id: 'frontend-development',
+		label: 'Frontend Development',
+	},
+	{
+		id: 'database-design',
+		label: 'Database Design',
+	},
+	{
+		id: 'devops',
+		label: 'DevOps',
+	},
+	{
+		id: 'uxui-design',
+		label: 'UX/UI Design',
+	},
+	{
+		id: 'project-management',
+		label: 'Project Management',
+	},
+	{
+		id: 'backend-development',
+		label: 'Backend Development',
+	},
+	{
+		id: 'cloud-infrastructure',
+		label: 'Cloud Infrastructure',
+	},
+	{
+		id: 'mobile-development',
+		label: 'Mobile Development',
+	},
+	{
+		id: 'quality-assurance',
+		label: 'Quality Assurance',
+	},
+	{
+		id: 'technical-consulting',
+		label: 'Technical Consulting',
+	},
+] as const
+
+/** Technical Requirements */
+
+export const formTeamSizes = [
+	{
+		id: '1–2 Members',
+		label: '1–2 Members',
+	},
+	{
+		id: '3–5 Members',
+		label: '3–5 Members',
+	},
+	{
+		id: '6–10 Members',
+		label: '6–10 Members',
+	},
+	{
+		id: '10–15 Members',
+		label: '10–15 Members',
+	},
+	{
+		id: '15+ Members',
+		label: '15+ Members',
+	},
+] as const
+
+/** Form Budget Ranges */
+export const formBudgetRanges = [
+	'$10,000 - $25,000',
+	'$25,000 - $50,000',
+	'$50,000 - $100,000',
+	'$100,000 - $250,000',
+	'$250,000+',
+] as const
+
+/** Form Project Timeline */
+export const formProjectTimelines = [
+	'0–3 Months',
+	'3–6 Months',
+	'6–9 Months',
+	'9–12 Months',
+	'12+ Months',
+] as const

@@ -100,8 +100,8 @@ const BrandsCarousel = ({ pauseOnHover, speed = 50 }: BrandsCarouselProps) => {
 			{[...PartnersLogos, ...PartnersLogos].map((partner, index) => (
 				<motion.div
 					key={`partner-${index}`}
-					className="inline-flex items-center justify-center mx-8 flex-shrink-0 rounded-lg transition-shadow duration-300"
-					style={{ width: '200px', height: '100px' }}
+					className="inline-flex items-center justify-center mx-12 flex-shrink-0 rounded-lg transition-shadow duration-300"
+					style={{ height: '100px' }}
 					whileHover={{ scale: 1.05 }}
 					transition={{ duration: 0.2 }}
 				>
