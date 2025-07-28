@@ -127,10 +127,12 @@ const Footer = () => {
 									className="absolute top-0 left-0 size-full border-0"
 									title={currentLocation.enterprise?.toString()}
 									src={currentLocation.iframeLink}
-									// style={{ border: 0 }}
+									style={{ border: 0 }}
 									allowFullScreen
 									aria-hidden="false"
+									loading="lazy"
 									tabIndex={0}
+									referrerPolicy="no-referrer-when-downgrade"
 								/>
 							</div>
 							<div className="lg:max-w-[500px] w-full">

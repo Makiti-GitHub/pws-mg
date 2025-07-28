@@ -8,8 +8,9 @@ import AnimatedCounter from '@/components/atoms/animations/AnimatedCounter'
 import MotionIconButton2 from '@/components/atoms/buttons/MotionIconButton2'
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowLeftIcon, ArrowRightIcon } from 'lucide-react'
+import { ArrowDownIcon, ArrowLeftIcon, ArrowRightIcon } from 'lucide-react'
 import Image from '@rasenganjs/image'
+import { Link } from 'rasengan'
 
 // const slideVariants = {
 // 	hiddenRight: {
@@ -181,7 +182,14 @@ const HeroSection = () => {
 						isDesktop ? 'custom-cursor' : ''
 					} overflow-hidden`}
 				>
-					<div className="relative">
+					<div
+						className="relative"
+						onClick={(e) => {
+							handleNext()
+							e.preventDefault()
+							e.stopPropagation()
+						}}
+					>
 						<Image
 							src={heroCarousel[currentIndex].image}
 							alt={heroCarousel[currentIndex].title}
@@ -193,6 +201,13 @@ const HeroSection = () => {
 					</div>
 					<CustomCursor position={cursorPosition} isVisible={isHovering} />
 				</div>
+			</div>
+			<div className="flex flex-col items-center justify-center">
+				<Link to="#services">
+					<div className="size-12 animate-bounce bg-secondary border-2 border-primary rounded-full flex items-center justify-center">
+						<ArrowDownIcon className="size-6 text-primary" />
+					</div>
+				</Link>
 			</div>
 			<div className="space-y-[60px]">
 				<div className="px-8 md:px-[80px] lg:px-[120px]">

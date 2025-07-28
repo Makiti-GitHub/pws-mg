@@ -931,7 +931,7 @@ export const locationsMock: ILocation[] = [
 		mail: 'contact@makiti.de',
 		website: 'www.makiti-group.com',
 		iframeLink:
-			'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.35721207169!2d126.9525508511284!3d37.49949233562292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1d7daa43d7b%3A0x101547c9adb8137c!2z7ISc7Jq467O47LmY6rO8!5e0!3m2!1sko!2sus!4v1603125402556!5m2!1sko!2sus',
+			'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5247.8924261166885!2d2.3096515766164756!3d48.8783018993049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fb8223c18ed%3A0x1144769557471933!2s58%20Rue%20de%20Monceau%2C%2075008%20Paris%2C%20France!5e0!3m2!1sfr!2sde!4v1753448617959!5m2!1sfr!2sde',
 	},
 	{
 		name: 'Yaoundé - Cameroon',
@@ -946,7 +946,7 @@ export const locationsMock: ILocation[] = [
 		mail: 'contact@makiti.cm',
 		website: 'www.makiti.cm',
 		iframeLink:
-			'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.35721207169!2d126.9525508511284!3d37.49949233562292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1d7daa43d7b%3A0x101547c9adb8137c!2z7ISc7Jq467O47LmY6rO8!5e0!3m2!1sko!2sus!4v1603125402556!5m2!1sko!2sus',
+			'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.5142507275755!2d11.536122975462819!3d3.9136499479766624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcffbec9d86b3%3A0xf33e87492a4425cb!2sMakiti%20SARL!5e0!3m2!1sfr!2sde!4v1753448717828!5m2!1sfr!2sde',
 	},
 	{
 		name: 'Lagos - Nigeria',
@@ -962,7 +962,7 @@ export const locationsMock: ILocation[] = [
 		mail: 'contact@makiti.cm',
 		website: 'www.makiti.cm',
 		iframeLink:
-			'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.35721207169!2d126.9525508511284!3d37.49949233562292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1d7daa43d7b%3A0x101547c9adb8137c!2z7ISc7Jq467O47LmY6rO8!5e0!3m2!1sko!2sus!4v1603125402556!5m2!1sko!2sus',
+			'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.1042894254438!2d3.3543779754678194!3d6.508481523336707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c3f2b2097d3%3A0x2ec57bc54ee9197d!2sRandle%20Ave%2C%20Surulere%2C%20101241%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sfr!2sde!4v1753448746277!5m2!1sfr!2sde',
 	},
 ]
 

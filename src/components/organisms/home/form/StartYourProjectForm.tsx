@@ -16,6 +16,7 @@ import ProjectInfoStep from './steps/ProjectInfoStep'
 import ProjectDescriptionInfoStep from './steps/ProjectDescriptionStep'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@radix-ui/react-select'
+import { t } from 'i18next'
 
 const slideVariants = {
 	enter: (direction: number) => ({
@@ -89,6 +90,63 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 	const onSubmit = (data: FullFormData) => {
 		console.log('Form submitted:', data)
 		alert('Form submitted successfully!')
+
+		const project = '+49 162 7265788'
+
+		let text = `Demande de projet :\n\n`
+
+		text += `${t('pages.home.sections.startYourProjectToday.form.fields.fullName.label')} : ${
+			data.fullName
+		}\n`
+
+		text += `${t(
+			'pages.home.sections.startYourProjectToday.form.fields.emailAddress.label',
+		)} : ${data.email}\n`
+
+		text += `${t(
+			'pages.home.sections.startYourProjectToday.form.fields.companyName.label',
+		)} : ${data.companyName}\n`
+
+		text += `${t(
+			'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',
+		)} : ${data.phoneNumber}\n`
+
+		text += `${t(
+			'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',
+		)} : ${data.phoneNumber}\n`
+
+		text += `${t(
+			'pages.home.sections.startYourProjectToday.form.fields.projectType.label',
+		)} : ${data.projectType}\n`
+
+		text += `${t(
+			'pages.home.sections.startYourProjectToday.form.fields.budgetRange.label',
+		)} : ${data.budgetRange}\n`
+
+		text += `${t(
+			'pages.home.sections.startYourProjectToday.form.fields.projectTimeline.label',
+		)} : ${data.projectTimeline}\n`
+
+		data.technicalRequirements.forEach((requirement) => {
+			text += `\t• ${requirement}\n`
+		})
+
+		text += `${t(
+			'pages.home.sections.startYourProjectToday.form.fields.projectDescription.label',
+		)} : ${data.projectDescription}\n`
+
+		text += `\n`
+
+		// Create WhatsApp URL with phone number and optional message
+		// Format phone number - remove any non-digit characters
+		const formattedNumber = project?.replace(/\D/g, '')
+		const encodedMessage = encodeURIComponent(text)
+		const whatsappUrl = `https://wa.me/${formattedNumber}?text=${encodedMessage}`
+
+		console.log(whatsappUrl)
+
+		// Open WhatsApp in a new tab
+		window.open(whatsappUrl, '_blank')
 	}
 
 	const stepComponents = [PersonalInfoStep, ProjectInfoStep, ProjectDescriptionInfoStep]
@@ -100,6 +158,15 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 				onSubmit={form.handleSubmit(onSubmit)}
 				className="box_shadow_products_card p-6 flex flex-col gap-6 rounded-xl"
 			>
+				<div className="space-y-2">
+					<p className="font-seravek_medium text-on-surface-variant text-xl">
+						{t('pages.home.sections.startYourProjectToday.form.title')}
+					</p>
+					<p className="text-base text-outline">
+						{t('pages.home.sections.startYourProjectToday.form.indication')}
+					</p>
+				</div>
+
 				<div className=" bg-white">
 					{/* Step Indicator */}
 					<div className="flex items-center justify-between mb-8">
