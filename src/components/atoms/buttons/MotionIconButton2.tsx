@@ -13,7 +13,7 @@ interface ButtonProps {
 	// iconX?: number
 }
 
-const MotionIconButton2: FC<ButtonProps> = ({
+const MotionIconButton2: FC<React.ComponentProps<'button'> & ButtonProps> = ({
 	prefixIcon,
 	suffixIcon,
 	label,

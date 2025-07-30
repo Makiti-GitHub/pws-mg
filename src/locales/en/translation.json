@@ -18,6 +18,10 @@
             "letsTalk": "Let's Talk"
         }
     },
+    "footer": {
+        "leftSection": {},
+        "rightSection": {}
+    },
     "pages": {
         "home": {
             "sections": {
@@ -70,6 +74,32 @@
                             }
                         }
                     }
+                }
+            }
+        },
+        "portfolio": {
+            "sections": {
+                "projects": {
+                    "title": "Projects",
+                    "subtitle": "Discover our portfolio of successful projects"
+                }
+            }
+        },
+        "products": {
+            "sections": {
+                "products": {
+                    "title": "Products",
+                    "subtitle": "Discover our portfolio of successful projects"
+                }
+            }
+        },
+        "about": {
+            "title": "The Story of Makiti Group",
+            "subtitle": "The Makiti Group adventure officially began on March 1, 2023, with its main headquarters established in Paris, France. This company is the fruit of the bold vision of MJ, a young Cameroonian entrepreneur residing in Europe. Her fundamental objective is to propel the IT ecosystem in Africa, with particular attention to Cameroon.",
+            "sections": {
+                "about": {
+                    "title": "About",
+                    "subtitle": "Discover our portfolio of successful projects"
                 }
             }
         }

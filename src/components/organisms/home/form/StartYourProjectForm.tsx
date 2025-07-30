@@ -2,7 +2,16 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronLeft, ChevronRight, User, Mail, CreditCard, Check } from 'lucide-react'
+import {
+	ChevronLeft,
+	ChevronRight,
+	User,
+	Mail,
+	CreditCard,
+	Check,
+	CheckCircleIcon,
+	SendIcon,
+} from 'lucide-react'
 import { Form } from '@/components/ui/form'
 import {
 	FullFormData,
@@ -17,6 +26,15 @@ import ProjectDescriptionInfoStep from './steps/ProjectDescriptionStep'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@radix-ui/react-select'
 import { t } from 'i18next'
+import {
+	Dialog,
+	DialogClose,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+} from '@/components/ui/dialog'
 
 const slideVariants = {
 	enter: (direction: number) => ({
@@ -45,6 +63,8 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 	const [currentStep, setCurrentStep] = useState(0)
 	const [direction, setDirection] = useState(0)
 	const [completedSteps, setCompletedSteps] = useState<number[]>([])
+
+	const dialogRef = React.useRef<HTMLButtonElement>(null)
 
 	const form = useForm<FullFormData>({
 		resolver: zodResolver(fullFormSchema),
@@ -89,7 +109,7 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 
 	const onSubmit = (data: FullFormData) => {
 		console.log('Form submitted:', data)
-		alert('Form submitted successfully!')
+		// alert('Form submitted successfully!')
 
 		const project = '+49 162 7265788'
 
@@ -144,6 +164,8 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 		const whatsappUrl = `https://wa.me/${formattedNumber}?text=${encodedMessage}`
 
 		console.log(whatsappUrl)
+
+		dialogRef.current?.click()
 
 		// Open WhatsApp in a new tab
 		window.open(whatsappUrl, '_blank')
@@ -259,14 +281,26 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 
 							{currentStep === steps.length - 1 ? (
 								<Button
+									variant="primary"
 									type="button"
 									onClick={form.handleSubmit(onSubmit)}
-									className="flex items-center h-max px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
+									className="rounded-4xl h-max px-5 py-3 gap-3 hover:cursor-pointer"
 								>
-									Submit
-									<Check size={16} className="ml-1" />
+									<SendIcon className="size-5" />
+									<span className="sr-only">Send Project Request</span>{' '}
+									<span className="text-lg font-seravek_medium">
+										Send Project Request
+									</span>{' '}
 								</Button>
 							) : (
+								// <Button
+								// 	type="button"
+								// 	onClick={form.handleSubmit(onSubmit)}
+								// 	className="flex items-center h-max px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
+								// >
+								// 	Submit
+								// 	<Check size={16} className="ml-1" />
+								// </Button>
 								<Button
 									type="button"
 									variant="primary"
@@ -281,6 +315,51 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 					</div>
 				</div>
 			</form>
+
+			<Dialog>
+				<DialogTrigger ref={dialogRef} className="hidden" />
+				{/* <Button variant="outline">Share</Button>
+				</DialogTrigger> */}
+				<DialogContent className="sm:max-w-xl">
+					<DialogHeader className="flex flex-col items-center">
+						<DialogTitle>
+							<CheckCircleIcon className="size-[72px] text-success" />
+						</DialogTitle>
+						<DialogDescription className="hidden">
+							Anyone who has this link will be able to view this.
+						</DialogDescription>
+						<DialogClose className="hidden" />
+					</DialogHeader>
+					<div className="flex flex-col items-center text-center gap-2">
+						<p className="font-seravek_medium text-2xl text-on-surface-variant">
+							Thank you! We'll get back to you within 24 hours.
+						</p>
+
+						<p className="text-lg text-outline">
+							We've received your project requirements and are currently analyzing
+							them carefully. Our team will prepare a detailed proposal and get back
+							to you soon.
+						</p>
+						{/* <div className="grid flex-1 gap-2">
+            <Label htmlFor="link" className="sr-only">
+              Link
+            </Label>
+            <Input
+              id="link"
+              defaultValue="https://ui.shadcn.com/docs/installation"
+              readOnly
+            />
+          </div> */}
+					</div>
+					{/* <DialogFooter className="sm:justify-start">
+          <DialogClose asChild>
+            <Button type="button" variant="secondary">
+              Close
+            </Button>
+          </DialogClose>
+        </DialogFooter> */}
+				</DialogContent>
+			</Dialog>
 		</Form>
 	)
 }

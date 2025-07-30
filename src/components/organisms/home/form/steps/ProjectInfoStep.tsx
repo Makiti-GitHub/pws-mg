@@ -20,7 +20,7 @@ import { FullFormData } from '../FormSchema'
 const ProjectInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({ form }) => {
 	return (
 		<div className="space-y-4">
-			<h2 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h2>
+			<h2 className="text-2xl font-bold text-gray-800 mb-6">Project Information</h2>
 
 			<div className="">
 				<FormField
@@ -67,7 +67,7 @@ const ProjectInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({ form
 					control={form.control}
 					name="budgetRange"
 					render={({ field }) => (
-						<FormItem className="w-1/2">
+						<FormItem className="w-1/2 flex flex-col items-start">
 							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.budgetRange.label',
@@ -104,7 +104,7 @@ const ProjectInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({ form
 					control={form.control}
 					name="projectTimeline"
 					render={({ field }) => (
-						<FormItem className="w-1/2">
+						<FormItem className="w-1/2 flex flex-col items-start">
 							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.projectTimeline.label',

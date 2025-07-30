@@ -323,13 +323,13 @@ const Footer = () => {
 			<div className="w-full text-outline-variant text-base flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-2">
 				<p>© 2025 Makiti Group. All rights reserved.</p>
 				<div className="flex items-center justify-between gap-5">
-					<a href="" className="hover:text-white">
+					<a href="#" className="hover:text-white">
 						Privacy Policy
 					</a>
-					<a href="" className="hover:text-white">
+					<a href="#" className="hover:text-white">
 						Terms of Service
 					</a>
-					<a href="" className="hover:text-white">
+					<a href="#" className="hover:text-white">
 						Legal Notice
 					</a>
 				</div>

@@ -7,12 +7,18 @@ import AppRouter from '@/app/app.router'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n/i18n'
 import { LanguageProvider } from './providers/LanguageProvider'
+import MenuProvider from './providers/MenuProvider'
+import { FloatingCursorProvider } from './providers/FloatingCursorProvider'
 
 export default function App({ Component, children }: AppProps) {
 	return (
 		<I18nextProvider i18n={i18n}>
 			<LanguageProvider>
-				<Component router={AppRouter}>{children}</Component>
+				<MenuProvider>
+					<FloatingCursorProvider>
+						<Component router={AppRouter}>{children}</Component>
+					</FloatingCursorProvider>
+				</MenuProvider>
 			</LanguageProvider>
 		</I18nextProvider>
 	)

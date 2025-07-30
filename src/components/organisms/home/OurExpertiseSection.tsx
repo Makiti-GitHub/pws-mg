@@ -1,11 +1,12 @@
 import SectionHeader from '@/components/molecules/SectionHeader'
 import { expertisesMock, solutionsProcessStackMock } from '@/data/mock'
+import Image from '@rasenganjs/image'
 
 const OurExpertiseSection = () => {
 	return (
 		<section
 			id="services"
-			className="px-8 md:px-[80px] lg:px-[120px] w-screen bg-gradient-to-b from-secondary from-35% to-surface to-60% pb-16"
+			className="px-8 scroll-mt-[150px] md:px-[80px] lg:px-[120px] w-screen bg-gradient-to-b from-secondary from-35% to-surface to-60% pb-16"
 		>
 			<div className="flex flex-col p-6 gap-10 bg-surface box_shadow_expertise_container rounded-2xl">
 				<SectionHeader
@@ -17,7 +18,7 @@ const OurExpertiseSection = () => {
 					{expertisesMock.map((expertise, index) => (
 						<div
 							key={`expertise-item-${index}`}
-							className="box_shadow group hover:bg-primary flex flex-col rounded-xl p-6 gap-[30px] hover:scale-105 hover:border-2 hover:border-secondary transition duration-300 ease-in-out"
+							className="box_shadow group hover:bg-secondary flex flex-col rounded-xl p-6 gap-[30px] hover:scale-105 transition duration-300 ease-in-out"
 						>
 							<div className="flex flex-col gap-5">
 								<div
@@ -25,18 +26,20 @@ const OurExpertiseSection = () => {
 									style={{ backgroundColor: expertise.color }}
 								>
 									<div className="size-12">
-										<img
+										<Image
 											src={expertise.icon}
 											alt={expertise.title}
+											width={'100%'}
+											height={'100%'}
 											className="size-full object-contain aspect-auto"
 										/>
 									</div>
 								</div>
-								<p className="text-2xl font-seravek_medium text-[#020304]">
+								<p className="text-2xl font-seravek_medium text-[#020304] group-hover:text-white transition-colors">
 									{expertise.title}
 								</p>
 							</div>
-							<div className="text-[#44474A] text-xl flex flex-col gap-5">
+							<div className="text-[#44474A] group-hover:text-outline-variant text-xl flex flex-col gap-5">
 								<p>{expertise.content.description}</p>
 								<ul className="list-disc pl-8">
 									{expertise.content.list.map((item, index) => (

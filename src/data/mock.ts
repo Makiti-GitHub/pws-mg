@@ -164,7 +164,7 @@ export const expertisesMock: {
 		description: string
 		list: string[]
 	}
-	icon?: string
+	icon: string
 	color?: string
 }[] = [
 	{

@@ -54,7 +54,7 @@ const TalentProfileSection = () => {
 
 					<div
 						id="talent"
-						className="col-span-6 lg:col-span-8 space-y-8 rounded-xl border-[0.75px] p-6 border-outline-variant"
+						className="col-span-6 scroll-mt-[150px] lg:scroll-mt-[250px] lg:col-span-8 space-y-8 rounded-xl border-[0.75px] p-6 border-outline-variant"
 					>
 						<div className="flex gap-4">
 							<div className="p-2.5 rounded-sm bg-surface-container flex items-center justify-center">

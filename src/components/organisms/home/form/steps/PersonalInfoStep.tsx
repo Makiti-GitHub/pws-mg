@@ -41,7 +41,7 @@ const PersonalInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({
 					control={personalInfoForm.control}
 					name="email"
 					render={({ field }) => (
-						<FormItem className="w-1/2">
+						<FormItem className="w-1/2 flex flex-col items-start">
 							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.emailAddress.label',
@@ -68,7 +68,7 @@ const PersonalInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({
 					control={personalInfoForm.control}
 					name="companyName"
 					render={({ field }) => (
-						<FormItem className="w-1/2">
+						<FormItem className="w-1/2 flex flex-col items-start">
 							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.companyName.label',
@@ -91,7 +91,7 @@ const PersonalInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({
 					control={personalInfoForm.control}
 					name="phoneNumber"
 					render={({ field }) => (
-						<FormItem className="w-1/2">
+						<FormItem className="w-1/2 flex flex-col items-start">
 							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',

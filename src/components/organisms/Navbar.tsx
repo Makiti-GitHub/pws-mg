@@ -5,35 +5,17 @@ import LanguageButton from '../atoms/buttons/LanguageButton'
 import MotionIconButton2 from '../atoms/buttons/MotionIconButton2'
 import Image from '@rasenganjs/image'
 import { useTranslation } from 'react-i18next'
+import { useMenuContext } from '@/hooks/guard/ContextGuard'
 // import { useEffect, useState } from 'react'
-// import { AnimatePresence, motion } from 'framer-motion'
+import { MenuIcon } from 'lucide-react'
+import { Button } from '../ui/button'
 
 // const scrollThreshold = 1280 // Change this value to set when the background should change
 
-const links: {
-	label: string
-	href: string
-}[] = [
-	{
-		label: 'services',
-		href: '#services',
-	},
-	{
-		label: 'portfolio',
-		href: '/portfolio',
-	},
-	{
-		label: 'products',
-		href: '/products',
-	},
-	{
-		label: 'about',
-		href: '/about',
-	},
-]
-
 const NavBar = () => {
 	const { t } = useTranslation()
+
+	const { isOpened, setIsOpened, navlinks } = useMenuContext()
 	// const [isScrolled, setIsScrolled] = useState<boolean>(false)
 
 	// useEffect(() => {
@@ -52,9 +34,9 @@ const NavBar = () => {
 	// }, [scrollThreshold])
 
 	return (
-		<div className="fixed left-0 right-0 w-full z-50">
+		<div className="fixed left-0 right-0 w-full z-30">
 			<nav
-				className={`px-8 md:px-[80px] lg:px-[120px] py-5 w-full flex items-center justify-between bg-secondary glassy_navbar`}
+				className={`relative px-8 md:px-[80px] xl:px-[120px] py-5 w-full flex items-center justify-between bg-secondary glassy_navbar`}
 			>
 				{/* === Logo === */}
 				<div className="w-[121px] h-[84px]">
@@ -98,7 +80,7 @@ const NavBar = () => {
 				<ul
 					className={`hidden lg:flex flex-1 justify-center items-center gap-6 text-white text-lg`}
 				>
-					{links.map((link, index) => (
+					{navlinks.map((link, index) => (
 						<li key={`nav-link-${index}`}>
 							<Link
 								className="hover:text-primary hover:underline capitalize"
@@ -113,7 +95,7 @@ const NavBar = () => {
 				<div className="flex items-center gap-4">
 					<MotionIconButton2
 						label={t('nav.cta.letsTalk')}
-						className="rounded-[40px] px-2 py-1.5 h-max text-base"
+						className="rounded-[40px] px-2 py-1.5 h-max text-base hidden sm:inline-flex"
 					/>
 					{/* <Button variant="primary" className="rounded-4xl">
 						<span className="sr-only">Let's talk</span> <span>Let's talk</span>{' '}
@@ -121,6 +103,16 @@ const NavBar = () => {
 					</Button> */}
 
 					<LanguageButton />
+
+					<Button
+						variant={'ghost'}
+						type="button"
+						className="rounded-lg h-max lg:hidden !p-1 text-white place-content-center transition-all duration-75 ease-in-out hover:text-secondary hover:bg-primary"
+						onClick={() => setIsOpened(!isOpened)}
+					>
+						<span className="sr-only">mobile Menu</span>
+						<MenuIcon className="size-6" />
+					</Button>
 				</div>
 			</nav>
 		</div>

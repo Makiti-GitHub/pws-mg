@@ -11,6 +11,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowDownIcon, ArrowLeftIcon, ArrowRightIcon } from 'lucide-react'
 import Image from '@rasenganjs/image'
 import { Link } from 'rasengan'
+import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
 
 // const slideVariants = {
 // 	hiddenRight: {
@@ -64,6 +65,7 @@ const dotsVariants = {
 const HeroSection = () => {
 	const { isDesktop } = useIsTouchDevice()
 	const { handleMouseLeave, handleMouseMove, cursorPosition, isHovering } = useMouse()
+	const { setCursorVariant } = useFloatingCursor()
 
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [direction, setDirection] = useState('left')
@@ -112,6 +114,8 @@ const HeroSection = () => {
 					</Button> */}
 
 					<MotionIconButton2
+						onMouseEnter={() => setCursorVariant('button')}
+						onMouseLeave={() => setCursorVariant('default')}
 						label="Discover Our Outsourcing Solutions"
 						className="rounded-[40px] px-4 py-3 lg:px-8 lg:py-6 h-max text-xl lg:text-2xl"
 					/>
