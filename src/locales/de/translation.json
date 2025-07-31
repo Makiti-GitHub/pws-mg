@@ -1,32 +1,361 @@
 {
-    "hello": "Hello",
+    "hello": "Hallo",
     "languages": "Sprachen",
+    "industry": "Branche",
+    "projectDuration": "Projektdauer",
+    "teamSize": "Teamgröße",
+    "investment": "Investition",
+    "keyResults": "Hauptergebnisse",
+    "viewLiveWebsite": "Live-Website ansehen",
+    "developers": "Entwickler",
+    "day": "Tag",
+    "days": "Tage",
+    "week": "Woche",
+    "weeks": "Wochen",
+    "month": "Monat",
+    "months": "Monate",
+    "year": "Jahr",
+    "years": "Jahre",
+    "remote": "Remote",
+    "onSite": "Vor Ort",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "project": "Projekt",
+    "duration": "Dauer",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "location": "Standort",
+    "businessHours": "Geschäftszeiten",
+    "skills": "Fähigkeiten",
+    "and": "und",
     "language": {
         "en": "Englisch",
         "de": "Deutsch",
-        "fr": "Französisch"
+        "fr": "Französisch"
     },
     "nav": {
         "links": {
             "services": "Dienstleistungen",
             "portfolio": "Portfolio",
             "products": "Produkte",
-            "about": "Über uns",
+            "about": "Über uns",
             "contact": "Kontakt"
         },
         "cta": {
-            "letsTalk": "Lass uns sprechen"
+            "letsTalk": "Lassen Sie uns sprechen"
+        }
+    },
+    "footer": {
+        "upperSection": {
+            "leftSection": {
+                "contactUs": "Kontaktieren Sie uns",
+                "makitiActivityDescription": "Ihr strategischer IT-Outsourcing-Partner, der Exzellenz in allen Technologiebereichen mit innovativen Lösungen und Expertenteams liefert.",
+                "getDirections": "Wegbeschreibung",
+                "form": {
+                    "fields": {
+                        "newsletter": {
+                            "label": "Newsletter",
+                            "placeholder": "Ihre E-Mail"
+                        }
+                    }
+                }
+            },
+            "rightSection": {
+                "services": {
+                    "title": "Dienstleistungen",
+                    "options": {
+                        "itOutsourcing": "IT-Outsourcing",
+                        "agileSoftwareDevelopment": "Agile Softwareentwicklung",
+                        "itTransformation": "IT-Transformation & Audit"
+                    }
+                },
+                "products": {
+                    "title": "Produkte",
+                    "options": {
+                        "ticketManagement": "Ticket-Management-System",
+                        "inventory": "Inventar- & Lagerverwaltungssystem",
+                        "paymentGateway": "Payment-Gateway-System"
+                    }
+                },
+                "company": {
+                    "title": "Unternehmen",
+                    "options": {
+                        "about": "Über uns",
+                        "teamMembers": "Teammitglieder",
+                        "careers": "Karriere"
+                    }
+                }
+            }
+        },
+        "lowerSection": {
+            "copyright": "© {{year}} Makiti Group. Alle Rechte vorbehalten.",
+            "nav": {
+                "privacyPolicy": "Datenschutzerklärung",
+                "termsOfService": "Allgemeine Geschäftsbedingungen",
+                "legalNotice": "Impressum"
+            }
         }
     },
     "pages": {
         "home": {
             "sections": {
+                "hero": {
+                    "item1": {
+                        "tag": "IT-OUTSOURCING",
+                        "title": "Ihr strategischer IT-Outsourcing-Partner",
+                        "content": "Transformieren Sie Ihr Unternehmen mit unseren erfahrenen IT-Outsourcing-Lösungen. Vom Development bis zur Beratung - wir liefern Exzellenz in allen Technologiebereichen."
+                    },
+                    "item2": {
+                        "tag": "IT-Transformation & Audit",
+                        "title": "Fördern Sie Wachstum durch IT-Transformation",
+                        "content": "Stellen Sie sich Ihre Technologielandschaft mit unserer IT-Transformationsexpertise neu vor. Von der Legacy-Modernisierung bis zur digitalen Strategie - wir treiben wirkungsvolle Veränderungen in großem Maßstab voran."
+                    },
+                    "item3": {
+                        "tag": "IT-Transformation & Audit",
+                        "title": "Beschleunigen Sie Innovation mit agiler Lieferung",
+                        "content": "Liefern Sie schneller Mehrwert mit unseren agilen Softwareentwicklungsservices. Unsere anpassungsfähigen Teams bringen Geschwindigkeit, Flexibilität und konstante Qualität in jeden Sprint und helfen Ihnen, selbstbewusst auf Veränderungen zu reagieren."
+                    },
+                    "cta": "Entdecken Sie unsere Outsourcing-Lösungen"
+                },
+                "ourClients": {
+                    "title": "Unsere Kunden",
+                    "description": "Wir haben uns mit verschiedenen Unternehmen zusammengetan, um die Art und Weise, wie Benutzer ihre Produkte erleben, neu zu erfinden und zu definieren."
+                },
+                "ourExpertise": {
+                    "title": "Unsere Expertise",
+                    "subtitle": "Umfassende IT-Outsourcing-Lösungen in allen Technologiebereichen",
+                    "items": {
+                        "item1": {
+                            "title": "IT-Outsourcing",
+                            "content": {
+                                "description": "Komplettes IT-Outsourcing mit dedizierten Teams",
+                                "list": {
+                                    "item1": "Dedizierte Teams",
+                                    "item2": "Projektmanagement",
+                                    "item3": "CMS-Lösungen"
+                                }
+                            }
+                        },
+                        "item2": {
+                            "title": "Softwareentwicklung",
+                            "content": {
+                                "description": "Agile Entwicklung und nachhaltiges UX/UI-Design",
+                                "list": {
+                                    "item1": "Agile Entwicklung",
+                                    "item2": "UX/UI-Design",
+                                    "item3": "Qualitätssicherung"
+                                }
+                            }
+                        },
+                        "item3": {
+                            "title": "IT-Beratung",
+                            "content": {
+                                "description": "KI-gesteuerte Designs und Innovationsstrategien",
+                                "list": {
+                                    "item1": "KI-gesteuertes Design",
+                                    "item2": "Innovationsstrategie",
+                                    "item3": "Technische Beratung"
+                                }
+                            }
+                        },
+                        "item4": {
+                            "title": "E-Commerce & SaaS",
+                            "content": {
+                                "description": "Plattformentwicklung und Cloud-Lösungen",
+                                "list": {
+                                    "item1": "E-Commerce-Plattformen",
+                                    "item2": "SaaS-Entwicklung",
+                                    "item3": "Cloud-Integration"
+                                }
+                            }
+                        },
+                        "item5": {
+                            "title": "Sicherheit & Compliance",
+                            "content": {
+                                "description": "Umfassende Cybersicherheits- und Compliance-Lösungen",
+                                "list": {
+                                    "item1": "Cybersicherheitsaudits",
+                                    "item2": "Datenschutz",
+                                    "item3": "Compliance-Lösungen"
+                                }
+                            }
+                        },
+                        "item6": {
+                            "title": "Digitale Lösungen",
+                            "content": {
+                                "description": "Grünes digitales Marketing und App-Entwicklung",
+                                "list": {
+                                    "item1": "Digitales Marketing",
+                                    "item2": "Mobile Anwendung",
+                                    "item3": "Plattformübergreifend"
+                                }
+                            }
+                        }
+                    },
+                    "ourSolutionProcessStack": {
+                        "title": "Unser Lösungsprozess-Stack",
+                        "items": {
+                            "item1": "Requirements Engineering",
+                            "item2": "UX/UI-Design",
+                            "item3": "Softwareentwicklung",
+                            "item4": "Qualitätssicherung",
+                            "item5": "DevOps & CI/CD",
+                            "item6": "Performance-Optimierung",
+                            "item7": "Cloud-Lösungen"
+                        }
+                    }
+                },
+                "findTheTalentYouNeed": {
+                    "title": "Finden Sie das Talent, das Sie brauchen",
+                    "subtitle": "Wählen Sie aus unseren Experten-Outsourcing-Profilen",
+                    "talents": {
+                        "frontendDeveloper": {
+                            "title": "Frontend-Entwickler",
+                            "description": "Experten Frontend-Entwickler spezialisiert auf moderne Webtechnologien und responsives Design"
+                        },
+                        "backendDeveloper": {
+                            "title": "Backend-Entwickler",
+                            "description": "Senior Backend-Entwickler mit Expertise in skalierbarer Architektur und Cloud-Lösungen."
+                        },
+                        "devopsEngineer": {
+                            "title": "DevOps-Ingenieur",
+                            "description": "DevOps-Ingenieure mit Fokus auf Automatisierung, CI/CD und Infrastruktur-Optimierung."
+                        },
+                        "uiuxDesigner": {
+                            "title": "UX/UI-Designer",
+                            "description": "Kreative UX/UI-Designer mit Fokus auf benutzerzentriertes Design und Nachhaltigkeit."
+                        },
+                        "testManager": {
+                            "title": "Test-Manager",
+                            "description": "Test-Manager und QA-Ingenieure, die Qualität durch umfassende Tests gewährleisten."
+                        },
+                        "scrumMaster": {
+                            "title": "Scrum Master",
+                            "description": "Zertifizierte Scrum Master mit umfangreicher Erfahrung im agilen Projektmanagement."
+                        }
+                    },
+                    "keySkills": "Schlüsselkompetenzen",
+                    "requestQuote": {
+                        "startingPrice": "Startpreis",
+                        "cta": "Angebot anfordern",
+                        "pricePerHour": "Ab {{price}}€/Stunde",
+                        "info": "Erhalten Sie ein personalisiertes Angebot innerhalb von 24 Stunden"
+                    }
+                },
+                "ourSuccessStories": {
+                    "title": "Unsere Erfolgsgeschichten",
+                    "subtitle": "Entdecken Sie einige unserer jüngsten Projekte und die Auswirkungen, die wir erzielt haben",
+                    "banner": {
+                        "title": "Werden Sie Teil unserer zufriedenen Kunden",
+                        "subtitle": "Erleben Sie das gleiche Niveau an Exzellenz und Ergebnissen. Lassen Sie uns besprechen, wie wir Ihnen bei der Transformation Ihres Unternehmens durch strategisches IT-Outsourcing helfen können.",
+                        "cta": "Portfolio ansehen"
+                    }
+                },
+                "ourLiveProducts": {
+                    "title": "Unsere Live-Produkte",
+                    "subtitle": "Entdecken Sie unsere erfolgreich gelieferten und eingesetzten Anwendungen, die derzeit echte Benutzer und Unternehmen weltweit bedienen.",
+                    "banner": {
+                        "title": "Stärken Sie Ihr Unternehmen mit unseren Produkten",
+                        "subtitle": "Erleben Sie das gleiche Niveau an Exzellenz und Ergebnissen. Lassen Sie uns besprechen, wie wir Ihnen bei der Transformation Ihres Unternehmens durch strategisches IT-Outsourcing helfen können.",
+                        "cta": "Produkte erkunden"
+                    }
+                },
+                "ourTechnologyStack": {
+                    "title": "Unser Technologie-Stack",
+                    "subtitle": "Wir nutzen Technologie, die den implementierten Lösungen dient - niemals umgekehrt",
+                    "banner": {
+                        "title": "Stärken Sie Ihr Unternehmen mit unseren Produkten",
+                        "subtitle": "Erleben Sie das gleiche Niveau an Exzellenz und Ergebnissen. Lassen Sie uns besprechen, wie wir Ihnen bei der Transformation Ihres Unternehmens durch strategisches IT-Outsourcing helfen können.",
+                        "cta": "Produkte erkunden"
+                    },
+                    "categories": {
+                        "frontend": "Frontend",
+                        "nativeApp": "Native App",
+                        "backend": "Backend",
+                        "testing": "Testing",
+                        "database": "Datenbank",
+                        "cms": "CMS",
+                        "crossPlatformApp": "Plattformübergreifende App",
+                        "uxUiDesign": "UX/UI-Design",
+                        "cloud": "Cloud",
+                        "testingTools": "Test-Tools",
+                        "deployment": "Deployment",
+                        "organization": "Organisation"
+                    }
+                },
+                "whatOurClientsSays": {
+                    "title": "Was unsere Kunden sagen",
+                    "subtitle": "Glauben Sie nicht nur uns—hören Sie von unseren zufriedenen Kunden.",
+                    "banner": {
+                        "title": "Bereit, Ihr Unternehmen zu transformieren?",
+                        "subtitle": "Lassen Sie uns besprechen, wie wir Ihnen mit unseren erfahrenen IT-Outsourcing-Services zu ähnlichen Ergebnissen verhelfen können.",
+                        "cta": "Lassen Sie uns sprechen"
+                    }
+                },
+                "faq": {
+                    "title": "Häufig gestellte Fragen",
+                    "subtitle": "Alles, was Sie über unsere IT-Outsourcing-Services wissen müssen",
+                    "banner": {
+                        "title": "Haben Sie noch Fragen?",
+                        "subtitle": "Unsere Experten sind bereit, Ihnen bei der Suche nach der perfekten Outsourcing-Lösung zu helfen.",
+                        "cta": "Lassen Sie uns sprechen"
+                    },
+                    "questions": {
+                        "question1": {
+                            "question": "Was ist IT-Outsourcing und wie funktioniert es?",
+                            "answer": "IT-Outsourcing ist die Praxis, externe Dienstleister mit der Abwicklung Ihrer IT-Funktionen und -Services zu beauftragen. Bei Makiti SARL bieten wir dedizierte Teams, projektbasierte Entwicklung und laufenden technischen Support. Unser Outsourcing-Modell ermöglicht es Ihnen, auf Expertenwissen zuzugreifen, Kosten zu reduzieren und Ihre Abläufe effizient zu skalieren, während Sie sich auf Ihre Kerngeschäftstätigkeiten konzentrieren"
+                        },
+                        "question2": {
+                            "question": "Warum sollte ich IT-Outsourcing wählen anstatt interne Entwickler einzustellen?",
+                            "answer": "Erschließen Sie sofort Expertenwissen mit IT-Outsourcing. Profitieren Sie von bis zu 60% Kosteneinsparungen, skalieren Sie mühelos und reduzieren Sie Einstellungsrisiken. Unsere erfahrenen Teams beschleunigen Ihre Time-to-Market--keine Rekrutierungssorgen, Schulungskosten oder Infrastrukturprobleme. Passen Sie Ihre Teamgröße flexibel an die Entwicklung Ihres Projekts an."
+                        },
+                        "question3": {
+                            "question": "Wie stellen Sie Datensicherheit und Vertraulichkeit sicher?",
+                            "answer": "Sicherheit ist unsere oberste Priorität. Wir verwenden Schutzmaßnahmen auf Unternehmensebene wie verschlüsselte Kommunikation, sichere Entwicklungsumgebungen, VPNs, Multi-Faktor-Authentifizierung und regelmäßige Sicherheitsaudits. Jedes Teammitglied unterzeichnet strenge NDAs und hält sich an rigorose Datenverarbeitungsprotokolle. Wir sind vollständig konform mit DSGVO, ISO 27001 und globalen Sicherheitsstandards."
+                        },
+                        "question4": {
+                            "question": "Wie funktioniert die Kommunikation mit ausgelagerten Teams?",
+                            "answer": "Wir halten die Kommunikation kristallklar mit täglichen Standups, wöchentlichen Updates und monatlichen Reviews. Mit Tools wie Slack, Microsoft Teams, Jira und Zoom bleiben Sie bei jedem Schritt verbunden. Sie haben direkten Zugang zu Ihrem dedizierten Projektmanager und Team--abgestimmt auf Ihre Zeitzone, Ihren Stil, Ihren Zeitplan."
+                        },
+                        "question5": {
+                            "question": "Welche Preismodelle haben Sie und wie strukturieren Sie die Kosten?",
+                            "answer": "Wir bieten flexible Preisgestaltung, die auf Ihre Bedürfnisse zugeschnitten ist--Stundensätze (45-60€/Stunde), Festpreisprojekte oder dedizierte Team-Modelle. Die Kosten variieren je nach Skill-Level, Projektkomplexität und Dauer. Sie erhalten transparente Schätzungen im Voraus ohne versteckte Gebühren. Langzeitpartner genießen Vorzugspreise und prioritären Support."
+                        },
+                        "question6": {
+                            "question": "Wie lange dauert es, ein Projekt zu starten und Ergebnisse zu liefern?",
+                            "answer": "Der Projektstart dauert normalerweise 2-3 Wochen und umfasst Team-Setup und Anforderungsanalyse. Lieferzeiten hängen vom Projektumfang ab: einfache Websites (4-8 Wochen), komplexe Apps (3-12 Monate), Unternehmenslösungen (6-18 Monate). Sie erhalten eine detaillierte Roadmap im Voraus mit konsistenten Fortschrittsupdates in jeder Phase."
+                        },
+                        "question7": {
+                            "question": "Auf welche Technologien und Fähigkeiten spezialisieren sich Ihre Teams?",
+                            "answer": "Unsere Teams sind Experten in modernen Tech-Stacks: Frontend (React, Vue.js, Angular), Backend (Node.js, Python, Java), Mobile (React Native, Flutter), Cloud (AWS, Azure, GCP), DevOps (Docker, Kubernetes), AI/ML (TensorFlow, PyTorch), und Datenbanken (PostgreSQL, MongoDB). Wir bleiben scharf, indem wir uns kontinuierlich mit den neuesten Tools und Best Practices weiterentwickeln."
+                        }
+                    }
+                },
                 "startYourProjectToday": {
                     "title": "Starten Sie Ihr Projekt heute",
-                    "subtitle": "Erzählen Sie uns von Ihren Projektanforderungen und lassen Sie uns gemeinsam etwas Außergewöhnliches schaffen.",
+                    "subtitle": "Erzählen Sie uns von Ihren Projektanforderungen und lassen Sie uns gemeinsam etwas Großartiges schaffen.",
+                    "steps": {
+                        "step1": {
+                            "label": "Persönliche Infos",
+                            "indication": "Erzählen Sie uns mehr über sich"
+                        },
+                        "step2": {
+                            "label": "Projekt-Infos",
+                            "indication": "Erzählen Sie uns mehr über Ihr Projekt"
+                        },
+                        "step3": {
+                            "label": "Projektbeschreibung",
+                            "indication": "Beschreiben Sie Ihre Projektanforderungen"
+                        }
+                    },
                     "form": {
                         "title": "Projektanforderungen",
-                        "indication": "Bitte füllen Sie dieses Formular mit so vielen Details wie möglich aus, um uns zu helfen, Ihre Projektbedürfnisse zu verstehen.",
+                        "indication": "Bitte füllen Sie dieses Formular so detailliert wie möglich aus, um uns zu helfen, Ihre Projektbedürfnisse zu verstehen.",
+                        "sendRequest": "Projektanfrage senden",
+                        "modal": {
+                            "title": "Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
+                            "content": "Wir haben Ihre Projektanforderungen erhalten und analysieren sie derzeit sorgfältig. Unser Team wird einen detaillierten Vorschlag vorbereiten und sich bald bei Ihnen melden."
+                        },
                         "fields": {
                             "fullName": {
                                 "label": "Vollständiger Name",
@@ -45,15 +374,15 @@
                                 "placeholder": "Optional"
                             },
                             "projectType": {
-                                "label": "Projektart",
-                                "placeholder": "Wählen Sie eine Projektart"
+                                "label": "Projekttyp",
+                                "placeholder": "Wählen Sie einen Projekttyp"
                             },
                             "budgetRange": {
-                                "label": "Budgetbereich",
-                                "placeholder": "Wählen Sie einen Budgetbereich"
+                                "label": "Budgetrahmen",
+                                "placeholder": "Wählen Sie einen Budgetrahmen"
                             },
                             "projectTimeline": {
-                                "label": "Projektzeitplan",
+                                "label": "Projekt-Zeitplan",
                                 "placeholder": "Wählen Sie einen Zeitplan"
                             },
                             "technicalRequirements": {
@@ -61,20 +390,229 @@
                                 "placeholder": "Wählen Sie technische Anforderungen"
                             },
                             "preferredTeamSize": {
-                                "label": "Vorzugte Teamgröße",
+                                "label": "Bevorzugte Teamgröße",
                                 "placeholder": "Wählen Sie die Anzahl der Teammitglieder"
                             },
                             "projectDescription": {
                                 "label": "Projektbeschreibung",
-                                "placeholder": "Beschreiben Sie Ihr Projekt im Detail: Ziele, spezifische technische Anforderungen, Einschränkungen, die wir kennen sollten, und alle anderen Details..."
+                                "placeholder": "Beschreiben Sie Ihr Projekt im Detail: Ziele, spezifische Technologieanforderungen, Einschränkungen, die wir kennen sollten, und weitere Details..."
                             }
                         }
+                    }
+                },
+                "whyChooseMakiti": {
+                    "title": "Warum Makiti Group wählen",
+                    "subtitle": "Partnern Sie mit uns für außergewöhnliche IT-Outsourcing-Lösungen, die von Expertise, Innovation und Zuverlässigkeit unterstützt werden.",
+                    "reasons": {
+                        "reason1": {
+                            "title": "Agiler Ansatz",
+                            "desc": "Schnelle, iterative Entwicklung mit kontinuierlichem Feedback und raschen Deployment-Zyklen."
+                        },
+                        "reason2": {
+                            "title": "Nachhaltiges Design",
+                            "desc": "Umweltfreundliches und nachhaltiges Design mit Fokus auf Energieeffizienz und Umweltverantwortung."
+                        },
+                        "reason3": {
+                            "title": "Innovationsfokus",
+                            "desc": "Hochmoderne KI-gesteuerte Lösungen und innovative Ansätze für komplexe Herausforderungen."
+                        },
+                        "reason4": {
+                            "title": "Expertenberatung",
+                            "desc": "Strategische IT-Beratung mit tiefgreifender Branchenexpertise und bewährten Methoden."
+                        },
+                        "reason5": {
+                            "title": "Sicherheit zuerst",
+                            "desc": "Sicherheitsmaßnahmen auf Unternehmensebene und Einhaltung internationaler Standards."
+                        },
+                        "reason6": {
+                            "title": "24/7-Support",
+                            "desc": "Rund-um-die-Uhr technischer Support und Überwachung für geschäftskritische Systeme."
+                        },
+                        "reason7": {
+                            "title": "Qualitätssicherung",
+                            "desc": "Rigorose Test- und Qualitätskontrollprozesse, die Lieferexzellenz gewährleisten."
+                        },
+                        "reason8": {
+                            "title": "Globale Reichweite",
+                            "desc": "Internationales Team mit mehrsprachigem Support und interkultureller Expertise."
+                        }
+                    }
+                }
+            }
+        },
+        "portfolio": {
+            "title": "Entdecken Sie unser Portfolio",
+            "subtitle": "Glauben Sie nicht nur uns – entdecken Sie die innovativen Lösungen, die wir für unsere Kunden geschaffen haben. Lesen Sie unsere Fallstudien, um unsere Auswirkungen branchenübergreifend zu sehen, und stellen Sie sich vor, was wir gemeinsam erreichen könnten.",
+            "filters": {
+                "all": "Alle",
+                "web_app": "Web-Apps",
+                "mobile_app": "Mobile Apps",
+                "e_commerce": "E-Commerce",
+                "saas": "SaaS"
+            },
+            "projects": {
+                "card": {
+                    "category": {
+                        "web_app": "Web-App",
+                        "mobile_app": "Mobile App",
+                        "e_commerce": "E-Commerce",
+                        "saas": "SaaS"
+                    },
+                    "industry": {
+                        "transportation": "Transport",
+                        "travel": "Reise",
+                        "finance": "Finanzen",
+                        "cross_platform": "Plattformübergreifend",
+                        "e_commerce": "E-Commerce",
+                        "logistics": "Logistik",
+                        "agency": "Agentur",
+                        "agriculture": "Landwirtschaft",
+                        "farming": "Landwirtschaft"
+                    }
+                }
+            },
+            "sections": {
+                "challenge": {
+                    "title": "Die Herausforderung",
+                    "problems": {
+                        "title": "Identifizierte Hauptprobleme"
+                    }
+                },
+                "solution": {
+                    "title": "Unsere Lösung",
+                    "developmentApproach": {
+                        "title": "Entwicklungsansatz",
+                        "phases": {
+                            "discovery_and_planning": "Entdeckung & Planung",
+                            "design_and_development": "Design & Entwicklung",
+                            "launch_and_optimization": "Launch & Optimierung"
+                        }
+                    },
+                    "techsUsed": {
+                        "title": "Verwendete Technologien"
+                    },
+                    "keyAchievements": {
+                        "title": "Wichtige Errungenschaften"
+                    }
+                },
+                "achievements": {
+                    "title": "Erzielte Ergebnisse",
+                    "categories": {
+                        "user_engagement": "Steigerung der Benutzerinteraktion",
+                        "booking_time": "Reduzierte durchschnittliche Buchungszeit",
+                        "conversion_rate": "Steigerung der Conversion-Rate",
+                        "customer_satisfaction": "Kundenzufriedenheits-Score"
+                    }
+                },
+                "clientTestimonial": {
+                    "title": "Kundenstimme"
+                },
+                "banner": {
+                    "title": "Interessiert an ähnlichen Ergebnissen?",
+                    "subtitle": "Lassen Sie uns besprechen, wie wir Ihnen mit unseren erfahrenen IT-Outsourcing-Services zu ähnlichen Ergebnissen verhelfen können.",
+                    "cta": "Starten Sie Ihr Projekt"
+                }
+            }
+        },
+        "products": {
+            "title": "Unsere Live-Produkte",
+            "subtitle": "Entdecken Sie die leistungsstarken Produkte, die wir zur Lösung realer Herausforderungen entwickelt haben. Erfahren Sie, wie unsere Lösungen die Leistung steigern, Abläufe rationalisieren und branchenübergreifend Mehrwert schaffen."
+        },
+        "about": {
+            "title": "Die Geschichte der Makiti Group",
+            "subtitle": "Das Abenteuer der Makiti Group begann offiziell am 1. März 2023, mit dem Hauptsitz in Paris, Frankreich. Dieses Unternehmen ist die Frucht der mutigen Vision von MJ, einer jungen kamerunischen Unternehmerin mit Wohnsitz in Europa. Ihr grundlegendes Ziel ist es, das IT-Ökosystem in Afrika voranzutreiben, mit besonderem Fokus auf Kamerun.",
+            "sections": {
+                "theStoryOfMakiti": {
+                    "title": "Globale Outsourcing-Herausforderungen meistern",
+                    "p1": "Heute wenden sich viele große europäische Unternehmen an Indien für ihre IT-Dienstleistungen. Dieses Vorgehen bringt jedoch oft große Herausforderungen mit sich: die Sprachbarriere (Englisch als einzige gemeinsame Sprache) und ein erheblicher Zeitunterschied von bis zu 5 Stunden im Vergleich zu Frankreich.",
+                    "p2": "Mit der Makiti Group verfolgt MJ das Ziel, europäische Unternehmen mit afrikanischen Talenten zu unterstützen – bei gleichzeitigem Anspruch auf höchste Service- und Ressourcenqualität. Eine reibungslose Kommunikation hat bei uns höchste Priorität. Unsere Mitarbeitenden sind nicht nur hochqualifiziert in technischer Hinsicht, sondern auch mehrsprachig. Neben Englisch beherrschen wir insbesondere die deutsche Sprache. Dadurch können unsere Kunden aus Luxemburg, der Schweiz und natürlich aus Deutschland in ihrer Muttersprache mit unseren Entwicklern kommunizieren. Diese einfache Kommunikation ist entscheidend für eine präzise Anforderungserfassung und eine harmonische Zusammenarbeit."
+                },
+                "growthAndAchievements": {
+                    "title": "Wachstum und Erfolge",
+                    "p1": "Das Jahr 2024 war geprägt von einem bedeutenden Ausbau unserer Teams. Wir haben eine Vielzahl außergewöhnlicher Profile rekrutiert: Java- und React-Entwickler, Site & Reliability Engineers, UX/UI-Designer, Grafikdesigner und Testautomatisierungsingenieure.",
+                    "p2": "Diese Talente haben bereits zur Realisierung mehrerer innovativer interner Produkte geführt, wie zum Beispiel",
+                    "p3": "Parallel dazu haben wir zahlreiche Projekte für unsere Kunden und Partner erfolgreich abgeschlossen und dadurch unseren Ruf für Zuverlässigkeit und Exzellenz weiter gestärkt.",
+                    "p4": "Die Makiti Group verbindet das technologische Potenzial Afrikas mit den Bedürfnissen des europäischen Marktes – und schafft so Verbindungen über Grenzen und Zeitzonen hinweg."
+                },
+                "ourMission": {
+                    "title": "Unsere Mission",
+                    "body": "Unternehmen mit modernen IT-Lösungen durch strategische Outsourcing-Partnerschaften zu stärken. Wir überbrücken die Lücke zwischen Vision und Umsetzung, indem wir hochwertige Softwareentwicklung, Beratung und digitale Transformationsdienste bereitstellen, die Wachstum und Innovation beschleunigen."
+                },
+                "ourVision": {
+                    "title": "Unsere Vision",
+                    "body": "Unternehmen mit modernen IT-Lösungen durch strategische Outsourcing-Partnerschaften zu stärken. Wir überbrücken die Lücke zwischen Vision und Umsetzung, indem wir hochwertige Softwareentwicklung, Beratung und digitale Transformationsdienste bereitstellen, die Wachstum und Innovation beschleunigen."
+                },
+                "statistics": {
+                    "title": "Vertrauenswürdig für Unternehmen weltweit",
+                    "subtitle": "Unsere Erfolgsbilanz spricht für sich. Wir haben Unternehmen jeder Größe dabei geholfen, ihre Ziele der digitalen Transformation zu erreichen.",
+                    "stat": {
+                        "projectsDelivered": "Abgeschlossene Projekte",
+                        "activeYears": "Aktive Jahre",
+                        "satisfiedClients": "Zufriedene Kunden",
+                        "officesGlobally": "Niederlassungen weltweit"
+                    }
+                },
+                "meetOurTeam": {
+                    "title": "Unser Team kennenlernen",
+                    "subtitle": "Die talentierten Fachleute hinter unserem Erfolg"
+                },
+                "ourJourney": {
+                    "title": "Unsere Reise",
+                    "subtitle": "Wichtige Meilensteine in unserer Unternehmensentwicklung",
+                    "timeline": {
+                        "checkpoint1": "Gründung des Unternehmens mit Hauptsitz in Paris, Frankreich",
+                        "checkpoint2": "Eröffnung einer Niederlassung in Yaoundé, Kamerun",
+                        "checkpoint3": "Eröffnung einer Niederlassung in Lagos, Nigeria",
+                        "checkpoint4": "Einführung unserer Produkte Matoa & Lyssafi"
+                    }
+                },
+                "ourCoreValues": {
+                    "title": "Unsere Grundwerte",
+                    "subtitle": "Die Prinzipien, die unser Handeln leiten",
+                    "banner": {
+                        "title": "Bereit, Ihr Projekt zu starten?",
+                        "subtitle": "Lassen Sie uns besprechen, wie wir Ihnen mit unserem Fachwissen im IT-Outsourcing zu vergleichbaren Ergebnissen verhelfen können.",
+                        "cta": "Jetzt sprechen"
                     }
                 }
             }
         }
     },
     "common": {
-        "backToHomeCta": "Retour à l'accueil"
+        "backToHomeCta": "Zurück zur Startseite",
+        "values": {
+            "value1": {
+                "title": "Agile Vorgehensweise",
+                "content": "Schnelle, iterative Entwicklung mit kontinuierlichem Feedback und kurzen Bereitstellungszyklen."
+            },
+            "value2": {
+                "title": "Nachhaltiges Design",
+                "content": "Schnelle, iterative Entwicklung mit kontinuierlichem Feedback und kurzen Bereitstellungszyklen."
+            },
+            "value3": {
+                "title": "Fokus auf Innovation",
+                "content": "Hochmoderne KI-basierte Lösungen und innovative Ansätze für komplexe Herausforderungen."
+            },
+            "value4": {
+                "title": "Fachkundige Beratung",
+                "content": "Strategische IT-Beratung mit tiefgreifender Branchenerfahrung und bewährten Methoden."
+            },
+            "value5": {
+                "title": "Sicherheit an erster Stelle",
+                "content": "Sicherheitsmaßnahmen auf Unternehmensniveau und Einhaltung internationaler Standards."
+            },
+            "value6": {
+                "title": "Rund-um-die-Uhr-Support",
+                "content": "24/7 technischer Support und Überwachung für geschäftskritische Systeme."
+            },
+            "value7": {
+                "title": "Qualitätssicherung",
+                "content": "Strenge Test- und Qualitätskontrollprozesse für höchste Lieferqualität."
+            },
+            "value8": {
+                "title": "Globale Reichweite",
+                "content": "Internationales Team mit mehrsprachiger Unterstützung und interkultureller Kompetenz."
+            }
+        }
     }
 }

@@ -1,3 +1,4 @@
+import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
 import { FC } from 'react'
 
 interface BannerProps {
@@ -8,15 +9,18 @@ interface BannerProps {
 }
 
 const Banner: FC<BannerProps> = ({ title, desc, children, variant = 'primary' }) => {
+	const { setCursorVariant } = useFloatingCursor()
 	return (
 		<div
-			className={`flex justify-center items-center gap-6 p-8 ${
+			className={`flex justify-center items-center gap-6 p-4 sm:p-8 ${
 				variant === 'primary' ? 'bg-primary' : 'bg-secondary'
 			} rounded-2xl`}
 		>
 			<div className="w-full flex flex-col items-center gap-4">
 				<h3
-					className={`font-seravek_bold text-center text-[32px] ${
+					onMouseEnter={() => setCursorVariant('text')}
+					onMouseLeave={() => setCursorVariant('default')}
+					className={`font-seravek_bold text-center text-2xl sm:text-[32px] ${
 						variant === 'primary' ? 'text-secondary' : 'text-white'
 					}`}
 				>
@@ -24,7 +28,7 @@ const Banner: FC<BannerProps> = ({ title, desc, children, variant = 'primary' })
 				</h3>
 
 				<p
-					className={`text-base text-center ${
+					className={`text-sm sm:text-base text-center ${
 						variant === 'primary' ? 'text-secondary' : 'text-outline-variant'
 					}`}
 				>

@@ -5,20 +5,23 @@ import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/comp
 import { t } from 'i18next'
 import { FullFormData } from '../FormSchema'
 
-const PersonalInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({
+const PersonalInfoStep: React.FC<{ form: UseFormReturn<FullFormData>; stepIndex: number }> = ({
 	form: personalInfoForm,
+	stepIndex,
 }) => {
 	return (
-		<div className="space-y-4">
-			<h2 className="text-2xl font-bold text-gray-800 mb-6">Tel us more about you</h2>
+		<div className="space-y-3 sm:space-y-4">
+			<h4 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
+				{t(`pages.home.sections.startYourProjectToday.steps.step${stepIndex}.indication`)}
+			</h4>
 
-			<div className="flex gap-5">
+			<div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
 				<FormField
 					control={personalInfoForm.control}
 					name="fullName"
 					render={({ field }) => (
-						<FormItem className="w-1/2 flex flex-col items-start">
-							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
+						<FormItem className="sm:w-1/2 flex flex-col items-start">
+							<FormLabel className="font-seravek_medium text-base sm:text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.fullName.label',
 								)}
@@ -41,8 +44,8 @@ const PersonalInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({
 					control={personalInfoForm.control}
 					name="email"
 					render={({ field }) => (
-						<FormItem className="w-1/2 flex flex-col items-start">
-							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
+						<FormItem className="sm:w-1/2 flex flex-col items-start">
+							<FormLabel className="font-seravek_medium text-base sm:text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.emailAddress.label',
 								)}
@@ -63,13 +66,13 @@ const PersonalInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({
 				/>
 			</div>
 
-			<div className="flex gap-5">
+			<div className="flex flex-col sm:flex-row gap-5">
 				<FormField
 					control={personalInfoForm.control}
 					name="companyName"
 					render={({ field }) => (
-						<FormItem className="w-1/2 flex flex-col items-start">
-							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
+						<FormItem className="sm:w-1/2 flex flex-col items-start">
+							<FormLabel className="font-seravek_medium text-base sm:text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.companyName.label',
 								)}
@@ -91,8 +94,8 @@ const PersonalInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({
 					control={personalInfoForm.control}
 					name="phoneNumber"
 					render={({ field }) => (
-						<FormItem className="w-1/2 flex flex-col items-start">
-							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
+						<FormItem className="sm:w-1/2 flex flex-col items-start">
+							<FormLabel className="font-seravek_medium text-base sm:text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',
 								)}

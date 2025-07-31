@@ -9,12 +9,12 @@ interface StatisticProps {
 const Statistic: FC<StatisticProps> = ({ count, label }) => {
 	return (
 		<div className="flex flex-col tracking-normal font-normal items-center gap-1 text-white">
-			<p className="text-6xl">
+			<p className="text-5xl sm:text-6xl">
 				<AnimatedCounter from={0} to={count} />
 				{/* <span>{count}</span> */}
 				<span>+</span>
 			</p>
-			<p className="text-lg">{label}</p>
+			<p className="text-base sm:text-lg">{label}</p>
 		</div>
 	)
 }

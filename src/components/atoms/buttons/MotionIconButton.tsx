@@ -1,71 +1,74 @@
+import { FC, JSX, useState } from 'react'
+import { ArrowUpRight } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
-import { motion } from 'framer-motion'
-import React from 'react'
-import { backgroundVariant, firstTextVariant, secondTextVariant } from '../animations/constants'
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	icon: JSX.Element
-	iconX?: number
+interface MotionIconButtonProps {
+	prefixIcon?: JSX.Element
+	suffixIcon?: JSX.Element
+	label: string
+	className?: string
+	onClick?: () => void
+	// iconX?: number
 }
 
-const MotionIconButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
-	({ children, icon, className, iconX = -10 }, ref) => {
-		const iconVariant = {
-			initial: {
-				x: '100%',
-			},
-			hover: {
-				x: iconX,
-				transition: {
-					duration: 1.125,
-					ease: [0.19, 1, 0.22, 1],
-				},
-			},
-			animate: {
-				x: '100%',
-				transition: {
-					duration: 1.125,
-					ease: [0.19, 1, 0.22, 1],
-				},
-			},
-		}
+const MotionIconButton: FC<React.ComponentProps<'button'> & MotionIconButtonProps> = ({
+	prefixIcon,
+	suffixIcon,
+	label,
+	className,
+	onClick,
+	...props
+}) => {
+	const [buttonState, setButtonState] = useState<'hover' | 'default'>('default')
 
-		return (
-			<motion.button
-				initial="initial"
-				whileHover={'hover'}
-				animate="animate"
-				variants={backgroundVariant}
-				ref={ref}
-				className={cn(
-					'w-[143px] h-12 bg-[#B9FD50] rounded-lg relative overflow-hidden',
-					className,
-				)}
-			>
-				<div className="overflow-hidden relative">
-					<motion.p variants={firstTextVariant} className="text-[#111204] font-semibold">
-						{children}
-					</motion.p>
-					<motion.p
-						variants={secondTextVariant}
-						aria-hidden
-						className="absolute top-0 -left-2 text-center text-[#B9FD50] font-semibold w-full"
+	return (
+		<button
+			// className={twMerge('w-max')}
+			{...props}
+			onMouseEnter={(e) => {
+				setButtonState('hover')
+				props.onMouseEnter?.(e)
+			}}
+			onMouseLeave={(e) => {
+				setButtonState('default')
+				props.onMouseLeave?.(e)
+			}}
+			onClick={onClick}
+			className={cn(
+				'bg-primary hover:cursor-pointer border-2 border-primary hover:border-primary hover:bg-secondary text-secondary hover:text-primary !m-0 w-max flex items-center duration-300 ease-in-out',
+				className,
+			)}
+		>
+			<AnimatePresence>
+				{buttonState === 'hover' && (
+					<motion.div
+						key="copy"
+						initial={{ width: 0, opacity: 0 }}
+						animate={{ width: 20, opacity: 1 }}
+						exit={{ width: 0, opacity: 0 }}
+						transition={{ duration: 0.4 }}
 					>
-						{children}
-					</motion.p>
-				</div>
-				<motion.div
-					variants={iconVariant}
-					className="absolute w-fit h-full top-0 flex items-center right-0 text-red-300 font-bold"
-					aria-hidden
-				>
-					{icon}
-				</motion.div>
-			</motion.button>
-		)
-	},
-)
-
-MotionIconButton.displayName = 'MotionIconButton'
+						{prefixIcon ?? <ArrowUpRight className="size-4 sm:size-5" />}
+					</motion.div>
+				)}
+			</AnimatePresence>
+			<p className="px-1 sm:px-2 z-20">{label}</p>
+			<AnimatePresence initial={false}>
+				{buttonState === 'default' && (
+					<motion.div
+						key="mail"
+						initial={{ width: 0, opacity: 0 }}
+						animate={{ width: 20, opacity: 1 }}
+						exit={{ width: 0, opacity: 0 }}
+						transition={{ duration: 0.4 }}
+					>
+						{suffixIcon ?? <ArrowUpRight className="size-4 sm:size-5" />}
+					</motion.div>
+				)}
+			</AnimatePresence>
+		</button>
+	)
+}
 
 export default MotionIconButton

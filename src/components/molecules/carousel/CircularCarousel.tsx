@@ -59,7 +59,7 @@ const CircularCarousel: React.FC<CircularCarouselProps> = ({
 								left: `calc(50% + ${x}px - ${imageSize / 2}px)`,
 								top: `calc(50% + ${y}px - ${imageSize / 2}px)`,
 								width: `${imageSize}px`,
-								height: `${imageSize}px`,
+								// height: `${imageSize}px`,
 							}}
 							whileHover={{ scale: 1.2, zIndex: 10 }}
 							transition={{ duration: 0.2 }}
@@ -73,23 +73,16 @@ const CircularCarousel: React.FC<CircularCarouselProps> = ({
 									className="size-full object-contain duration-300"
 								/>
 								{image.title && (
-									<div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-										<div className="bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+									<div className="absolute z-20 -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+										<span className="bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap">
 											{image.title}
-										</div>
+										</span>
 									</div>
 								)}
 							</div>
 						</motion.div>
 					)
 				})}
-
-				{/* Center decoration */}
-				{/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-					<div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full shadow-lg flex items-center justify-center">
-						<div className="w-8 h-8 bg-white rounded-full opacity-20"></div>
-					</div>
-				</div> */}
 			</motion.div>
 		</div>
 	)

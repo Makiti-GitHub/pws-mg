@@ -7,7 +7,6 @@ export const FloatingCursorProvider: React.FC<{ children: ReactNode }> = ({ chil
 	const [cursorVariant, setCursorVariant] = useState<'default' | 'text' | 'button' | 'hide'>(
 		'default',
 	)
-	// const [cursorVariant, setCursorVariant] = useState('default')
 
 	useEffect(() => {
 		const handleMouseMove = (e: MouseEvent) => {

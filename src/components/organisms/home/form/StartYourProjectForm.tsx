@@ -117,35 +117,35 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 
 		text += `${t('pages.home.sections.startYourProjectToday.form.fields.fullName.label')} : ${
 			data.fullName
-		}\n`
+		}\n\n`
 
 		text += `${t(
 			'pages.home.sections.startYourProjectToday.form.fields.emailAddress.label',
-		)} : ${data.email}\n`
+		)} : ${data.email}\n\n`
 
 		text += `${t(
 			'pages.home.sections.startYourProjectToday.form.fields.companyName.label',
-		)} : ${data.companyName}\n`
+		)} : ${data.companyName}\n\n`
 
 		text += `${t(
 			'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',
-		)} : ${data.phoneNumber}\n`
+		)} : ${data.phoneNumber}\n\n`
 
 		text += `${t(
 			'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',
-		)} : ${data.phoneNumber}\n`
+		)} : ${data.phoneNumber}\n\n`
 
 		text += `${t(
 			'pages.home.sections.startYourProjectToday.form.fields.projectType.label',
-		)} : ${data.projectType}\n`
+		)} : ${data.projectType}\n\n`
 
 		text += `${t(
 			'pages.home.sections.startYourProjectToday.form.fields.budgetRange.label',
-		)} : ${data.budgetRange}\n`
+		)} : ${data.budgetRange}\n\n`
 
 		text += `${t(
 			'pages.home.sections.startYourProjectToday.form.fields.projectTimeline.label',
-		)} : ${data.projectTimeline}\n`
+		)} : ${data.projectTimeline}\n\n`
 
 		data.technicalRequirements.forEach((requirement) => {
 			text += `\t• ${requirement}\n`
@@ -168,7 +168,7 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 		dialogRef.current?.click()
 
 		// Open WhatsApp in a new tab
-		window.open(whatsappUrl, '_blank')
+		// window.open(whatsappUrl, '_blank')
 	}
 
 	const stepComponents = [PersonalInfoStep, ProjectInfoStep, ProjectDescriptionInfoStep]
@@ -178,12 +178,12 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 		<Form {...form}>
 			<form
 				onSubmit={form.handleSubmit(onSubmit)}
-				className="box_shadow_products_card p-6 flex flex-col gap-6 rounded-xl"
+				className="box_shadow_products_card p-4 sm:p-6 flex flex-col gap-4 sm:gap-6 rounded-xl"
 			>
 				<div className="space-y-2">
-					<p className="font-seravek_medium text-on-surface-variant text-xl">
+					<h3 className="font-seravek_medium text-on-surface-variant text-xl">
 						{t('pages.home.sections.startYourProjectToday.form.title')}
-					</p>
+					</h3>
 					<p className="text-base text-outline">
 						{t('pages.home.sections.startYourProjectToday.form.indication')}
 					</p>
@@ -191,7 +191,7 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 
 				<div className=" bg-white">
 					{/* Step Indicator */}
-					<div className="flex items-center justify-between mb-8">
+					<div className="flex items-center justify-between mb-4 sm:mb-8">
 						{steps.map((step, index) => {
 							const Icon = step.icon
 							const isActive = index === currentStep
@@ -199,11 +199,16 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 							const isAccessible = index <= Math.max(...completedSteps, -1) + 1
 
 							return (
-								<div key={index} className="flex items-center flex-1">
+								<div
+									key={`form-step-${index}`}
+									className={`flex items-center ${
+										index !== steps.length - 1 ? 'flex-1' : ''
+									}`}
+								>
 									<button
 										onClick={() => goToStep(index)}
 										disabled={!isAccessible}
-										className={`flex items-center justify-center w-10 h-10 rounded-full border-2 transition-colors ${
+										className={`flex items-center justify-center size-10 rounded-full border-2 transition-colors ${
 											isActive
 												? 'bg-blue-500 border-blue-500 text-white'
 												: isCompleted
@@ -225,7 +230,11 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 												: 'text-gray-500'
 										}`}
 									>
-										{step.title}
+										{t(
+											`pages.home.sections.startYourProjectToday.steps.step${
+												index + 1
+											}.label`,
+										)}
 									</span>
 
 									{index < steps.length - 1 && (
@@ -234,11 +243,6 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 												isCompleted ? 'bg-green-500' : 'bg-gray-200'
 											}`}
 										/>
-										// <div
-										// 	className={`w-16 h-0.5 mx-4 ${
-										// 		isCompleted ? 'bg-green-500' : 'bg-gray-200'
-										// 	}`}
-										// />
 									)}
 								</div>
 							)
@@ -247,7 +251,15 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 
 					{/* Form Content */}
 					<div>
-						<div className="relative min-h-[500px]">
+						<div
+							className={`relative ${
+								currentStep === 0
+									? 'min-h-[450px] sm:min-h-[300px]'
+									: currentStep === 1
+									? 'min-h-[700px] sm:min-h-[500px]'
+									: 'min-h-[450px] sm:min-h-[400px]'
+							}`}
+						>
 							<AnimatePresence initial={false} custom={direction}>
 								<motion.div
 									key={currentStep}
@@ -262,7 +274,7 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 									}}
 									className="absolute inset-0"
 								>
-									<CurrentStepComponent form={form} />
+									<CurrentStepComponent form={form} stepIndex={currentStep + 1} />
 								</motion.div>
 							</AnimatePresence>
 						</div>
@@ -276,7 +288,7 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 								className="flex items-center h-max px-4 py-2 text-gray-600 bg-gray-100 rounded-full hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
 							>
 								<ChevronLeft size={16} />
-								Previous
+								{t('previous')}
 							</Button>
 
 							{currentStep === steps.length - 1 ? (
@@ -284,30 +296,24 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 									variant="primary"
 									type="button"
 									onClick={form.handleSubmit(onSubmit)}
-									className="rounded-4xl h-max px-5 py-3 gap-3 hover:cursor-pointer"
+									className="rounded-4xl h-max px-3 sm:px-5 py-2 gap-1.5 hover:cursor-pointer"
 								>
 									<SendIcon className="size-5" />
 									<span className="sr-only">Send Project Request</span>{' '}
-									<span className="text-lg font-seravek_medium">
-										Send Project Request
+									<span className="text-sm font-seravek_medium">
+										{t(
+											'pages.home.sections.startYourProjectToday.form.sendRequest',
+										)}
 									</span>{' '}
 								</Button>
 							) : (
-								// <Button
-								// 	type="button"
-								// 	onClick={form.handleSubmit(onSubmit)}
-								// 	className="flex items-center h-max px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
-								// >
-								// 	Submit
-								// 	<Check size={16} className="ml-1" />
-								// </Button>
 								<Button
 									type="button"
 									variant="primary"
 									onClick={nextStep}
 									className="flex items-center h-max px-4 py-2 rounded-full transition-colors"
 								>
-									Next
+									{t('next')}
 									<ChevronRight size={16} />
 								</Button>
 							)}
@@ -323,41 +329,20 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 				<DialogContent className="sm:max-w-xl">
 					<DialogHeader className="flex flex-col items-center">
 						<DialogTitle>
-							<CheckCircleIcon className="size-[72px] text-success" />
+							<CheckCircleIcon className="size-12 sm:size-[72px] text-success" />
 						</DialogTitle>
-						<DialogDescription className="hidden">
-							Anyone who has this link will be able to view this.
-						</DialogDescription>
+						<DialogDescription className="hidden" />
 						<DialogClose className="hidden" />
 					</DialogHeader>
 					<div className="flex flex-col items-center text-center gap-2">
-						<p className="font-seravek_medium text-2xl text-on-surface-variant">
-							Thank you! We'll get back to you within 24 hours.
+						<p className="font-seravek_medium text-xl sm:text-2xl text-on-surface-variant">
+							{t('pages.home.sections.startYourProjectToday.form.modal.title')}
 						</p>
 
-						<p className="text-lg text-outline">
-							We've received your project requirements and are currently analyzing
-							them carefully. Our team will prepare a detailed proposal and get back
-							to you soon.
+						<p className="text-base sm:text-lg text-outline">
+							{t('pages.home.sections.startYourProjectToday.form.modal.content')}
 						</p>
-						{/* <div className="grid flex-1 gap-2">
-            <Label htmlFor="link" className="sr-only">
-              Link
-            </Label>
-            <Input
-              id="link"
-              defaultValue="https://ui.shadcn.com/docs/installation"
-              readOnly
-            />
-          </div> */}
 					</div>
-					{/* <DialogFooter className="sm:justify-start">
-          <DialogClose asChild>
-            <Button type="button" variant="secondary">
-              Close
-            </Button>
-          </DialogClose>
-        </DialogFooter> */}
 				</DialogContent>
 			</Dialog>
 		</Form>

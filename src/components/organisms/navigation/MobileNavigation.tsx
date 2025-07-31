@@ -51,7 +51,7 @@ const MobileNavigation = () => {
 							stiffness: 100,
 							damping: 15,
 						}}
-						className="fixed inset-0 z-50 flex flex-col gap-24 px-6 sm:px-12 py-8 bg-secondary text-white"
+						className="fixed inset-0 z-50 flex flex-col gap-24 px-4 sm:px-12 py-8 bg-secondary text-white"
 					>
 						{/* Navigation Links */}
 
@@ -116,7 +116,7 @@ const MobileNavigation = () => {
 
 						<div>
 							<Separator className="w-full bg-outline" />
-							<div className="w-full text-outline-variant text-base flex flex-col gap-6 sm:gap-2">
+							<div className="w-full text-outline-variant text-sm  sm:text-base flex flex-col gap-6 sm:gap-2">
 								<p>© 2025 Makiti Group. All rights reserved.</p>
 								<div className="flex items-center gap-5">
 									<a href="#" className="hover:text-white">

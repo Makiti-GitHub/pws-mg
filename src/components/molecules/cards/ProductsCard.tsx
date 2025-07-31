@@ -1,7 +1,6 @@
-import { Button } from '@/components/ui/button'
 import { ourLiveProductsMock } from '@/data/mock'
+import { cn } from '@/lib/utils'
 import Image from '@rasenganjs/image'
-import { ArrowUpRightIcon } from 'lucide-react'
 import { FC } from 'react'
 
 interface ProductsCardProps {
@@ -9,13 +8,21 @@ interface ProductsCardProps {
 	withButton?: boolean
 }
 
-const ProductsCard: FC<ProductsCardProps> = ({ story, withButton = false }) => {
+const ProductsCard: FC<React.ComponentProps<'article'> & ProductsCardProps> = ({
+	story,
+	className,
+	withButton = false,
+	children,
+	...props
+}) => {
 	return (
 		<a href={story.link} target="_blank">
 			<article
-				tabIndex={0}
-				role="button"
-				className="w-full hover:cursor-pointer rounded-[20px] box_shadow_products_card"
+				className={cn(
+					'w-full hover:cursor-pointer rounded-[20px] box_shadow_products_card hover:scale-105 transition duration-300 ease-in-out',
+					className,
+				)}
+				{...props}
 			>
 				<div className="w-full h-[250px] bg-slate-300 rounded-t-[20px]">
 					<Image
@@ -25,15 +32,10 @@ const ProductsCard: FC<ProductsCardProps> = ({ story, withButton = false }) => {
 						alt={story.title}
 						className="size-full object-cover aspect-auto rounded-t-[20px]"
 					/>
-					{/* <img
-					src={story.image}
-					alt={story.title}
-					className="size-full aspect-auto object-cover rounded-t-[20px]"
-				/> */}
 				</div>
 				<div
 					className={`${
-						withButton ? 'flex flex-col min-h-64 justify-between gap-12' : ''
+						children ? 'flex flex-col min-h-64 justify-between gap-12' : ''
 					} p-4`}
 				>
 					<div className="space-y-3">
@@ -43,16 +45,7 @@ const ProductsCard: FC<ProductsCardProps> = ({ story, withButton = false }) => {
 						</div>
 						<p className="text-base text-outline">{story.description}</p>
 					</div>
-					{withButton && story.link ? (
-						<Button
-							variant={'primary'}
-							className="gap-1 w-full !px-8 !py-2 !h-max !m-0 rounded-[40px] hover:cursor-pointer"
-						>
-							<span className="sr-only">View Live website</span>
-							<span className="text-lg font-seravek_medium">View Live website</span>
-							<ArrowUpRightIcon className="size-6" />
-						</Button>
-					) : null}
+					{children}
 				</div>
 			</article>
 		</a>

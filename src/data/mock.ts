@@ -240,15 +240,23 @@ export const talentProfilesMock: {
 	title: string
 	hourCost: number
 	expYear: number
-	location: 'On Site' | 'Remote'
+	location: 'onSite' | 'remote'
 	skills: string[]
 	description: string
-	icon?: string
+	icon: string
+	category:
+		| 'frontendDeveloper'
+		| 'backendDeveloper'
+		| 'devopsEngineer'
+		| 'uiuxDesigner'
+		| 'testManager'
+		| 'scrumMaster'
 }[] = [
 	{
 		title: 'Frontend Developer',
+		category: 'frontendDeveloper',
 		hourCost: 45,
-		location: 'Remote',
+		location: 'remote',
 		expYear: 5,
 		description:
 			'Expert frontend developers specialized in modern web technologies and responsive design',
@@ -257,8 +265,9 @@ export const talentProfilesMock: {
 	},
 	{
 		title: 'Backend Developer',
+		category: 'backendDeveloper',
 		hourCost: 50,
-		location: 'Remote',
+		location: 'remote',
 		expYear: 6,
 		description:
 			'Senior backend developers with expertise in scalable architecture and cloud solutions.',
@@ -267,8 +276,9 @@ export const talentProfilesMock: {
 	},
 	{
 		title: 'DevOps Engineer',
+		category: 'devopsEngineer',
 		hourCost: 55,
-		location: 'Remote',
+		location: 'remote',
 		expYear: 7,
 		description:
 			'DevOps engineers focused on automation, CI/CD, and infrastructure optimization.',
@@ -277,8 +287,9 @@ export const talentProfilesMock: {
 	},
 	{
 		title: 'UX/UI Designer',
+		category: 'uiuxDesigner',
 		hourCost: 45,
-		location: 'Remote',
+		location: 'remote',
 		expYear: 5,
 		description:
 			'Creative UX/UI designers with focus on user-centered design and sustainability.',
@@ -287,8 +298,9 @@ export const talentProfilesMock: {
 	},
 	{
 		title: 'Test Manager',
+		category: 'testManager',
 		hourCost: 40,
-		location: 'Remote',
+		location: 'remote',
 		expYear: 4,
 		description:
 			'Test managers and QA engineers ensuring quality through comprehensive testing.',
@@ -297,8 +309,9 @@ export const talentProfilesMock: {
 	},
 	{
 		title: 'Scrum Master',
+		category: 'scrumMaster',
 		hourCost: 45,
-		location: 'Remote',
+		location: 'remote',
 		expYear: 8,
 		description:
 			'Certified Scrum Masters with extensive experience in agile project management.',
@@ -308,6 +321,20 @@ export const talentProfilesMock: {
 ]
 
 export type ProjectCategoryType = 'web_app' | 'mobile_app' | 'e_commerce' | 'saas' | 'all'
+export type IndustriesType =
+	| 'transportation'
+	| 'travel'
+	| 'finance'
+	| 'cross_platform'
+	| 'e_commerce'
+	| 'logistics'
+	| 'agency'
+	| 'agriculture'
+	| 'farming'
+export type PhaseType =
+	| 'discovery_and_planning'
+	| 'design_and_development'
+	| 'launch_and_optimization'
 
 export const successStoriesMock: {
 	id: string
@@ -316,7 +343,12 @@ export const successStoriesMock: {
 	categoryType: ProjectCategoryType
 	description: string
 	results: string[]
-	tags: string[]
+	budget: number
+	teamSize: number
+	tags: {
+		label: string
+		type: IndustriesType
+	}[]
 	techs?: (keyof typeof techStackMock)[]
 	image: string
 	testimonial?: (typeof testimonialsMock)[number][]
@@ -325,6 +357,8 @@ export const successStoriesMock: {
 		stats: {
 			count: number
 			label: string
+			type: 'user_engagement' | 'booking_time' | 'conversion_rate' | 'customer_satisfaction'
+			category: 'increase' | 'decrease'
 			color: '#27AE60' | '#087EA4' | '#9747FF' | '#FF7262'
 		}[]
 	}
@@ -337,6 +371,7 @@ export const successStoriesMock: {
 		description: string
 		achievements: string[]
 		phases: {
+			category: PhaseType
 			label: string
 			startDate: Date
 			endDate: Date
@@ -350,6 +385,8 @@ export const successStoriesMock: {
 		title: 'Matoa Traveller App',
 		category: 'Mobile App',
 		categoryType: 'mobile_app',
+		budget: 150000,
+		teamSize: 5,
 		description:
 			'This app simplifies booking bus trips, enabling users to plan and secure travel with route and schedule access.',
 		results: [
@@ -357,7 +394,10 @@ export const successStoriesMock: {
 			'A 150% increase in conversions.',
 			'An average rating of 4.75.',
 		],
-		tags: ['Transportation', 'Travel'],
+		tags: [
+			{ label: 'Transportation', type: 'transportation' },
+			{ label: 'Travel', type: 'travel' },
+		], // ['Transportation', 'Travel'],
 		image: portfolioImage1,
 		techs: ['figma', 'react', 'next'],
 		challenges: {
@@ -379,21 +419,29 @@ export const successStoriesMock: {
 					count: 200,
 					label: 'User Engagement Increase',
 					color: '#27AE60',
+					type: 'user_engagement',
+					category: 'increase',
 				},
 				{
 					count: 75,
 					label: 'Reduced Average Booking Time',
 					color: '#087EA4',
+					type: 'booking_time',
+					category: 'decrease',
 				},
 				{
 					count: 150,
 					label: 'Conversion Rate Increase',
 					color: '#9747FF',
+					type: 'conversion_rate',
+					category: 'increase',
 				},
 				{
 					count: 300,
 					label: 'Customer Satisfaction Score',
 					color: '#FF7262',
+					type: 'customer_satisfaction',
+					category: 'increase',
 				},
 			],
 		},
@@ -418,6 +466,7 @@ export const successStoriesMock: {
 					label: 'Discovery & Planning',
 					startDate: new Date(),
 					endDate: new Date(),
+					category: 'discovery_and_planning',
 					achievements: [
 						'User Research & Persona Development',
 						'Feature Prioritization & Roadmapping',
@@ -430,6 +479,7 @@ export const successStoriesMock: {
 					label: 'Design & Development',
 					startDate: new Date(),
 					endDate: new Date(),
+					category: 'design_and_development',
 					achievements: [
 						'Agile development sprints',
 						'Intuitive UI/UX Design',
@@ -442,6 +492,7 @@ export const successStoriesMock: {
 					label: 'Launch & Optimization',
 					startDate: new Date(),
 					endDate: new Date(),
+					category: 'launch_and_optimization',
 					achievements: [
 						'Phased rollout',
 						'Performance monitoring',
@@ -462,6 +513,8 @@ export const successStoriesMock: {
 		id: '2',
 		title: 'Lyssafi',
 		category: 'Web App',
+		budget: 150000,
+		teamSize: 5,
 		categoryType: 'web_app',
 		description:
 			'This project involved designing a universal web application to offer a versatile payment solution, providing users with diverse payment methods for their convenience across all platforms.',
@@ -470,13 +523,18 @@ export const successStoriesMock: {
 			'A 150% increase in conversions.',
 			'An average rating of 4.75.',
 		],
-		tags: ['Finance', 'Cross Platform'],
+		tags: [
+			{ label: 'Finance', type: 'finance' },
+			{ label: 'Cross Platform', type: 'cross_platform' },
+		], // ['Finance', 'Cross Platform'],
 		image: portfolioImage4,
 		techs: ['figma', 'react', 'html', 'tailwind'],
 	},
 	{
 		id: '3',
 		title: 'Inventory Stock Management',
+		budget: 150000,
+		teamSize: 5,
 		category: 'Mobile App',
 		categoryType: 'mobile_app',
 		description:
@@ -486,13 +544,18 @@ export const successStoriesMock: {
 			'A 150% increase in conversions.',
 			'An average rating of 4.75.',
 		],
-		tags: ['E-commerce', 'Logistics'],
+		tags: [
+			{ label: 'E-commerce', type: 'e_commerce' },
+			{ label: 'Logistics', type: 'logistics' },
+		], // ['E-commerce', 'Logistics'],
 		image: portfolioImage2,
 		techs: ['figma', 'react', 'next', 'js'],
 	},
 	{
 		id: '4',
 		title: 'Matoa Agency Landing Page',
+		budget: 150000,
+		teamSize: 5,
 		category: 'SaaS',
 		categoryType: 'saas',
 		description:
@@ -502,12 +565,17 @@ export const successStoriesMock: {
 			'A 150% increase in conversions.',
 			'An average rating of 4.75.',
 		],
-		tags: ['Agency', 'Travel'],
+		tags: [
+			{ label: 'Agency', type: 'agency' },
+			{ label: 'Travel', type: 'travel' },
+		], // ['Agency', 'Travel'],
 		image: portfolioImage3,
 	},
 	{
 		id: '5',
 		title: 'Matoa Web Admin',
+		budget: 150000,
+		teamSize: 5,
 		category: 'Web App',
 		categoryType: 'web_app',
 		description:
@@ -517,7 +585,10 @@ export const successStoriesMock: {
 			'A 150% increase in conversions.',
 			'An average rating of 4.75.',
 		],
-		tags: ['Transportation', 'Travel'],
+		tags: [
+			{ label: 'Transportation', type: 'transportation' },
+			{ label: 'Travel', type: 'travel' },
+		], // ['Transportation', 'Travel'],
 		image: portfolioImage5,
 		techs: ['figma', 'react', 'html', 'tailwind'],
 	},
@@ -525,6 +596,8 @@ export const successStoriesMock: {
 	{
 		id: '6',
 		title: 'Watat Bau',
+		budget: 150000,
+		teamSize: 5,
 		category: 'Web App',
 		categoryType: 'web_app',
 		description:
@@ -534,13 +607,18 @@ export const successStoriesMock: {
 			'A 150% increase in conversions.',
 			'An average rating of 4.75.',
 		],
-		tags: ['Transportation', 'Travel'],
+		tags: [
+			{ label: 'Transportation', type: 'transportation' },
+			{ label: 'Travel', type: 'travel' },
+		], // ['Transportation', 'Travel'],
 		image: portfolioImage6,
 		techs: ['figma', 'html', 'js', 'tailwind'],
 	},
 	{
 		id: '7',
 		title: 'Young Agro Africa',
+		budget: 150000,
+		teamSize: 5,
 		category: 'SaaS',
 		categoryType: 'saas',
 		description:
@@ -550,7 +628,10 @@ export const successStoriesMock: {
 			'A 150% increase in conversions.',
 			'An average rating of 4.75.',
 		],
-		tags: ['Agriculture', 'Farming'],
+		tags: [
+			{ label: 'Agriculture', type: 'agriculture' },
+			{ label: 'Farming', type: 'farming' },
+		], // ['Agriculture', 'Farming'],
 		image: portfolioImage7,
 		techs: ['figma', 'react', 'next', 'html', 'tailwind'],
 	},
@@ -558,6 +639,8 @@ export const successStoriesMock: {
 	{
 		id: '8',
 		title: 'ST Express Groupage',
+		budget: 150000,
+		teamSize: 5,
 		category: 'SaaS',
 		categoryType: 'saas',
 		description:
@@ -567,7 +650,10 @@ export const successStoriesMock: {
 			'A 150% increase in conversions.',
 			'An average rating of 4.75.',
 		],
-		tags: ['Agency', 'Travel'],
+		tags: [
+			{ label: 'Agency', type: 'agency' },
+			{ label: 'Travel', type: 'travel' },
+		], // ['Agency', 'Travel'],
 		image: portfolioImage8,
 		techs: ['figma', 'react', 'next', 'html', 'tailwind'],
 	},
@@ -807,55 +893,80 @@ export const frequentlyAskedQuestionsMock: { question: string; answer: string }[
 
 export const technologiesMock: {
 	techno: string
+	category:
+		| 'frontend'
+		| 'backend'
+		| 'nativeApp'
+		| 'deployment'
+		| 'testing'
+		| 'cloud'
+		| 'testingTools'
+		| 'database'
+		| 'cms'
+		| 'crossPlatformApp'
+		| 'uxUiDesign'
+		| 'organization'
 	list: string[]
 }[] = [
 	{
+		category: 'frontend',
 		techno: 'Frontend',
 		list: ['Angular', 'React.Js'],
 	},
 	{
+		category: 'nativeApp',
 		techno: 'Native App',
 		list: ['Swift', 'Kotlin'],
 	},
 	{
+		category: 'backend',
 		techno: 'Backend',
 		list: ['Java Spring Boot', 'Node JS'],
 	},
 	{
+		category: 'testing',
 		techno: 'Testing',
 		list: ['JUnit/Jest', 'Cypress/Selenium'],
 	},
 
 	{
+		category: 'database',
 		techno: 'Database',
 		list: ['PostgreSQL', 'MongoDB', 'Oracle'],
 	},
 	{
+		category: 'cms',
 		techno: 'CMS',
 		list: ['Strapi', 'WooCommerce', 'Wordpress'],
 	},
 	{
+		category: 'crossPlatformApp',
 		techno: 'Cross Platform App',
 		list: ['React Native', 'Flutter/Dart', 'Ionic Angular'],
 	},
 	{
-		techno: 'UX-/UI Design',
+		category: 'uxUiDesign',
+		techno: 'UX/UI Design',
 		list: ['Adobe Creative Cloud', 'Figma', 'Behance'],
 	},
 
 	{
+		category: 'cloud',
 		techno: 'Cloud',
 		list: ['AWS', 'GCP', 'Azure'],
 	},
 	{
+		category: 'testingTools',
 		techno: 'Testing Tools',
 		list: ['Postman', 'Newman', 'Soap UI'],
 	},
 	{
+		category: 'deployment',
 		techno: 'Deployment',
 		list: ['Kubernetes', 'Docker', 'Ansible'],
 	},
 	{
+		category: 'organization',
 		techno: 'Organization',
 		list: ['M365', 'G-Suite', 'Jira/Confluence'],
 	},
@@ -978,26 +1089,32 @@ export const socialsMock: {
 	{
 		label: 'Instagram',
 		icon: instagramLogo,
+		link: '#',
 	},
 	{
 		label: 'Twitter',
 		icon: twitterLogo,
+		link: '#',
 	},
 	{
 		label: 'Linkedin',
 		icon: linkedInLogo,
+		link: '#',
 	},
 	{
 		label: 'Xing',
 		icon: xingLogo,
+		link: '#',
 	},
 	{
 		label: 'Github',
 		icon: githubLogo,
+		link: '#',
 	},
 	{
 		label: 'Youtube',
 		icon: youtubeLogo,
+		link: '#',
 	},
 ]
 
@@ -1046,15 +1163,15 @@ export const teamMemberMock: Member[] = [
 		roleDesc:
 			'Visionary leader with extensive experience in business strategy and client relations, driving company growth and innovation.',
 	},
-	{
-		name: 'Marie-Josée Mache',
-		role: 'Chief Technology Officer',
-		experience: 7,
-		image: '/static/images/teams/2.jpeg',
-		tags: ['Strategic Leadership', 'Software Architecture'],
-		roleDesc:
-			'Strategic technology leader with deep expertise in software architecture, driving innovative technical solutions and organizational growth.',
-	},
+	// {
+	// 	name: 'Marie-Josée Mache',
+	// 	role: 'Chief Technology Officer',
+	// 	experience: 7,
+	// 	image: '/static/images/teams/2.jpeg',
+	// 	tags: ['Strategic Leadership', 'Software Architecture'],
+	// 	roleDesc:
+	// 		'Strategic technology leader with deep expertise in software architecture, driving innovative technical solutions and organizational growth.',
+	// },
 	{
 		name: 'Ivan Axel Ngomdjom',
 		role: 'Project Analyst',

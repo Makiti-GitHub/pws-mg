@@ -8,14 +8,19 @@ import {
 import { frequentlyAskedQuestionsMock } from '@/data/mock'
 import Banner from '@/components/molecules/banner/Banner'
 import { AtSignIcon, ClockIcon, MapPinIcon, SmartphoneIcon } from 'lucide-react'
-import MotionIconButton2 from '@/components/atoms/buttons/MotionIconButton2'
+import MotionIconButton from '@/components/atoms/buttons/MotionIconButton'
+import { useTranslation } from 'react-i18next'
+import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
 
 const FaqSection = () => {
+	const { t } = useTranslation()
+	const { setCursorVariant } = useFloatingCursor()
+
 	return (
-		<section className="px-8 md:px-[80px] lg:px-[120px] screen flex flex-col gap-[24px] pb-16">
+		<section className="px-4 sm:px-8 md:px-[80px] lg:px-[120px] screen flex flex-col gap-[24px] pb-16">
 			<SectionHeader
-				title="Frequently Asked Questions"
-				subTitle="Everything you need to know about our IT Outsourcing services"
+				title={t('pages.home.sections.faq.title')}
+				subTitle={t('pages.home.sections.faq.subtitle')}
 			/>
 			<div className="grid md:grid-cols-12 gap-4">
 				<div className="col-span-12 md:col-span-7 lg:col-span-8">
@@ -23,7 +28,7 @@ const FaqSection = () => {
 						type="multiple"
 						// collapsible={true}
 						className="w-full flex flex-col gap-4"
-						defaultValue={['item-1']}
+						// defaultValue={['item-1']}
 					>
 						{frequentlyAskedQuestionsMock.map((faq, index) => (
 							<AccordionItem
@@ -50,12 +55,22 @@ const FaqSection = () => {
 											<path d="M12 17h.01" />
 										</svg>
 										<span className="font-seravek_medium text-sm text-on-surface-variant">
-											{faq.question}
+											{t(
+												`pages.home.sections.faq.questions.question${
+													index + 1
+												}.question`,
+											)}
 										</span>
 									</p>
 								</AccordionTrigger>
 								<AccordionContent className="flex flex-col gap-4 text-balance">
-									<p>{faq.answer}</p>
+									<p>
+										{t(
+											`pages.home.sections.faq.questions.question${
+												index + 1
+											}.answer`,
+										)}
+									</p>
 								</AccordionContent>
 							</AccordionItem>
 						))}
@@ -70,9 +85,11 @@ const FaqSection = () => {
 								</div>
 								<div className="space-y-1">
 									<p className="text-sm font-seravek_medium text-on-surface-variant">
-										Phone
+										{t('phone')}
 									</p>
-									<p className="text-sm text-outline">+237 6 53 78 80 53</p>
+									<p className="text-sm text-outline">
+										<a href="tel:+237653788053">+237 6 53 78 80 53</a>
+									</p>
 								</div>
 							</div>
 							<div className="flex items-center gap-3">
@@ -81,9 +98,11 @@ const FaqSection = () => {
 								</div>
 								<div className="space-y-1">
 									<p className="text-sm font-seravek_medium text-on-surface-variant">
-										Email
+										{t('email')}
 									</p>
-									<p className="text-sm text-outline">contact@makiti.com</p>
+									<p className="text-sm text-outline">
+										<a href="mailto:contact@makiti.com">contact@makiti.com</a>
+									</p>
 								</div>
 							</div>
 
@@ -93,7 +112,7 @@ const FaqSection = () => {
 								</div>
 								<div className="space-y-1">
 									<p className="text-sm font-seravek_medium text-on-surface-variant">
-										Location
+										{t('location')}
 									</p>
 									<p className="text-sm text-outline">Yaoundé, Cameroon</p>
 								</div>
@@ -105,7 +124,7 @@ const FaqSection = () => {
 								</div>
 								<div className="space-y-1">
 									<p className="text-sm font-seravek_medium text-on-surface-variant">
-										Business Hours
+										{t('businessHours')}
 									</p>
 									<p className="text-sm text-outline">Mon-Fri: 9AM-6PM CAF</p>
 								</div>
@@ -114,22 +133,15 @@ const FaqSection = () => {
 					</div>
 					<Banner
 						variant="secondary"
-						title="Still have questions?"
-						desc="Our experts are ready to help you find the perfect outsourcing solution."
+						title={t('pages.home.sections.faq.banner.title')}
+						desc={t('pages.home.sections.faq.banner.subtitle')}
 					>
-						<MotionIconButton2
-							label="Let's Talk"
-							className="rounded-4xl h-max px-4 py-3 gap-1 text-lg font-seravek_medium"
+						<MotionIconButton
+							label={t('pages.home.sections.faq.banner.cta')}
+							onMouseEnter={() => setCursorVariant('button')}
+							onMouseLeave={() => setCursorVariant('default')}
+							className="rounded-4xl !h-max !px-4 !py-2 gap-1 text-base sm:text-lg font-seravek_medium"
 						/>
-
-						{/* <Button
-							variant="primary"
-							className="rounded-4xl h-max px-5 py-3 gap-1 hover:cursor-pointer"
-						>
-							<span className="sr-only">Let's Talk</span>{' '}
-							<span className="text-lg font-seravek_medium">Let's Talk</span>{' '}
-							<ArrowUpRightIcon className="size-6" />
-						</Button> */}
 					</Banner>
 				</aside>
 			</div>

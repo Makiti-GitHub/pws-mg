@@ -2,12 +2,14 @@ import { testimonialsMock } from '@/data/mock'
 import { QuoteIcon, Star } from 'lucide-react'
 import { FC } from 'react'
 import Image from '@rasenganjs/image'
+import { useTranslation } from 'react-i18next'
 
 interface TestimonialProps {
 	testimonial: (typeof testimonialsMock)[number]
 }
 
 const TestimonialCard: FC<TestimonialProps> = ({ testimonial }) => {
+	const { t } = useTranslation()
 	return (
 		<article className="w-full p-6 flex flex-col gap-5 rounded-xl box_shadow_products_card">
 			<div className="w-full flex items-center justify-between gap-4">
@@ -27,22 +29,22 @@ const TestimonialCard: FC<TestimonialProps> = ({ testimonial }) => {
 			<div className="rounded-lg p-3 space-y-4 text-sm bg-surface-container">
 				<div className="flex gap-20">
 					<div className="space-y-1">
-						<p className="text-outline">Project</p>
+						<p className="text-outline">{t('project')}</p>
 
 						<p className="font-seravek_medium text-on-surface-variant">
 							{testimonial.category}
 						</p>
 					</div>
 					<div className="space-y-1">
-						<p className="text-outline">Duration</p>
+						<p className="text-outline">{t('duration')}</p>
 						<p className="font-seravek_medium text-on-surface-variant">
-							{testimonial.duration} Months
+							{testimonial.duration} {t('months')}
 						</p>
 					</div>
 				</div>
 
 				<div className="space-y-1">
-					<p className="text-outline">Key results</p>
+					<p className="text-outline capitalize">{t('keyResults')}</p>
 
 					<p className="font-seravek_medium text-success">{testimonial.result}</p>
 				</div>

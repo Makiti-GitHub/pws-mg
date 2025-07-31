@@ -1,23 +1,36 @@
 import { successStoriesMock, techStackMock } from '@/data/mock'
+import { cn } from '@/lib/utils'
 import Image from '@rasenganjs/image'
 import { Link } from 'rasengan'
 import { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 
 interface SuccessStoryCardProps {
 	story: (typeof successStoriesMock)[number]
 }
 
-const SuccessStoryCard: FC<SuccessStoryCardProps> = ({ story }) => {
+const SuccessStoryCard: FC<React.ComponentProps<'article'> & SuccessStoryCardProps> = ({
+	story,
+	className,
+	...props
+}) => {
+	const { t } = useTranslation()
 	return (
 		<Link to={`/portfolio/${story.id}`}>
-			<article className="w-full hover:cursor-pointer grid lg:grid-cols-5 xl:grid-cols-2 gap-10 border rounded-[40px] p-3 border-outline-variant">
-				<div className="col-span-1 lg:col-span-3 xl:col-span-1 w-full h-[365px] sm:h-auto bg-white-300 rounded-[30px]">
+			<article
+				className={cn(
+					'w-full hover:cursor-pointer grid lg:grid-cols-5 xl:grid-cols-2 gap-5 sm:gap-10 border rounded-3xl sm:rounded-[40px] p-3 border-outline-variant hover:scale-95 transition duration-300 ease-in-out',
+					className,
+				)}
+				{...props}
+			>
+				<div className="col-span-1 lg:col-span-3 xl:col-span-1 w-full h-56 sm:h-[365px] md:h-auto bg-white-300 rounded-2xl sm:rounded-[30px]">
 					<Image
 						src={story.image}
 						alt={story.title}
 						width={'100%'}
 						height={'100%'}
-						className="size-full aspect-auto object-cover rounded-[30px]"
+						className="size-full aspect-auto object-cover rounded-2xl sm:rounded-[30px]"
 					/>
 				</div>
 				<div className="space-y-2 col-span-1 lg:col-span-2 xl:col-span-1">
@@ -42,12 +55,14 @@ const SuccessStoryCard: FC<SuccessStoryCardProps> = ({ story }) => {
 					<div className="space-y-2 font-seravek_medium">
 						<div className="space-y-2">
 							<p className="text-[32px] text-on-surface">{story.title}</p>
-							<p className="text-base text-on-surface-variant">{story.category}</p>
+							<p className="text-base text-on-surface-variant">
+								{t(`pages.portfolio.projects.card.category.${story.categoryType}`)}
+							</p>
 						</div>
 						<p className="text-base text-outline">{story.description}</p>
 					</div>
 					<div className="space-y-2 font-seravek_medium">
-						<p className="text-base text-on-surface-variant">Key results</p>
+						<p className="text-base text-on-surface-variant">{t('keyResults')}</p>
 
 						<ul className="list-disc pl-8">
 							{story.results.map((item, index) => (
@@ -62,7 +77,7 @@ const SuccessStoryCard: FC<SuccessStoryCardProps> = ({ story }) => {
 					</div>
 					<div className="space-y-2">
 						<p className="text-base font-seravek_medium text-on-surface-variant">
-							Industry
+							{t('industry')}
 						</p>
 
 						<div className="flex flex-wrap gap-2.5">
@@ -71,7 +86,7 @@ const SuccessStoryCard: FC<SuccessStoryCardProps> = ({ story }) => {
 									key={`story-${index}-industry-${item}`}
 									className="bg-surface-container px-4 py-1 rounded-lg text-sm text-[#44474A]"
 								>
-									{item}
+									{t(`pages.portfolio.projects.card.industry.${item.type}`)}
 								</span>
 							))}
 						</div>

@@ -12,10 +12,15 @@ import {
 } from '@/components/ui/select'
 import { formTeamSizes } from '@/data/mock'
 
-const ProjectDescriptionInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({ form }) => {
+const ProjectDescriptionInfoStep: React.FC<{
+	form: UseFormReturn<FullFormData>
+	stepIndex: number
+}> = ({ form, stepIndex }) => {
 	return (
-		<div className="space-y-4">
-			<h2 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h2>
+		<div className="space-y-3 sm:space-y-4">
+			<h4 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
+				{t(`pages.home.sections.startYourProjectToday.steps.step${stepIndex}.indication`)}
+			</h4>
 
 			<div className="">
 				<FormField
@@ -23,7 +28,7 @@ const ProjectDescriptionInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }
 					name="preferredTeamSize"
 					render={({ field }) => (
 						<FormItem className="w-full">
-							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
+							<FormLabel className="font-seravek_medium text-base sm:text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.preferredTeamSize.label',
 								)}
@@ -62,7 +67,7 @@ const ProjectDescriptionInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }
 					name="projectDescription"
 					render={({ field }) => (
 						<FormItem className="w-full">
-							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
+							<FormLabel className="font-seravek_medium text-base sm:text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.projectDescription.label',
 								)}
@@ -75,7 +80,7 @@ const ProjectDescriptionInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }
 									)}
 									{...field}
 									rows={5}
-									className="bg-surface-container px-3 py-2.5"
+									className="bg-surface-container px-3 py-2.5 resize-none"
 								/>
 							</FormControl>
 							<FormMessage />

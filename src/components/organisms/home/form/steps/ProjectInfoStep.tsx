@@ -17,10 +17,15 @@ import { Checkbox } from '@/components/ui/checkbox'
 import { UseFormReturn } from 'react-hook-form'
 import { FullFormData } from '../FormSchema'
 
-const ProjectInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({ form }) => {
+const ProjectInfoStep: React.FC<{ form: UseFormReturn<FullFormData>; stepIndex: number }> = ({
+	form,
+	stepIndex,
+}) => {
 	return (
-		<div className="space-y-4">
-			<h2 className="text-2xl font-bold text-gray-800 mb-6">Project Information</h2>
+		<div className="space-y-3 sm:space-y-4">
+			<h4 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
+				{t(`pages.home.sections.startYourProjectToday.steps.step${stepIndex}.indication`)}
+			</h4>
 
 			<div className="">
 				<FormField
@@ -28,7 +33,7 @@ const ProjectInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({ form
 					name="projectType"
 					render={({ field }) => (
 						<FormItem className="w-full">
-							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
+							<FormLabel className="font-seravek_medium text-base sm:text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.projectType.label',
 								)}
@@ -49,7 +54,6 @@ const ProjectInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({ form
 												key={`form-project-type-${projectType.type}-${index}`}
 												value={`${projectType.type}`}
 											>
-												{/* {t(projectType.label)} */}
 												{projectType.label}
 											</SelectItem>
 										))}
@@ -62,13 +66,13 @@ const ProjectInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({ form
 				/>
 			</div>
 
-			<div className="flex gap-5">
+			<div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
 				<FormField
 					control={form.control}
 					name="budgetRange"
 					render={({ field }) => (
-						<FormItem className="w-1/2 flex flex-col items-start">
-							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
+						<FormItem className="sm:w-1/2 flex flex-col items-start">
+							<FormLabel className="font-seravek_medium text-base sm:text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.budgetRange.label',
 								)}
@@ -104,8 +108,8 @@ const ProjectInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({ form
 					control={form.control}
 					name="projectTimeline"
 					render={({ field }) => (
-						<FormItem className="w-1/2 flex flex-col items-start">
-							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
+						<FormItem className="sm:w-1/2 flex flex-col items-start">
+							<FormLabel className="font-seravek_medium text-base sm:text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.projectTimeline.label',
 								)}
@@ -144,12 +148,12 @@ const ProjectInfoStep: React.FC<{ form: UseFormReturn<FullFormData> }> = ({ form
 					name="technicalRequirements"
 					render={() => (
 						<FormItem className="w-full">
-							<FormLabel className="font-seravek_medium text-lg text-on-surface-variant">
+							<FormLabel className="font-seravek_medium text-base sm:text-lg text-on-surface-variant">
 								{t(
 									'pages.home.sections.startYourProjectToday.form.fields.technicalRequirements.label',
 								)}
 							</FormLabel>
-							<div className="grid grid-rows-5 grid-cols-2 gap-2">
+							<div className="grid sm:grid-rows-5 sm:grid-cols-2 gap-2">
 								{formTechnicalRequirements.map((item) => (
 									<FormField
 										key={item.id}

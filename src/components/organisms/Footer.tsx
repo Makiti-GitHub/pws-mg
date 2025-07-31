@@ -31,10 +31,10 @@ import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
 	const { t } = useTranslation()
-	const [currentLocation, setCurrentLocation] = useState<ILocation>(locationsMock[0])
+	const [currentLocation, setCurrentLocation] = useState<ILocation>(locationsMock[1])
 
 	return (
-		<footer className="px-8 md:px-[120px] pt-10 pb-5 w-full flex flex-col gap-10 bg-secondary mt-[60px]">
+		<footer className="px-4 sm:px-8 md:px-[120px] pt-10 pb-5 w-full flex flex-col gap-10 bg-secondary mt-[60px]">
 			<div className="w-full flex flex-col lg:flex-row justify-between gap-12">
 				<div className="flex flex-col gap-12 md:gap-5">
 					<div className="flex flex-col gap-6">
@@ -46,7 +46,7 @@ const Footer = () => {
 							</div>
 							<div className="flex gap-5 items-center">
 								{socialsMock.map((social, index) => (
-									<div className="size-6 rounded-xs" key={`social-${index}`}>
+									<span className="size-6 rounded-xs" key={`social-${index}`}>
 										<a href={social.link} target="_blank">
 											<Image
 												width={'100%'}
@@ -56,7 +56,7 @@ const Footer = () => {
 												className="size-full object-contain aspect-auto"
 											/>
 										</a>
-									</div>
+									</span>
 								))}
 							</div>
 						</div>
@@ -82,7 +82,7 @@ const Footer = () => {
 									type="single"
 									collapsible
 									className="flex flex-col w-full"
-									defaultValue="item-1"
+									// defaultValue="item-1"
 								>
 									{locationsMock.map((location, index) => (
 										<Fragment key={`location-item-${index}`}>

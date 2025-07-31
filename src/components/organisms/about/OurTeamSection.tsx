@@ -10,20 +10,22 @@ import {
 } from '@/components/ui/carousel'
 import { teamMemberMock } from '@/data/mock'
 import TeamMemberCard from '@/components/molecules/cards/TeamMemberCard'
+import { useTranslation } from 'react-i18next'
 
 interface OurTeamSectionProps {
 	className?: string
 }
 
 const OurTeamSection: FC<OurTeamSectionProps> = ({ className }) => {
+	const { t } = useTranslation()
 	return (
 		<section
 			id="teams"
 			className={cn('flex scroll-mt-[150px] flex-col gap-6 pb-16', className)}
 		>
 			<SectionHeader
-				title="Meet Our Team"
-				subTitle="The talented professionals behind our success"
+				title={t('pages.about.sections.meetOurTeam.title')}
+				subTitle={t('pages.about.sections.meetOurTeam.subtitle')}
 			/>
 
 			<div className="relative mt-20 md:mt-10">
@@ -37,7 +39,7 @@ const OurTeamSection: FC<OurTeamSectionProps> = ({ className }) => {
 					<CarouselContent>
 						{teamMemberMock.map((member, index) => (
 							<CarouselItem
-								className="basis-full sm:basis-1/2 xl:basis-1/4"
+								className="basis-full sm:basis-1/2 xl:basis-1/3 2xl:basis-1/4"
 								key={index}
 							>
 								<TeamMemberCard member={member} />

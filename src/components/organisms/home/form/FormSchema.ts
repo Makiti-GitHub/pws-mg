@@ -28,9 +28,6 @@ const projectDescriptionSchema = z.object({
 // Combined schema for final validation
 const fullFormSchema = personalInfoSchema.and(projectInfoSchema).and(projectDescriptionSchema)
 
-// type PersonalInfo = z.infer<typeof personalInfoSchema>;
-// type ContactInfo = z.infer<typeof contactInfoSchema>;
-// type PaymentInfo = z.infer<typeof paymentInfoSchema>;
 export type FullFormData = z.infer<typeof fullFormSchema>
 
 export { fullFormSchema, personalInfoSchema, projectInfoSchema, projectDescriptionSchema }

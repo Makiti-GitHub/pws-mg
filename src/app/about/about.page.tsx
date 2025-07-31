@@ -9,54 +9,57 @@ import bulbIcon from '@/assets/images/Find the talent you need/famicons_bulb-out
 
 import { PageComponent, useNavigate } from 'rasengan'
 import { useTranslation } from 'react-i18next'
+import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
 
 const About: PageComponent = () => {
 	const navigate = useNavigate()
 	const { t } = useTranslation()
+	const { setCursorVariant } = useFloatingCursor()
 
 	return (
-		<main className="flex flex-col gap-8 pt-[150px] relative px-8 md:px-[80px] lg:px-[120px]">
+		<main className="flex flex-col gap-4 sm:gap-8 pt-[150px] relative px-4 sm:px-8 md:px-[80px] lg:px-[120px]">
 			<div className="space-y-8 relative">
 				<Button
 					variant={'ghost'}
 					onClick={() => navigate('/en/')}
-					className="xl:absolute xl:left-0 xl:top-0 text-secondary !py-3 !px-5 !h-max hover:cursor-pointer bg-white box_shadow_products_card !font-seravek_medium !text-base"
+					onMouseEnter={() => setCursorVariant('button')}
+					onMouseLeave={() => setCursorVariant('default')}
+					className="xl:absolute xl:left-0 xl:top-0 text-secondary py-2 sm:!py-3 px-3 sm:!px-5!h-max hover:cursor-pointer bg-white box_shadow_products_card !font-seravek_medium !text-base"
 				>
 					<ArrowLeftIcon className="size-6" />
 					<span className="sr-only">Back to home</span>
 					<span>{t('common.backToHomeCta')}</span>
 				</Button>
 
-				<h1 className="text-on-surface text-5xl font-seravek_bold text-center">
+				<h1 className="text-on-surface text-4xl sm:text-5xl font-seravek_bold text-center">
 					{t('pages.about.title')}
 				</h1>
 
 				<div className="text-on-surface-variant text-center space-y-6">
-					<p className="text-xl">{t('pages.about.subtitle')}</p>
+					<p className="text-lg sm:text-xl">{t('pages.about.subtitle')}</p>
 					<div className="space-y-3">
-						<h2 className="text-[28px] font-seravek_medium text-center">
+						<h2 className="text-2xl sm:text-[28px] font-seravek_medium text-center">
 							{t('pages.about.sections.theStoryOfMakiti.title')}
 						</h2>
-						<div className="text-xl">
+						<div className="text-lg sm:text-xl">
 							<p>{t('pages.about.sections.theStoryOfMakiti.p1')}</p>
 							<p>{t('pages.about.sections.theStoryOfMakiti.p2')}</p>
 						</div>
 					</div>
 					<div className="space-y-3">
-						<h2 className="text-[28px] font-seravek_medium text-center">
+						<h2 className="text-2xl sm:text-[28px] font-seravek_medium text-center">
 							{t('pages.about.sections.growthAndAchievements.title')}
 						</h2>
 
-						<div className="text-xl">
+						<div className="text-lg sm:text-xl">
 							<p>{t('pages.about.sections.growthAndAchievements.p1')}</p>
 
 							<p>
-								These talents have already led to the realization of several
-								innovative internal products, such as{' '}
+								{t('pages.about.sections.growthAndAchievements.p2')}{' '}
 								<a href="#" className="underline text-primary">
 									<span>MATOA</span>
 								</a>{' '}
-								and{' '}
+								{t('and')}{' '}
 								<a href="#" className="underline text-primary">
 									<span>LYSSAFI</span>
 								</a>
@@ -70,12 +73,12 @@ const About: PageComponent = () => {
 					</div>
 				</div>
 
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-2.5 pb-8">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-6 pt-2.5 pb-2 sm:pb-8">
 					<div className="px-4 py-5 rounded-xl bg-white box_shadow_products_card">
 						<div className="">
 							<div className="flex items-center gap-2">
-								<div className="size-9 rounded-[6px] bg-surface-variant flex items-center justify-center">
-									<div className="size-6">
+								<div className="size-8 sm:size-9 rounded-[6px] bg-surface-variant flex items-center justify-center">
+									<div className="size-5 sm:size-6">
 										<img
 											src={circleIcon}
 											alt="circle icon"
@@ -83,12 +86,12 @@ const About: PageComponent = () => {
 										/>
 									</div>
 								</div>
-								<span className="text-[28px] font-seravek_medium text-on-surface">
+								<span className="text-2xl sm:text-[28px] font-seravek_medium text-on-surface">
 									{t('pages.about.sections.ourMission.title')}
 								</span>
 							</div>
 							<div>
-								<p className="text-on-surface-variant text-lg">
+								<p className="text-on-surface-variant text-base sm:text-lg">
 									{t('pages.about.sections.ourMission.body')}
 								</p>
 							</div>
@@ -97,8 +100,8 @@ const About: PageComponent = () => {
 					<div className="px-4 py-5 rounded-xl bg-white box_shadow_products_card">
 						<div className="">
 							<div className="flex items-center gap-2">
-								<div className="size-9 rounded-[6px] bg-surface-variant flex items-center justify-center">
-									<div className="size-6">
+								<div className="size-8 sm:size-9 rounded-[6px] bg-surface-variant flex items-center justify-center">
+									<div className="size-5 sm:size-6">
 										<img
 											src={bulbIcon}
 											alt="buld icon"
@@ -106,12 +109,12 @@ const About: PageComponent = () => {
 										/>
 									</div>
 								</div>
-								<span className="text-[28px] font-seravek_medium text-on-surface">
+								<span className="text-2xl sm:text-[28px] font-seravek_medium text-on-surface">
 									{t('pages.about.sections.ourVision.title')}
 								</span>
 							</div>
 							<div>
-								<p className="text-on-surface-variant text-lg">
+								<p className="text-on-surface-variant text-base sm:text-lg">
 									{t('pages.about.sections.ourVision.body')}
 								</p>
 							</div>

@@ -2,6 +2,7 @@ import SuccessStoryCard from '@/components/molecules/cards/SuccessStoryCard'
 import SectionHeader from '@/components/molecules/SectionHeader'
 import { Button } from '@/components/ui/button'
 import { ProjectCategoryType, successStoriesMock } from '@/data/mock'
+import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
 import { ArrowLeftIcon } from 'lucide-react'
 import { PageComponent, useNavigate } from 'rasengan'
 import { useMemo, useState } from 'react'
@@ -18,6 +19,7 @@ const filterOptions: { label: string; value: ProjectCategoryType }[] = [
 const Portfolio: PageComponent = () => {
 	const navigate = useNavigate()
 	const { t } = useTranslation()
+	const { setCursorVariant } = useFloatingCursor()
 
 	const [selectedFilter, setSelectedFilter] = useState<ProjectCategoryType>('all')
 
@@ -33,11 +35,13 @@ const Portfolio: PageComponent = () => {
 	}
 
 	return (
-		<main className="flex flex-col gap-8 px-8 md:px-[80px] lg:px-[60px] xl:px-[120px] pt-[150px] relative">
+		<main className="flex flex-col gap-8 px-4 sm:px-8 md:px-[80px] lg:px-[60px] xl:px-[120px] pt-[150px] relative">
 			<div className="space-y-8 relative">
 				<Button
 					variant={'ghost'}
 					onClick={() => navigate('/')}
+					onMouseEnter={() => setCursorVariant('button')}
+					onMouseLeave={() => setCursorVariant('default')}
 					className="xl:absolute xl:left-0 xl:top-0 text-secondary !py-3 !px-5 !h-max hover:cursor-pointer bg-white box_shadow_products_card !font-seravek_medium !text-base"
 				>
 					<ArrowLeftIcon className="size-6" />
@@ -49,7 +53,7 @@ const Portfolio: PageComponent = () => {
 					subTitle={t('pages.portfolio.subtitle')}
 				/>
 
-				<div className="space-y-6">
+				<div className="space-y-4 sm:space-y-6">
 					<div className="flex justify-center items-center flex-wrap gap-3">
 						{filterOptions.map((item, index) => (
 							<span
@@ -57,20 +61,27 @@ const Portfolio: PageComponent = () => {
 								role="button"
 								onClick={() => handleSelectFilter(item.value)}
 								key={`story-${index}-industry-${item.value}`}
+								onMouseEnter={() => setCursorVariant('text')}
+								onMouseLeave={() => setCursorVariant('default')}
 								className={`${
 									selectedFilter === item.value
 										? 'bg-primary text-secondary'
 										: 'bg-surface-container text-on-surface-variant hover:bg-outline-variant'
 								} px-3 py-2 rounded-xl font-seravek_medium text-sm hover:cursor-pointer`}
 							>
-								{item.label}
+								{t(`pages.portfolio.filters.${item.value}`)}
 							</span>
 						))}
 					</div>
 
-					<div className="flex flex-col gap-6">
+					<div className="flex flex-col gap-4 sm:gap-6">
 						{filteredStories.map((story, index) => (
-							<SuccessStoryCard key={`success-story-${index}`} story={story} />
+							<SuccessStoryCard
+								key={`success-story-${index}`}
+								story={story}
+								onMouseEnter={() => setCursorVariant('button')}
+								onMouseLeave={() => setCursorVariant('default')}
+							/>
 						))}
 					</div>
 				</div>

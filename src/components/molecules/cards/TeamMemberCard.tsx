@@ -1,16 +1,21 @@
 import { motion } from 'framer-motion'
 import Image from '@rasenganjs/image'
-import { useState } from 'react'
+import { use, useState } from 'react'
 import { Member } from '@/data/mock'
+import useIsTouchDevice from '@/hooks/useIsTouchDevice'
+import { useTranslation } from 'react-i18next'
 
 const TeamMemberCard = ({ member }: { member: Member }) => {
 	const [isFlipped, setIsFlipped] = useState(false)
+	const { isDesktop } = useIsTouchDevice()
+	const { t } = useTranslation()
 
 	return (
 		<article
 			className="relative w-80 h-96 cursor-pointer perspective-1000"
 			onMouseEnter={() => setIsFlipped(true)}
 			onMouseLeave={() => setIsFlipped(false)}
+			onClick={() => !isDesktop && setIsFlipped(false)}
 		>
 			<motion.div
 				className="relative w-full h-full preserve-3d py-1"
@@ -46,6 +51,7 @@ const TeamMemberCard = ({ member }: { member: Member }) => {
 						backfaceVisibility: 'hidden',
 						transform: 'rotateY(180deg)',
 					}}
+					onClick={() => !isDesktop && setIsFlipped(false)}
 				>
 					<div className="flex-1 flex flex-col justify-between">
 						<div>
@@ -54,7 +60,7 @@ const TeamMemberCard = ({ member }: { member: Member }) => {
 						</div>
 
 						<div className="mb-4">
-							<h4 className="font-semibold mb-2 text-xl">Skills:</h4>
+							<h4 className="font-semibold mb-2 text-xl">{t('skills')}:</h4>
 							<div className="flex flex-wrap gap-1">
 								{member.tags.map((skill, index) => (
 									<span
