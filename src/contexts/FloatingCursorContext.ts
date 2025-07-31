@@ -11,8 +11,8 @@ export interface FloatingCursorContextType {
 		opacity: number
 		transition: string
 	}
-	cursorVariant: string
-	setCursorVariant: (variant: string) => void
+	cursorVariant: 'default' | 'text' | 'button' | 'hide'
+	setCursorVariant: (variant: 'default' | 'text' | 'button' | 'hide') => void
 }
 
 const FloatingCursorContext = createContext<FloatingCursorContextType | undefined>(undefined)

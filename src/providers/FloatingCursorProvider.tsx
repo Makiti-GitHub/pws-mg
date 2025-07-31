@@ -4,7 +4,9 @@ import { ReactNode, useEffect, useState } from 'react'
 export const FloatingCursorProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 	const [isVisible, setIsVisible] = useState(false)
-	const [cursorVariant, setCursorVariant] = useState('default')
+	const [cursorVariant, setCursorVariant] = useState<'default' | 'text' | 'button' | 'hide'>(
+		'default',
+	)
 	// const [cursorVariant, setCursorVariant] = useState('default')
 
 	useEffect(() => {
@@ -39,16 +41,21 @@ export const FloatingCursorProvider: React.FC<{ children: ReactNode }> = ({ chil
 			case 'text':
 				return {
 					...baseStyle,
-					transform: `translate(${mousePosition.x - 24}px, ${
-						mousePosition.y - 24
+					transform: `translate(${mousePosition.x - 16}px, ${
+						mousePosition.y - 16
 					}px) scale(1.5)`,
 				}
 			case 'button':
 				return {
 					...baseStyle,
-					transform: `translate(${mousePosition.x - 32}px, ${
-						mousePosition.y - 32
+					transform: `translate(${mousePosition.x - 16}px, ${
+						mousePosition.y - 16
 					}px) scale(2)`,
+				}
+			case 'hide':
+				return {
+					...baseStyle,
+					display: 'none',
 				}
 			default:
 				return baseStyle
@@ -76,8 +83,13 @@ export const FloatingCursorProvider: React.FC<{ children: ReactNode }> = ({ chil
 					...baseStyle,
 					transform: `translate(${mousePosition.x - 20}px, ${
 						mousePosition.y - 20
-					}px) scale(0.5)`,
+					}px) scale(2)`,
 					opacity: isVisible ? 0.8 : 0,
+				}
+			case 'hide':
+				return {
+					...baseStyle,
+					display: 'none',
 				}
 			default:
 				return baseStyle

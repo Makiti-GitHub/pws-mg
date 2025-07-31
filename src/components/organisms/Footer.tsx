@@ -27,70 +27,11 @@ import { ILocation, locationsMock, socialsMock } from '@/data/mock'
 import { Link } from 'rasengan'
 import { Fragment, useState } from 'react'
 import Image from '@rasenganjs/image'
-// import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
-// import { LatLngExpression } from 'leaflet'
-
-// Component to handle map updates
-// interface MapUpdaterProps {
-// 	center: LatLngExpression
-// 	zoom: number
-// }
-
-// const MapUpdater: React.FC<MapUpdaterProps> = ({ center, zoom }) => {
-// 	const map = useMap()
-
-// 	useEffect(() => {
-// 		map.setView(center, zoom)
-// 	}, [map, center, zoom])
-
-// 	return null
-// }
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
+	const { t } = useTranslation()
 	const [currentLocation, setCurrentLocation] = useState<ILocation>(locationsMock[0])
-	// const [mapCenter, setMapCenter] = useState<LatLngExpression>(locationsMock[0].coordinates)
-	// const [mapZoom, setMapZoom] = useState<number>(10)
-	// const [customLat, setCustomLat] = useState<string>('')
-	// const [customLng, setCustomLng] = useState<string>('')
-
-	// // Function to jump to a specific location
-	// const jumpToLocation = (location: ILocation, zoom: number = 10) => {
-	// 	setCurrentLocation(location)
-	// 	setMapCenter(location.coordinates)
-	// 	setMapZoom(zoom)
-	// }
-
-	// // Function to jump to custom coordinates
-	// const jumpToCustomCoordinates = () => {
-	// 	const lat = parseFloat(customLat)
-	// 	const lng = parseFloat(customLng)
-
-	// 	if (isNaN(lat) || isNaN(lng)) {
-	// 		alert('Please enter valid latitude and longitude values')
-	// 		return
-	// 	}
-
-	// 	if (lat < -90 || lat > 90) {
-	// 		alert('Latitude must be between -90 and 90')
-	// 		return
-	// 	}
-
-	// 	if (lng < -180 || lng > 180) {
-	// 		alert('Longitude must be between -180 and 180')
-	// 		return
-	// 	}
-
-	// 	const customLocation: ILocation = {
-	// 		id: 'custom',
-	// 		name: 'Custom Location',
-	// 		coordinates: [lat, lng],
-	// 		address: `Custom coordinates: ${lat}, ${lng}`,
-	// 	}
-
-	// 	jumpToLocation(customLocation, 12)
-	// }
-
-	// const windowIsDefined = typeof window !== 'undefined'
 
 	return (
 		<footer className="px-8 md:px-[120px] pt-10 pb-5 w-full flex flex-col gap-10 bg-secondary mt-[60px]">
@@ -100,13 +41,13 @@ const Footer = () => {
 						<div className="flex flex-col gap-6">
 							<div>
 								<p className="font-seravek_medium text-base text-outline-variant">
-									Contact Us
+									{t('footer.upperSection.leftSection.contactUs')}
 								</p>
 							</div>
 							<div className="flex gap-5 items-center">
 								{socialsMock.map((social, index) => (
 									<div className="size-6 rounded-xs" key={`social-${index}`}>
-										<a href={social.link}>
+										<a href={social.link} target="_blank">
 											<Image
 												width={'100%'}
 												height={'100%'}
@@ -236,7 +177,9 @@ const Footer = () => {
 																<div className="flex gap-4 items-center">
 																	<MapIcon className="size-6" />
 																	<span className="flex-1">
-																		Get Directions
+																		{t(
+																			'footer.upperSection.leftSection.getDirections',
+																		)}
 																	</span>
 																</div>
 															) : null}
@@ -264,17 +207,21 @@ const Footer = () => {
 								/>
 							</div>
 							<p className="text-base text-outline-variant sm:flex-1">
-								Your strategic IT outsourcing partner, delivering excellence across
-								all technology domains with innovative solutions and expert teams.
+								{t('footer.upperSection.leftSection.makitiActivityDescription')}
 							</p>
 						</div>
 						<div className="w-full sm:w-[298px]">
-							<p className="font-seravek_medium text-base text-outline-variant">
-								Newsletter
-							</p>
+							<label
+								htmlFor="newsletter"
+								className="font-seravek_medium text-base text-outline-variant"
+							>
+								{t('footer.upperSection.leftSection.form.fields.newsletter.label')}
+							</label>
 							<div className="flex gap-2 items-center">
 								<Input
-									placeholder="Your email"
+									placeholder={t(
+										'footer.upperSection.leftSection.form.fields.newsletter.placeholder',
+									)}
 									className="border border-white placeholder:text-white flex-1"
 								/>
 								<Button className="bg-white text-secondary border border-white md:border-secondary h-max rounded-lg px-3 py-2">
@@ -288,49 +235,111 @@ const Footer = () => {
 
 				<div className="flex flex-col gap-10">
 					<div className="text-base space-y-5 text-outline-variant">
-						<p className="font-seravek_medium">Services</p>
-						<div className="space-y-2.5">
-							<p>IT Outsourcing</p>
-							<p>Agile Software Development</p>
-							<p>IT Transformation & Audit</p>
-						</div>
+						<p className="font-seravek_medium">
+							{t('footer.upperSection.rightSection.services.title')}
+						</p>
+						<ul className="space-y-2.5">
+							<li>
+								<Link to={'/#services'} className="hover:text-white">
+									{t(
+										'footer.upperSection.rightSection.services.options.itOutsourcing',
+									)}
+								</Link>
+							</li>
+							<li>
+								<Link to={'/#services'} className="hover:text-white">
+									{t(
+										'footer.upperSection.rightSection.services.options.agileSoftwareDevelopment',
+									)}
+								</Link>
+							</li>
+							<li>
+								<Link to={'/#services'} className="hover:text-white">
+									{t(
+										'footer.upperSection.rightSection.services.options.itTransformation',
+									)}
+								</Link>
+							</li>
+						</ul>
 					</div>
 					<div className="text-base space-y-5 text-outline-variant">
-						<p className="font-seravek_medium">Products</p>
-						<div className="space-y-2.5">
-							<p>Ticket Management System</p>
-							<p>Inventory & Stock Management System</p>
-							<p>Payment Gateway System</p>
-						</div>
+						<p className="font-seravek_medium">
+							{t('footer.upperSection.rightSection.products.title')}
+						</p>
+						<ul className="space-y-2.5">
+							<li>
+								<a
+									href="https://agency.matoa.io"
+									target="_blank"
+									className="hover:text-white"
+								>
+									{t(
+										'footer.upperSection.rightSection.products.options.ticketManagement',
+									)}
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://ism.cm"
+									target="_blank"
+									className="hover:text-white"
+								>
+									{t(
+										'footer.upperSection.rightSection.products.options.inventory',
+									)}
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://lyssafi.com"
+									target="_blank"
+									className="hover:text-white"
+								>
+									{t(
+										'footer.upperSection.rightSection.products.options.paymentGateway',
+									)}
+								</a>
+							</li>
+						</ul>
 					</div>
 					<div className="text-base space-y-5 text-outline-variant">
-						<p className="font-seravek_medium">Company</p>
-						<div className="gap-2.5 flex flex-col">
-							<Link to="/about" className="hover:text-white">
-								About
-							</Link>
-							<Link to="/about#teams" className="hover:text-white">
-								Team members
-							</Link>
-							<Link to="#talents" className="hover:text-white">
-								Careers
-							</Link>
-						</div>
+						<p className="font-seravek_medium">
+							{t('footer.upperSection.rightSection.company.title')}
+						</p>
+						<ul className="gap-2.5 flex flex-col">
+							<li>
+								<Link to="/about" className="hover:text-white">
+									{t('footer.upperSection.rightSection.company.options.about')}
+								</Link>
+							</li>
+							<li>
+								<Link to="/about#teams" className="hover:text-white">
+									{t(
+										'footer.upperSection.rightSection.company.options.teamMembers',
+									)}
+								</Link>
+							</li>
+							<li>
+								<Link to="#talents" className="hover:text-white">
+									{t('footer.upperSection.rightSection.company.options.careers')}
+								</Link>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 			<Separator className="w-full bg-outline" />
 			<div className="w-full text-outline-variant text-base flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-2">
-				<p>© 2025 Makiti Group. All rights reserved.</p>
+				<p>{t('footer.lowerSection.copyright', { year: '2025' })}</p>
 				<div className="flex items-center justify-between gap-5">
 					<a href="#" className="hover:text-white">
-						Privacy Policy
+						{t('footer.lowerSection.nav.privacyPolicy')}
 					</a>
 					<a href="#" className="hover:text-white">
-						Terms of Service
+						{t('footer.lowerSection.nav.termsOfService')}
 					</a>
 					<a href="#" className="hover:text-white">
-						Legal Notice
+						{t('footer.lowerSection.nav.legalNotice')}
 					</a>
 				</div>
 			</div>

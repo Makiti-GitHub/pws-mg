@@ -1,37 +1,20 @@
 import makitiLogoWhite from '@/assets/images/logo_makiti/Makiti Logo White.png'
-// import makitiLogoDark from '@/assets/images/logo_makiti/Makiti Logo Colored.png'
-import { Link } from 'rasengan'
+import { Link, useLocation } from 'rasengan'
 import LanguageButton from '../atoms/buttons/LanguageButton'
 import MotionIconButton2 from '../atoms/buttons/MotionIconButton2'
 import Image from '@rasenganjs/image'
 import { useTranslation } from 'react-i18next'
 import { useMenuContext } from '@/hooks/guard/ContextGuard'
-// import { useEffect, useState } from 'react'
 import { MenuIcon } from 'lucide-react'
 import { Button } from '../ui/button'
 
-// const scrollThreshold = 1280 // Change this value to set when the background should change
-
 const NavBar = () => {
 	const { t } = useTranslation()
+	const { pathname } = useLocation()
 
 	const { isOpened, setIsOpened, navlinks } = useMenuContext()
-	// const [isScrolled, setIsScrolled] = useState<boolean>(false)
 
-	// useEffect(() => {
-	// 	const handleScroll = () => {
-	// 		const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-	// 		setIsScrolled(scrollTop > scrollThreshold)
-	// 	}
-
-	// 	// Add scroll event listener
-	// 	window.addEventListener('scroll', handleScroll)
-
-	// 	// Cleanup function to remove event listener
-	// 	return () => {
-	// 		window.removeEventListener('scroll', handleScroll)
-	// 	}
-	// }, [scrollThreshold])
+	console.log(pathname)
 
 	return (
 		<div className="fixed left-0 right-0 w-full z-30">
@@ -50,30 +33,6 @@ const NavBar = () => {
 							height={'100%'}
 							className="size-full aspect-auto object-contain pointer-events-none select-none"
 						/>
-						{/* <img
-							// key={'makiti-logo-white'}
-							alt="shadcn logo"
-							className="size-full aspect-auto object-contain pointer-events-none select-none"
-							src={makitiLogoWhite}
-						/> */}
-						{/* <AnimatePresence>
-							{isScrolled && (
-								<motion.img
-									key={'makiti-logo-dark'}
-									alt="shadcn logo"
-									className="size-full aspect-auto object-contain pointer-events-none select-none"
-									src={makitiLogoDark}
-								/>
-							)}
-							{!isScrolled && (
-								<motion.img
-									key={'makiti-logo-white'}
-									alt="shadcn logo"
-									className="size-full aspect-auto object-contain pointer-events-none select-none"
-									src={makitiLogoWhite}
-								/>
-							)}
-						</AnimatePresence> */}
 					</Link>
 				</div>
 				{/* === Menu === */}

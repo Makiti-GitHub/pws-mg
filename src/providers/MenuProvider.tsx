@@ -7,7 +7,7 @@ const navlinks: {
 }[] = [
 	{
 		label: 'services',
-		href: '#talent',
+		href: '/#talent',
 	},
 	{
 		label: 'portfolio',

@@ -7,7 +7,7 @@ const FloatingCursor = () => {
 		<>
 			{/* Main cursor dot */}
 			<div
-				className="fixed top-0 left-0 w-8 h-8 bg-primary rounded-full pointer-events-none z-50"
+				className="fixed top-0 left-0 size-5 bg-primary rounded-full pointer-events-none z-50"
 				style={{
 					...getCursorStyles(),
 					mixBlendMode: 'difference',
@@ -16,7 +16,7 @@ const FloatingCursor = () => {
 
 			{/* Outer ring */}
 			<div
-				className="fixed top-0 left-0 w-10 h-10 border-2 border-white rounded-full pointer-events-none z-40"
+				className="fixed top-0 left-0 size-7 border-2 border-white rounded-full pointer-events-none z-40"
 				style={getOuterRingStyles()}
 			/>
 

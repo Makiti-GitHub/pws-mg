@@ -1,5 +1,6 @@
 import Image from '@rasenganjs/image'
 import { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 
 interface ServiceCardProps {
 	service: {
@@ -8,9 +9,11 @@ interface ServiceCardProps {
 		icon?: string
 		color: string
 	}
+	index?: number
 }
 
-const ServiceCard: FC<ServiceCardProps> = ({ service: { title, desc, icon, color } }) => {
+const ServiceCard: FC<ServiceCardProps> = ({ service: { title, desc, icon, color }, index }) => {
+	const { t } = useTranslation()
 	return (
 		<div className="box_shadow flex flex-col rounded-xl p-6 gap-4">
 			<div className="flex flex-col gap-5 items-center">
@@ -35,9 +38,13 @@ const ServiceCard: FC<ServiceCardProps> = ({ service: { title, desc, icon, color
 						</div>
 					) : null}
 				</div>
-				<p className="text-2xl font-seravek_medium text-on-surface text-center">{title}</p>
+				<p className="text-2xl font-seravek_medium text-on-surface text-center">
+					{index ? t(`common.values.value${index}.title`) : title}
+				</p>
 			</div>
-			<p className="text-on-surface-variant text-xl text-center">{desc}</p>
+			<p className="text-on-surface-variant text-xl text-center">
+				{index ? t(`common.values.value${index}.content`) : desc}
+			</p>
 		</div>
 	)
 }

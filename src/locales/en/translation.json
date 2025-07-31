@@ -19,8 +19,55 @@
         }
     },
     "footer": {
-        "leftSection": {},
-        "rightSection": {}
+        "upperSection": {
+            "leftSection": {
+                "contactUs": "Contact Us",
+                "makitiActivityDescription": "Your strategic IT outsourcing partner, delivering excellence across all technology domains with innovative solutions and expert teams.Description",
+                "getDirections": "Get Directions",
+                "form": {
+                    "fields": {
+                        "newsletter": {
+                            "label": "Newsletter",
+                            "placeholder": "Your email"
+                        }
+                    }
+                }
+            },
+            "rightSection": {
+                "services": {
+                    "title": "Services",
+                    "options": {
+                        "itOutsourcing": "IT Outsourcing",
+                        "agileSoftwareDevelopment": "Agile Software Development",
+                        "itTransformation": "IT Transformation & Audit"
+                    }
+                },
+                "products": {
+                    "title": "Products",
+                    "options": {
+                        "ticketManagement": "Ticket Management System",
+                        "inventory": "Inventory & Stock Management System",
+                        "paymentGateway": "Payment Gateway System"
+                    }
+                },
+                "company": {
+                    "title": "Company",
+                    "options": {
+                        "about": "About",
+                        "teamMembers": "Team members",
+                        "careers": "Careers"
+                    }
+                }
+            }
+        },
+        "lowerSection": {
+            "copyright": "© {{year}} Makiti Group. All rights reserved.",
+            "nav": {
+                "privacyPolicy": "Privacy Policy",
+                "termsOfService": "Terms & Conditions",
+                "legalNotice": "Legal Notice"
+            }
+        }
     },
     "pages": {
         "home": {
@@ -74,33 +121,110 @@
                             }
                         }
                     }
+                },
+                "whyChooseMakiti": {
+                    "title": "Why Choose Makiti Group",
+                    "subtitle": "Partner with us for exceptional IT outsourcing solutions backed by expertise, innovation, and reliability."
                 }
             }
         },
         "portfolio": {
-            "sections": {
-                "projects": {
-                    "title": "Projects",
-                    "subtitle": "Discover our portfolio of successful projects"
-                }
-            }
+            "title": "Explore our portfolio",
+            "subtitle": "Don’t just take our word for it – explore the innovative solutions we’ve crafted for our clients. Read our case studies to see our impact across industries, and envision what we could achieve together."
         },
         "products": {
-            "sections": {
-                "products": {
-                    "title": "Products",
-                    "subtitle": "Discover our portfolio of successful projects"
-                }
-            }
+            "title": "Our Live Products",
+            "subtitle": "Explore the powerful products we’ve built to solve real-world challenges. Discover how our solutions drive performance, streamline operations, and deliver value across industries."
         },
         "about": {
             "title": "The Story of Makiti Group",
             "subtitle": "The Makiti Group adventure officially began on March 1, 2023, with its main headquarters established in Paris, France. This company is the fruit of the bold vision of MJ, a young Cameroonian entrepreneur residing in Europe. Her fundamental objective is to propel the IT ecosystem in Africa, with particular attention to Cameroon.",
             "sections": {
-                "about": {
-                    "title": "About",
-                    "subtitle": "Discover our portfolio of successful projects"
+                "theStoryOfMakiti": {
+                    "title": "The Story of Makiti Group",
+                    "p1": "Today, many large European companies turn to India for their IT service outsourcing. However, this approach often presents major challenges: the language barrier (English being the only common language) and a significant time difference that can be up to 5 hours compared to France.",
+                    "p2": "With Makiti Group, MJ's ambition is to make African talent available to European companies, while guaranteeing unparalleled quality service and resources. We have made fluid communication a priority. At Makiti Group, our staff is not only highly technically qualified but also multilingual. Beyond English, we distinguish ourselves by our proficiency in German. This allows our clients from Luxembourg, Switzerland, and of course Germany, to communicate with our developers in their native language. This ease of exchange is crucial for precise requirement transmission and harmonious collaboration."
+                },
+                "growthAndAchievements": {
+                    "title": "Growth and Achievements",
+                    "p1": "The year 2024 was marked by a significant development of our teams. We recruited a diverse range of exceptional profiles: Java and React Developers, Site & Reliability Engineers, UX/UI Designers, Graphic Designers, and Test Automation Engineers.",
+                    "p2": "These talents have already led to the realization of several innovative internal products, such as {{link1}} and {{link2}}.",
+                    "p3": "In parallel, we have successfully completed numerous projects for our clients and partners, thereby strengthening our reputation for reliability and excellence.",
+                    "p4": "Makiti Group bridges African technological potential with European market needs, building connections beyond borders and time zones."
+                },
+                "ourMission": {
+                    "title": "Our Mission",
+                    "body": "To empower businesses with cutting-edge IT solutions through strategic outsourcing partnerships. We bridge the gap between vision and execution, delivering high-quality software development, consulting, and digital transformation services that accelerate growth and innovation."
+                },
+                "ourVision": {
+                    "title": "Our Mission",
+                    "body": "To empower businesses with cutting-edge IT solutions through strategic outsourcing partnerships. We bridge the gap between vision and execution, delivering high-quality software development, consulting, and digital transformation services that accelerate growth and innovation."
+                },
+                "statistics": {
+                    "title": "Trusted by companies worldwide",
+                    "subtitle": "Our track record speaks for itself. We've helped businesses of all sizes achieve their digital transformation goals.",
+                    "stat": {
+                        "projectsDelivered": "Projects delivered",
+                        "activeYears": "Active Years",
+                        "satisfiedClients": "Satisfied Clients",
+                        "officesGlobally": "Offices Globally"
+                    }
+                },
+                "meetOurTeam": {
+                    "title": "Meet Our Team",
+                    "subtitle": "The talented professionals behind our success"
+                },
+                "ourJourney": {
+                    "title": "Our Journey",
+                    "subtitle": "Key milestones in our company evolution",
+                    "timeline": {
+                        "checkpoint1": "We founded the company with Headquater in Paris, France",
+                        "checkpoint2": "We opened a branch office in Yaoundé, Cameroun",
+                        "checkpoint3": "We opened a branch office in Lagos, Nigeria",
+                        "checkpoint4": "We launched our Products Matoa & Lyssafi"
+                    }
+                },
+                "ourCoreValues": {
+                    "title": "Our Core Values",
+                    "subtitle": "The principles that guide everything we do"
                 }
+            }
+        }
+    },
+    "common": {
+        "backToHomeCta": "Back to home",
+        "values": {
+            "value1": {
+                "title": "Agile Approach",
+                "content": "Fast, iterative development with continuous feedback and rapid deployment cycles."
+            },
+            "value2": {
+                "title": "Sustainable Design",
+                "content": "Fast, iterative development with continuous feedback and rapid deployment cycles."
+            },
+            "value3": {
+                "title": "Innovation Focus",
+                "content": "Cutting-edge AI-driven solutions and innovative approaches to complex challenges."
+            },
+            "value4": {
+                "title": "Expert Consulting",
+                "content": "Strategic IT consulting with deep industry expertise and proven methodologies."
+            },
+            "value5": {
+                "title": "Security First",
+                "content": "Enterprise-grade security measures and compliance with international standards."
+            },
+            "value6": {
+                "title": "24/7 Support",
+                "content": "Round-the-clock technical support and monitoring for mission-critical systems."
+            },
+            "value7": {
+                "title": "Quality Assurance",
+                "content": "Rigorous testing and quality control processes ensuring delivery excellence."
+            },
+            "value8": {
+                "title": "Global Reach",
+                "content": "International team with multilingual support and cross-cultural expertise."
             }
         }
     }

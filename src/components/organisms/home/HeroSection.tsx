@@ -6,7 +6,7 @@ import useIsTouchDevice from '@/hooks/useIsTouchDevice'
 import useMouse from '@/hooks/useMouse'
 import AnimatedCounter from '@/components/atoms/animations/AnimatedCounter'
 import MotionIconButton2 from '@/components/atoms/buttons/MotionIconButton2'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowDownIcon, ArrowLeftIcon, ArrowRightIcon } from 'lucide-react'
 import Image from '@rasenganjs/image'
@@ -70,6 +70,15 @@ const HeroSection = () => {
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [direction, setDirection] = useState('left')
 
+	// Auto-slide every 5 seconds
+	useEffect(() => {
+		const interval = setInterval(() => {
+			handleNext()
+		}, 5000)
+
+		return () => clearInterval(interval)
+	}, [])
+
 	const handleNext = () => {
 		setDirection('right')
 		setCurrentIndex((prevIndex) => (prevIndex + 1 === heroCarousel.length ? 0 : prevIndex + 1))
@@ -90,21 +99,42 @@ const HeroSection = () => {
 
 	return (
 		<section className={`space-y-24 bg-secondary w-screen pt-[150px] pb-16`}>
-			<div className="w-full grid grid-cols-4 lg:grid-cols-2">
-				<div className="flex flex-col gap-10 pl-8 md:px-[80px] lg:pl-[120px] lg:pr-0 text-white col-span-3 lg:col-span-1">
-					<span className="rounded-2xl w-max px-3 py-1.5 border-2 border-white">
-						{heroCarousel[currentIndex].tag}
-					</span>
-					<div className="space-y-6 ">
-						<h1 className="font-seravek_bold text-5xl lg:text-7xl xl:text-[80px] leading-16 xl:leading-20">
-							{heroCarousel[currentIndex].title}
-						</h1>
-						<p className="font-seravek_bold text-xl lg:text-[26px] leading-normal">
-							{heroCarousel[currentIndex].desc}
-						</p>
-					</div>
+			<div className="w-full grid grid-cols-4 lg:grid-cols-2 relative">
+				<div className="relative col-span-3 lg:col-span-1">
+					<div className="absolute inset-0 flex flex-col pl-8 md:px-[80px] lg:pl-[120px] lg:pr-0 text-white gap-10">
+						<AnimatePresence>
+							{heroCarousel[currentIndex] && (
+								<>
+									<motion.span
+										initial={{ x: 50, opacity: 0 }}
+										animate={{ x: 0, opacity: 1 }}
+										exit={{ x: -50, opacity: 0 }}
+										transition={{ duration: 0.8, delay: 0.2 }}
+										key={`tag-${currentIndex}`}
+										className="rounded-2xl w-max px-3 py-1.5 border-2 border-white"
+									>
+										{heroCarousel[currentIndex].tag}
+									</motion.span>
+									<motion.div
+										initial={{ x: 50, opacity: 0 }}
+										animate={{ x: 0, opacity: 1 }}
+										exit={{ x: -50, opacity: 0 }}
+										transition={{ duration: 0.8, delay: 0.4 }}
+										key={heroCarousel[currentIndex].title}
+										className="space-y-6"
+									>
+										<motion.h1 className="font-seravek_bold text-5xl lg:text-7xl xl:text-[80px] leading-16 xl:leading-20">
+											{heroCarousel[currentIndex].title}
+										</motion.h1>
+										<motion.p className="font-seravek_bold text-xl lg:text-[26px] leading-normal">
+											{heroCarousel[currentIndex].desc}
+										</motion.p>
+									</motion.div>
+								</>
+							)}
+						</AnimatePresence>
 
-					{/* <Button
+						{/* <Button
 						variant={'primary'}
 						className="gap-1 w-max !px-8 !py-6 !h-max !m-0 rounded-[40px] hover:cursor-pointer"
 					>
@@ -113,95 +143,114 @@ const HeroSection = () => {
 						<ArrowUpRightIcon className="size-6" />
 					</Button> */}
 
-					<MotionIconButton2
-						onMouseEnter={() => setCursorVariant('button')}
-						onMouseLeave={() => setCursorVariant('default')}
-						label="Discover Our Outsourcing Solutions"
-						className="rounded-[40px] px-4 py-3 lg:px-8 lg:py-6 h-max text-xl lg:text-2xl"
-					/>
+						<MotionIconButton2
+							onMouseEnter={() => setCursorVariant('button')}
+							onMouseLeave={() => setCursorVariant('default')}
+							label="Discover Our Outsourcing Solutions"
+							className="rounded-[40px] px-4 py-3 lg:px-8 lg:py-6 h-max text-xl lg:text-2xl"
+						/>
 
-					<div>
-						<AnimatePresence>
-							{heroCarousel.length > 0 ? (
-								<div className="w-max flex gap-4 items-center justify-between">
-									<motion.div
-										variants={slidersVariants}
-										whileHover="hover"
-										role="button"
-										className="cursor-pointer"
-										onClick={(e) => {
-											handlePrevious()
-											e.preventDefault()
-											e.stopPropagation()
-										}}
-									>
-										<ArrowLeftIcon className="size-7 text-white" />
-									</motion.div>
-									<div className="flex gap-2">
-										{heroCarousel.map((_, index) => (
-											<motion.div
-												key={`carousel-dot-${index}`}
-												className={`size-3 rounded-xl ${
-													currentIndex === index
-														? 'bg-primary'
-														: 'bg-outline-variant'
-												}`}
-												onClick={(e) => {
-													handleDotClick(index)
-													e.stopPropagation()
-												}}
-												initial="initial"
-												animate={
-													currentIndex === index ? 'active' : 'inactive'
-												}
-												// animate="active"
-												whileHover="hover"
-												role="button"
-												variants={dotsVariants}
-											/>
-										))}
+						<div>
+							<AnimatePresence>
+								{heroCarousel.length > 0 ? (
+									<div className="w-max flex gap-4 items-center justify-between">
+										<motion.div
+											variants={slidersVariants}
+											whileHover="hover"
+											role="button"
+											className="cursor-pointer"
+											onClick={(e) => {
+												handlePrevious()
+												e.preventDefault()
+												e.stopPropagation()
+											}}
+										>
+											<ArrowLeftIcon className="size-7 text-white" />
+										</motion.div>
+										<div className="flex gap-2">
+											{heroCarousel.map((_, index) => (
+												<motion.div
+													key={`carousel-dot-${index}`}
+													className={`size-3 rounded-xl ${
+														currentIndex === index
+															? 'bg-primary'
+															: 'bg-outline-variant'
+													}`}
+													onClick={(e) => {
+														handleDotClick(index)
+														e.stopPropagation()
+													}}
+													initial="initial"
+													animate={
+														currentIndex === index
+															? 'active'
+															: 'inactive'
+													}
+													// animate="active"
+													whileHover="hover"
+													role="button"
+													variants={dotsVariants}
+												/>
+											))}
+										</div>
+										<motion.div
+											variants={slidersVariants}
+											whileHover="hover"
+											role="button"
+											className="cursor-pointer"
+											onClick={(e) => {
+												handleNext()
+												e.preventDefault()
+												e.stopPropagation()
+											}}
+										>
+											<ArrowRightIcon className="size-7 text-white" />
+										</motion.div>
 									</div>
-									<motion.div
-										variants={slidersVariants}
-										whileHover="hover"
-										role="button"
-										className="cursor-pointer"
-										onClick={(e) => {
-											handleNext()
-											e.preventDefault()
-											e.stopPropagation()
-										}}
-									>
-										<ArrowRightIcon className="size-7 text-white" />
-									</motion.div>
-								</div>
-							) : null}
-						</AnimatePresence>
+								) : null}
+							</AnimatePresence>
+						</div>
 					</div>
 				</div>
+
 				<div
+					onMouseEnter={() => setCursorVariant('hide')}
 					onMouseMove={handleMouseMove}
-					onMouseLeave={handleMouseLeave}
+					onMouseLeave={() => {
+						setCursorVariant('default')
+						handleMouseLeave()
+					}}
 					className={`w-full relative hover:cursor-none ease-in hidden lg:block lg:col-span-1 ${
 						isDesktop ? 'custom-cursor' : ''
-					} overflow-hidden`}
+					} overflow-hidden min-h-[80vh]`}
 				>
-					<div
-						className="relative"
-						onClick={(e) => {
-							handleNext()
-							e.preventDefault()
-							e.stopPropagation()
-						}}
-					>
-						<Image
-							src={heroCarousel[currentIndex].image}
-							alt={heroCarousel[currentIndex].title}
-							width={'100%'}
-							height={'100%'}
-							className="aspect-auto object-contain size-full"
-						/>
-						<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-full scale-[140%] rounded-full bg-radial-[at_50%_50%] from-30% from-transparent to-secondary z-20 to-50%" />
+					<div className="absolute inset-0 size-full">
+						<AnimatePresence>
+							{heroCarousel[currentIndex] && (
+								<motion.div
+									className="relative size-full"
+									initial={{ x: 50, opacity: 0 }}
+									animate={{ x: 0, opacity: 1 }}
+									exit={{ x: -50, opacity: 0 }}
+									transition={{ duration: 0.8, delay: 0.2 }}
+									key={`hero-image-${currentIndex}`}
+									onClick={(e) => {
+										handleNext()
+										e.preventDefault()
+										e.stopPropagation()
+									}}
+								>
+									<img
+										src={heroCarousel[currentIndex].image}
+										alt={heroCarousel[currentIndex].title}
+										// width={'100%'}
+										// height={'100%'}
+										className="aspect-auto object-contain size-full"
+									/>
+									<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-full scale-[140%] rounded-full bg-radial-[at_50%_50%] from-30% from-transparent to-secondary z-20 to-50%" />
+								</motion.div>
+							)}
+						</AnimatePresence>
 					</div>
 					<CustomCursor position={cursorPosition} isVisible={isHovering} />
 				</div>
@@ -223,7 +272,11 @@ const HeroSection = () => {
 							<p className="font-seravek_medium text-[32px] underline text-primary">
 								Our Clients
 							</p>
-							<p className="text-white text-2xl font-seravek_light">
+							<p
+								onMouseEnter={() => setCursorVariant('text')}
+								onMouseLeave={() => setCursorVariant('default')}
+								className="text-white text-2xl font-seravek_light"
+							>
 								We’ve partnered with several companies to reimagine and redefine the
 								way users experience their products.
 							</p>

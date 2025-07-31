@@ -17,7 +17,10 @@ interface OurTeamSectionProps {
 
 const OurTeamSection: FC<OurTeamSectionProps> = ({ className }) => {
 	return (
-		<section className={cn('flex flex-col gap-6 pb-16', className)}>
+		<section
+			id="teams"
+			className={cn('flex scroll-mt-[150px] flex-col gap-6 pb-16', className)}
+		>
 			<SectionHeader
 				title="Meet Our Team"
 				subTitle="The talented professionals behind our success"

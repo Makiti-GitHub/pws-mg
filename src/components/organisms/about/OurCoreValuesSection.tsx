@@ -21,7 +21,11 @@ const OurCoreValuesSection: FC<OurCoreValuesSectionProps> = ({ className }) => {
 
 			<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-4">
 				{chooseReasonsMock.map((reason, index) => (
-					<ServiceCard key={`choose-reason-${index}`} service={reason} />
+					<ServiceCard
+						key={`choose-reason-${index}`}
+						service={reason}
+						index={index + 1}
+					/>
 				))}
 			</div>
 

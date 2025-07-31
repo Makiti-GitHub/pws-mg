@@ -4,9 +4,11 @@ import { Button } from '@/components/ui/button'
 import { ourLiveProductsMock } from '@/data/mock'
 import { ArrowLeftIcon } from 'lucide-react'
 import { PageComponent, useNavigate } from 'rasengan'
+import { useTranslation } from 'react-i18next'
 
 const Products: PageComponent = () => {
 	const navigate = useNavigate()
+	const { t } = useTranslation()
 
 	return (
 		<main className="flex flex-col gap-8 px-8 md:px-[80px] lg:px-[120px] pt-[150px] relative">
@@ -18,11 +20,11 @@ const Products: PageComponent = () => {
 				>
 					<ArrowLeftIcon className="size-6" />
 					<span className="sr-only">Back to home</span>
-					<span>Back to home</span>
+					<span>{t('common.backToHomeCta')}</span>
 				</Button>
 				<SectionHeader
-					title="Our Live Products"
-					subTitle="Explore the powerful products we’ve built to solve real-world challenges. Discover how our solutions drive performance, streamline operations, and deliver value across industries."
+					title={t('pages.products.title')}
+					subTitle={t('pages.products.subtitle')}
 				/>
 
 				<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">

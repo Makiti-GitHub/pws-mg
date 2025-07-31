@@ -5,6 +5,7 @@ import { ProjectCategoryType, successStoriesMock } from '@/data/mock'
 import { ArrowLeftIcon } from 'lucide-react'
 import { PageComponent, useNavigate } from 'rasengan'
 import { useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const filterOptions: { label: string; value: ProjectCategoryType }[] = [
 	{ label: 'All Projects', value: 'all' },
@@ -16,6 +17,7 @@ const filterOptions: { label: string; value: ProjectCategoryType }[] = [
 
 const Portfolio: PageComponent = () => {
 	const navigate = useNavigate()
+	const { t } = useTranslation()
 
 	const [selectedFilter, setSelectedFilter] = useState<ProjectCategoryType>('all')
 
@@ -40,11 +42,11 @@ const Portfolio: PageComponent = () => {
 				>
 					<ArrowLeftIcon className="size-6" />
 					<span className="sr-only">Back to home</span>
-					<span>Back to home</span>
+					<span>{t('common.backToHomeCta')}</span>
 				</Button>
 				<SectionHeader
-					title="Explore our portfolio"
-					subTitle="Don’t just take our word for it – explore the innovative solutions we’ve crafted for our clients. Read our case studies to see our impact across industries, and envision what we could achieve together."
+					title={t('pages.portfolio.title')}
+					subTitle={t('pages.portfolio.subtitle')}
 				/>
 
 				<div className="space-y-6">
@@ -66,7 +68,7 @@ const Portfolio: PageComponent = () => {
 						))}
 					</div>
 
-					<div className="space-y-6">
+					<div className="flex flex-col gap-6">
 						{filteredStories.map((story, index) => (
 							<SuccessStoryCard key={`success-story-${index}`} story={story} />
 						))}

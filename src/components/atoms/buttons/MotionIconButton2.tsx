@@ -19,50 +19,55 @@ const MotionIconButton2: FC<React.ComponentProps<'button'> & ButtonProps> = ({
 	label,
 	className,
 	onClick,
+	...props
 }) => {
 	const [buttonState, setButtonState] = useState<'hover' | 'default'>('default')
 
 	return (
 		<button
-			className={twMerge('w-max')}
-			onMouseEnter={() => setButtonState('hover')}
-			onMouseLeave={() => setButtonState('default')}
+			// className={twMerge('w-max')}
+			{...props}
+			onMouseEnter={(e) => {
+				setButtonState('hover')
+				props.onMouseEnter?.(e)
+			}}
+			onMouseLeave={(e) => {
+				setButtonState('default')
+				props.onMouseLeave?.(e)
+			}}
 			onClick={onClick}
+			className={cn(
+				'bg-primary hover:cursor-pointer border-2 border-primary hover:border-primary hover:bg-secondary text-secondary hover:text-primary !m-0 w-max flex items-center duration-300 ease-in-out',
+				className,
+			)}
 		>
-			<div
-				className={cn(
-					'bg-primary hover:cursor-pointer border-2 border-primary hover:border-primary hover:bg-secondary text-secondary hover:text-primary !m-0 w-max flex items-center duration-300 ease-in-out',
-					className,
+			<AnimatePresence>
+				{buttonState === 'hover' && (
+					<motion.div
+						key="copy"
+						initial={{ width: 0, opacity: 0 }}
+						animate={{ width: 20, opacity: 1 }}
+						exit={{ width: 0, opacity: 0 }}
+						transition={{ duration: 0.4 }}
+					>
+						{prefixIcon ?? <ArrowUpRight className="size-5" />}
+					</motion.div>
 				)}
-			>
-				<AnimatePresence>
-					{buttonState === 'hover' && (
-						<motion.div
-							key="copy"
-							initial={{ width: 0, opacity: 0 }}
-							animate={{ width: 20, opacity: 1 }}
-							exit={{ width: 0, opacity: 0 }}
-							transition={{ duration: 0.4 }}
-						>
-							{prefixIcon ?? <ArrowUpRight className="size-5" />}
-						</motion.div>
-					)}
-				</AnimatePresence>
-				<p className="px-2 z-20">{label}</p>
-				<AnimatePresence initial={false}>
-					{buttonState === 'default' && (
-						<motion.div
-							key="mail"
-							initial={{ width: 0, opacity: 0 }}
-							animate={{ width: 20, opacity: 1 }}
-							exit={{ width: 0, opacity: 0 }}
-							transition={{ duration: 0.4 }}
-						>
-							{suffixIcon ?? <ArrowUpRight className="size-5" />}
-						</motion.div>
-					)}
-				</AnimatePresence>
-			</div>
+			</AnimatePresence>
+			<p className="px-2 z-20">{label}</p>
+			<AnimatePresence initial={false}>
+				{buttonState === 'default' && (
+					<motion.div
+						key="mail"
+						initial={{ width: 0, opacity: 0 }}
+						animate={{ width: 20, opacity: 1 }}
+						exit={{ width: 0, opacity: 0 }}
+						transition={{ duration: 0.4 }}
+					>
+						{suffixIcon ?? <ArrowUpRight className="size-5" />}
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</button>
 	)
 }

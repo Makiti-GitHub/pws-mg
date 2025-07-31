@@ -861,22 +861,26 @@ export const technologiesMock: {
 	},
 ]
 
-export const statisticsMock: { count: number; label: string }[] = [
+export const statisticsMock: { count: number; label: string; transKey: string }[] = [
 	{
 		count: 100,
 		label: 'Projects Delivered',
+		transKey: 'projectsDelivered',
 	},
 	{
 		count: 10,
 		label: 'Active Years',
+		transKey: 'activeYears',
 	},
 	{
 		count: 20,
 		label: 'Satisfied Clients',
+		transKey: 'satisfiedClients',
 	},
 	{
 		count: 5,
 		label: 'Offices Globally',
+		transKey: 'officesGlobally',
 	},
 ]
 
