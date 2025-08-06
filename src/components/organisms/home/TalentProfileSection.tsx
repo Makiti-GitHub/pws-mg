@@ -150,20 +150,22 @@ const TalentProfileSection = () => {
 									</p>
 								</div>
 
-								<Button
-									variant="primary"
-									onMouseEnter={() => setCursorVariant('button')}
-									onMouseLeave={() => setCursorVariant('default')}
-									className="rounded-4xl w-full h-max !py-2.5 sm:!py-[13px] hover:cursor-pointer"
-								>
-									<span className="sr-only">Request Quote</span>{' '}
-									<span className="text-lg font-seravek_medium">
-										{t(
-											'pages.home.sections.findTheTalentYouNeed.requestQuote.cta',
-										)}
-									</span>{' '}
-									<ArrowRightIcon className="size-6" />
-								</Button>
+								<Link to="#start-project">
+									<Button
+										variant="primary"
+										onMouseEnter={() => setCursorVariant('button')}
+										onMouseLeave={() => setCursorVariant('default')}
+										className="rounded-4xl w-full h-max !py-2.5 sm:!py-[13px] hover:cursor-pointer"
+									>
+										<span className="sr-only">Request Quote</span>{' '}
+										<span className="text-lg font-seravek_medium">
+											{t(
+												'pages.home.sections.findTheTalentYouNeed.requestQuote.cta',
+											)}
+										</span>{' '}
+										<ArrowRightIcon className="size-6" />
+									</Button>
+								</Link>
 							</div>
 
 							<p className="text-center font-seravek_medium text-[#73777C] text-base">

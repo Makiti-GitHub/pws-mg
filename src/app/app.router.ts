@@ -5,11 +5,23 @@ import Portfolio from './portfolio/portfolio.page'
 import Products from './products/products.page'
 import About from './about/about.page'
 import Project from './portfolio/project.page'
+import TermsAndConditions from './terms_and_conditions/terms_and_conditions.page'
+import PrivacyPolicy from './privacy_policy/privacy_policy.page'
+import LegalNotice from './legal_notice/legal_notice.page'
 
 class AppRouter extends RouterComponent {}
 
 export default defineRouter({
 	imports: [],
 	layout: AppLayout,
-	pages: [Home, Portfolio, Products, About, Project],
+	pages: [
+		Home,
+		Portfolio,
+		Products,
+		About,
+		Project,
+		TermsAndConditions,
+		PrivacyPolicy,
+		LegalNotice,
+	],
 })(AppRouter)

@@ -118,13 +118,14 @@ const HeroSection = () => {
 								</>
 							)}
 						</AnimatePresence>
-
-						<MotionIconButton
-							onMouseEnter={() => setCursorVariant('button')}
-							onMouseLeave={() => setCursorVariant('default')}
-							label={t(`pages.home.sections.hero.cta`)}
-							className="rounded-[40px] px-4 py-3 lg:px-8 lg:py-6 h-max sm:text-xl lg:text-2xl"
-						/>
+						<Link to="#talent">
+							<MotionIconButton
+								onMouseEnter={() => setCursorVariant('button')}
+								onMouseLeave={() => setCursorVariant('default')}
+								label={t(`pages.home.sections.hero.cta`)}
+								className="rounded-[40px] px-4 py-3 lg:px-8 lg:py-6 h-max sm:text-xl lg:text-2xl"
+							/>
+						</Link>
 
 						<div>
 							<AnimatePresence>

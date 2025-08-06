@@ -1099,7 +1099,7 @@ export const socialsMock: {
 	{
 		label: 'Linkedin',
 		icon: linkedInLogo,
-		link: '#',
+		link: 'https://www.linkedin.com/company/makiti-group/posts/?feedView=all',
 	},
 	{
 		label: 'Xing',
@@ -1109,7 +1109,7 @@ export const socialsMock: {
 	{
 		label: 'Github',
 		icon: githubLogo,
-		link: '#',
+		link: 'https://github.com/Makiti-GitHub?utm_source=chatgpt.com',
 	},
 	{
 		label: 'Youtube',

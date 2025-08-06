@@ -8,7 +8,6 @@ interface MotionIconButtonProps {
 	suffixIcon?: JSX.Element
 	label: string
 	className?: string
-	onClick?: () => void
 	// iconX?: number
 }
 
@@ -17,14 +16,12 @@ const MotionIconButton: FC<React.ComponentProps<'button'> & MotionIconButtonProp
 	suffixIcon,
 	label,
 	className,
-	onClick,
 	...props
 }) => {
 	const [buttonState, setButtonState] = useState<'hover' | 'default'>('default')
 
 	return (
 		<button
-			// className={twMerge('w-max')}
 			{...props}
 			onMouseEnter={(e) => {
 				setButtonState('hover')
@@ -34,7 +31,6 @@ const MotionIconButton: FC<React.ComponentProps<'button'> & MotionIconButtonProp
 				setButtonState('default')
 				props.onMouseLeave?.(e)
 			}}
-			onClick={onClick}
 			className={cn(
 				'bg-primary hover:cursor-pointer border-2 border-primary hover:border-primary hover:bg-secondary text-secondary hover:text-primary !m-0 w-max flex items-center duration-300 ease-in-out',
 				className,

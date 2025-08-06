@@ -6,7 +6,10 @@ const StartProjectSection = () => {
 	const { t } = useTranslation()
 
 	return (
-		<section className="px-4 sm:px-8 md:px-[80px] lg:px-[120px] flex flex-col gap-8 w-full">
+		<section
+			id="start-project"
+			className="px-4 sm:px-8 md:px-[80px] lg:px-[120px] flex flex-col gap-8 w-full scroll-mt-[150px]"
+		>
 			<div className="space-y-[50px]">
 				<SectionHeader
 					title={t('pages.home.sections.startYourProjectToday.title')}

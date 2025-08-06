@@ -332,15 +332,15 @@ const Footer = () => {
 			<div className="w-full text-outline-variant text-base flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-2">
 				<p>{t('footer.lowerSection.copyright', { year: '2025' })}</p>
 				<div className="flex items-center justify-between gap-5">
-					<a href="#" className="hover:text-white">
+					<Link to="/privacy-policy" className="hover:text-white">
 						{t('footer.lowerSection.nav.privacyPolicy')}
-					</a>
-					<a href="#" className="hover:text-white">
+					</Link>
+					<Link to="/terms-and-conditions" className="hover:text-white">
 						{t('footer.lowerSection.nav.termsOfService')}
-					</a>
-					<a href="#" className="hover:text-white">
+					</Link>
+					<Link to="/legal-notice" className="hover:text-white">
 						{t('footer.lowerSection.nav.legalNotice')}
-					</a>
+					</Link>
 				</div>
 			</div>
 		</footer>

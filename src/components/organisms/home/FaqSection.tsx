@@ -11,6 +11,7 @@ import { AtSignIcon, ClockIcon, MapPinIcon, SmartphoneIcon } from 'lucide-react'
 import MotionIconButton from '@/components/atoms/buttons/MotionIconButton'
 import { useTranslation } from 'react-i18next'
 import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
+import { Link } from 'rasengan'
 
 const FaqSection = () => {
 	const { t } = useTranslation()
@@ -136,12 +137,14 @@ const FaqSection = () => {
 						title={t('pages.home.sections.faq.banner.title')}
 						desc={t('pages.home.sections.faq.banner.subtitle')}
 					>
-						<MotionIconButton
-							label={t('pages.home.sections.faq.banner.cta')}
-							onMouseEnter={() => setCursorVariant('button')}
-							onMouseLeave={() => setCursorVariant('default')}
-							className="rounded-4xl !h-max !px-4 !py-2 gap-1 text-base sm:text-lg font-seravek_medium"
-						/>
+						<Link to="#start-project">
+							<MotionIconButton
+								label={t('pages.home.sections.faq.banner.cta')}
+								onMouseEnter={() => setCursorVariant('button')}
+								onMouseLeave={() => setCursorVariant('default')}
+								className="rounded-4xl !h-max !px-4 !py-2 gap-1 text-base sm:text-lg font-seravek_medium"
+							/>
+						</Link>
 					</Banner>
 				</aside>
 			</div>

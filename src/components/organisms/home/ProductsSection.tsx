@@ -16,7 +16,7 @@ const ProductsSection = () => {
 	return (
 		<section
 			id="products"
-			className="flex flex-col gap-8 px-4 sm:px-8 md:px-[80px] lg:px-[120px] pb-16"
+			className="flex flex-col gap-8 px-4 sm:px-8 md:px-[80px] lg:px-[120px] pb-16 bg-gradient-to-t from-secondary from-10% to-surface to-45%"
 		>
 			<div className="space-y-8">
 				<SectionHeader

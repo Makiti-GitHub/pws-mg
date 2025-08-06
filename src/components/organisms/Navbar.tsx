@@ -53,12 +53,14 @@ const NavBar = () => {
 				</ul>
 
 				<div className="flex items-center gap-4">
-					<MotionIconButton
-						label={t('nav.cta.letsTalk')}
-						onMouseEnter={() => setCursorVariant('button')}
-						onMouseLeave={() => setCursorVariant('default')}
-						className="rounded-[40px] px-2 py-1.5 h-max text-base hidden sm:inline-flex"
-					/>
+					<Link to="#start-project">
+						<MotionIconButton
+							label={t('nav.cta.letsTalk')}
+							onMouseEnter={() => setCursorVariant('button')}
+							onMouseLeave={() => setCursorVariant('default')}
+							className="rounded-[40px] px-2 py-1.5 h-max text-base hidden sm:inline-flex"
+						/>
+					</Link>
 
 					<LanguageButton />
 

@@ -19,7 +19,7 @@ const ProductsCard: FC<React.ComponentProps<'article'> & ProductsCardProps> = ({
 		<a href={story.link} target="_blank">
 			<article
 				className={cn(
-					'w-full hover:cursor-pointer rounded-[20px] box_shadow_products_card hover:scale-105 transition duration-300 ease-in-out',
+					'w-full hover:cursor-pointer rounded-[20px] box_shadow_products_card hover:scale-105 transition duration-300 ease-in-out bg-surface',
 					className,
 				)}
 				{...props}

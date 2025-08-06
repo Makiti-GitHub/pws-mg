@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/carousel'
 import { testimonialsMock } from '@/data/mock'
 import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
+import { Link } from 'rasengan'
 import { useTranslation } from 'react-i18next'
 
 const TestimonialSection = () => {
@@ -69,12 +70,14 @@ const TestimonialSection = () => {
 				title={t('pages.home.sections.whatOurClientsSays.banner.title')}
 				desc={t('pages.home.sections.whatOurClientsSays.banner.subtitle')}
 			>
-				<MotionIconButton
-					onMouseEnter={() => setCursorVariant('button')}
-					onMouseLeave={() => setCursorVariant('default')}
-					label={t('pages.home.sections.whatOurClientsSays.banner.cta')}
-					className="rounded-4xl h-max px-4 py-2 sm:py-3 gap-1 text-base sm:text-lg font-seravek_medium uppercase"
-				/>
+				<Link to="#start-project">
+					<MotionIconButton
+						onMouseEnter={() => setCursorVariant('button')}
+						onMouseLeave={() => setCursorVariant('default')}
+						label={t('pages.home.sections.whatOurClientsSays.banner.cta')}
+						className="rounded-4xl h-max px-4 py-2 sm:py-3 gap-1 text-base sm:text-lg font-seravek_medium uppercase"
+					/>
+				</Link>
 			</Banner>
 		</section>
 	)
