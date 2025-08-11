@@ -7,10 +7,12 @@ import { useTranslation } from 'react-i18next'
 
 interface SuccessStoryCardProps {
 	story: (typeof successStoriesMock)[number]
+	index: number
 }
 
 const SuccessStoryCard: FC<React.ComponentProps<'article'> & SuccessStoryCardProps> = ({
 	story,
+	index,
 	className,
 	...props
 }) => {
@@ -56,21 +58,32 @@ const SuccessStoryCard: FC<React.ComponentProps<'article'> & SuccessStoryCardPro
 						<div className="space-y-2">
 							<p className="text-[32px] text-on-surface">{story.title}</p>
 							<p className="text-base text-on-surface-variant">
-								{t(`pages.portfolio.projects.card.category.${story.categoryType}`)}
+								{story.categoryTypes?.map((item, index) => {
+									return `${t(`pages.portfolio.projects.card.category.${item}`)}${
+										index < story.categoryTypes.length - 1 ? ', ' : ''
+									}`
+								})}
 							</p>
 						</div>
-						<p className="text-base text-outline">{story.description}</p>
+						<p className="text-base text-outline">
+							{t(`pages.portfolio.projects.stories.story${index + 1}.description`)}
+						</p>
 					</div>
 					<div className="space-y-2 font-seravek_medium">
 						<p className="text-base text-on-surface-variant">{t('keyResults')}</p>
 
 						<ul className="list-disc pl-8">
-							{story.results.map((item, index) => (
+							{story.results.map((item, index2) => (
 								<li
-									key={`story-${index}-result-${index}-${item}`}
+									key={`story-${index}-result-${index2}-${item}`}
 									className={`text-sm text-success`}
 								>
-									{item}
+									{/* {item} */}
+									{t(
+										`pages.portfolio.projects.stories.story${
+											index + 1
+										}.results.result${index2 + 1}`,
+									)}
 								</li>
 							))}
 						</ul>

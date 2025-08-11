@@ -448,7 +448,12 @@
                 "web_app": "Apps Web",
                 "mobile_app": "Apps Mobile",
                 "e_commerce": "E-Commerce",
-                "saas": "SaaS"
+                "saas": "SaaS",
+                "branding": "Identité visuelle",
+                "website": "Site web",
+                "search_engine_optimization": "Optimisation pour les moteurs de recherche",
+                "social_media_management": "Gestion des réseaux sociaux",
+                "social_management": "Gestion sociale"
             },
             "projects": {
                 "card": {
@@ -456,7 +461,12 @@
                         "web_app": "App Web",
                         "mobile_app": "App Mobile",
                         "e_commerce": "E-Commerce",
-                        "saas": "SaaS"
+                        "saas": "SaaS",
+                        "branding": "Identité visuelle",
+                        "website": "Site web",
+                        "search_engine_optimization": "Optimisation pour les moteurs de recherche",
+                        "social_media_management": "Gestion des réseaux sociaux",
+                        "social_management": "Gestion sociale"
                     },
                     "industry": {
                         "transportation": "Transport",
@@ -468,6 +478,72 @@
                         "agency": "Agence",
                         "agriculture": "Agriculture",
                         "farming": "Agriculture"
+                    }
+                },
+                "stories": {
+                    "story1": {
+                        "description": "Cette application simplifie la réservation de voyages en bus, permettant aux utilisateurs de planifier et de sécuriser leur déplacement avec accès aux itinéraires et horaires.",
+                        "results": {
+                            "result1": "Plus de 500 000 téléchargements.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story2": {
+                        "description": "Ce projet a consisté à concevoir une application web universelle pour offrir une solution de paiement polyvalente, fournissant aux utilisateurs diverses méthodes de paiement pour leur convenance sur toutes les plateformes.",
+                        "results": {
+                            "result1": "Plus de 1 million de visites.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story3": {
+                        "description": "Cette application permet aux entreprises de suivre leurs stocks, de gérer leurs commandes et de générer des rapports en temps réel avec des fonctionnalités conviviales.",
+                        "results": {
+                            "result1": "Plus de 500 000 téléchargements.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story4": {
+                        "description": "Ce projet a consisté à créer un site web pour promouvoir une application d'agence de bus, mettant en avant ses fonctionnalités qui aident les agences à suivre et à gérer les voyages en bus de manière efficace.",
+                        "results": {
+                            "result1": "Plus de 1 million de visites.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story5": {
+                        "description": "Ce projet visait à développer une application web pour les agences de bus afin de suivre efficacement les voyages et de gérer les itinéraires en temps réel.",
+                        "results": {
+                            "result1": "Plus de 1 million de visites.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story6": {
+                        "description": "Ce projet a livré un site web pour une entreprise de construction et d'infrastructure, ainsi que la création d'une identité visuelle, du référencement et de la gestion des réseaux sociaux pour mettre en avant les services dans l'immobilier, la fibre optique et les travaux publics.",
+                        "results": {
+                            "result1": "Plus de 500 000 téléchargements.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story7": {
+                        "description": "Ce projet a créé un pipeline direct pour les agriculteurs locaux afin de livrer des produits frais directement aux consommateurs, rationalisant la chaîne d'approvisionnement et soutenant l'agriculture locale.",
+                        "results": {
+                            "result1": "Plus de 500 000 téléchargements.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story8": {
+                        "description": "Une entreprise logistique transportant des marchandises d'Allemagne au Cameroun. Ce projet a consisté à réaménager des prospectus pour améliorer la visibilité et l'accessibilité en ligne, soutenant les efforts de marketing numérique plus larges.",
+                        "results": {
+                            "result1": "Plus de 500 000 téléchargements.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
                     }
                 }
             },

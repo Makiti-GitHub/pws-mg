@@ -448,7 +448,12 @@
                 "web_app": "Web Apps",
                 "mobile_app": "Mobile Apps",
                 "e_commerce": "E-Commerce",
-                "saas": "SaaS"
+                "saas": "SaaS",
+                "branding": "Branding",
+                "website": "Website",
+                "search_engine_optimization": "Search Engine Optimization",
+                "social_media_management": "Social Media Management",
+                "social_management": "Social Management"
             },
             "projects": {
                 "card": {
@@ -456,7 +461,12 @@
                         "web_app": "Web App",
                         "mobile_app": "Mobile App",
                         "e_commerce": "E-Commerce",
-                        "saas": "SaaS"
+                        "saas": "SaaS",
+                        "branding": "Branding",
+                        "website": "Website",
+                        "search_engine_optimization": "Search Engine Optimization",
+                        "social_media_management": "Social Media Management",
+                        "social_management": "Social Management"
                     },
                     "industry": {
                         "transportation": "Transportation",
@@ -468,6 +478,72 @@
                         "agency": "Agency",
                         "agriculture": "Agriculture",
                         "farming": "Farming"
+                    }
+                },
+                "stories": {
+                    "story1": {
+                        "description": "This app simplifies booking bus trips, enabling users to plan and secure travel with route and schedule access.",
+                        "results": {
+                            "result1": "Over 500,000 Downloads.",
+                            "result2": "A 150% increase in conversions.",
+                            "result3": "An average rating of 4.75."
+                        }
+                    },
+                    "story2": {
+                        "description": "This project involved designing a universal web application to offer a versatile payment solution, providing users with diverse payment methods for their convenience across all platforms.",
+                        "results": {
+                            "result1": "Over 1 million visits.",
+                            "result2": "A 150% increase in conversions.",
+                            "result3": "An average rating of 4.75."
+                        }
+                    },
+                    "story3": {
+                        "description": "This app enables businesses to track inventory, manage orders, and generate real-time reports with user-friendly features.",
+                        "results": {
+                            "result1": "Over 500,000 Downloads.",
+                            "result2": "A 150% increase in conversions.",
+                            "result3": "An average rating of 4.75."
+                        }
+                    },
+                    "story4": {
+                        "description": "This project focused on creating a website to promote a bus agency app, showcasing its features that help agencies track and manage bus trips efficiently.",
+                        "results": {
+                            "result1": "Over 1 million visits.",
+                            "result2": "A 150% increase in conversions.",
+                            "result3": "An average rating of 4.75."
+                        }
+                    },
+                    "story5": {
+                        "description": "This project aimed to develop a web app for bus agencies to efficiently track trips and manage routes in real time.",
+                        "results": {
+                            "result1": "Over 1 million visits.",
+                            "result2": "A 150% increase in conversions.",
+                            "result3": "An average rating of 4.75."
+                        }
+                    },
+                    "story6": {
+                        "description": "This project delivered a website for a construction and infrastructure firm, along with branding, SEO, and social media management to showcase services in real estate, fiber optics, and civil works.",
+                        "results": {
+                            "result1": "Over 500,000 Downloads.",
+                            "result2": "A 150% increase in conversions.",
+                            "result3": "An average rating of 4.75."
+                        }
+                    },
+                    "story7": {
+                        "description": "This project created a direct pipeline for local farmers to deliver fresh produce straight to consumers, streamlining the supply chain and supporting local agriculture.",
+                        "results": {
+                            "result1": "Over 500,000 Downloads.",
+                            "result2": "A 150% increase in conversions.",
+                            "result3": "An average rating of 4.75."
+                        }
+                    },
+                    "story8": {
+                        "description": "A logistics company moving goods from Germany to Cameroon. This project involved redesigning flyers to enhance online visibility and accessibility, supporting broader digital marketing efforts.",
+                        "results": {
+                            "result1": "Over 500,000 Downloads.",
+                            "result2": "A 150% increase in conversions.",
+                            "result3": "An average rating of 4.75."
+                        }
                     }
                 }
             },

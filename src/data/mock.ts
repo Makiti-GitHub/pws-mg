@@ -320,7 +320,17 @@ export const talentProfilesMock: {
 	},
 ]
 
-export type ProjectCategoryType = 'web_app' | 'mobile_app' | 'e_commerce' | 'saas' | 'all'
+export type ProjectCategoryType =
+	| 'web_app'
+	| 'mobile_app'
+	| 'e_commerce'
+	| 'saas'
+	| 'branding'
+	| 'website'
+	| 'search_engine_optimization'
+	| 'social_media_management'
+	| 'social_management'
+	| 'all'
 export type IndustriesType =
 	| 'transportation'
 	| 'travel'
@@ -340,7 +350,7 @@ export const successStoriesMock: {
 	id: string
 	title: string
 	category: string
-	categoryType: ProjectCategoryType
+	categoryTypes: ProjectCategoryType[]
 	description: string
 	results: string[]
 	budget: number
@@ -384,7 +394,7 @@ export const successStoriesMock: {
 		id: '1',
 		title: 'Matoa Traveller App',
 		category: 'Mobile App',
-		categoryType: 'mobile_app',
+		categoryTypes: ['mobile_app'],
 		budget: 150000,
 		teamSize: 5,
 		description:
@@ -515,7 +525,7 @@ export const successStoriesMock: {
 		category: 'Web App',
 		budget: 150000,
 		teamSize: 5,
-		categoryType: 'web_app',
+		categoryTypes: ['web_app'],
 		description:
 			'This project involved designing a universal web application to offer a versatile payment solution, providing users with diverse payment methods for their convenience across all platforms.',
 		results: [
@@ -536,7 +546,7 @@ export const successStoriesMock: {
 		budget: 150000,
 		teamSize: 5,
 		category: 'Mobile App',
-		categoryType: 'mobile_app',
+		categoryTypes: ['mobile_app'],
 		description:
 			'This app enables businesses to track inventory, manage orders, and generate real-time reports with user-friendly features.',
 		results: [
@@ -557,7 +567,7 @@ export const successStoriesMock: {
 		budget: 150000,
 		teamSize: 5,
 		category: 'SaaS',
-		categoryType: 'saas',
+		categoryTypes: ['saas'],
 		description:
 			'This project focused on creating a website to promote a bus agency app, showcasing its features that help agencies track and manage bus trips efficiently.',
 		results: [
@@ -577,7 +587,7 @@ export const successStoriesMock: {
 		budget: 150000,
 		teamSize: 5,
 		category: 'Web App',
-		categoryType: 'web_app',
+		categoryTypes: ['web_app'],
 		description:
 			'This project aimed to develop a web app for bus agencies to efficiently track trips and manage routes in real time.',
 		results: [
@@ -599,9 +609,14 @@ export const successStoriesMock: {
 		budget: 150000,
 		teamSize: 5,
 		category: 'Web App',
-		categoryType: 'web_app',
+		categoryTypes: [
+			'branding',
+			'website',
+			'search_engine_optimization',
+			'social_media_management',
+		],
 		description:
-			'This project aimed to develop a web app for bus agencies to efficiently track trips and manage routes in real time.',
+			'This project delivered a website for a construction and infrastructure firm, along with branding, SEO, and social media management to showcase services in real estate, fiber optics, and civil works.',
 		results: [
 			'Over 1 million visits.',
 			'A 150% increase in conversions.',
@@ -610,7 +625,7 @@ export const successStoriesMock: {
 		tags: [
 			{ label: 'Transportation', type: 'transportation' },
 			{ label: 'Travel', type: 'travel' },
-		], // ['Transportation', 'Travel'],
+		],
 		image: portfolioImage6,
 		techs: ['figma', 'html', 'js', 'tailwind'],
 	},
@@ -620,7 +635,7 @@ export const successStoriesMock: {
 		budget: 150000,
 		teamSize: 5,
 		category: 'SaaS',
-		categoryType: 'saas',
+		categoryTypes: ['saas'],
 		description:
 			'This project created a direct pipeline for local farmers to deliver fresh produce straight to consumers, streamlining the supply chain and supporting local agriculture.',
 		results: [
@@ -642,7 +657,7 @@ export const successStoriesMock: {
 		budget: 150000,
 		teamSize: 5,
 		category: 'SaaS',
-		categoryType: 'saas',
+		categoryTypes: ['saas'],
 		description:
 			'A logistics company moving goods from Germany to Cameroon. This project involved redesigning flyers to enhance online visibility and accessibility, supporting broader digital marketing efforts.',
 		results: [

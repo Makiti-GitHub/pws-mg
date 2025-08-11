@@ -448,7 +448,12 @@
                 "web_app": "Web-Apps",
                 "mobile_app": "Mobile Apps",
                 "e_commerce": "E-Commerce",
-                "saas": "SaaS"
+                "saas": "SaaS",
+                "branding": "Markenidentität",
+                "website": "Webseite",
+                "search_engine_optimization": "Suchmaschinen-Optimierung",
+                "social_media_management": "Social-Media-Management",
+                "social_management": "Soziales Management"
             },
             "projects": {
                 "card": {
@@ -456,7 +461,12 @@
                         "web_app": "Web-App",
                         "mobile_app": "Mobile App",
                         "e_commerce": "E-Commerce",
-                        "saas": "SaaS"
+                        "saas": "SaaS",
+                        "branding": "Markenidentität",
+                        "website": "Webseite",
+                        "search_engine_optimization": "Suchmaschinen-Optimierung",
+                        "social_media_management": "Social-Media-Management",
+                        "social_management": "Soziales Management"
                     },
                     "industry": {
                         "transportation": "Transport",
@@ -468,6 +478,72 @@
                         "agency": "Agentur",
                         "agriculture": "Landwirtschaft",
                         "farming": "Landwirtschaft"
+                    }
+                },
+                "stories": {
+                    "story1": {
+                        "description": "Diese App vereinfacht die Buchung von Busreisen, ermöglicht es den Nutzern, ihre Reise zu planen und zu sichern, mit Zugang zu Routen und Fahrplänen.",
+                        "results": {
+                            "result1": "Über 500.000 Downloads.",
+                            "result2": "Eine Steigerung der Konversionen um 150%.",
+                            "result3": "Ein Durchschnittsbewertung von 4,75."
+                        }
+                    },
+                    "story2": {
+                        "description": "Dieses Projekt umfasste die Entwicklung einer universellen Webanwendung, um eine vielseitige Zahlungslösung anzubieten, die den Nutzern verschiedene Zahlungsmethoden für ihre Bequemlichkeit auf allen Plattformen bietet.",
+                        "results": {
+                            "result1": "Über 1 Million Besuche.",
+                            "result2": "Eine Steigerung der Konversionen um 150%.",
+                            "result3": "Ein Durchschnittsbewertung von 4,75."
+                        }
+                    },
+                    "story3": {
+                        "description": "Diese App ermöglicht es Unternehmen, ihre Bestände zu verfolgen, ihre Aufträge zu verwalten und Echtzeitberichte mit benutzerfreundlichen Funktionen zu erstellen.",
+                        "results": {
+                            "result1": "Über 500.000 Downloads.",
+                            "result2": "Eine Steigerung der Konversionen um 150%.",
+                            "result3": "Ein Durchschnittsbewertung von 4,75."
+                        }
+                    },
+                    "story4": {
+                        "description": "Dieses Projekt umfasste die Erstellung einer Website, um eine Busagentur-App zu bewerben, die ihre Funktionen hervorhebt, die es den Agenturen ermöglichen, Busreisen effizient zu verfolgen und zu verwalten.",
+                        "results": {
+                            "result1": "Über 1 Million Besuche.",
+                            "result2": "Eine Steigerung der Konversionen um 150%.",
+                            "result3": "Ein Durchschnittsbewertung von 4,75."
+                        }
+                    },
+                    "story5": {
+                        "description": "Dieses Projekt zielte darauf ab, eine Webanwendung für Busagenturen zu entwickeln, um Reisen effizient zu verfolgen und Routen in Echtzeit zu verwalten.",
+                        "results": {
+                            "result1": "Über 1 Million Besuche.",
+                            "result2": "Eine Steigerung der Konversionen um 150%.",
+                            "result3": "Ein Durchschnittsbewertung von 4,75."
+                        }
+                    },
+                    "story6": {
+                        "description": "Dieses Projekt lieferte eine Website für ein Bau- und Infrastrukturunternehmen, einschließlich der Erstellung einer Corporate Identity, des Suchmaschinen-Marketings und der Social-Media-Verwaltung, um Dienstleistungen im Bereich Immobilien, Glasfaserkabel und öffentliche Arbeiten hervorzuheben.",
+                        "results": {
+                            "result1": "Über 500.000 Downloads.",
+                            "result2": "Eine Steigerung der Konversionen um 150%.",
+                            "result3": "Ein Durchschnittsbewertung von 4,75."
+                        }
+                    },
+                    "story7": {
+                        "description": "Dieses Projekt schuf eine direkte Pipeline für lokale Landwirte, um frische Produkte direkt an die Verbraucher zu liefern, die Lieferkette zu rationalisieren und die lokale Landwirtschaft zu unterstützen.",
+                        "results": {
+                            "result1": "Über 500.000 Downloads.",
+                            "result2": "Eine Steigerung der Konversionen um 150%.",
+                            "result3": "Ein Durchschnittsbewertung von 4,75."
+                        }
+                    },
+                    "story8": {
+                        "description": "Ein Logistikunternehmen, das Waren von Deutschland nach Kamerun transportiert. Dieses Projekt umfasste die Neugestaltung von Prospekten, um die Online-Sichtbarkeit und -Zugänglichkeit zu verbessern und umfassendere digitale Marketingbemühungen zu unterstützen.",
+                        "results": {
+                            "result1": "Über 500.000 Downloads.",
+                            "result2": "Eine Steigerung der Konversionen um 150%.",
+                            "result3": "Ein Durchschnittsbewertung von"
+                        }
                     }
                 }
             },

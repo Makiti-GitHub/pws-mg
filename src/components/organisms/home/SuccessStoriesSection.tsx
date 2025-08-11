@@ -23,7 +23,11 @@ const SuccessStoriesSection = () => {
 			<div className="space-y-8">
 				<div className="flex flex-col gap-6">
 					{successStoriesMock.slice(0, 3).map((story, index) => (
-						<SuccessStoryCard key={`success-story-${index}`} story={story} />
+						<SuccessStoryCard
+							key={`success-story-${index}`}
+							story={story}
+							index={index}
+						/>
 					))}
 				</div>
 

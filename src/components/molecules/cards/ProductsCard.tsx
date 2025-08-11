@@ -19,7 +19,7 @@ const ProductsCard: FC<React.ComponentProps<'article'> & ProductsCardProps> = ({
 		<a href={story.link} target="_blank">
 			<article
 				className={cn(
-					'w-full hover:cursor-pointer rounded-[20px] box_shadow_products_card hover:scale-105 transition duration-300 ease-in-out bg-surface',
+					'w-full h-full hover:cursor-pointer rounded-[20px] box_shadow_products_card hover:scale-105 transition duration-300 ease-in-out bg-surface',
 					className,
 				)}
 				{...props}
@@ -35,7 +35,7 @@ const ProductsCard: FC<React.ComponentProps<'article'> & ProductsCardProps> = ({
 				</div>
 				<div
 					className={`${
-						children ? 'flex flex-col min-h-64 justify-between gap-12' : ''
+						children ? 'flex flex-1 flex-col min-h-64 justify-between gap-12' : ''
 					} p-4`}
 				>
 					<div className="space-y-3">

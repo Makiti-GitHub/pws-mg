@@ -83,14 +83,14 @@ const OurTechnologyStackSection = () => {
 								<div className="relative group">
 									<Image
 										src={circleDotLogo}
-										alt={'Circle dot logo'}
+										alt={'Ionic dot logo'}
 										width={'100%'}
 										height={'100%'}
 										className="size-full object-contain duration-300"
 									/>
 									<div className="absolute z-20 -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 										<span className="bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap">
-											Circle
+											Ionic
 										</span>
 									</div>
 								</div>
@@ -106,14 +106,14 @@ const OurTechnologyStackSection = () => {
 							onMouseLeave={() => setCursorVariant('default')}
 							className="rounded-[20px] border border-primary py-3 sm:py-7 px-2 flex flex-col gap-2 sm:gap-4"
 						>
-							<div className="w-full">
-								<p className="text-center uppercase text-2xl sm:text-[32px] font-seravek_bold text-primary">
+							<div className="w-full px-4">
+								<p className="text-center break-words uppercase text-2xl sm:text-[32px] font-seravek_bold text-primary">
 									{t(
 										`pages.home.sections.ourTechnologyStack.categories.${tech.category}`,
 									)}
 								</p>
 							</div>
-							<div className="w-full space-y-2">
+							<div className="w-full px-4 space-y-2">
 								{tech.list.map((item, index) => (
 									<div key={`tech-item-${index}`} className="w-full">
 										<p className="text-center text-2xl sm:text-[32px] text-white">

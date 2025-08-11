@@ -14,6 +14,7 @@ const filterOptions: { label: string; value: ProjectCategoryType }[] = [
 	{ label: 'Mobile Apps', value: 'mobile_app' },
 	{ label: 'E-Commerce', value: 'e_commerce' },
 	{ label: 'SaaS', value: 'saas' },
+	{ label: 'Branding', value: 'branding' },
 ]
 
 const Portfolio: PageComponent = () => {
@@ -27,7 +28,7 @@ const Portfolio: PageComponent = () => {
 		if (selectedFilter === 'all') {
 			return successStoriesMock
 		}
-		return successStoriesMock.filter((story) => story.categoryType === selectedFilter)
+		return successStoriesMock.filter((story) => story.categoryTypes.includes(selectedFilter))
 	}, [selectedFilter])
 
 	const handleSelectFilter = (value: ProjectCategoryType) => {
@@ -79,6 +80,7 @@ const Portfolio: PageComponent = () => {
 							<SuccessStoryCard
 								key={`success-story-${index}`}
 								story={story}
+								index={index}
 								onMouseEnter={() => setCursorVariant('button')}
 								onMouseLeave={() => setCursorVariant('default')}
 							/>
