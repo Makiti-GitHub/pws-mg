@@ -201,6 +201,15 @@ body {
 }
 
 @font-face {
+	font-family: 'SeravekItalic';
+	src: local('SeravekItalic'),
+		url('../assets/fonts/Seravek/Seravek_Basic_Italic.otf') format('truetype');
+	font-weight: 400;
+	font-display: swap;
+	font-style: italic;
+}
+
+@font-face {
 	font-family: 'SeravekLight';
 	src: local('SeravekLight'),
 		url('../assets/fonts/Seravek/Seravek_Basic_Light.otf') format('truetype');
@@ -213,6 +222,7 @@ body {
 	--font-seravek_regular: SeravekRegular, 'sans-serif';
 	--font-seravek_medium: SeravekMedium, 'sans-serif';
 	--font-seravek_medium_italic: SeravekMediumItalic, 'sans-serif';
+	--font-seravek_italic: SeravekItalic, 'sans-serif';
 	--font-seravek_bold: SeravekBold, 'sans-serif';
 
 	--color-surface: oklch(0.9911 0 0);

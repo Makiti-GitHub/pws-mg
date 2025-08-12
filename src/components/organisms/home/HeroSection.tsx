@@ -76,7 +76,7 @@ const HeroSection = () => {
 
 	return (
 		<section className={`space-y-12 sm:space-y-24 bg-secondary w-screen pt-[150px] pb-16`}>
-			<div className="w-full grid grid-cols-4 lg:grid-cols-2 relative min-h-[85dvh] sm:min-h-auto">
+			<div className="w-full grid grid-cols-4 lg:grid-cols-2 relative min-h-[85dvh] sm:min-h-screen">
 				<div className="relative col-span-3 lg:col-span-1">
 					<div className="absolute inset-0 flex flex-col pl-4 sm:pl-8 md:px-[80px] lg:pl-[120px] lg:pr-0 text-white gap-10">
 						<AnimatePresence>
@@ -100,7 +100,7 @@ const HeroSection = () => {
 										key={heroCarousel[currentIndex].title}
 										className="space-y-6"
 									>
-										<motion.h1 className="font-seravek_bold text-4xl lg:text-7xl xl:text-[80px] leading-10 xl:leading-20">
+										<motion.h1 className="font-seravek_bold text-4xl lg:text-7xl xl:text-[80px] leading-10 md:leading-14 lg:leading-16 xl:leading-20">
 											{t(
 												`pages.home.sections.hero.item${
 													currentIndex + 1
@@ -204,7 +204,7 @@ const HeroSection = () => {
 						<AnimatePresence>
 							{heroCarousel[currentIndex] && (
 								<motion.div
-									className="relative size-full mask-l-from-80% mask-r-from-80% mask-t-from-80% mask-b-from-80% mask-radial-from-50% mask-radial-to-80%"
+									className="relative size-full [clip-path:ellipse(60%_35%_at_50%_50%)] mask-x-from-90% mask-y-from-75% mask-radial-from-40% mask-radial-to-80%"
 									initial={{ x: 50, opacity: 0 }}
 									animate={{ x: 0, opacity: 1 }}
 									exit={{ x: -50, opacity: 0 }}
@@ -219,11 +219,8 @@ const HeroSection = () => {
 									<img
 										src={heroCarousel[currentIndex].image}
 										alt={heroCarousel[currentIndex].title}
-										// width={'100%'}
-										// height={'100%'}
 										className="aspect-auto object-contain size-full"
 									/>
-									{/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-full scale-[140%] rounded-full bg-radial-[at_50%_50%] from-30% from-transparent to-secondary z-20 to-50%" /> */}
 								</motion.div>
 							)}
 						</AnimatePresence>

@@ -652,6 +652,278 @@
                     }
                 }
             }
+        },
+        "termsAndConditions": {
+            "title": "Allgemeine Nutzungsbedingungen (ANB)",
+            "sections": {
+                "introduction": {
+                    "title": "Vorstellung der Makiti Group",
+                    "p1": "Die Makiti Gruppe ist ein auf <bold>strategisches IT-Outsourcing</bold> spezialisiertes Unternehmen, das Dienstleistungen in den Bereichen Softwareentwicklung, digitale Begleitung, UX/UI-Design, Wartung und technischer Support anbietet.",
+                    "p2": "Die <bold>Makiti Gruppe</bold> ist ein Unternehmen nach französischem Recht mit Sitz in <bold>Paris, France</bold>, und <bold>niederlassungen in Yaoundé (Kamerun)</bold> und <bold>Lagos (Nigeria)</bold>. Ihr Slogan lautet: <italic>“Your strategic IT outsourcing partner”<italic> (Ihr strategischer IT-Outsourcing-Partner)."
+                },
+                "termsPurpose": {
+                    "title": "Gegenstand der ANB Die vorliegenden",
+                    "p1": "Allgemeinen Nutzungsbedingungen regeln den Zugang und die Nutzung der Website der Makiti Group, die unter der Adresse: <link1>www.makiti-group.com</link1> (im Folgenden \"die Website\") zugänglich ist.",
+                    "p2": "Mit dem Zugriff auf die Website akzeptiert der Nutzer vorbehaltlos die vorliegenden ANB."
+                },
+                "siteAccess": {
+                    "title": "Zugang zur Website",
+                    "p1": "Der Zugang zur Website ist kostenlos und für alle offen. Die Makiti Group behält sich das Recht vor, den Zugang zur gesamten Website oder zu Teilen davon aus Wartungs-, Aktualisierungs- oder anderen technischen Gründen auszusetzen, zu ändern oder zu unterbrechen."
+                },
+                "servicesOffered": {
+                    "title": "Auf der Website angebotene Dienstleistungen",
+                    "p1": "Die Website präsentiert die von der Makiti Gruppe angebotenen Dienstleistungen, darunter :",
+                    "ul": [
+                        "Entwicklung maßgeschneiderter Plattformen",
+                        "Wartung von Anwendungen",
+                        "Entwurf von Softwarearchitekturen",
+                        "Outsourcing von IT-Ressourcen",
+                        "Digitale Lösungen für Unternehmen und Start-ups"
+                    ],
+                    "p2": "Über Kontaktformulare können Nutzer Anfragen zu Informationen, Kostenvoranschlägen oder Kooperationen stellen."
+                },
+                "userCommitments": {
+                    "title": "Verpflichtungen des Nutzers",
+                    "p1": "Mit der Nutzung der Website verpflichtet sich der Nutzer :",
+                    "ul": [
+                        "den Betrieb der Website nicht zu stören",
+                        "nicht zu versuchen, sich unrechtmäßig Zugang zu anderen IT-Systemen zu verschaffen",
+                        "in allen Kontaktformularen korrekte Angaben zu machen",
+                        "die geistigen Eigentumsrechte an den veröffentlichten Inhalten zu respektieren"
+                    ]
+                },
+                "intellectualProperty": {
+                    "title": "Geistiges Eigentum",
+                    "p1": "Die Website, ihre Inhalte, ihre Struktur, ihre Bilder, Logos, Videos, Texte und grafischen Elemente sind, sofern nicht anders angegeben, das ausschließliche Eigentum der Makiti Gruppe.",
+                    "p2": "Jede Vervielfältigung, Verbreitung oder Wiederverwendung, auch auszugsweise, ohne schriftliche Genehmigung ist strengstens untersagt."
+                },
+                "liability": {
+                    "title": "Haftung",
+                    "p1": "Die Makiti Gruppe bemüht sich, die Richtigkeit der auf der Website enthaltenen Informationen zu gewährleisten. Sie kann jedoch nicht haftbar gemacht werden für :",
+                    "ul": [
+                        "Mögliche Fehler oder Auslassungen",
+                        "Technische Störungen oder die Unzugänglichkeit der Website",
+                        "Direkte oder indirekte Schäden, die dem Nutzer durch die Nutzung der Website entstehen"
+                    ]
+                },
+                "personalData": {
+                    "title": "Personenbezogene Daten",
+                    "p1": "Die Verarbeitung personenbezogener Daten unterliegt der auf der Website verfügbaren <bold>Datenschutzerklärung</bold>.",
+                    "p2": "Gemäß der DSGVO hat der Nutzer das Recht auf Zugang, Berichtigung, Löschung und Widerspruch."
+                },
+                "hypertextLinks": {
+                    "title": "Hyperlinks",
+                    "p1": "Die Website kann Links zu anderen Websites enthalten. Die Makiti Group kann nicht für den Inhalt, die Datenschutzerklärung oder die Praktiken dieser Websites Dritter haftbar gemacht werden."
+                },
+                "termsAndConditionsModification": {
+                    "title": "Änderung der ANB",
+                    "p1": "Die Makiti Gruppe behält sich das Recht vor, die vorliegenden ANB jederzeit zu ändern. Der Nutzer wird gebeten, diese regelmäßig zu konsultieren."
+                },
+                "applicableLawAndJuridiction": {
+                    "title": "Anwendbares Recht und Gerichtsbarkeit",
+                    "p1": "Die vorliegenden ANB unterliegen französischem Recht. Im Falle von Streitigkeiten sind die zuständigen Gerichte in Paris zuständig, sofern nicht zwingend etwas anderes bestimmt ist."
+                }
+            }
+        },
+        "privacyPolicy": {
+            "title": "Datenschutzerklärung der Makiti Group",
+            "sections": {
+                "introduction": {
+                    "title": "Einleitung",
+                    "p1": "Bei der <bold>Makiti Gruppe</bold>, hat der Schutz personenbezogener Daten oberste Priorität. Diese Datenschutzerklärung beschreibt, wie wir personenbezogene Daten von Nutzern, Partnern, Kunden und Mitarbeitern erheben, verarbeiten, speichern und schützen, wenn diese unsere digitalen Dienste und IT-Outsourcing-Dienstleistungen in Anspruch nehmen.",
+                    "p2": "Die Makiti Group handelt in Übereinstimmung mit :",
+                    "ul": [
+                        "der <bold>Datenschutz-Grundverordnung (DSGVO)</bold> der Europäischen Union;",
+                        "dem <bold>geänderten französischen Datenschutzgesetz</bold> vom 6. Januar 1978;",
+                        "und den in den Ländern, in denen die Gruppe tätig ist (insbesondere Kamerun und Nigeria), geltenden Best Practices."
+                    ]
+                },
+                "personalDataCollected": {
+                    "title": "Erfasste",
+                    "p1": "personenbezogene Daten Die Makiti Gruppe erfasst verschiedene Kategorien von Daten, darunter :",
+                    "ul": [
+                        "<bold>Identifikationsdaten :</bold> Nachname, Vorname, E-Mail-Adresse, Telefonnummer, Postanschrift.",
+                        "<bold>Berufliche Daten :</bold> Berufsbezeichnung, Name des Unternehmens, Tätigkeitsbereich.",
+                        "<bold>Technische Daten :</bold> IP-Adresse, Browsertyp, Anmeldedaten, Betriebssystem.",
+                        "<bold>Nutzungsdaten :</bold> Browserverlauf, Präferenzen, Kommentare.",
+                        "<bold>Finanzdaten :</bold> Zahlungsinformationen, Rechnungen, ausgenommen sensible Bankdaten."
+                    ]
+                },
+                "collectionMethod": {
+                    "title": "Erhebungsmethoden",
+                    "p1": "Die Daten werden über folgende Kanäle erhoben",
+                    "ul": [
+                        "Online-Formulare auf unserer Website <link1>www.makiti-group.com</link1>",
+                        "Kommunikation per E-Mail, Telefon oder Chat    ",
+                        "Geschäftlicher Austausch (Verträge, Angebote, Besprechungen)",
+                        "Auf unseren Plattformen verwendete Cookies und Tracking-Tools"
+                    ]
+                },
+                "processingPurposes": {
+                    "title": "Zwecke der Verarbeitung",
+                    "p1": "Personenbezogene Daten werden für folgende Zwecke verwendet:",
+                    "ul": [
+                        "Verwaltung von Kontakt-, Vorführungs- oder Partnerschaftsanfragen",
+                        "Bereitstellung unserer technischen, kommerziellen oder Beratungsdienstleistungen",
+                        "Überwachung von Projekten, Bereitstellung von Kundensupport und technischer Unterstützung",
+                        "Verbesserung der Qualität unserer Dienstleistungen und der Benutzererfahrung",
+                        "Einhaltung unserer gesetzlichen Verpflichtungen (steuerlich, sozial, vertraglich)"
+                    ]
+                },
+                "dataSharing": {
+                    "title": "Weitergabe von Daten",
+                    "p1": "Die Makiti Gruppe verpflichtet sich, Ihre Daten niemals zu verkaufen. Sie dürfen nur weitergegeben werden an :",
+                    "ul": [
+                        "Unsere technischen Dienstleister (Hosting-Anbieter, Entwickler, Tools von Drittanbietern) unter Einhaltung von Vertraulichkeitsklauseln",
+                        "Unsere Niederlassungen oder Tochtergesellschaften, streng im Rahmen des ursprünglichen Zwecks",
+                        "Verwaltungs- oder Justizbehörden, auf rechtliche Anfrage"
+                    ]
+                },
+                "retentionPeriod": {
+                    "title": "Aufbewahrungsfrist",
+                    "p1": "Die Daten werden für den Zeitraum aufbewahrt, der zur Erreichung der oben genannten Zwecke unbedingt erforderlich ist, zuzüglich der gesetzlichen Fristen für kommerzielle oder steuerliche Zwecke.",
+                    "p2": "Nach Ablauf dieser Fristen werden sie sicher gelöscht oder anonymisiert."
+                },
+                "dataSecurity": {
+                    "title": "Datensicherheit",
+                    "p1": "Die Makiti Group ergreift strenge technische und organisatorische Maßnahmen",
+                    "ul": [
+                        "Sichere Authentifizierung und Zugriffskontrolle",
+                        "Verschlüsselung sensibler Daten",
+                        "Einbruchserkennungssysteme",
+                        "Regelmäßige Sicherheitsaudits"
+                    ]
+                },
+                "yourRights": {
+                    "title": "Ihre Rechte",
+                    "p1": "Gemäß der DSGVO haben Sie folgende Rechte :",
+                    "ul": [
+                        "Recht auf Zugang zu Ihren Daten",
+                        "Recht auf Berichtigung oder Löschung",
+                        "Recht auf Widerspruch oder Einschränkung der Verarbeitung",
+                        "Recht auf Datenübertragbarkeit",
+                        "Recht auf jederzeitigen Widerruf Ihrer Einwilligung"
+                    ],
+                    "p2": "Um Ihre Rechte auszuüben, wenden Sie sich bitte an : <bold><email>contact@makiti-group.com</email></bold>"
+                },
+                "cookies": {
+                    "title": "Cookies",
+                    "p1": "Cookies können verwendet werden, um :",
+                    "ul": [
+                        "Ihnen das Surfen zu erleichtern",
+                        "Die Besucherzahlen der Website zu analysieren",
+                        "Inhalte und Angebote zu personalisieren"
+                    ],
+                    "p2": "Sie können Ihre Einstellungen in Ihren Browsereinstellungen oder über unser Einwilligungsbanner ändern."
+                },
+                "policyChanges": {
+                    "title": "Änderungen der Richtlinie",
+                    "p1": "Diese Richtlinie kann aktualisiert werden, um rechtlichen, technischen oder organisatorischen Änderungen Rechnung zu tragen. Die aktuelle Version ist jederzeit auf unserer Website verfügbar.",
+                    "p2": "<bold>Letzte Aktualisierung: 1. August 2025</bold>"
+                }
+            }
+        },
+        "legalNotice": {
+            "title": "Rechtliche Hinweise – Makiti Gruppe",
+            "sections": {
+                "websitePublisher": {
+                    "title": "Herausgeber der Website",
+                    "p1": "Diese Website wird von der <bold>Makiti Group</bold>, herausgegeben, einer Gesellschaft mit beschränkter Haftung mit einem Kapital von 10.000 Euro, die in Frankreich registriert ist und ihren Hauptsitz in <bold>Paris</bold> hat, mit <bold>Niederlassungen in Yaoundé (Kamerun)</bold> und <bold>Lagos (Nigeria)</bold>.",
+                    "p2": "Die Makiti Gruppe ist auf <bold>strategisches IT-Outsourcing</bold> spezialisiert und bietet Dienstleistungen in den Bereichen Softwareentwicklung, Outsourcing, UX/UI-Design, digitale Beratung und technischer Support an.",
+                    "p3": "<bold>Verantwortlicher Herausgeber :</bold> Moati Patou Mache Marie Josee",
+                    "p4": "<bold>SIRET :</bold> 987 482 908 00017",
+                    "p5": "<bold>Umsatzsteuer-Identifikationsnummer :</bold> FR60987482908",
+                    "p6": "<bold>Hauptsitz :</bold> Paris"
+                },
+                "makitiGroup": {
+                    "title": "Makiti Gruppe",
+                    "p1": "Vollständige Adresse in Paris : CS 48756 75380 - CEDEX 08 58 RUE DE MONCEAU 75008 PARIS.",
+                    "p2": "E-Mail-Adresse : <email>contact@makiti-group.com</email>"
+                },
+                "hosting": {
+                    "title": "Hosting",
+                    "p1": "Die Website wird gehostet von: <bold>Contabo GmbH</bold>",
+                    "p2": "Name des Hosting-Anbieters Adresse : <bold>Aschauer Straße 32a, 81549 München, Allemagne</bold>",
+                    "p3": "Telefon : <phone>+49 89 3564717-70</phone>",
+                    "p4": "E-Mail : <email>support@contabo.de</email>"
+                },
+                "websitePurpose": {
+                    "title": "Hosting-Anbieters",
+                    "p1": "Zweck der Website <link1>www.makiti-group.com</link1> besteht darin, die Dienstleistungen und Fachkenntnisse der Makiti Gruppe vorzustellen, insbesondere in den folgenden Bereichen :",
+                    "ul": [
+                        "Entwicklung maßgeschneiderter Software",
+                        "Outsourcing von IT-Ressourcen",
+                        "UX/UI-Design",
+                        "Anwendungswartung",
+                        "Beratung zur Digitalisierung für Unternehmen und Start-ups"
+                    ]
+                },
+                "intellectualProperty": {
+                    "title": "Geistiges Eigentum",
+                    "p1": "Alle Inhalte dieser Website (Texte, Bilder, Videos, Logos, Quellcodes, Architektur) sind, sofern nicht anders angegeben, ausschließliches Eigentum der Makiti Group oder ihrer Partner.",
+                    "p2": "Jede vollständige oder teilweise Vervielfältigung, Darstellung oder Anpassung ohne vorherige schriftliche Genehmigung der Makiti Group ist gemäß dem Gesetz über geistiges Eigentum und den geltenden internationalen Übereinkommen verboten."
+                },
+                "dataProtection": {
+                    "title": "Schutz personenbezogener Daten",
+                    "p1": "Die Makiti Gruppe verpflichtet sich, die Privatsphäre der Nutzer zu schützen und die <bold>Datenschutz-Grundverordnung (DSGVO)</bold> sowie die in ihren verschiedenen Tätigkeitsbereichen geltenden lokalen Vorschriften einzuhalten."
+                },
+                "collectedData": {
+                    "title": "Erfasste Daten",
+                    "p1": "Zu den Daten, die erfasst werden können, gehören: Name, Vorname, E-Mail-Adresse, Telefonnummer, IP-Adresse, Browsing-Präferenzen, Formulardaten usw."
+                },
+                "processingPurposes": {
+                    "title": "Zweck der Verarbeitung",
+                    "p1": "Die Daten werden zu folgenden Zwecken verarbeitet :",
+                    "ul": [
+                        "Beantwortung von Kontaktanfragen",
+                        "Verfolgung von Interessenten und Kundenprojekten",
+                        "Bereitstellung digitaler Dienste",
+                        "Analyse des Datenverkehrs und der Nutzung der Website",
+                        "Verwaltung der Geschäftsbeziehung"
+                    ]
+                },
+                "retentionPeriod": {
+                    "title": "Aufbewahrungsdauer",
+                    "p1": "Die Daten werden so lange aufbewahrt, wie es für die Erfüllung der Zwecke, für die sie erhoben wurden, erforderlich ist, oder gemäß den gesetzlichen Verpflichtungen."
+                },
+                "userRights": {
+                    "title": "Rechte der Nutzer",
+                    "p1": "Gemäß der DSGVO haben Sie folgende Rechte: Auskunft, Berichtigung, Löschung, Widerspruch, Einschränkung, Übertragbarkeit. Um Ihre Rechte auszuüben, können Sie uns unter <bold><email>contact@makiti-group.com</email></bold> oder an die Postanschrift des Hauptsitzes schreiben."
+                },
+                "dataTransfer": {
+                    "title": "Datenübermittlung außerhalb der EU",
+                    "p1": "Die Makiti Gruppe kann Daten an ihre Niederlassungen außerhalb der Europäischen Union, insbesondere in Kamerun und Nigeria, übermitteln. Diese Übermittlungen unterliegen Standardvertragsklauseln oder anderen von der Europäischen Kommission anerkannten Mechanismen."
+                },
+                "cookies": {
+                    "title": "Cookies",
+                    "p1": "Die Website kann Cookies zu folgenden Zwecken setzen :",
+                    "ul": [
+                        "Technische Zwecke (Funktionsweise der Website)",
+                        "Statistische Zwecke (Analyse des Datenverkehrs)",
+                        "Personalisierung der Benutzererfahrung"
+                    ],
+                    "p2": "Der Benutzer kann seinen Browser jederzeit so konfigurieren, dass Cookies abgelehnt oder verwaltet werden. Weitere Informationen finden Sie in der Datenschutzerklärung der Website."
+                },
+                "liability": {
+                    "title": "Haftung",
+                    "p1": "Die Makiti Gruppe ist bestrebt, aktuelle, genaue und zuverlässige Informationen bereitzustellen. Es wird jedoch keine Gewähr für die Vollständigkeit oder Richtigkeit der veröffentlichten Inhalte übernommen.",
+                    "p2": "Die Makiti Gruppe lehnt jede Haftung ab im Falle von :",
+                    "ul": [
+                        "Fehlfunktionen der Website",
+                        "Missbrauch der Inhalte",
+                        "unbefugtem Zugriff auf Daten"
+                    ]
+                },
+                "applicableLawAndJuridiction": {
+                    "title": "Anwendbares Recht und zuständige Gerichtsbarkeit",
+                    "p1": "Die vorliegenden rechtlichen Hinweise unterliegen französischem Recht. Im Falle von Streitigkeiten sind die zuständigen Gerichte in Paris zuständig, sofern nicht zwingend etwas anderes vorgeschrieben ist."
+                },
+                "contact": {
+                    "title": "Contact",
+                    "p1": "Bei Fragen zu den vorliegenden rechtlichen Hinweisen oder zu Ihren personenbezogenen Daten wenden Sie sich bitte an : <email>contact@makiti-group.com</email>",
+                    "p2": "Firmensitz : CS 48756 75380 - CEDEX 08 58 RUE DE MONCEAU 75008 PARIS"
+                }
+            }
         }
     },
     "common": {

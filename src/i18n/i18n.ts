@@ -24,7 +24,7 @@ i18n.use(Backend)
 	.use(LanguageDetector) // Detect user language
 	.use(initReactI18next) // Pass the i18n instance to react-i18next.
 	.init({
-		fallbackLng: 'en', // Default Fallback language if translation is missing
+		fallbackLng: 'fr', // Default Fallback language if translation is missing
 		debug: true,
 		interpolation: {
 			escapeValue: false, // React already escapes values

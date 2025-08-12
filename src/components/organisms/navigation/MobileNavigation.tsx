@@ -6,6 +6,8 @@ import makitiLogoWhite from '@/assets/images/logo_makiti/Makiti Logo White.png'
 import Image from '@rasenganjs/image'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
+import { Link } from 'rasengan'
+import { useTranslation } from 'react-i18next'
 
 // Menu animations
 const menuVariants = {
@@ -33,6 +35,7 @@ const menuVariants = {
 
 const MobileNavigation = () => {
 	const { isOpened, setIsOpened, navlinks } = useMenuContext()
+	const { t } = useTranslation()
 	return (
 		<div className={`relative`}>
 			{/* Animated Menu */}
@@ -117,17 +120,17 @@ const MobileNavigation = () => {
 						<div>
 							<Separator className="w-full bg-outline" />
 							<div className="w-full text-outline-variant text-sm  sm:text-base flex flex-col gap-6 sm:gap-2">
-								<p>© 2025 Makiti Group. All rights reserved.</p>
+								<p>{t('footer.lowerSection.copyright', { year: '2025' })}</p>
 								<div className="flex items-center gap-5">
-									<a href="#" className="hover:text-white">
-										Privacy Policy
-									</a>
-									<a href="#" className="hover:text-white">
-										Terms of Service
-									</a>
-									<a href="#" className="hover:text-white">
-										Legal Notice
-									</a>
+									<Link to="/privacy-policy" className="hover:text-white">
+										{t('footer.lowerSection.nav.privacyPolicy')}
+									</Link>
+									<Link to="/terms-and-conditions" className="hover:text-white">
+										{t('footer.lowerSection.nav.termsOfService')}
+									</Link>
+									<Link to="/legal-notice" className="hover:text-white">
+										{t('footer.lowerSection.nav.legalNotice')}
+									</Link>
 								</div>
 							</div>
 						</div>
