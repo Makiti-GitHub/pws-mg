@@ -35,7 +35,7 @@ const menuVariants = {
 
 const MobileNavigation = () => {
 	const { isOpened, setIsOpened, navlinks } = useMenuContext()
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	return (
 		<div className={`relative`}>
 			{/* Animated Menu */}
@@ -122,13 +122,25 @@ const MobileNavigation = () => {
 							<div className="w-full text-outline-variant text-sm  sm:text-base flex flex-col gap-6 sm:gap-2">
 								<p>{t('footer.lowerSection.copyright', { year: '2025' })}</p>
 								<div className="flex items-center gap-5">
-									<Link to="/privacy-policy" className="hover:text-white">
+									<Link
+										onClick={() => setIsOpened(false)}
+										to={`${i18n.language}/privacy-policy`}
+										className="hover:text-white"
+									>
 										{t('footer.lowerSection.nav.privacyPolicy')}
 									</Link>
-									<Link to="/terms-and-conditions" className="hover:text-white">
+									<Link
+										onClick={() => setIsOpened(false)}
+										to={`${i18n.language}/terms-and-conditions`}
+										className="hover:text-white"
+									>
 										{t('footer.lowerSection.nav.termsOfService')}
 									</Link>
-									<Link to="/legal-notice" className="hover:text-white">
+									<Link
+										onClick={() => setIsOpened(false)}
+										to={`${i18n.language}/legal-notice`}
+										className="hover:text-white"
+									>
 										{t('footer.lowerSection.nav.legalNotice')}
 									</Link>
 								</div>

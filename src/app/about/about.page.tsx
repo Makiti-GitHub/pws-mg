@@ -13,7 +13,7 @@ import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
 
 const About: PageComponent = () => {
 	const navigate = useNavigate()
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const { setCursorVariant } = useFloatingCursor()
 
 	return (
@@ -21,7 +21,7 @@ const About: PageComponent = () => {
 			<div className="space-y-8 relative">
 				<Button
 					variant={'ghost'}
-					onClick={() => navigate('/en/')}
+					onClick={() => navigate(`/${i18n.language}/en/`)}
 					onMouseEnter={() => setCursorVariant('button')}
 					onMouseLeave={() => setCursorVariant('default')}
 					className="xl:absolute xl:left-0 xl:top-0 text-secondary py-2 sm:!py-3 px-3 sm:!px-5!h-max hover:cursor-pointer bg-white box_shadow_products_card !font-seravek_medium !text-base"
@@ -56,11 +56,21 @@ const About: PageComponent = () => {
 
 							<p>
 								{t('pages.about.sections.growthAndAchievements.p2')}{' '}
-								<a href="#" className="underline text-primary">
+								<a
+									href="https://agency.matoa.io"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="underline text-primary"
+								>
 									<span>MATOA</span>
 								</a>{' '}
 								{t('and')}{' '}
-								<a href="#" className="underline text-primary">
+								<a
+									href="https://lyssafi.com"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="underline text-primary"
+								>
 									<span>LYSSAFI</span>
 								</a>
 								.

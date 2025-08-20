@@ -10,6 +10,7 @@ import {
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'rasengan'
 // import i18n, { t } from 'i18next'
 
 interface LanguageButtonProps {
@@ -20,8 +21,29 @@ interface LanguageButtonProps {
 const LanguageButton: FC<LanguageButtonProps> = ({ isScrolled }) => {
 	const intl = useIntlContext()
 	const { i18n, t } = useTranslation()
+	const navigate = useNavigate()
 
-	console.log(i18n.resolvedLanguage)
+	const changeLanguageAndPath = (lng: string) => {
+		intl.changeLanguage(lng)
+
+		// Update the URL path
+		const currentPath = location.pathname
+		const localePattern = /^\/([a-z]{2}(-[A-Z]{2})?)(\/.*)?$/
+		const match = currentPath.match(localePattern)
+
+		let newPath
+		if (match) {
+			// Replace existing locale
+			const pathAfterLocale = match[3] || ''
+			newPath = `/${lng}${pathAfterLocale}`
+		} else {
+			// Add locale to path
+			const pathWithoutLeadingSlash = currentPath === '/' ? '' : currentPath
+			newPath = `/${lng}${pathWithoutLeadingSlash}`
+		}
+
+		navigate(newPath)
+	}
 
 	return (
 		<DropdownMenu>
@@ -63,7 +85,7 @@ const LanguageButton: FC<LanguageButtonProps> = ({ isScrolled }) => {
 						className={`flex w-full justify-start p-2 gap-2 ${
 							i18n.resolvedLanguage === lng ? 'font-seravek_bold' : ''
 						} rounded-sm hover:cursor-pointer focus-visible:bg-transparent hover:bg-black`}
-						onCheckedChange={() => intl.changeLanguage(lng)}
+						onCheckedChange={() => changeLanguageAndPath(lng)}
 						key={index}
 					>
 						<img className="ml-6 size-6" src={intl.getLangIcon(lng)} alt={lng} />

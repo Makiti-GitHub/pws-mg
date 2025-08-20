@@ -8,18 +8,26 @@ import { PageComponent, useNavigate } from 'rasengan'
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const filterOptions: { label: string; value: ProjectCategoryType }[] = [
-	{ label: 'All Projects', value: 'all' },
-	{ label: 'Web Apps', value: 'web_app' },
-	{ label: 'Mobile Apps', value: 'mobile_app' },
-	{ label: 'E-Commerce', value: 'e_commerce' },
-	{ label: 'SaaS', value: 'saas' },
-	{ label: 'Branding', value: 'branding' },
+// Filters images
+import globeIcon from '@/assets/icons/Filter icons/streamline-plump_web.svg'
+import applicationWebIcon from '@/assets/icons/Filter icons/carbon_application-web.svg'
+import cartIcon from '@/assets/icons/Filter icons/iconsax-shopping-cart.svg'
+import mobileIcon from '@/assets/icons/Filter icons/bytesize_mobile.svg'
+import cloudIcon from '@/assets/icons/Filter icons/basil_cloud-outline.svg'
+import Image from '@rasenganjs/image'
+
+const filterOptions: { label: string; value: ProjectCategoryType; icon: string }[] = [
+	{ label: 'All Projects', value: 'all', icon: globeIcon },
+	{ label: 'Web Apps', value: 'web_app', icon: applicationWebIcon },
+	{ label: 'Mobile Apps', value: 'mobile_app', icon: mobileIcon },
+	{ label: 'E-Commerce', value: 'e_commerce', icon: cartIcon },
+	{ label: 'SaaS', value: 'saas', icon: cloudIcon },
+	{ label: 'Branding', value: 'branding', icon: globeIcon },
 ]
 
 const Portfolio: PageComponent = () => {
 	const navigate = useNavigate()
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const { setCursorVariant } = useFloatingCursor()
 
 	const [selectedFilter, setSelectedFilter] = useState<ProjectCategoryType>('all')
@@ -40,7 +48,7 @@ const Portfolio: PageComponent = () => {
 			<div className="space-y-8 relative">
 				<Button
 					variant={'ghost'}
-					onClick={() => navigate('/')}
+					onClick={() => navigate(`/${i18n.language}/`)}
 					onMouseEnter={() => setCursorVariant('button')}
 					onMouseLeave={() => setCursorVariant('default')}
 					className="xl:absolute xl:left-0 xl:top-0 text-secondary !py-3 !px-5 !h-max hover:cursor-pointer bg-white box_shadow_products_card !font-seravek_medium !text-base"
@@ -68,9 +76,18 @@ const Portfolio: PageComponent = () => {
 									selectedFilter === item.value
 										? 'bg-primary text-secondary'
 										: 'bg-surface-container text-on-surface-variant hover:bg-outline-variant'
-								} px-3 py-2 rounded-xl font-seravek_medium text-sm hover:cursor-pointer`}
+								} px-3 py-2 rounded-xl font-seravek_medium text-sm hover:cursor-pointer flex items-center gap-1`}
 							>
-								{t(`pages.portfolio.filters.${item.value}`)}
+								<span className="size-6">
+									<Image
+										src={item.icon}
+										alt={item.label}
+										// width={'100%'}
+										// height={'100%'}
+										className="size-full aspect-auto object-contain pointer-events-none select-none"
+									/>
+								</span>
+								<span>{t(`pages.portfolio.filters.${item.value}`)}</span>
 							</span>
 						))}
 					</div>

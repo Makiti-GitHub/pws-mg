@@ -15,7 +15,7 @@ import { Link } from 'rasengan'
 import { useTranslation } from 'react-i18next'
 
 const TestimonialSection = () => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const { setCursorVariant } = useFloatingCursor()
 	return (
 		<section className="flex flex-col gap-2 sm:gap-16 px-4 sm:px-8 md:px-[80px] lg:px-[120px] w-screen py-16">
@@ -33,10 +33,10 @@ const TestimonialSection = () => {
 							loop: true,
 						}}
 					>
-						<CarouselContent className="py-3">
+						<CarouselContent className="py-3 -ml-2 pr-2">
 							{testimonialsMock.map((testimonial, index) => (
 								<CarouselItem
-									className="basis-full lg:basis-1/2 xl:basis-1/3"
+									className={`basis-full lg:basis-1/2 xl:basis-1/3`}
 									key={`testimonial-${index}`}
 								>
 									<TestimonialCard testimonial={testimonial} />
@@ -70,7 +70,7 @@ const TestimonialSection = () => {
 				title={t('pages.home.sections.whatOurClientsSays.banner.title')}
 				desc={t('pages.home.sections.whatOurClientsSays.banner.subtitle')}
 			>
-				<Link to="#start-project">
+				<Link to={`/${i18n.language}/#start-project`}>
 					<MotionIconButton
 						onMouseEnter={() => setCursorVariant('button')}
 						onMouseLeave={() => setCursorVariant('default')}

@@ -254,6 +254,38 @@
                 "ourLiveProducts": {
                     "title": "Our Live Products",
                     "subtitle": "Explore our successfully delivered and deployed applications currently serving real users and businesses worldwide.",
+                    "products": {
+                        "product1": {
+                            "title": "Inventory & Stock Management",
+                            "category": "Mobile App for Business",
+                            "description": "Track inventory, manage orders, and monitor stock levels with this user-friendly mobile solution."
+                        },
+                        "product2": {
+                            "title": "Ticket Management System",
+                            "category": "Multi Vendor Administration Platform",
+                            "description": "Web platform for agencies to manage trips, vendors, and bookings with centralized control."
+                        },
+                        "product3": {
+                            "title": "Inventory & Stock Management - VendorAdmin",
+                            "category": "Vendor Administration Platform",
+                            "description": "Vendor-focused platform for real-time stock tracking, order management, and inventory insights."
+                        },
+                        "product4": {
+                            "title": "Ticket Management System",
+                            "category": "Mobile App for End Users",
+                            "description": "Mobile app for booking, managing, and tracking bus trips with real-time updates."
+                        },
+                        "product5": {
+                            "title": "Payment Gateway System",
+                            "category": "Multi Vendor Platform",
+                            "description": "Universal payment platform enabling secure, multi-vendor transactions across all web interfaces."
+                        },
+                        "product6": {
+                            "title": "Payment Gateway System",
+                            "category": "Mobile App for End Users",
+                            "description": "Mobile app for trip payments, scheduling, and seat tracking with a streamlined interface."
+                        }
+                    },
                     "banner": {
                         "title": "Empower Your Business with Our Products",
                         "subtitle": "Experience the same level of excellence and results. Let’s discuss how we can help you transform your business through strategic IT Outsourcing.",
@@ -928,6 +960,7 @@
     },
     "common": {
         "backToHomeCta": "Back to home",
+        "backToPortfolioCta": "Back to portfolio",
         "values": {
             "value1": {
                 "title": "Agile Approach",

@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input'
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { t } from 'i18next'
 import { FullFormData } from '../FormSchema'
+import { PhoneInput } from '@/components/atoms/input/phone-input'
 
 const PersonalInfoStep: React.FC<{ form: UseFormReturn<FullFormData>; stepIndex: number }> = ({
 	form: personalInfoForm,
@@ -101,12 +102,12 @@ const PersonalInfoStep: React.FC<{ form: UseFormReturn<FullFormData>; stepIndex:
 								)}
 							</FormLabel>
 							<FormControl>
-								<Input
+								<PhoneInput
 									placeholder={t(
 										'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.placeholder',
 									)}
 									{...field}
-									className="bg-surface-container px-3 py-2.5"
+									className="bg-surface-container rounded-lg w-full"
 								/>
 							</FormControl>
 							<FormMessage />

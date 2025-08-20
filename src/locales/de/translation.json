@@ -254,6 +254,38 @@
                 "ourLiveProducts": {
                     "title": "Unsere Live-Produkte",
                     "subtitle": "Entdecken Sie unsere erfolgreich gelieferten und eingesetzten Anwendungen, die derzeit echte Benutzer und Unternehmen weltweit bedienen.",
+                    "producte": {
+                        "product1": {
+                            "title": "Inventar- und Lagerverwaltung",
+                            "category": "Mobile App für Unternehmen",
+                            "description": "Verfolgen Sie das Inventar, verwalten Sie Bestellungen und überwachen Sie die Lagerbestände mit dieser benutzerfreundlichen mobilen Lösung."
+                        },
+                        "product2": {
+                            "title": "Ticket-Verwaltungssystem",
+                            "category": "Multi-Vendor-Verwaltungsplattform",
+                            "description": "Web-Plattform für Agenturen zur Verwaltung von Reisen, Verkäufern und Buchungen mit zentraler Kontrolle."
+                        },
+                        "product3": {
+                            "title": "Inventar- und Lagerverwaltung - VendorAdmin",
+                            "category": "Verkäufer-Verwaltungsplattform",
+                            "description": "Verkäufer-zentrierte Plattform für die Echtzeit-Überwachung von Lagerbeständen, Bestellverwaltung und Inventar-Informationen."
+                        },
+                        "product4": {
+                            "title": "Ticket-Verwaltungssystem",
+                            "category": "Mobile App für Endnutzer",
+                            "description": "Mobile App für die Buchung, Verwaltung und Überwachung von Busreisen mit Echtzeit-Updates."
+                        },
+                        "product5": {
+                            "title": "Zahlungsgateway-System",
+                            "category": "Multi-Vendor-Plattform",
+                            "description": "Universelle Zahlungsplattform für sichere, multi-vendor-Transaktionen auf allen Web-Schnittstellen."
+                        },
+                        "product6": {
+                            "title": "Zahlungsgateway-System",
+                            "category": "Mobile App für Endnutzer",
+                            "description": "Mobile App für Reise-Zahlungen, Planung und Sitz-Überwachung mit einer gestreamten Oberfläche."
+                        }
+                    },
                     "banner": {
                         "title": "Stärken Sie Ihr Unternehmen mit unseren Produkten",
                         "subtitle": "Erleben Sie das gleiche Niveau an Exzellenz und Ergebnissen. Lassen Sie uns besprechen, wie wir Ihnen bei der Transformation Ihres Unternehmens durch strategisches IT-Outsourcing helfen können.",
@@ -928,6 +960,7 @@
     },
     "common": {
         "backToHomeCta": "Zurück zur Startseite",
+        "backToPortfolioCta": "Zuruck zum Portfolio",
         "values": {
             "value1": {
                 "title": "Agile Vorgehensweise",

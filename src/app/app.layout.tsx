@@ -6,6 +6,7 @@ import MobileNavigation from '@/components/organisms/navigation/MobileNavigation
 import useMouse from '@/hooks/useMouse'
 import { useMenuContext } from '@/hooks/guard/ContextGuard'
 import FloatingCursor from '@/components/molecules/cursors/FloatingCursor'
+import { ScrollRestoration } from '@/components/molecules/ScrollRestoration'
 
 const AppLayout: LayoutComponent = () => {
 	const { handleMouseLeave, handleMouseMove, cursorPosition, isHovering } = useMouse()
@@ -19,12 +20,11 @@ const AppLayout: LayoutComponent = () => {
 				className={`relative ${isOpened ? 'max-h-screen overflow-hidden' : ''}`}
 			>
 				{/* === Navigation  === */}
-
 				<MobileNavigation />
 				<NavBar />
-
+				{/* === Navigation  === */}
 				<Outlet />
-
+				<ScrollRestoration />
 				<Footer />
 
 				{isHovering && (

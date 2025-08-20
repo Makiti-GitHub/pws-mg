@@ -7,14 +7,33 @@ import circleDotLogo from '@/assets/images/nuage_logos/Container-20.svg'
 import Image from '@rasenganjs/image'
 import { useTranslation } from 'react-i18next'
 import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
+import useIsResponsive from '@/hooks/useIsResponsive'
+
+import mask1 from '@/assets/images/nuage_logos/mask1.svg'
+import mask2 from '@/assets/images/nuage_logos/mask2.svg'
 
 const OurTechnologyStackSection = () => {
 	const { t } = useTranslation()
+	const isDesktop = useIsResponsive({ width: 1024 })
+	const isTablet = useIsResponsive({ width: 768 })
+	const isMobile = useIsResponsive({ width: 640 })
 	const { setCursorVariant } = useFloatingCursor()
 
 	return (
-		<section className="px-8 md:px-[80px] lg:px-[120px] w-screen flex flex-col gap-[24px] bg-secondary py-5">
-			<div className="space-y-8">
+		<section className="relative px-8 md:px-[80px] lg:px-[120px] w-screen flex flex-col gap-[24px] bg-secondary py-5">
+			<img
+				className="absolute -left-1/2 translate-x-1/5 size-full opacity-10"
+				src={mask1}
+				alt="mask1"
+			/>
+
+			<img
+				className="absolute right-0 translate-x-1/4 size-full opacity-10"
+				src={mask2}
+				alt="mask2"
+			/>
+
+			<div className="space-y-8 z-20">
 				<div className="space-y-8">
 					<div className="text-center tracking-normal space-y-3 px-2">
 						<h2 className="font-seravek_bold text-primary text-3xl sm:text-5xl uppercase">
@@ -34,7 +53,8 @@ const OurTechnologyStackSection = () => {
 									alt: image.alt,
 									title: image.title,
 								}))}
-								radius={360}
+								imageSize={!isDesktop ? 80 : !isTablet ? 65 : 50}
+								radius={!isDesktop ? 360 : !isTablet ? 300 : !isMobile ? 240 : 220}
 								duration={25}
 								direction="clockwise"
 							/>
@@ -46,19 +66,20 @@ const OurTechnologyStackSection = () => {
 										alt: image.alt,
 										title: image.title,
 									}))}
-									radius={240}
+									imageSize={!isDesktop ? 80 : !isTablet ? 65 : 50}
+									radius={!isDesktop ? 240 : !isTablet ? 200 : 150}
 									duration={18}
 									direction="counterclockwise"
 								/>
 							</div>
-							<div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
-								<div className="relative group">
+							<div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-0 sm:gap-1 md:gap-4">
+								<div className="relative group scale-[55%] sm:scale-[65%] md:scale-75 lg:scale-90">
 									<Image
 										src={awsLogo}
 										alt={'AWS logo'}
 										width={'100%'}
 										height={'100%'}
-										className="size-full scale-90 object-contain duration-300"
+										className="size-full object-contain duration-300"
 									/>
 									<div className="absolute z-20 -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 										<span className="bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap">
@@ -66,13 +87,13 @@ const OurTechnologyStackSection = () => {
 										</span>
 									</div>
 								</div>
-								<div className="relative group">
+								<div className="relative scale-[55%] sm:scale-[65%] md:scale-75 lg:scale-90 group">
 									<Image
 										src={office365Logo}
 										alt={'Office 365 logo'}
 										width={'100%'}
 										height={'100%'}
-										className="size-full scale-90 object-contain duration-300"
+										className="size-full  object-contain duration-300"
 									/>
 									<div className="absolute z-20 -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 										<span className="bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap">
@@ -80,7 +101,7 @@ const OurTechnologyStackSection = () => {
 										</span>
 									</div>
 								</div>
-								<div className="relative group">
+								<div className="relative group scale-[55%] sm:scale-[80%] lg:scale-100">
 									<Image
 										src={circleDotLogo}
 										alt={'Ionic dot logo'}
@@ -104,9 +125,9 @@ const OurTechnologyStackSection = () => {
 							key={`tech-${index}`}
 							onMouseEnter={() => setCursorVariant('text')}
 							onMouseLeave={() => setCursorVariant('default')}
-							className="rounded-[20px] border border-primary py-3 sm:py-7 px-2 flex flex-col gap-2 sm:gap-4"
+							className="rounded-[20px] w-full max-w-[400px] mx-auto md:max-w-none md:min-h-[300px] border border-primary py-3 sm:py-7 px-2 flex flex-col gap-2 sm:gap-4"
 						>
-							<div className="w-full px-4">
+							<div className="w-full">
 								<p className="text-center break-words uppercase text-2xl sm:text-[32px] font-seravek_bold text-primary">
 									{t(
 										`pages.home.sections.ourTechnologyStack.categories.${tech.category}`,

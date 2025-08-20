@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next'
 import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
 
 const TalentProfileSection = () => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const { setCursorVariant } = useFloatingCursor()
 
 	const [selectedTalent, setSelectedTalent] = useState<(typeof talentProfilesMock)[number]>(
@@ -31,7 +31,7 @@ const TalentProfileSection = () => {
 					<aside className="space-y-5 sm:space-y-[26px] col-span-6 lg:col-span-4">
 						{talentProfilesMock.map((profile, index) => (
 							<Link
-								to={`#talent`}
+								to={`/${i18n.language}/#talent`}
 								key={`talent-profile-${index}`}
 								onClick={() => setSelectedTalent(profile)}
 								onMouseEnter={() => setCursorVariant('button')}
@@ -150,7 +150,7 @@ const TalentProfileSection = () => {
 									</p>
 								</div>
 
-								<Link to="#start-project">
+								<Link to={`/${i18n.language}/#start-project`}>
 									<Button
 										variant="primary"
 										onMouseEnter={() => setCursorVariant('button')}

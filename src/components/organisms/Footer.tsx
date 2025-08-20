@@ -1,7 +1,7 @@
 // import { ArrowUpRightIcon } from 'lucide-react'
 // import { Button } from '../ui/button'
 import {
-	ArrowRightIcon,
+	// ArrowRightIcon,
 	AtSignIcon,
 	GlobeIcon,
 	HouseIcon,
@@ -28,9 +28,10 @@ import { Link } from 'rasengan'
 import { Fragment, useState } from 'react'
 import Image from '@rasenganjs/image'
 import { useTranslation } from 'react-i18next'
+import rightArrowIcon from '@/assets/icons/right_arrow.svg'
 
 const Footer = () => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const [currentLocation, setCurrentLocation] = useState<ILocation>(locationsMock[1])
 
 	return (
@@ -46,17 +47,20 @@ const Footer = () => {
 							</div>
 							<div className="flex gap-5 items-center">
 								{socialsMock.map((social, index) => (
-									<span className="size-6 rounded-xs" key={`social-${index}`}>
-										<a href={social.link} target="_blank">
+									<a href={social.link} target="_blank" rel="noopener noreferrer">
+										<span
+											className="w-6 h-auto bg-red-300"
+											key={`social-${index}`}
+										>
 											<Image
 												width={'100%'}
 												height={'100%'}
 												src={social.icon}
 												alt={social.label}
-												className="size-full object-contain aspect-auto"
+												className="w-6 h-full aspect-auto object-contain"
 											/>
-										</a>
-									</span>
+										</span>
+									</a>
 								))}
 							</div>
 						</div>
@@ -226,7 +230,16 @@ const Footer = () => {
 								/>
 								<Button className="bg-white text-secondary border border-white md:border-secondary h-max rounded-lg px-3 py-2">
 									<span className="sr-only">Subscribe</span>
-									<ArrowRightIcon className="w-4 h-3" />
+									{/* <ArrowRightIcon className="w-4 h-3" /> */}
+									<span className="w-4 h-3">
+										<Image
+											src={rightArrowIcon}
+											alt="right arrow icon"
+											width={'100%'}
+											height={'100%'}
+											className="size-full object-contain aspect-auto"
+										/>
+									</span>
 								</Button>
 							</div>
 						</div>
@@ -240,21 +253,30 @@ const Footer = () => {
 						</p>
 						<ul className="space-y-2.5">
 							<li>
-								<Link to={'/#services'} className="hover:text-white">
+								<Link
+									to={`/${i18n.language}/#services`}
+									className="hover:text-white"
+								>
 									{t(
 										'footer.upperSection.rightSection.services.options.itOutsourcing',
 									)}
 								</Link>
 							</li>
 							<li>
-								<Link to={'/#services'} className="hover:text-white">
+								<Link
+									to={`/${i18n.language}/#services`}
+									className="hover:text-white"
+								>
 									{t(
 										'footer.upperSection.rightSection.services.options.agileSoftwareDevelopment',
 									)}
 								</Link>
 							</li>
 							<li>
-								<Link to={'/#services'} className="hover:text-white">
+								<Link
+									to={`/${i18n.language}/#services`}
+									className="hover:text-white"
+								>
 									{t(
 										'footer.upperSection.rightSection.services.options.itTransformation',
 									)}
@@ -271,6 +293,7 @@ const Footer = () => {
 								<a
 									href="https://agency.matoa.io"
 									target="_blank"
+									rel="noopener noreferrer"
 									className="hover:text-white"
 								>
 									{t(
@@ -282,6 +305,7 @@ const Footer = () => {
 								<a
 									href="https://ism.cm"
 									target="_blank"
+									rel="noopener noreferrer"
 									className="hover:text-white"
 								>
 									{t(
@@ -293,6 +317,7 @@ const Footer = () => {
 								<a
 									href="https://lyssafi.com"
 									target="_blank"
+									rel="noopener noreferrer"
 									className="hover:text-white"
 								>
 									{t(
@@ -308,19 +333,25 @@ const Footer = () => {
 						</p>
 						<ul className="gap-2.5 flex flex-col">
 							<li>
-								<Link to="/about" className="hover:text-white">
+								<Link to={`/${i18n.language}/about`} className="hover:text-white">
 									{t('footer.upperSection.rightSection.company.options.about')}
 								</Link>
 							</li>
 							<li>
-								<Link to="/about#teams" className="hover:text-white">
+								<Link
+									to={`/${i18n.language}/about#teams`}
+									className="hover:text-white"
+								>
 									{t(
 										'footer.upperSection.rightSection.company.options.teamMembers',
 									)}
 								</Link>
 							</li>
 							<li>
-								<Link to="#talents" className="hover:text-white">
+								<Link
+									to={`/${i18n.language}/#talents`}
+									className="hover:text-white"
+								>
 									{t('footer.upperSection.rightSection.company.options.careers')}
 								</Link>
 							</li>
@@ -332,13 +363,16 @@ const Footer = () => {
 			<div className="w-full text-outline-variant text-base flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-2">
 				<p>{t('footer.lowerSection.copyright', { year: '2025' })}</p>
 				<div className="flex items-center justify-between gap-5">
-					<Link to="/privacy-policy" className="hover:text-white">
+					<Link to={`/${i18n.language}/privacy-policy`} className="hover:text-white">
 						{t('footer.lowerSection.nav.privacyPolicy')}
 					</Link>
-					<Link to="/terms-and-conditions" className="hover:text-white">
+					<Link
+						to={`/${i18n.language}/terms-and-conditions`}
+						className="hover:text-white"
+					>
 						{t('footer.lowerSection.nav.termsOfService')}
 					</Link>
-					<Link to="/legal-notice" className="hover:text-white">
+					<Link to={`/${i18n.language}/legal-notice`} className="hover:text-white">
 						{t('footer.lowerSection.nav.legalNotice')}
 					</Link>
 				</div>

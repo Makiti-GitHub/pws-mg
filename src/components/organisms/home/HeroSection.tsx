@@ -13,6 +13,8 @@ import { ArrowDownIcon, ArrowLeftIcon, ArrowRightIcon } from 'lucide-react'
 import { Link } from 'rasengan'
 import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
 import { useTranslation } from 'react-i18next'
+import useIsResponsive from '@/hooks/useIsResponsive'
+// import mask1 from '@/assets/images/HeroSection/mask1.svg'
 
 const slidersVariants = {
 	hover: {
@@ -39,10 +41,12 @@ const dotsVariants = {
 }
 
 const HeroSection = () => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const { isDesktop } = useIsTouchDevice()
 	const { handleMouseLeave, handleMouseMove, cursorPosition, isHovering } = useMouse()
 	const { setCursorVariant } = useFloatingCursor()
+
+	const isDesktopScreen = useIsResponsive({ width: 1024 })
 
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [direction, setDirection] = useState('left')
@@ -74,11 +78,22 @@ const HeroSection = () => {
 		setCurrentIndex(index)
 	}
 
+	// <div className="w-full grid grid-cols-4 lg:grid-cols-2 relative lg:min-h-screen">
+	// 			<div className="relative col-span-3 lg:col-span-1">
+	// 				<div className="lg:absolute bg-red-300 w-screen lg:inset-0 flex flex-col pl-4 pr-16 sm:pl-8 sm:pr-32 md:px-[80px] lg:pl-[120px] lg:pr-0 text-white gap-10">
+
 	return (
-		<section className={`space-y-12 sm:space-y-24 bg-secondary w-screen pt-[150px] pb-16`}>
-			<div className="w-full grid grid-cols-4 lg:grid-cols-2 relative min-h-[85dvh] sm:min-h-screen">
+		<section className={`space-y-12 sm:space-y-24 bg-secondary w-screen pt-[130px] pb-16`}>
+			<div className="w-full grid grid-cols-4 lg:grid-cols-2 relative lg:min-h-screen">
 				<div className="relative col-span-3 lg:col-span-1">
-					<div className="absolute inset-0 flex flex-col pl-4 sm:pl-8 md:px-[80px] lg:pl-[120px] lg:pr-0 text-white gap-10">
+					<div
+						style={{
+							backgroundImage: isDesktopScreen
+								? `url(${heroCarousel[currentIndex].image})`
+								: undefined,
+						}}
+						className="lg:absolute md:min-h-[65dvh] w-screen lg:size-auto lg:inset-0 bg-no-repeat bg-cover flex flex-col items-center sm:items-start px-6 py-6 sm:pl-8 sm:pr-32 md:px-[80px] xl:pl-[120px] lg:pr-0 text-white gap-6 sm:gap-10"
+					>
 						<AnimatePresence>
 							{heroCarousel[currentIndex] && (
 								<>
@@ -98,7 +113,7 @@ const HeroSection = () => {
 										exit={{ x: -50, opacity: 0 }}
 										transition={{ duration: 0.8, delay: 0.4 }}
 										key={heroCarousel[currentIndex].title}
-										className="space-y-6"
+										className="space-y-6 text-center sm:text-left"
 									>
 										<motion.h1 className="font-seravek_bold text-4xl lg:text-7xl xl:text-[80px] leading-10 md:leading-14 lg:leading-16 xl:leading-20">
 											{t(
@@ -118,12 +133,12 @@ const HeroSection = () => {
 								</>
 							)}
 						</AnimatePresence>
-						<Link to="#talent">
+						<Link to={`/${i18n.language}/#talent`}>
 							<MotionIconButton
 								onMouseEnter={() => setCursorVariant('button')}
 								onMouseLeave={() => setCursorVariant('default')}
 								label={t(`pages.home.sections.hero.cta`)}
-								className="rounded-[40px] px-4 py-3 lg:px-8 lg:py-6 h-max sm:text-xl lg:text-2xl"
+								className="rounded-[40px] px-4 py-3 lg:px-8 lg:py-6 h-max text-sm sm:text-xl lg:text-2xl"
 							/>
 						</Link>
 
@@ -204,6 +219,7 @@ const HeroSection = () => {
 						<AnimatePresence>
 							{heroCarousel[currentIndex] && (
 								<motion.div
+									// className="relative size-full"
 									className="relative size-full [clip-path:ellipse(60%_35%_at_50%_50%)] mask-x-from-90% mask-y-from-75% mask-radial-from-40% mask-radial-to-80%"
 									initial={{ x: 50, opacity: 0 }}
 									animate={{ x: 0, opacity: 1 }}
@@ -216,6 +232,11 @@ const HeroSection = () => {
 										e.stopPropagation()
 									}}
 								>
+									{/* <img
+										className="absolute inset-0 size-full scale-x-200 scale-y-150"
+										src={mask1}
+										alt="mask1"
+									/> */}
 									<img
 										src={heroCarousel[currentIndex].image}
 										alt={heroCarousel[currentIndex].title}
@@ -229,7 +250,7 @@ const HeroSection = () => {
 				</div>
 			</div>
 			<div className="flex flex-col items-center justify-center">
-				<Link to="#services">
+				<Link to={`/${i18n.language}/#services`}>
 					<div
 						onMouseEnter={() => setCursorVariant('button')}
 						onMouseLeave={() => setCursorVariant('default')}
@@ -240,10 +261,10 @@ const HeroSection = () => {
 				</Link>
 			</div>
 			<div className="space-y-[60px]">
-				<div className="px-8 md:px-[80px] lg:px-[120px]">
+				<div className="px-3 sm:px-8 md:px-[80px] xl:px-[120px]">
 					<Separator className="w-full bg-surface-variant" />
 				</div>
-				<div className="px-8 md:px-[80px] lg:px-[120px] flex justify-between">
+				<div className="px-3 sm:px-8 md:px-[80px] xl:px-[120px] flex justify-between">
 					<div className="flex flex-col xl:flex-row gap-8 justify-between w-full">
 						<div className="space-y-4 xl:max-w-[600px] text-center md:text-left w-full">
 							<h2
@@ -306,7 +327,7 @@ const HeroSection = () => {
 				<div className="w-full overflow-hidden">
 					<BrandsCarousel speed={25} pauseOnHover={true} />
 				</div>
-				<div className="px-8 md:px-[80px] lg:px-[120px]">
+				<div className="px-3 sm:px-8 md:px-[80px] xl:px-[120px]">
 					<Separator className="w-full bg-surface-variant" />
 				</div>
 			</div>

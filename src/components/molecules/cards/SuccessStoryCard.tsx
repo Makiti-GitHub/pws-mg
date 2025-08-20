@@ -16,9 +16,9 @@ const SuccessStoryCard: FC<React.ComponentProps<'article'> & SuccessStoryCardPro
 	className,
 	...props
 }) => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	return (
-		<Link to={`/portfolio/${story.id}`}>
+		<Link to={`/${i18n.language}/portfolio/${story.id}`}>
 			<article
 				className={cn(
 					'w-full hover:cursor-pointer grid lg:grid-cols-5 xl:grid-cols-2 gap-5 sm:gap-10 border rounded-3xl sm:rounded-[40px] p-3 border-outline-variant hover:scale-95 transition duration-300 ease-in-out',

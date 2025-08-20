@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next'
 
 const SuccessStoriesSection = () => {
 	const navigate = useNavigate()
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const { setCursorVariant } = useFloatingCursor()
 
 	return (
@@ -37,7 +37,7 @@ const SuccessStoriesSection = () => {
 					desc={t('pages.home.sections.ourSuccessStories.banner.subtitle')}
 				>
 					<Button
-						onClick={() => navigate('/portfolio')}
+						onClick={() => navigate(`/${i18n.language}/portfolio`)}
 						onMouseEnter={() => setCursorVariant('button')}
 						onMouseLeave={() => setCursorVariant('default')}
 						className="rounded-4xl !h-max !py-2 sm:!py-3 !px-5 hover:cursor-pointer border border-white text-white bg-transparent hover:bg-accent/5"

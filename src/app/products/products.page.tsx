@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next'
 
 const Products: PageComponent = () => {
 	const navigate = useNavigate()
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const { setCursorVariant } = useFloatingCursor()
 
 	return (
@@ -17,7 +17,7 @@ const Products: PageComponent = () => {
 			<div className="space-y-8 relative">
 				<Button
 					variant={'ghost'}
-					onClick={() => navigate('/')}
+					onClick={() => navigate(`/${i18n.language}/`)}
 					onMouseEnter={() => setCursorVariant('button')}
 					onMouseLeave={() => setCursorVariant('default')}
 					className="xl:absolute xl:left-0 xl:top-0 text-secondary !py-3 !px-5 !h-max hover:cursor-pointer bg-white box_shadow_products_card !font-seravek_medium !text-base"
@@ -36,6 +36,7 @@ const Products: PageComponent = () => {
 						<ProductsCard
 							key={`products-success-story-${index}`}
 							story={story}
+							index={index + 1}
 							withButton
 							onMouseEnter={() => setCursorVariant('button')}
 							onMouseLeave={() => setCursorVariant('default')}

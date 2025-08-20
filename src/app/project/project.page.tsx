@@ -24,7 +24,7 @@ import { useTranslation } from 'react-i18next'
 
 const Project: PageComponent = () => {
 	const navigate = useNavigate()
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const { setCursorVariant } = useFloatingCursor()
 
 	const { id } = useParams()
@@ -35,18 +35,18 @@ const Project: PageComponent = () => {
 
 	return (
 		<main className="flex flex-col gap-4 sm:gap-8 relative w-screen">
-			<div className="px-4 sm:px-8 md:px-[80px] lg:px-[120px] pt-[150px] relative bg-secondary">
+			<div className="px-4 sm:px-8 md:px-[80px] lg:px-[120px] pt-6 relative bg-secondary">
 				<div className="relative bg-secondary">
 					<Button
 						variant={'ghost'}
-						onClick={() => navigate('/')}
+						onClick={() => navigate(`/${i18n.language}/portfolio`)}
 						onMouseEnter={() => setCursorVariant('button')}
 						onMouseLeave={() => setCursorVariant('default')}
 						className="text-secondary py-2 sm:!py-3 px-3 sm:!px-5 !h-max hover:cursor-pointer bg-white box_shadow_products_card !font-seravek_medium !text-base"
 					>
 						<ArrowLeftIcon className="size-5 sm:size-6" />
-						<span className="sr-only">Back to home</span>
-						<span>{t('common.backToHomeCta')}</span>
+						<span className="sr-only">Back to Portfolio</span>
+						<span>{t('common.backToPortfolioCta')}</span>
 					</Button>
 
 					{project ? (
@@ -55,7 +55,7 @@ const Project: PageComponent = () => {
 								<div className="flex flex-col gap-5">
 									<span className="rounded-xl sm:rounded-2xl text-sm sm:text-base w-max px-3 py-1.5 border-2 border-white">
 										{t(
-											`pages.portfolio.projects.card.category.${project.categoryType}`,
+											`pages.portfolio.projects.card.category.${project.categoryTypes[0]}`,
 										)}
 									</span>
 									<div className="space-y-2">
@@ -383,7 +383,7 @@ const Project: PageComponent = () => {
 	)
 }
 
-Project.path = '/:locale?/portfolio/:id'
+Project.path = '/:id'
 Project.metadata = {
 	title: 'Project',
 	description: 'Project page',

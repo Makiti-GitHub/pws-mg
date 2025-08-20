@@ -49,7 +49,7 @@ const MotionIconButton: FC<React.ComponentProps<'button'> & MotionIconButtonProp
 					</motion.div>
 				)}
 			</AnimatePresence>
-			<p className="px-1 sm:px-2 z-20">{label}</p>
+			<p className="px-1 sm:px-2 z-20 break-words">{label}</p>
 			<AnimatePresence initial={false}>
 				{buttonState === 'default' && (
 					<motion.div

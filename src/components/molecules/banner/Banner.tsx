@@ -1,20 +1,24 @@
 import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
+import { cn } from '@/lib/utils'
 import { FC } from 'react'
 
 interface BannerProps {
 	title: string
 	desc: string
 	children?: React.ReactNode
+	className?: string
 	variant?: 'primary' | 'secondary'
 }
 
-const Banner: FC<BannerProps> = ({ title, desc, children, variant = 'primary' }) => {
+const Banner: FC<BannerProps> = ({ title, desc, children, variant = 'primary', className }) => {
 	const { setCursorVariant } = useFloatingCursor()
 	return (
 		<div
-			className={`flex justify-center items-center gap-6 p-4 sm:p-8 ${
-				variant === 'primary' ? 'bg-primary' : 'bg-secondary'
-			} rounded-2xl`}
+			className={cn(
+				'flex justify-center items-center gap-6 p-4 sm:p-8 rounded-2xl',
+				variant === 'primary' ? 'bg-primary' : 'bg-secondary',
+				className,
+			)}
 		>
 			<div className="w-full flex flex-col items-center gap-4">
 				<h3

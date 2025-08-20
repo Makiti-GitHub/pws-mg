@@ -14,7 +14,7 @@ import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
 import { Link } from 'rasengan'
 
 const FaqSection = () => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const { setCursorVariant } = useFloatingCursor()
 
 	return (
@@ -35,9 +35,9 @@ const FaqSection = () => {
 							<AccordionItem
 								key={`question-${index + 1}-${faq.question}`}
 								value={`item-${index + 1}`}
-								className="box_shadow_products_card rounded-lg px-3 py-1.5"
+								className="box_shadow_products_card rounded-lg py-[5px]"
 							>
-								<AccordionTrigger>
+								<AccordionTrigger className="px-3 py-4">
 									<p className="flex items-center gap-2.5">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ const FaqSection = () => {
 						))}
 					</Accordion>
 				</div>
-				<aside className="space-y-4 col-span-12 md:col-span-5 lg:col-span-4 flex flex-col">
+				<aside className="col-span-12 md:col-span-5 lg:col-span-4 flex flex-col gap-4">
 					<div className="p-6 rounded-xl box_shadow_products_card">
 						<div className="space-y-4">
 							<div className="flex items-center gap-3">
@@ -136,13 +136,14 @@ const FaqSection = () => {
 						variant="secondary"
 						title={t('pages.home.sections.faq.banner.title')}
 						desc={t('pages.home.sections.faq.banner.subtitle')}
+						className="sm:p-6"
 					>
-						<Link to="#start-project">
+						<Link to={`/${i18n.language}/#start-project`}>
 							<MotionIconButton
 								label={t('pages.home.sections.faq.banner.cta')}
 								onMouseEnter={() => setCursorVariant('button')}
 								onMouseLeave={() => setCursorVariant('default')}
-								className="rounded-4xl !h-max !px-4 !py-2 gap-1 text-base sm:text-lg font-seravek_medium"
+								className="rounded-4xl !h-max !px-4 !py-2 gap-1 text-sm sm:text-base xl:text-lg font-seravek_medium"
 							/>
 						</Link>
 					</Banner>

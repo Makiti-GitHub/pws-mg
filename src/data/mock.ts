@@ -103,9 +103,9 @@ import photoshopIcon from '@/assets/images/Technologies icons/photoshop.svg'
 import wordpressIcon from '@/assets/images/Technologies icons/wordpress.svg'
 
 /** Hero images */
-import heroImage1 from '@/assets/images/Hero Section/image1.png'
-import heroImage2 from '@/assets/images/Hero Section/image2.png'
-import heroImage3 from '@/assets/images/Hero Section/image3.png'
+import heroImage1 from '@/assets/images/HeroSection/image1.png'
+import heroImage2 from '@/assets/images/HeroSection/image2.png'
+import heroImage3 from '@/assets/images/HeroSection/image3.png'
 
 export const techStackMock = {
 	html: htmlIcon,

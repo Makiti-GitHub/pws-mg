@@ -254,6 +254,38 @@
                 "ourLiveProducts": {
                     "title": "Nos Produits En Direct",
                     "subtitle": "Explorez nos applications livrées avec succès et déployées qui servent actuellement de vrais utilisateurs et entreprises dans le monde entier.",
+                    "products": {
+                        "product1": {
+                            "title": "Gestion des stocks et de l'inventaire",
+                            "category": "Application mobile pour entreprises",
+                            "description": "Suivez l'inventaire, gérez les commandes et surveillez les niveaux de stock avec cette solution mobile conviviale."
+                        },
+                        "product2": {
+                            "title": "Système de gestion des billets",
+                            "category": "Plateforme d'administration multi-vendeur",
+                            "description": "Plateforme web pour les agences de gestion des voyages, des vendeurs et des réservations avec un contrôle centralisé."
+                        },
+                        "product3": {
+                            "title": "Gestion des stocks et de l'inventaire - VendorAdmin",
+                            "category": "Plateforme d'administration des vendeurs",
+                            "description": "Plateforme centrée sur les vendeurs pour la surveillance en temps réel des stocks, la gestion des commandes et les informations d'inventaire."
+                        },
+                        "product4": {
+                            "title": "Système de gestion des billets",
+                            "category": "Application mobile pour les utilisateurs finaux",
+                            "description": "Application mobile pour la réservation, la gestion et la surveillance des voyages en bus avec des mises à jour en temps réel."
+                        },
+                        "product5": {
+                            "title": "Système de passerelle de paiement",
+                            "category": "Plateforme multi-vendeur",
+                            "description": "Plateforme de paiement universelle permettant des transactions sécurisées et multi-vendeurs sur toutes les interfaces web."
+                        },
+                        "product6": {
+                            "title": "Système de passerelle de paiement",
+                            "category": "Application mobile pour les utilisateurs finaux",
+                            "description": "Application mobile pour les paiements de voyages, la planification et la surveillance des sièges avec une interface simplifiée."
+                        }
+                    },
                     "banner": {
                         "title": "Dynamisez Votre Entreprise avec Nos Produits",
                         "subtitle": "Expérimentez le même niveau d'excellence et de résultats. Discutons de la façon dont nous pouvons vous aider à transformer votre entreprise grâce à l'externalisation IT stratégique.",
@@ -928,6 +960,7 @@
     },
     "common": {
         "backToHomeCta": "Retour à l'accueil",
+        "backToPortfolioCta": "Retour au Portfolio",
         "values": {
             "value1": {
                 "title": "Approche Agile",

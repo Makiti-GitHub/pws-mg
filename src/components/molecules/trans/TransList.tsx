@@ -1,5 +1,4 @@
 import { Trans, useTranslation } from 'react-i18next'
-import { isArray } from 'util'
 
 interface TransListProps {
 	transKey: string
@@ -14,7 +13,7 @@ const TransList = ({ transKey, links, listKey = 'ul' }: TransListProps) => {
 
 	links?.forEach((item, index) => {
 		listRecord[`link${index + 1}`] = (
-			<a href={item} className="text-primary" rel="noopener noreferrer" />
+			<a href={item} target="_blank" className="text-primary" rel="noopener noreferrer" />
 		)
 	})
 

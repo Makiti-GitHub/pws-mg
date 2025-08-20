@@ -1,4 +1,5 @@
 import { ProjectTypeCategoriesEnum } from '@/data/mock'
+import { isValidPhoneNumber } from 'react-phone-number-input'
 import z from 'zod'
 
 // Define schemas for each step
@@ -8,7 +9,11 @@ const personalInfoSchema = z.object({
 	}),
 	email: z.email(),
 	companyName: z.string().optional(),
-	phoneNumber: z.string().optional(),
+	phoneNumber: z
+		.string()
+		.refine(isValidPhoneNumber, { message: 'Invalid phone number' })
+		.optional(),
+	// or(z.literal('')),
 })
 
 const projectInfoSchema = z.object({

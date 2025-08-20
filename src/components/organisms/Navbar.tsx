@@ -7,9 +7,10 @@ import { useTranslation } from 'react-i18next'
 import { useFloatingCursor, useMenuContext } from '@/hooks/guard/ContextGuard'
 import { MenuIcon } from 'lucide-react'
 import { Button } from '../ui/button'
+import NavItem from './navigation/NavItem'
 
 const NavBar = () => {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 	const { setCursorVariant } = useFloatingCursor()
 	const { isOpened, setIsOpened, navlinks } = useMenuContext()
 
@@ -22,7 +23,7 @@ const NavBar = () => {
 				<div className="w-[121px] h-[84px]">
 					{/* === Background Images === */}
 					{/* <Image */}
-					<Link to={'/'}>
+					<Link to={`/${i18n.language}/`}>
 						<Image
 							src={makitiLogoWhite}
 							alt="Makiti logo"
@@ -42,18 +43,13 @@ const NavBar = () => {
 							onMouseEnter={() => setCursorVariant('text')}
 							onMouseLeave={() => setCursorVariant('default')}
 						>
-							<Link
-								className="hover:text-primary hover:underline capitalize"
-								to={link.href}
-							>
-								{t(`nav.links.${link.label}`)}
-							</Link>
+							<NavItem href={link.href} label={link.label} />
 						</li>
 					))}
 				</ul>
 
 				<div className="flex items-center gap-4">
-					<Link to="#start-project">
+					<Link to={`/${i18n.language}/#start-project`}>
 						<MotionIconButton
 							label={t('nav.cta.letsTalk')}
 							onMouseEnter={() => setCursorVariant('button')}

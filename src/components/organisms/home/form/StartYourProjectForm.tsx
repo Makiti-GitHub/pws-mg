@@ -71,6 +71,13 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 		mode: 'onChange',
 	})
 
+	// Method 2: Trigger validation for multiple specific fields
+	const validateMultipleFields = async (fieldNames: (keyof FullFormData)[]) => {
+		const isValid = await form.trigger(fieldNames)
+		console.log(`Validation result for [${fieldNames.join(', ')}]:`, isValid)
+		return isValid
+	}
+
 	const nextStep = async () => {
 		const currentSchema = steps[currentStep].schema
 		const currentData = form.getValues()
@@ -123,17 +130,17 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 			'pages.home.sections.startYourProjectToday.form.fields.emailAddress.label',
 		)} : ${data.email}\n\n`
 
-		text += `${t(
-			'pages.home.sections.startYourProjectToday.form.fields.companyName.label',
-		)} : ${data.companyName}\n\n`
+		if (data.companyName) {
+			text += `${t(
+				'pages.home.sections.startYourProjectToday.form.fields.companyName.label',
+			)} : ${data.companyName}\n\n`
+		}
 
-		text += `${t(
-			'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',
-		)} : ${data.phoneNumber}\n\n`
-
-		text += `${t(
-			'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',
-		)} : ${data.phoneNumber}\n\n`
+		if (data.phoneNumber) {
+			text += `${t(
+				'pages.home.sections.startYourProjectToday.form.fields.phoneNumber.label',
+			)} : ${data.phoneNumber}\n\n`
+		}
 
 		text += `${t(
 			'pages.home.sections.startYourProjectToday.form.fields.projectType.label',
@@ -151,7 +158,7 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 			text += `\t• ${requirement}\n`
 		})
 
-		text += `${t(
+		text += `\n${t(
 			'pages.home.sections.startYourProjectToday.form.fields.projectDescription.label',
 		)} : ${data.projectDescription}\n`
 
@@ -167,8 +174,12 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 
 		dialogRef.current?.click()
 
+		form.reset()
+		setCurrentStep(0)
+		setCompletedSteps([])
+
 		// Open WhatsApp in a new tab
-		// window.open(whatsappUrl, '_blank')
+		window.open(whatsappUrl, '_blank')
 	}
 
 	const stepComponents = [PersonalInfoStep, ProjectInfoStep, ProjectDescriptionInfoStep]
@@ -310,7 +321,29 @@ const StartYourProjectMultiStepForm: React.FC = () => {
 								<Button
 									type="button"
 									variant="primary"
-									onClick={nextStep}
+									onClick={async () => {
+										if (currentStep === 0) {
+											const isValid = await validateMultipleFields([
+												'fullName',
+												'email',
+												'companyName',
+												'phoneNumber',
+											])
+											if (isValid) {
+												nextStep()
+											}
+										} else if (currentStep === 1) {
+											const isValid = await validateMultipleFields([
+												'projectType',
+												'budgetRange',
+												'projectTimeline',
+												'technicalRequirements',
+											])
+											if (isValid) {
+												nextStep()
+											}
+										}
+									}}
 									className="flex items-center h-max px-4 py-2 rounded-full transition-colors"
 								>
 									{t('next')}
