@@ -2,7 +2,7 @@ import { firstTextVariant, secondTextVariant } from '@/components/atoms/animatio
 import { useMenuContext } from '@/hooks/guard/ContextGuard'
 import { motion, AnimatePresence } from 'framer-motion'
 import { XCircleIcon } from 'lucide-react'
-import makitiLogoWhite from '@/assets/images/logo_makiti/Makiti Logo White.png'
+import makitiLogoWhite from '@/assets/images/logo_makiti/Makiti Logo White.svg'
 import Image from '@rasenganjs/image'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
@@ -99,6 +99,10 @@ const MobileNavigation = () => {
 											<motion.a
 												href={link.href}
 												variants={firstTextVariant}
+												transition={{
+													duration: 1.125,
+													ease: [0.19, 1, 0.22, 1],
+												}}
 												className="text-white block"
 											>
 												{link.label}
@@ -106,6 +110,13 @@ const MobileNavigation = () => {
 											<motion.a
 												href={link.href}
 												variants={secondTextVariant}
+												transition={{
+													duration: 1.125,
+													ease: [0.19, 1, 0.22, 1],
+													type: 'spring',
+													stiffness: 200,
+													damping: 10,
+												}}
 												aria-hidden
 												className="absolute bottom-0 -left-0 text-primary"
 											>

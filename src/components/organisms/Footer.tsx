@@ -47,11 +47,13 @@ const Footer = () => {
 							</div>
 							<div className="flex gap-5 items-center">
 								{socialsMock.map((social, index) => (
-									<a href={social.link} target="_blank" rel="noopener noreferrer">
-										<span
-											className="w-6 h-auto bg-red-300"
-											key={`social-${index}`}
-										>
+									<a
+										href={social.link}
+										key={`social-${index}`}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<span className="w-6 h-auto bg-red-300">
 											<Image
 												width={'100%'}
 												height={'100%'}

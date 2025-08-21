@@ -14,7 +14,8 @@ import { Link } from 'rasengan'
 import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
 import { useTranslation } from 'react-i18next'
 import useIsResponsive from '@/hooks/useIsResponsive'
-// import mask1 from '@/assets/images/HeroSection/mask1.svg'
+import mask1 from '@/assets/images/HeroSection/mask1.svg'
+import mask2 from '@/assets/images/HeroSection/mask2.svg'
 
 const slidersVariants = {
 	hover: {
@@ -49,7 +50,7 @@ const HeroSection = () => {
 	const isDesktopScreen = useIsResponsive({ width: 1024 })
 
 	const [currentIndex, setCurrentIndex] = useState(0)
-	const [direction, setDirection] = useState('left')
+	const [direction, setDirection] = useState<'right' | 'left'>('left')
 
 	// Auto-slide every 5 seconds
 	useEffect(() => {
@@ -76,16 +77,14 @@ const HeroSection = () => {
 	const handleDotClick = (index: number) => {
 		setDirection(index > currentIndex ? 'right' : 'left')
 		setCurrentIndex(index)
+		console.log(direction)
 	}
-
-	// <div className="w-full grid grid-cols-4 lg:grid-cols-2 relative lg:min-h-screen">
-	// 			<div className="relative col-span-3 lg:col-span-1">
-	// 				<div className="lg:absolute bg-red-300 w-screen lg:inset-0 flex flex-col pl-4 pr-16 sm:pl-8 sm:pr-32 md:px-[80px] lg:pl-[120px] lg:pr-0 text-white gap-10">
 
 	return (
 		<section className={`space-y-12 sm:space-y-24 bg-secondary w-screen pt-[130px] pb-16`}>
 			<div className="w-full grid grid-cols-4 lg:grid-cols-2 relative lg:min-h-screen">
-				<div className="relative col-span-3 lg:col-span-1">
+				<div className="relative w-screen lg:w-auto sm:col-span-3 lg:col-span-1 z-[5]">
+					<div className="absolute inset-0 size-full bg-secondary opacity-30 z-[2] lg:hidden" />
 					<div
 						style={{
 							backgroundImage: isDesktopScreen
@@ -103,7 +102,7 @@ const HeroSection = () => {
 										exit={{ x: -50, opacity: 0 }}
 										transition={{ duration: 0.8, delay: 0.2 }}
 										key={`tag-${currentIndex}`}
-										className="rounded-2xl w-max px-3 py-1.5 border-2 border-white"
+										className="rounded-2xl w-max px-3 py-1.5 border-2 border-white z-[3]"
 									>
 										{t(`pages.home.sections.hero.item${currentIndex + 1}.tag`)}
 									</motion.span>
@@ -113,9 +112,9 @@ const HeroSection = () => {
 										exit={{ x: -50, opacity: 0 }}
 										transition={{ duration: 0.8, delay: 0.4 }}
 										key={heroCarousel[currentIndex].title}
-										className="space-y-6 text-center sm:text-left"
+										className="space-y-6 text-center sm:text-left z-[3]"
 									>
-										<motion.h1 className="font-seravek_bold text-4xl lg:text-7xl xl:text-[80px] leading-10 md:leading-14 lg:leading-16 xl:leading-20">
+										<motion.h1 className="font-seravek_bold text-4xl lg:text-6xl xl:text-[80px] leading-10 md:leading-14 lg:leading-16 xl:leading-20">
 											{t(
 												`pages.home.sections.hero.item${
 													currentIndex + 1
@@ -133,16 +132,16 @@ const HeroSection = () => {
 								</>
 							)}
 						</AnimatePresence>
-						<Link to={`/${i18n.language}/#talent`}>
+						<Link to={`/${i18n.language}/#talent`} className="z-[3]">
 							<MotionIconButton
 								onMouseEnter={() => setCursorVariant('button')}
 								onMouseLeave={() => setCursorVariant('default')}
 								label={t(`pages.home.sections.hero.cta`)}
-								className="rounded-[40px] px-4 py-3 lg:px-8 lg:py-6 h-max text-sm sm:text-xl lg:text-2xl"
+								className="rounded-[40px] px-4 py-3 xl:px-8 xl:py-6 h-max text-sm sm:text-xl lg:text-2xl"
 							/>
 						</Link>
 
-						<div>
+						<div className="z-[3]">
 							<AnimatePresence>
 								{heroCarousel.length > 0 ? (
 									<div className="w-max flex gap-4 items-center justify-between">
@@ -204,49 +203,55 @@ const HeroSection = () => {
 					</div>
 				</div>
 
-				<div
-					onMouseEnter={() => setCursorVariant('hide')}
-					onMouseMove={handleMouseMove}
-					onMouseLeave={() => {
-						setCursorVariant('default')
-						handleMouseLeave()
-					}}
-					className={`w-full relative hover:cursor-none ease-in hidden lg:block lg:col-span-1 ${
-						isDesktop ? 'custom-cursor' : ''
-					} overflow-hidden min-h-[80vh]`}
-				>
-					<div className="absolute inset-0 size-full">
-						<AnimatePresence>
-							{heroCarousel[currentIndex] && (
-								<motion.div
-									// className="relative size-full"
-									className="relative size-full [clip-path:ellipse(60%_35%_at_50%_50%)] mask-x-from-90% mask-y-from-75% mask-radial-from-40% mask-radial-to-80%"
-									initial={{ x: 50, opacity: 0 }}
-									animate={{ x: 0, opacity: 1 }}
-									exit={{ x: -50, opacity: 0 }}
-									transition={{ duration: 0.8, delay: 0.2 }}
-									key={`hero-image-${currentIndex}`}
-									onClick={(e) => {
-										handleNext()
-										e.preventDefault()
-										e.stopPropagation()
-									}}
-								>
-									{/* <img
-										className="absolute inset-0 size-full scale-x-200 scale-y-150"
-										src={mask1}
-										alt="mask1"
-									/> */}
-									<img
-										src={heroCarousel[currentIndex].image}
-										alt={heroCarousel[currentIndex].title}
-										className="aspect-auto object-contain size-full"
-									/>
-								</motion.div>
-							)}
-						</AnimatePresence>
+				<div className="size-full relative hidden lg:flex lg:col-span-1 lg:items-center">
+					<div
+						onMouseEnter={() => setCursorVariant('hide')}
+						onMouseMove={handleMouseMove}
+						onMouseLeave={() => {
+							setCursorVariant('default')
+							handleMouseLeave()
+						}}
+						className={`w-full relative hover:cursor-none ease-in ${
+							isDesktop ? 'custom-cursor' : ''
+						} overflow-hidden min-h-[80vh] xl:h-min`}
+					>
+						<img
+							className="absolute inset-0 scale-[350%] size-full z-[4]"
+							src={mask1}
+							alt="mask1"
+						/>
+						<img
+							className="absolute left-0 top-0 scale-150 size-full z-[4]"
+							src={mask2}
+							alt="mask2"
+						/>
+						<div className="absolute inset-0 size-full mask-x-from-90% mask-y-from-75% mask-radial-from-40% mask-radial-to-80%">
+							<AnimatePresence>
+								{heroCarousel[currentIndex] && (
+									<motion.div
+										className="relative size-full"
+										initial={{ x: 50, opacity: 0 }}
+										animate={{ x: 0, opacity: 1 }}
+										exit={{ x: -50, opacity: 0 }}
+										transition={{ duration: 0.8, delay: 0.2 }}
+										key={`hero-image-${currentIndex}`}
+										onClick={(e) => {
+											handleNext()
+											e.preventDefault()
+											e.stopPropagation()
+										}}
+									>
+										<img
+											src={heroCarousel[currentIndex].image}
+											alt={heroCarousel[currentIndex].title}
+											className="aspect-auto object-contain size-full"
+										/>
+									</motion.div>
+								)}
+							</AnimatePresence>
+						</div>
+						<CustomCursor position={cursorPosition} isVisible={isHovering} />
 					</div>
-					<CustomCursor position={cursorPosition} isVisible={isHovering} />
 				</div>
 			</div>
 			<div className="flex flex-col items-center justify-center">
@@ -260,11 +265,12 @@ const HeroSection = () => {
 					</div>
 				</Link>
 			</div>
-			<div className="space-y-[60px]">
-				<div className="px-3 sm:px-8 md:px-[80px] xl:px-[120px]">
+			<div className="space-y-[60px] relative">
+				<div className="px-3 sm:px-8 md:px-[80px] xl:px-[120px] z-[3] relative">
+					<div className="absolute top-1/2 -translate-y-1/2 sm:bottom-0 backdrop-blur-[900px] -left-[150px] lg:-left-[300px] xl:-left-[450px] blur-3xl opacity-10 size-[300px] lg:size-[600px] xl:size-[900px] bg-primary rounded-e-full z-[2]" />
 					<Separator className="w-full bg-surface-variant" />
 				</div>
-				<div className="px-3 sm:px-8 md:px-[80px] xl:px-[120px] flex justify-between">
+				<div className="px-3 sm:px-8 md:px-[80px] xl:px-[120px] flex justify-between z-[3]">
 					<div className="flex flex-col xl:flex-row gap-8 justify-between w-full">
 						<div className="space-y-4 xl:max-w-[600px] text-center md:text-left w-full">
 							<h2

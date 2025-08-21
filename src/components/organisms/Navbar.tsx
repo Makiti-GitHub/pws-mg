@@ -1,4 +1,4 @@
-import makitiLogoWhite from '@/assets/images/logo_makiti/Makiti Logo White.png'
+import makitiLogoWhite from '@/assets/images/logo_makiti/Makiti Logo White.svg'
 import { Link } from 'rasengan'
 import LanguageButton from '../atoms/buttons/LanguageButton'
 import MotionIconButton from '../atoms/buttons/MotionIconButton'
