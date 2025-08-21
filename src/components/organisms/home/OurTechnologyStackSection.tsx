@@ -17,6 +17,8 @@ const OurTechnologyStackSection = () => {
 	const isDesktop = useIsResponsive({ width: 1024 })
 	const isTablet = useIsResponsive({ width: 768 })
 	const isMobile = useIsResponsive({ width: 640 })
+	const isSmallMobile = useIsResponsive({ width: 528 })
+	const isXSmallMobile = useIsResponsive({ width: 400 })
 	const { setCursorVariant } = useFloatingCursor()
 
 	return (
@@ -45,7 +47,7 @@ const OurTechnologyStackSection = () => {
 					</div>
 
 					<div className="flex items-center justify-center">
-						<div className="relative">
+						<div className="relative bg-orage-500">
 							<CircularCarousel
 								images={ourTechnosLogos2.map((image) => ({
 									id: image.id,
@@ -53,8 +55,28 @@ const OurTechnologyStackSection = () => {
 									alt: image.alt,
 									title: image.title,
 								}))}
-								imageSize={!isDesktop ? 80 : !isTablet ? 65 : 50}
-								radius={!isDesktop ? 360 : !isTablet ? 300 : !isMobile ? 240 : 220}
+								imageSize={
+									!isDesktop
+										? 80
+										: !isTablet || !isMobile
+										? 65
+										: !isSmallMobile
+										? 50
+										: 40
+								}
+								radius={
+									!isDesktop
+										? 360
+										: !isTablet
+										? 300
+										: !isMobile
+										? 240
+										: !isSmallMobile
+										? 220
+										: !isXSmallMobile
+										? 170
+										: 150
+								}
 								duration={25}
 								direction="clockwise"
 							/>
@@ -66,14 +88,32 @@ const OurTechnologyStackSection = () => {
 										alt: image.alt,
 										title: image.title,
 									}))}
-									imageSize={!isDesktop ? 80 : !isTablet ? 65 : 50}
-									radius={!isDesktop ? 240 : !isTablet ? 200 : 150}
+									imageSize={
+										!isDesktop
+											? 80
+											: !isTablet || !isMobile
+											? 65
+											: !isSmallMobile
+											? 50
+											: 40
+									}
+									radius={
+										!isDesktop
+											? 240
+											: !isTablet || !isMobile
+											? 160
+											: !isSmallMobile
+											? 130
+											: !isXSmallMobile
+											? 115
+											: 100
+									}
 									duration={18}
 									direction="counterclockwise"
 								/>
 							</div>
-							<div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-0 sm:gap-1 md:gap-4">
-								<div className="relative group scale-[55%] sm:scale-[65%] md:scale-75 lg:scale-90">
+							<div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex flex-col justify-center items-center gap-0 sm:gap-1 md:gap-4 scale-75 min-[400px]:scale-90 min-[528px]:scale-100">
+								<div className="relative group scale-[40%] min-[528px]:scale-[55%] sm:scale-[65%] md:scale-75 lg:scale-90">
 									<Image
 										src={awsLogo}
 										alt={'AWS logo'}
@@ -87,7 +127,7 @@ const OurTechnologyStackSection = () => {
 										</span>
 									</div>
 								</div>
-								<div className="relative scale-[55%] sm:scale-[65%] md:scale-75 lg:scale-90 group">
+								<div className="relative scale-[50%] min-[528px]:scale-[55%] sm:scale-[65%] md:scale-75 lg:scale-90 group">
 									<Image
 										src={office365Logo}
 										alt={'Office 365 logo'}
@@ -101,7 +141,7 @@ const OurTechnologyStackSection = () => {
 										</span>
 									</div>
 								</div>
-								<div className="relative group scale-[55%] sm:scale-[80%] lg:scale-100">
+								<div className="relative group scale-[50%] min-[528px]:scale-[55%] sm:scale-[80%] lg:scale-100">
 									<Image
 										src={circleDotLogo}
 										alt={'Ionic dot logo'}
