@@ -836,7 +836,7 @@
                         "Recht auf Datenübertragbarkeit",
                         "Recht auf jederzeitigen Widerruf Ihrer Einwilligung"
                     ],
-                    "p2": "Um Ihre Rechte auszuüben, wenden Sie sich bitte an : <bold><email>contact@makiti-group.com</email></bold>"
+                    "p2": "Um Ihre Rechte auszuüben, wenden Sie sich bitte an : <bold><email>contact@makiti.de</email></bold>"
                 },
                 "cookies": {
                     "title": "Cookies",
@@ -870,7 +870,7 @@
                 "makitiGroup": {
                     "title": "Makiti Gruppe",
                     "p1": "Vollständige Adresse in Paris : CS 48756 75380 - CEDEX 08 58 RUE DE MONCEAU 75008 PARIS.",
-                    "p2": "E-Mail-Adresse : <email>contact@makiti-group.com</email>"
+                    "p2": "E-Mail-Adresse : <email>contact@makiti.de</email>"
                 },
                 "hosting": {
                     "title": "Hosting",
@@ -920,7 +920,7 @@
                 },
                 "userRights": {
                     "title": "Rechte der Nutzer",
-                    "p1": "Gemäß der DSGVO haben Sie folgende Rechte: Auskunft, Berichtigung, Löschung, Widerspruch, Einschränkung, Übertragbarkeit. Um Ihre Rechte auszuüben, können Sie uns unter <bold><email>contact@makiti-group.com</email></bold> oder an die Postanschrift des Hauptsitzes schreiben."
+                    "p1": "Gemäß der DSGVO haben Sie folgende Rechte: Auskunft, Berichtigung, Löschung, Widerspruch, Einschränkung, Übertragbarkeit. Um Ihre Rechte auszuüben, können Sie uns unter <bold><email>contact@makiti.de</email></bold> oder an die Postanschrift des Hauptsitzes schreiben."
                 },
                 "dataTransfer": {
                     "title": "Datenübermittlung außerhalb der EU",
@@ -952,7 +952,7 @@
                 },
                 "contact": {
                     "title": "Contact",
-                    "p1": "Bei Fragen zu den vorliegenden rechtlichen Hinweisen oder zu Ihren personenbezogenen Daten wenden Sie sich bitte an : <email>contact@makiti-group.com</email>",
+                    "p1": "Bei Fragen zu den vorliegenden rechtlichen Hinweisen oder zu Ihren personenbezogenen Daten wenden Sie sich bitte an : <email>contact@makiti.de</email>",
                     "p2": "Firmensitz : CS 48756 75380 - CEDEX 08 58 RUE DE MONCEAU 75008 PARIS"
                 }
             }

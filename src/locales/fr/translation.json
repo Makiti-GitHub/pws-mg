@@ -836,7 +836,7 @@
                         "Droit à la portabilité de vos données",
                         "Droit de retirer votre consentement à tout moment"
                     ],
-                    "p2": "Pour exercer vos droits : <bold><email>contact@makiti-group.com</email></bold>"
+                    "p2": "Pour exercer vos droits : <bold><email>contact@makiti.de</email></bold>"
                 },
                 "cookies": {
                     "title": "Cookies",
@@ -870,7 +870,7 @@
                 "makitiGroup": {
                     "title": "Makiti Group",
                     "p1": "Adresse complète à Paris : CS 48756 75380 - CEDEX 08 58 RUE DE MONCEAU 75008 PARIS.",
-                    "p2": "Adresse e-mail : <email>contact@makiti-group.com</email>"
+                    "p2": "Adresse e-mail : <email>contact@makiti.de</email>"
                 },
                 "hosting": {
                     "title": "Hébergement",
@@ -920,7 +920,7 @@
                 },
                 "userRights": {
                     "title": "Droits des utilisateurs",
-                    "p1": "Conformément au RGPD, vous disposez des droits suivants : accès, rectification, suppression, opposition, limitation, portabilité. Pour exercer vos droits, vous pouvez nous écrire à <bold><email>contact@makiti-group.com</email></bold> ou à l’adresse postale du siège."
+                    "p1": "Conformément au RGPD, vous disposez des droits suivants : accès, rectification, suppression, opposition, limitation, portabilité. Pour exercer vos droits, vous pouvez nous écrire à <bold><email>contact@makiti.de</email></bold> ou à l’adresse postale du siège."
                 },
                 "dataTransfer": {
                     "title": "Transfert de données hors UE",
@@ -952,7 +952,7 @@
                 },
                 "contact": {
                     "title": "Contact",
-                    "p1": "Pour toute question relative aux présentes mentions légales ou à vos données personnelles : <email>contact@makiti-group.com</email>",
+                    "p1": "Pour toute question relative aux présentes mentions légales ou à vos données personnelles : <email>contact@makiti.de</email>",
                     "p2": "Siège social : CS 48756 75380 - CEDEX 08 58 RUE DE MONCEAU 75008 PARIS"
                 }
             }

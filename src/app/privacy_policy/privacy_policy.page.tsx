@@ -110,7 +110,7 @@ const PrivacyPolicy: PageComponent = () => {
 					<TransList transKey="pages.privacyPolicy.sections.yourRights" />
 					<TransParagraph
 						transKey="pages.privacyPolicy.sections.yourRights.p2"
-						emails={['contact@makiti-group.com']}
+						emails={['contact@makiti.de']}
 					/>
 				</div>
 			</div>

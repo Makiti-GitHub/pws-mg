@@ -836,7 +836,7 @@
                         "Right to data portability",
                         "Right to withdraw your consent at any time"
                     ],
-                    "p2": "To exercise your rights, please contact  : <bold><email>contact@makiti-group.com</email></bold>"
+                    "p2": "To exercise your rights, please contact  : <bold><email>contact@makiti.de</email></bold>"
                 },
                 "cookies": {
                     "title": "Cookies",
@@ -870,7 +870,7 @@
                 "makitiGroup": {
                     "title": "Makiti Group",
                     "p1": "Full address in Paris : CS 48756 75380 - CEDEX 08 58 RUE DE MONCEAU 75008 PARIS.",
-                    "p2": "Email address : <email>contact@makiti-group.com</email>"
+                    "p2": "Email address : <email>contact@makiti.de</email>"
                 },
                 "hosting": {
                     "title": "Hosting",
@@ -920,7 +920,7 @@
                 },
                 "userRights": {
                     "title": "User rights",
-                    "p1": "In accordance with the GDPR, you have the following rights: access, rectification, erasure, objection, restriction, and portability. To exercise your rights, you can write to us at <bold><email>contact@makiti-group.com</email></bold> or to the postal address of our head office."
+                    "p1": "In accordance with the GDPR, you have the following rights: access, rectification, erasure, objection, restriction, and portability. To exercise your rights, you can write to us at <bold><email>contact@makiti.de</email></bold> or to the postal address of our head office."
                 },
                 "dataTransfer": {
                     "title": "Transfer of data outside the EU",
@@ -952,7 +952,7 @@
                 },
                 "contact": {
                     "title": "Contact",
-                    "p1": "For any questions regarding these legal notices or your personal data : <email>contact@makiti-group.com</email>",
+                    "p1": "For any questions regarding these legal notices or your personal data : <email>contact@makiti.de</email>",
                     "p2": "Head office : CS 48756 75380 - CEDEX 08 58 RUE DE MONCEAU 75008 PARIS"
                 }
             }

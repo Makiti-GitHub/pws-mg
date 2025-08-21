@@ -84,7 +84,7 @@ const LegalNotice: PageComponent = () => {
 					<TransParagraph transKey="pages.legalNotice.sections.makitiGroup.p1" />
 					<TransParagraph
 						transKey="pages.legalNotice.sections.makitiGroup.p2"
-						emails={['contact@makiti-group.com']}
+						emails={['contact@makiti.de']}
 					/>
 				</div>
 			</div>
@@ -191,7 +191,7 @@ const LegalNotice: PageComponent = () => {
 				<div className="space-y-2 text-lg">
 					<TransParagraph
 						transKey="pages.legalNotice.sections.userRights.p1"
-						emails={['contact@makiti-group.com']}
+						emails={['contact@makiti.de']}
 					/>
 				</div>
 			</div>
@@ -205,7 +205,7 @@ const LegalNotice: PageComponent = () => {
 				<div className="space-y-2 text-lg">
 					<TransParagraph
 						transKey="pages.legalNotice.sections.dataTransfer.p1"
-						emails={['contact@makiti-group.com']}
+						emails={['contact@makiti.de']}
 					/>
 				</div>
 			</div>
@@ -257,7 +257,7 @@ const LegalNotice: PageComponent = () => {
 				<div className="space-y-2 text-lg">
 					<TransParagraph
 						transKey="pages.legalNotice.sections.contact.p1"
-						emails={['contact@makiti-group.com']}
+						emails={['contact@makiti.de']}
 					/>
 					<TransParagraph transKey="pages.legalNotice.sections.contact.p2" />
 				</div>
