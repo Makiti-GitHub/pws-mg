@@ -332,6 +332,9 @@
                         "subtitle": "Unsere Experten sind bereit, Ihnen bei der Suche nach der perfekten Outsourcing-Lösung zu helfen.",
                         "cta": "Lassen Sie uns sprechen"
                     },
+                    "infos": {
+                        "openingHours": "Mo-Fr: 9:00-18:00 CAF"
+                    },
                     "questions": {
                         "question1": {
                             "question": "Was ist IT-Outsourcing und wie funktioniert es?",

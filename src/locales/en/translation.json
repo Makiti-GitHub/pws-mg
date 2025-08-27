@@ -332,6 +332,9 @@
                         "subtitle": "Our experts are ready to help you find the perfect outsourcing solution.",
                         "cta": "Let's talk"
                     },
+                    "infos": {
+                        "openingHours": "Mon-Fri: 9AM-6PM CAF"
+                    },
                     "questions": {
                         "question1": {
                             "question": "What is IT Outsourcing and how does it work?",

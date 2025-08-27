@@ -5,7 +5,7 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from '@/components/ui/accordion'
-import { frequentlyAskedQuestionsMock } from '@/data/mock'
+import { frequentlyAskedQuestionsMock, locationsMock } from '@/data/mock'
 import Banner from '@/components/molecules/banner/Banner'
 import { AtSignIcon, ClockIcon, MapPinIcon, SmartphoneIcon } from 'lucide-react'
 import MotionIconButton from '@/components/atoms/buttons/MotionIconButton'
@@ -89,7 +89,14 @@ const FaqSection = () => {
 										{t('phone')}
 									</p>
 									<p className="text-sm text-outline">
-										<a href="tel:+237653788053">+237 6 53 78 80 53</a>
+										<a
+											href={`tel:${locationsMock[0].phone?.replace(
+												/\s/g,
+												'',
+											)}`}
+										>
+											{locationsMock[0].phone}
+										</a>
 									</p>
 								</div>
 							</div>
@@ -102,7 +109,9 @@ const FaqSection = () => {
 										{t('email')}
 									</p>
 									<p className="text-sm text-outline">
-										<a href="mailto:contact@makiti.com">contact@makiti.com</a>
+										<a href={`mailto:${locationsMock[0].mail}`}>
+											{locationsMock[0].mail}
+										</a>
 									</p>
 								</div>
 							</div>
@@ -115,7 +124,7 @@ const FaqSection = () => {
 									<p className="text-sm font-seravek_medium text-on-surface-variant">
 										{t('location')}
 									</p>
-									<p className="text-sm text-outline">Yaoundé, Cameroon</p>
+									<p className="text-sm text-outline">{locationsMock[0].name}</p>
 								</div>
 							</div>
 
@@ -127,7 +136,9 @@ const FaqSection = () => {
 									<p className="text-sm font-seravek_medium text-on-surface-variant">
 										{t('businessHours')}
 									</p>
-									<p className="text-sm text-outline">Mon-Fri: 9AM-6PM CAF</p>
+									<p className="text-sm text-outline">
+										{t('pages.home.sections.faq.infos.openingHours')}
+									</p>
 								</div>
 							</div>
 						</div>

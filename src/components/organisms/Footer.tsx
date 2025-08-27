@@ -13,8 +13,8 @@ import {
 	SignpostIcon,
 	SmartphoneIcon,
 } from 'lucide-react'
-import { Button } from '../ui/button'
-import { Input } from '../ui/input'
+// import { Button } from '../ui/button'
+// import { Input } from '../ui/input'
 import { Separator } from '../ui/separator'
 import {
 	Accordion,
@@ -28,11 +28,11 @@ import { Link } from 'rasengan'
 import { Fragment, useState } from 'react'
 import Image from '@rasenganjs/image'
 import { useTranslation } from 'react-i18next'
-import rightArrowIcon from '@/assets/icons/right_arrow.svg'
+// import rightArrowIcon from '@/assets/icons/right_arrow.svg'
 
 const Footer = () => {
 	const { t, i18n } = useTranslation()
-	const [currentLocation, setCurrentLocation] = useState<ILocation>(locationsMock[1])
+	const [currentLocation, setCurrentLocation] = useState<ILocation>(locationsMock[0])
 
 	return (
 		<footer className="px-4 sm:px-8 md:px-[120px] pt-10 pb-5 w-full flex flex-col gap-10 bg-secondary mt-[60px]">
@@ -216,7 +216,7 @@ const Footer = () => {
 								{t('footer.upperSection.leftSection.makitiActivityDescription')}
 							</p>
 						</div>
-						<div className="w-full sm:w-[298px]">
+						{/* <div className="w-full sm:w-[298px]">
 							<label
 								htmlFor="newsletter"
 								className="font-seravek_medium text-base text-outline-variant"
@@ -232,7 +232,6 @@ const Footer = () => {
 								/>
 								<Button className="bg-white text-secondary border border-white md:border-secondary h-max rounded-lg px-3 py-2">
 									<span className="sr-only">Subscribe</span>
-									{/* <ArrowRightIcon className="w-4 h-3" /> */}
 									<span className="w-4 h-3">
 										<Image
 											src={rightArrowIcon}
@@ -244,7 +243,7 @@ const Footer = () => {
 									</span>
 								</Button>
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 

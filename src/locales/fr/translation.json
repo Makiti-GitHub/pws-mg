@@ -332,6 +332,9 @@
                         "subtitle": "Nos experts sont prêts à vous aider à trouver la solution d'externalisation parfaite.",
                         "cta": "Parlons-en"
                     },
+                    "infos": {
+                        "openingHours": "Lun-Ven: 9h-18h CAF"
+                    },
                     "questions": {
                         "question1": {
                             "question": "Qu'est-ce que l'Externalisation IT et comment cela fonctionne-t-il ?",

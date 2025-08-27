@@ -6,13 +6,20 @@ import useIsTouchDevice from '@/hooks/useIsTouchDevice'
 import useMouse from '@/hooks/useMouse'
 import AnimatedCounter from '@/components/atoms/animations/AnimatedCounter'
 import MotionIconButton from '@/components/atoms/buttons/MotionIconButton'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowDownIcon, ArrowLeftIcon, ArrowRightIcon } from 'lucide-react'
 // import Image from '@rasenganjs/image'
 import { Link } from 'rasengan'
 import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
 import { useTranslation } from 'react-i18next'
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from '@/components/ui/carousel'
 import useIsResponsive from '@/hooks/useIsResponsive'
 import mask1 from '@/assets/images/HeroSection/mask1.svg'
 import mask2 from '@/assets/images/HeroSection/mask2.svg'
@@ -47,6 +54,10 @@ const HeroSection = () => {
 	const { handleMouseLeave, handleMouseMove, cursorPosition, isHovering } = useMouse()
 	const { setCursorVariant } = useFloatingCursor()
 
+	const leftRef = useRef<HTMLButtonElement>(null)
+	const rightRef = useRef<HTMLButtonElement>(null)
+	const intervalRef = useRef<NodeJS.Timeout>(null)
+
 	const isDesktopScreen = useIsResponsive({ width: 1024 })
 
 	const [currentIndex, setCurrentIndex] = useState(0)
@@ -54,21 +65,36 @@ const HeroSection = () => {
 
 	// Auto-slide every 5 seconds
 	useEffect(() => {
-		const interval = setInterval(() => {
+		intervalRef.current = setInterval(() => {
 			handleNext()
 		}, 5000)
 
-		return () => clearInterval(interval)
+		return () => {
+			if (intervalRef.current) {
+				clearInterval(intervalRef.current)
+			}
+		}
 	}, [])
+
+	// To reset the interval manually:
+	const resetInterval = () => {
+		if (intervalRef.current) {
+			clearInterval(intervalRef.current)
+		}
+		intervalRef.current = setInterval(() => {
+			handleNext()
+		}, 5000)
+	}
 
 	const handleNext = () => {
 		setDirection('right')
+		rightRef?.current?.click()
 		setCurrentIndex((prevIndex) => (prevIndex + 1 === heroCarousel.length ? 0 : prevIndex + 1))
 	}
 
 	const handlePrevious = () => {
 		setDirection('left')
-
+		leftRef?.current?.click()
 		setCurrentIndex((prevIndex) =>
 			prevIndex - 1 < 0 ? heroCarousel.length - 1 : prevIndex - 1,
 		)
@@ -76,6 +102,12 @@ const HeroSection = () => {
 
 	const handleDotClick = (index: number) => {
 		setDirection(index > currentIndex ? 'right' : 'left')
+		if (index > currentIndex) {
+			rightRef?.current?.click()
+		} else if (index < currentIndex) {
+			leftRef?.current?.click()
+		}
+		resetInterval()
 		setCurrentIndex(index)
 		console.log(direction)
 	}
@@ -152,6 +184,7 @@ const HeroSection = () => {
 											className="cursor-pointer"
 											onClick={(e) => {
 												handlePrevious()
+												resetInterval()
 												e.preventDefault()
 												e.stopPropagation()
 											}}
@@ -190,6 +223,7 @@ const HeroSection = () => {
 											className="cursor-pointer"
 											onClick={(e) => {
 												handleNext()
+												resetInterval()
 												e.preventDefault()
 												e.stopPropagation()
 											}}
@@ -211,6 +245,12 @@ const HeroSection = () => {
 							setCursorVariant('default')
 							handleMouseLeave()
 						}}
+						onClick={(e) => {
+							handleNext()
+							resetInterval()
+							e.preventDefault()
+							e.stopPropagation()
+						}}
 						className={`w-full relative hover:cursor-none ease-in ${
 							isDesktop ? 'custom-cursor' : ''
 						} overflow-hidden min-h-[80vh] xl:h-min`}
@@ -226,7 +266,38 @@ const HeroSection = () => {
 							alt="mask2"
 						/>
 						<div className="absolute inset-0 size-full mask-x-from-90% mask-y-from-75% mask-radial-from-40% mask-radial-to-80%">
-							<AnimatePresence>
+							<Carousel
+								className="w-full relative"
+								opts={{
+									align: 'start',
+									loop: true,
+								}}
+							>
+								<CarouselContent className="">
+									{heroCarousel.map((item, index) => (
+										<CarouselItem
+											className={`basis-full`}
+											key={`hero-item-${index}`}
+										>
+											<img
+												src={item.image}
+												alt={item.title}
+												className="aspect-auto object-contain size-full"
+											/>
+											{/* <TestimonialCard testimonial={testimonial} /> */}
+										</CarouselItem>
+									))}
+								</CarouselContent>
+								<CarouselPrevious
+									title={t('previous')}
+									ref={leftRef}
+									className="hidden"
+								/>
+
+								<CarouselNext title={t('next')} ref={rightRef} className="hidden" />
+							</Carousel>
+
+							{/* <AnimatePresence>
 								{heroCarousel[currentIndex] && (
 									<motion.div
 										className="relative size-full"
@@ -248,7 +319,7 @@ const HeroSection = () => {
 										/>
 									</motion.div>
 								)}
-							</AnimatePresence>
+							</AnimatePresence> */}
 						</div>
 						<CustomCursor position={cursorPosition} isVisible={isHovering} />
 					</div>
