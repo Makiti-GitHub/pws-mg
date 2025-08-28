@@ -96,15 +96,29 @@ const LegalNotice: PageComponent = () => {
 				</h2>
 
 				<div className="space-y-2 text-lg">
-					<TransParagraph transKey="pages.legalNotice.sections.hosting.p1" />
-					<TransParagraph transKey="pages.legalNotice.sections.hosting.p2" />
+					<TransParagraph
+						transKey="pages.legalNotice.sections.hosting.p1"
+						values={{
+							hostName: 'Cronon GmbH',
+						}}
+					/>
+					<TransParagraph
+						transKey="pages.legalNotice.sections.hosting.p2"
+						values={{ hostAddress: 'Otto-Ostrowski-Str. 710249 Berlin,Allemagne' }}
+					/>
 					<TransParagraph
 						transKey="pages.legalNotice.sections.hosting.p3"
-						phones={['+49 89 3564717-70']}
+						phones={['+49 30 39802-0']}
+						values={{
+							phoneNumber: '+49 30 39802-0',
+						}}
 					/>
 					<TransParagraph
 						transKey="pages.legalNotice.sections.hosting.p4"
-						emails={['support@contabo.de']}
+						emails={['contact@cronon.net']}
+						values={{
+							mail: 'contact@cronon.net',
+						}}
 					/>
 				</div>
 			</div>

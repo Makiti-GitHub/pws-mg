@@ -877,10 +877,10 @@
                 },
                 "hosting": {
                     "title": "Hébergement",
-                    "p1": "Le site est hébergé par: <bold>Contabo GmbH</bold>",
-                    "p2": "Adresse : <bold>Aschauer Straße 32a, 81549 München, Allemagne</bold>",
-                    "p3": "Téléphone : <phone>+49 89 3564717-70</phone>",
-                    "p4": "E-mail : <email>support@contabo.de</email>"
+                    "p1": "Le site est hébergé par: <bold>{{hostName}}</bold>",
+                    "p2": "Adresse : <bold>{{hostAddress}}</bold>",
+                    "p3": "Téléphone : <phone>{{phoneNumber}}</phone>",
+                    "p4": "E-mail : <email>{{mail}}</email>"
                 },
                 "websitePurpose": {
                     "title": "Objet du site",
