@@ -1,0 +1,48 @@
+import { useFloatingCursor } from '@/hooks/guard/ContextGuard'
+import { cn } from '@/lib/utils'
+import { FC } from 'react'
+
+interface BannerProps {
+	title: string
+	desc: string
+	children?: React.ReactNode
+	className?: string
+	variant?: 'primary' | 'secondary'
+}
+
+const Banner: FC<BannerProps> = ({ title, desc, children, variant = 'primary', className }) => {
+	const { setCursorVariant } = useFloatingCursor()
+	return (
+		<div
+			className={cn(
+				'flex justify-center items-center gap-6 p-4 sm:p-8 rounded-2xl',
+				variant === 'primary' ? 'bg-primary' : 'bg-secondary',
+				className,
+			)}
+		>
+			<div className="w-full flex flex-col items-center gap-4">
+				<h3
+					onMouseEnter={() => setCursorVariant('text')}
+					onMouseLeave={() => setCursorVariant('default')}
+					className={`font-seravek_bold text-center text-2xl sm:text-[32px] ${
+						variant === 'primary' ? 'text-secondary' : 'text-white'
+					}`}
+				>
+					{title}
+				</h3>
+
+				<p
+					className={`text-sm sm:text-base text-center ${
+						variant === 'primary' ? 'text-secondary' : 'text-outline-variant'
+					}`}
+				>
+					{desc}
+				</p>
+
+				{children}
+			</div>
+		</div>
+	)
+}
+
+export default Banner

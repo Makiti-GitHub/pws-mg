@@ -1,0 +1,1002 @@
+{
+    "hello": "Bonjour",
+    "languages": "Langues",
+    "industry": "Secteur",
+    "projectDuration": "Durée du projet",
+    "teamSize": "Taille de l'équipe",
+    "investment": "Investissement",
+    "keyResults": "Résultats clés",
+    "viewLiveWebsite": "Voir le site en direct",
+    "developers": "Développeurs",
+    "day": "Jour",
+    "days": "Jours",
+    "week": "Semaine",
+    "weeks": "Semaines",
+    "month": "Mois",
+    "months": "Mois",
+    "year": "Année",
+    "years": "Années",
+    "remote": "À distance",
+    "onSite": "Sur site",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "project": "Projet",
+    "duration": "Durée",
+    "phone": "Téléphone",
+    "email": "Email",
+    "location": "Localisation",
+    "businessHours": "Heures d'ouverture",
+    "skills": "Compétences",
+    "and": "et",
+    "language": {
+        "en": "Anglais",
+        "de": "Allemand",
+        "fr": "Français"
+    },
+    "nav": {
+        "links": {
+            "services": "Services",
+            "portfolio": "Portfolio",
+            "products": "Produits",
+            "about": "À propos",
+            "contact": "Contact"
+        },
+        "cta": {
+            "letsTalk": "Parlons-en"
+        }
+    },
+    "footer": {
+        "upperSection": {
+            "leftSection": {
+                "contactUs": "Nous contacter",
+                "makitiActivityDescription": "Votre partenaire stratégique en externalisation IT, offrant l'excellence dans tous les domaines technologiques avec des solutions innovantes et des équipes expertes.",
+                "getDirections": "Obtenir l'itinéraire",
+                "form": {
+                    "fields": {
+                        "newsletter": {
+                            "label": "Newsletter",
+                            "placeholder": "Votre email"
+                        }
+                    }
+                }
+            },
+            "rightSection": {
+                "services": {
+                    "title": "Services",
+                    "options": {
+                        "itOutsourcing": "Externalisation IT",
+                        "agileSoftwareDevelopment": "Développement Logiciel Agile",
+                        "itTransformation": "Transformation & Audit IT"
+                    }
+                },
+                "products": {
+                    "title": "Produits",
+                    "options": {
+                        "ticketManagement": "Système de Gestion de Tickets",
+                        "inventory": "Système de Gestion d'Inventaire et de Stock",
+                        "paymentGateway": "Système de Passerelle de Paiement"
+                    }
+                },
+                "company": {
+                    "title": "Entreprise",
+                    "options": {
+                        "about": "À propos",
+                        "teamMembers": "Membres de l'équipe",
+                        "careers": "Carrières"
+                    }
+                }
+            }
+        },
+        "lowerSection": {
+            "copyright": "© {{year}} Makiti Group. Tous droits réservés.",
+            "nav": {
+                "privacyPolicy": "Politique de confidentialité",
+                "termsOfService": "Conditions générales",
+                "legalNotice": "Mentions légales"
+            }
+        }
+    },
+    "pages": {
+        "home": {
+            "sections": {
+                "hero": {
+                    "item1": {
+                        "tag": "EXTERNALISATION IT",
+                        "title": "Votre Partenaire Stratégique en Externalisation IT",
+                        "content": "Transformez votre entreprise avec nos solutions expertes d'externalisation IT. Du développement au conseil, nous offrons l'excellence dans tous les domaines technologiques."
+                    },
+                    "item2": {
+                        "tag": "Transformation & Audit IT",
+                        "title": "Stimulez la Croissance avec la Transformation IT",
+                        "content": "Réinventez votre paysage technologique avec notre expertise en transformation IT. De la modernisation des systèmes hérités à la stratégie numérique, nous conduisons un changement impactant à grande échelle."
+                    },
+                    "item3": {
+                        "tag": "Transformation & Audit IT",
+                        "title": "Accélérez l'Innovation avec une Livraison Agile",
+                        "content": "Livrez de la valeur plus rapidement avec nos services de développement logiciel agile. Nos équipes adaptatives apportent rapidité, flexibilité et qualité constante à chaque sprint, vous aidant à répondre au changement avec confiance."
+                    },
+                    "cta": "Découvrez nos Solutions d'Externalisation"
+                },
+                "ourClients": {
+                    "title": "Nos Clients",
+                    "description": "Nous nous sommes associés à plusieurs entreprises pour réimaginer et redéfinir la façon dont les utilisateurs vivent leurs produits."
+                },
+                "ourExpertise": {
+                    "title": "Notre Expertise",
+                    "subtitle": "Solutions complètes d'externalisation IT dans tous les domaines technologiques",
+                    "items": {
+                        "item1": {
+                            "title": "Externalisation IT",
+                            "content": {
+                                "description": "Externalisation IT complète avec équipes dédiées",
+                                "list": {
+                                    "item1": "Équipes Dédiées",
+                                    "item2": "Gestion de Projet",
+                                    "item3": "Solutions CMS"
+                                }
+                            }
+                        },
+                        "item2": {
+                            "title": "Développement Logiciel",
+                            "content": {
+                                "description": "Développement agile et conception UX/UI durable",
+                                "list": {
+                                    "item1": "Développement Agile",
+                                    "item2": "Conception UX/UI",
+                                    "item3": "Assurance Qualité"
+                                }
+                            }
+                        },
+                        "item3": {
+                            "title": "Conseil IT",
+                            "content": {
+                                "description": "Conception pilotée par l'IA et stratégies d'innovation",
+                                "list": {
+                                    "item1": "Conception pilotée par l'IA",
+                                    "item2": "Stratégie d'Innovation",
+                                    "item3": "Conseil Technique"
+                                }
+                            }
+                        },
+                        "item4": {
+                            "title": "E-Commerce & SaaS",
+                            "content": {
+                                "description": "Développement de plateformes et solutions cloud",
+                                "list": {
+                                    "item1": "Plateformes E-Commerce",
+                                    "item2": "Développement SaaS",
+                                    "item3": "Intégration Cloud"
+                                }
+                            }
+                        },
+                        "item5": {
+                            "title": "Sécurité & Conformité",
+                            "content": {
+                                "description": "Solutions complètes de cybersécurité et de conformité réglementaire",
+                                "list": {
+                                    "item1": "Audits de Cybersécurité",
+                                    "item2": "Protection des Données",
+                                    "item3": "Solutions de Conformité"
+                                }
+                            }
+                        },
+                        "item6": {
+                            "title": "Solutions Numériques",
+                            "content": {
+                                "description": "Marketing numérique vert et développement d'applications",
+                                "list": {
+                                    "item1": "Marketing Numérique",
+                                    "item2": "Application Mobile",
+                                    "item3": "Multi-plateforme"
+                                }
+                            }
+                        }
+                    },
+                    "ourSolutionProcessStack": {
+                        "title": "Notre Stack de Processus de Solutions",
+                        "items": {
+                            "item1": "Ingénierie des Exigences",
+                            "item2": "Conception UX/UI",
+                            "item3": "Développement Logiciel",
+                            "item4": "Assurance Qualité",
+                            "item5": "DevOps & CI/CD",
+                            "item6": "Optimisation des Performances",
+                            "item7": "Solutions Cloud"
+                        }
+                    }
+                },
+                "findTheTalentYouNeed": {
+                    "title": "Trouvez le Talent dont Vous Avez Besoin",
+                    "subtitle": "Sélectionnez parmi nos profils experts en externalisation",
+                    "talents": {
+                        "frontendDeveloper": {
+                            "title": "Développeur Frontend",
+                            "description": "Développeurs frontend experts spécialisés dans les technologies web modernes et le design responsive"
+                        },
+                        "backendDeveloper": {
+                            "title": "Développeur Backend",
+                            "description": "Développeurs backend seniors avec expertise en architecture évolutive et solutions cloud."
+                        },
+                        "devopsEngineer": {
+                            "title": "Ingénieur DevOps",
+                            "description": "Ingénieurs DevOps axés sur l'automatisation, CI/CD et l'optimisation d'infrastructure."
+                        },
+                        "uiuxDesigner": {
+                            "title": "Designer UX/UI",
+                            "description": "Designers UX/UI créatifs avec focus sur la conception centrée utilisateur et la durabilité."
+                        },
+                        "testManager": {
+                            "title": "Responsable Test",
+                            "description": "Responsables de test et ingénieurs QA assurant la qualité par des tests complets."
+                        },
+                        "scrumMaster": {
+                            "title": "Scrum Master",
+                            "description": "Scrum Masters certifiés avec une vaste expérience en gestion de projet agile."
+                        }
+                    },
+                    "keySkills": "Compétences Clés",
+                    "requestQuote": {
+                        "startingPrice": "Prix de Départ",
+                        "cta": "Demander un Devis",
+                        "pricePerHour": "À partir de {{price}}€/heure",
+                        "info": "Obtenez un devis personnalisé dans les 24 heures"
+                    }
+                },
+                "ourSuccessStories": {
+                    "title": "Nos Histoires de Succès",
+                    "subtitle": "Découvrez quelques-uns de nos projets récents et l'impact que nous avons eu",
+                    "banner": {
+                        "title": "Rejoignez nos Clients Satisfaits",
+                        "subtitle": "Expérimentez le même niveau d'excellence et de résultats. Discutons de la façon dont nous pouvons vous aider à transformer votre entreprise grâce à l'externalisation IT stratégique.",
+                        "cta": "Voir le Portfolio"
+                    }
+                },
+                "ourLiveProducts": {
+                    "title": "Nos Produits En Direct",
+                    "subtitle": "Explorez nos applications livrées avec succès et déployées qui servent actuellement de vrais utilisateurs et entreprises dans le monde entier.",
+                    "products": {
+                        "product1": {
+                            "title": "Gestion des stocks et de l'inventaire",
+                            "category": "Application mobile pour entreprises",
+                            "description": "Suivez l'inventaire, gérez les commandes et surveillez les niveaux de stock avec cette solution mobile conviviale."
+                        },
+                        "product2": {
+                            "title": "Système de gestion des billets",
+                            "category": "Plateforme d'administration multi-vendeur",
+                            "description": "Plateforme web pour les agences de gestion des voyages, des vendeurs et des réservations avec un contrôle centralisé."
+                        },
+                        "product3": {
+                            "title": "Gestion des stocks et de l'inventaire - VendorAdmin",
+                            "category": "Plateforme d'administration des vendeurs",
+                            "description": "Plateforme centrée sur les vendeurs pour la surveillance en temps réel des stocks, la gestion des commandes et les informations d'inventaire."
+                        },
+                        "product4": {
+                            "title": "Système de gestion des billets",
+                            "category": "Application mobile pour les utilisateurs finaux",
+                            "description": "Application mobile pour la réservation, la gestion et la surveillance des voyages en bus avec des mises à jour en temps réel."
+                        },
+                        "product5": {
+                            "title": "Système de passerelle de paiement",
+                            "category": "Plateforme multi-vendeur",
+                            "description": "Plateforme de paiement universelle permettant des transactions sécurisées et multi-vendeurs sur toutes les interfaces web."
+                        },
+                        "product6": {
+                            "title": "Système de passerelle de paiement",
+                            "category": "Application mobile pour les utilisateurs finaux",
+                            "description": "Application mobile pour les paiements de voyages, la planification et la surveillance des sièges avec une interface simplifiée."
+                        }
+                    },
+                    "banner": {
+                        "title": "Dynamisez Votre Entreprise avec Nos Produits",
+                        "subtitle": "Expérimentez le même niveau d'excellence et de résultats. Discutons de la façon dont nous pouvons vous aider à transformer votre entreprise grâce à l'externalisation IT stratégique.",
+                        "cta": "Explorer les Produits"
+                    }
+                },
+                "ourTechnologyStack": {
+                    "title": "Notre stack technologique",
+                    "subtitle": "Nous utilisons une technologie qui sert les solutions mises en œuvre - jamais l'inverse",
+                    "banner": {
+                        "title": "Dynamisez Votre Entreprise avec Nos Produits",
+                        "subtitle": "Expérimentez le même niveau d'excellence et de résultats. Discutons de la façon dont nous pouvons vous aider à transformer votre entreprise grâce à l'externalisation IT stratégique.",
+                        "cta": "Explorer les Produits"
+                    },
+                    "categories": {
+                        "frontend": "Frontend",
+                        "nativeApp": "App Native",
+                        "backend": "Backend",
+                        "testing": "Tests",
+                        "database": "Base de données",
+                        "cms": "CMS",
+                        "crossPlatformApp": "App Multi-plateforme",
+                        "uxUiDesign": "Conception UX/UI",
+                        "cloud": "Cloud",
+                        "testingTools": "Outils de Test",
+                        "deployment": "Déploiement",
+                        "organization": "Organisation"
+                    }
+                },
+                "whatOurClientsSays": {
+                    "title": "Ce que Disent nos Clients",
+                    "subtitle": "Ne nous croyez pas sur parole—écoutez nos clients satisfaits.",
+                    "banner": {
+                        "title": "Prêt à transformer votre entreprise ?",
+                        "subtitle": "Discutons de la façon dont nous pouvons vous aider à obtenir des résultats similaires avec nos services experts d'externalisation IT.",
+                        "cta": "Parlons-en"
+                    }
+                },
+                "faq": {
+                    "title": "Questions Fréquemment Posées",
+                    "subtitle": "Tout ce que vous devez savoir sur nos services d'Externalisation IT",
+                    "banner": {
+                        "title": "Vous avez encore des questions ?",
+                        "subtitle": "Nos experts sont prêts à vous aider à trouver la solution d'externalisation parfaite.",
+                        "cta": "Parlons-en"
+                    },
+                    "infos": {
+                        "openingHours": "Lun-Ven: 9h-18h CAF"
+                    },
+                    "questions": {
+                        "question1": {
+                            "question": "Qu'est-ce que l'Externalisation IT et comment cela fonctionne-t-il ?",
+                            "answer": "L'externalisation IT est la pratique de contracter des prestataires de services externes pour gérer vos fonctions et services IT. Chez Makiti SARL, nous fournissons des équipes dédiées, du développement basé sur des projets et un support technique continu. Notre modèle d'externalisation vous permet d'accéder à des talents experts, de reduire les coûts et d'adapter vos opérations efficacement tout en vous concentrant sur vos activités commerciales principales"
+                        },
+                        "question2": {
+                            "question": "Pourquoi devrais-je choisir l'externalisation IT plutôt que d'embaucher des développeurs en interne ?",
+                            "answer": "Débloquez instantanément des talents experts avec l'externalisation IT. Profitez d'économies allant jusqu'à 60%, adaptez-vous sans effort et réduisez les risques d'embauche. Nos équipes expérimentées accélèrent votre time-to-market--pas de maux de tête de recrutement, de coûts de formation ou de soucis d'infrastructure. Ajustez la taille de votre équipe selon l'évolution de votre projet."
+                        },
+                        "question3": {
+                            "question": "Comment assurez-vous la sécurité des données et la confidentialité ?",
+                            "answer": "La sécurité est notre priorité absolue. Nous utilisons des protections de niveau entreprise comme la communication chiffrée, des environnements de développement sécurisés, des VPN, l'authentification multi-facteurs et des audits de sécurité réguliers. Chaque membre de l'équipe signe des NDA stricts et adhère à des protocoles rigoureux de traitement des données. Nous sommes entièrement conformes au RGPD, à l'ISO 27001 et aux normes de sécurité mondiales."
+                        },
+                        "question4": {
+                            "question": "Comment fonctionne la communication avec les équipes externalisées ?",
+                            "answer": "Nous gardons la communication cristalline avec des daily standups, des mises à jour hebdomadaires et des revues mensuelles. En utilisant des outils comme Slack, Microsoft Teams, Jira et Zoom, vous restez connecté à chaque étape. Vous aurez un accès direct à votre chef de projet dédié et à votre équipe--alignés sur votre fuseau horaire, votre style, votre planning."
+                        },
+                        "question5": {
+                            "question": "Quels sont vos modèles de tarification et comment structurez-vous les coûts ?",
+                            "answer": "Nous offrons une tarification flexible adaptée à vos besoins--tarifs horaires (45-60€/heure), projets à prix fixe, ou modèles d'équipes dédiées. Les coûts varient selon le niveau de compétence, la complexité du projet et la durée. Vous recevrez des estimations transparentes dès le départ sans frais cachés. Les partenaires à long terme bénéficient de tarifs préférentiels et d'un support prioritaire."
+                        },
+                        "question6": {
+                            "question": "Combien de temps faut-il pour démarrer un projet et livrer des résultats ?",
+                            "answer": "Le lancement du projet prend généralement 2-3 semaines, couvrant la mise en place de l'équipe et l'analyse des exigences. Les délais de livraison dépendent de la portée du projet : sites web simples (4-8 semaines), applications complexes (3-12 mois), solutions d'entreprise (6-18 mois). Vous obtiendrez une feuille de route détaillée dès le départ, avec des mises à jour de progression cohérentes à chaque étape."
+                        },
+                        "question7": {
+                            "question": "Dans quelles technologies et compétences vos équipes se spécialisent-elles ?",
+                            "answer": "Nos équipes sont expertes dans les stacks technologiques modernes : Frontend (React, Vue.js, Angular), Backend (Node.js, Python, Java), Mobile (React Native, Flutter), Cloud (AWS, Azure, GCP), DevOps (Docker, Kubernetes), AI/ML (TensorFlow, PyTorch), et bases de données (PostgreSQL, MongoDB). Nous restons à la pointe en évoluant constamment avec les derniers outils et meilleures pratiques."
+                        }
+                    }
+                },
+                "startYourProjectToday": {
+                    "title": "Commencez votre projet aujourd'hui",
+                    "subtitle": "Parlez-nous des exigences de votre projet et construisons quelque chose d'incroyable ensemble.",
+                    "steps": {
+                        "step1": {
+                            "label": "Infos Personnelles",
+                            "indication": "Parlez-nous de vous"
+                        },
+                        "step2": {
+                            "label": "Infos Projet",
+                            "indication": "Parlez-nous de votre projet"
+                        },
+                        "step3": {
+                            "label": "Description du Projet",
+                            "indication": "Décrivez les exigences de votre projet"
+                        }
+                    },
+                    "form": {
+                        "title": "Exigences du Projet",
+                        "indication": "Veuillez remplir ce formulaire avec le plus de détails possible pour nous aider à comprendre les besoins de votre projet.",
+                        "sendRequest": "Envoyer la Demande de Projet",
+                        "modal": {
+                            "title": "Merci ! Nous vous recontacterons dans les 24 heures.",
+                            "content": "Nous avons reçu les exigences de votre projet et les analysons actuellement avec soin. Notre équipe préparera une proposition détaillée et vous recontactera bientôt."
+                        },
+                        "fields": {
+                            "fullName": {
+                                "label": "Nom Complet",
+                                "placeholder": "Entrez votre nom complet"
+                            },
+                            "emailAddress": {
+                                "label": "Adresse Email",
+                                "placeholder": "Entrez votre adresse email"
+                            },
+                            "companyName": {
+                                "label": "Nom de l'Entreprise",
+                                "placeholder": "Optionnel"
+                            },
+                            "phoneNumber": {
+                                "label": "Numéro de Téléphone",
+                                "placeholder": "Optionnel"
+                            },
+                            "projectType": {
+                                "label": "Type de Projet",
+                                "placeholder": "Sélectionnez un type de projet"
+                            },
+                            "budgetRange": {
+                                "label": "Fourchette de Budget",
+                                "placeholder": "Sélectionnez une fourchette de budget"
+                            },
+                            "projectTimeline": {
+                                "label": "Chronologie du Projet",
+                                "placeholder": "Sélectionnez une chronologie"
+                            },
+                            "technicalRequirements": {
+                                "label": "Exigences Techniques",
+                                "placeholder": "Sélectionnez les exigences techniques"
+                            },
+                            "preferredTeamSize": {
+                                "label": "Taille d'Équipe Préférée",
+                                "placeholder": "Sélectionnez le nombre de membres d'équipe"
+                            },
+                            "projectDescription": {
+                                "label": "Description du Projet",
+                                "placeholder": "Décrivez votre projet en détail : objectifs, exigences technologiques spécifiques, contraintes que nous devrions connaître, et tout détail supplémentaire..."
+                            }
+                        }
+                    }
+                },
+                "whyChooseMakiti": {
+                    "title": "Pourquoi Choisir Makiti Group",
+                    "subtitle": "Associez-vous à nous pour des solutions d'externalisation IT exceptionnelles soutenues par l'expertise, l'innovation et la fiabilité.",
+                    "reasons": {
+                        "reason1": {
+                            "title": "Approche Agile",
+                            "desc": "Développement rapide et itératif avec retours continus et cycles de déploiement rapides."
+                        },
+                        "reason2": {
+                            "title": "Conception Durable",
+                            "desc": "Développement rapide et itératif avec retours continus et cycles de déploiement rapides."
+                        },
+                        "reason3": {
+                            "title": "Focus Innovation",
+                            "desc": "Solutions de pointe pilotées par l'IA et approches innovantes pour les défis complexes."
+                        },
+                        "reason4": {
+                            "title": "Conseil Expert",
+                            "desc": "Conseil IT stratégique avec une expertise sectorielle approfondie et des méthodologies éprouvées."
+                        },
+                        "reason5": {
+                            "title": "Sécurité d'Abord",
+                            "desc": "Mesures de sécurité de niveau entreprise et conformité aux normes internationales."
+                        },
+                        "reason6": {
+                            "title": "Support 24/7",
+                            "desc": "Support technique et surveillance 24 heures sur 24 pour les systèmes critiques."
+                        },
+                        "reason7": {
+                            "title": "Assurance Qualité",
+                            "desc": "Processus rigoureux de test et de contrôle qualité garantissant l'excellence de livraison."
+                        },
+                        "reason8": {
+                            "title": "Portée Mondiale",
+                            "desc": "Équipe internationale avec support multilingue et expertise interculturelle."
+                        }
+                    }
+                }
+            }
+        },
+        "portfolio": {
+            "title": "Explorez notre portfolio",
+            "subtitle": "Ne nous croyez pas sur parole – explorez les solutions innovantes que nous avons créées pour nos clients. Lisez nos études de cas pour voir notre impact dans tous les secteurs, et imaginez ce que nous pourrions accomplir ensemble.",
+            "filters": {
+                "all": "Tout",
+                "web_app": "Apps Web",
+                "mobile_app": "Apps Mobile",
+                "e_commerce": "E-Commerce",
+                "saas": "SaaS",
+                "branding": "Identité visuelle",
+                "website": "Site web",
+                "search_engine_optimization": "Optimisation pour les moteurs de recherche",
+                "social_media_management": "Gestion des réseaux sociaux",
+                "social_management": "Gestion sociale"
+            },
+            "projects": {
+                "card": {
+                    "category": {
+                        "web_app": "App Web",
+                        "mobile_app": "App Mobile",
+                        "e_commerce": "E-Commerce",
+                        "saas": "SaaS",
+                        "branding": "Identité visuelle",
+                        "website": "Site web",
+                        "search_engine_optimization": "Optimisation pour les moteurs de recherche",
+                        "social_media_management": "Gestion des réseaux sociaux",
+                        "social_management": "Gestion sociale"
+                    },
+                    "industry": {
+                        "transportation": "Transport",
+                        "travel": "Voyage",
+                        "finance": "Finance",
+                        "cross_platform": "Multi-plateforme",
+                        "e_commerce": "E-commerce",
+                        "logistics": "Logistique",
+                        "agency": "Agence",
+                        "agriculture": "Agriculture",
+                        "farming": "Agriculture"
+                    }
+                },
+                "stories": {
+                    "story1": {
+                        "description": "Cette application simplifie la réservation de voyages en bus, permettant aux utilisateurs de planifier et de sécuriser leur déplacement avec accès aux itinéraires et horaires.",
+                        "results": {
+                            "result1": "Plus de 500 000 téléchargements.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story2": {
+                        "description": "Ce projet a consisté à concevoir une application web universelle pour offrir une solution de paiement polyvalente, fournissant aux utilisateurs diverses méthodes de paiement pour leur convenance sur toutes les plateformes.",
+                        "results": {
+                            "result1": "Plus de 1 million de visites.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story3": {
+                        "description": "Cette application permet aux entreprises de suivre leurs stocks, de gérer leurs commandes et de générer des rapports en temps réel avec des fonctionnalités conviviales.",
+                        "results": {
+                            "result1": "Plus de 500 000 téléchargements.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story4": {
+                        "description": "Ce projet a consisté à créer un site web pour promouvoir une application d'agence de bus, mettant en avant ses fonctionnalités qui aident les agences à suivre et à gérer les voyages en bus de manière efficace.",
+                        "results": {
+                            "result1": "Plus de 1 million de visites.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story5": {
+                        "description": "Ce projet visait à développer une application web pour les agences de bus afin de suivre efficacement les voyages et de gérer les itinéraires en temps réel.",
+                        "results": {
+                            "result1": "Plus de 1 million de visites.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story6": {
+                        "description": "Ce projet a livré un site web pour une entreprise de construction et d'infrastructure, ainsi que la création d'une identité visuelle, du référencement et de la gestion des réseaux sociaux pour mettre en avant les services dans l'immobilier, la fibre optique et les travaux publics.",
+                        "results": {
+                            "result1": "Plus de 500 000 téléchargements.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story7": {
+                        "description": "Ce projet a créé un pipeline direct pour les agriculteurs locaux afin de livrer des produits frais directement aux consommateurs, rationalisant la chaîne d'approvisionnement et soutenant l'agriculture locale.",
+                        "results": {
+                            "result1": "Plus de 500 000 téléchargements.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    },
+                    "story8": {
+                        "description": "Une entreprise logistique transportant des marchandises d'Allemagne au Cameroun. Ce projet a consisté à réaménager des prospectus pour améliorer la visibilité et l'accessibilité en ligne, soutenant les efforts de marketing numérique plus larges.",
+                        "results": {
+                            "result1": "Plus de 500 000 téléchargements.",
+                            "result2": "Une augmentation de 150% des conversions.",
+                            "result3": "Une note moyenne de 4,75."
+                        }
+                    }
+                }
+            },
+            "sections": {
+                "challenge": {
+                    "title": "Le Défi",
+                    "problems": {
+                        "title": "Problèmes Clés Identifiés"
+                    }
+                },
+                "solution": {
+                    "title": "Notre Solution",
+                    "developmentApproach": {
+                        "title": "Approche de Développement",
+                        "phases": {
+                            "discovery_and_planning": "Découverte & Planification",
+                            "design_and_development": "Conception & Développement",
+                            "launch_and_optimization": "Lancement & Optimisation"
+                        }
+                    },
+                    "techsUsed": {
+                        "title": "Technologies utilisées"
+                    },
+                    "keyAchievements": {
+                        "title": "Réalisations Clés"
+                    }
+                },
+                "achievements": {
+                    "title": "Résultats Obtenus",
+                    "categories": {
+                        "user_engagement": "Augmentation de l'Engagement Utilisateur",
+                        "booking_time": "Réduction du Temps de Réservation Moyen",
+                        "conversion_rate": "Augmentation du Taux de Conversion",
+                        "customer_satisfaction": "Score de Satisfaction Client"
+                    }
+                },
+                "clientTestimonial": {
+                    "title": "Témoignage Client"
+                },
+                "banner": {
+                    "title": "Intéressé par des Résultats Similaires ?",
+                    "subtitle": "Discutons de la façon dont nous pouvons vous aider à obtenir des résultats similaires avec nos services experts d'externalisation IT.",
+                    "cta": "Commencer Votre Projet"
+                }
+            }
+        },
+        "products": {
+            "title": "Nos Produits En Direct",
+            "subtitle": "Explorez les produits puissants que nous avons construits pour résoudre des défis du monde réel. Découvrez comment nos solutions stimulent les performances, rationalisent les opérations et apportent de la valeur dans tous les secteurs."
+        },
+        "about": {
+            "title": "L'Histoire de Makiti Group",
+            "subtitle": "L'aventure Makiti Group a officiellement commencé le 1er mars 2023, avec son siège principal établi à Paris, France. Cette entreprise est le fruit de la vision audacieuse de MJ, une jeune entrepreneure camerounaise résidant en Europe. Son objectif fondamental est de propulser l'écosystème IT en Afrique, avec une attention particulière pour le Cameroun.",
+            "sections": {
+                "theStoryOfMakiti": {
+                    "title": "Répondre aux Défis Mondiaux d'Externalisation",
+                    "p1": "Aujourd'hui, de nombreuses grandes entreprises européennes se tournent vers l'Inde pour leur externalisation de services IT. Cependant, cette approche présente souvent des défis majeurs : la barrière linguistique (l'anglais étant la seule langue commune) et un décalage horaire significatif pouvant aller jusqu'à 5 heures par rapport à la France.",
+                    "p2": "Avec Makiti Group, l'ambition de MJ est de mettre à disposition des entreprises européennes les talents africains, tout en garantissant un service de qualité et des ressources inégalées. Nous avons fait de la communication fluide une priorité. Chez Makiti Group, notre personnel n'est pas seulement hautement qualifié techniquement mais aussi multilingue. Au-delà de l'anglais, nous nous distinguons par notre maîtrise de l'allemand. Cela permet à nos clients du Luxembourg, de Suisse, et bien sûr d'Allemagne, de communiquer avec nos développeurs dans leur langue maternelle. Cette facilité d'échange est cruciale pour une transmission précise des exigences et une collaboration harmonieuse."
+                },
+                "growthAndAchievements": {
+                    "title": "Croissance et Réalisations",
+                    "p1": "L'année 2024 a été marquée par un développement significatif de nos équipes. Nous avons recruté une gamme diversifiée de profils exceptionnels : Développeurs Java et React, Ingénieurs Site & Reliability, Designers UX/UI, Graphistes, et Ingénieurs Test Automation.",
+                    "p2": "Ces talents ont déjà mené à la réalisation de plusieurs produits internes innovants, tels que",
+                    "p3": "En parallèle, nous avons mené à bien de nombreux projets pour nos clients et partenaires, renforçant ainsi notre réputation de fiabilité et d'excellence.",
+                    "p4": "Makiti Group fait le pont entre le potentiel technologique africain et les besoins du marché européen, construisant des connexions au-delà des frontières et des fuseaux horaires."
+                },
+                "ourMission": {
+                    "title": "Notre Mission",
+                    "body": "Autonomiser les entreprises avec des solutions IT de pointe grâce à des partenariats d'externalisation stratégiques. Nous comblons le fossé entre vision et exécution, en livrant des services de développement logiciel, de conseil et de transformation numérique de haute qualité qui accélèrent la croissance et l'innovation."
+                },
+                "ourVision": {
+                    "title": "Notre Vision",
+                    "body": "Devenir le leader mondial des solutions d'externalisation IT en connectant les talents exceptionnels avec les entreprises visionnaires, créant un écosystème technologique durable qui transcende les frontières géographiques et culturelles."
+                },
+                "statistics": {
+                    "title": "Fait confiance par des entreprises du monde entier",
+                    "subtitle": "Notre track record parle de lui-même. Nous avons aidé des entreprises de toutes tailles à atteindre leurs objectifs de transformation numérique.",
+                    "stat": {
+                        "projectsDelivered": "Projets livrés",
+                        "activeYears": "Années d'activité",
+                        "satisfiedClients": "Clients satisfaits",
+                        "officesGlobally": "Bureaux dans le monde"
+                    }
+                },
+                "meetOurTeam": {
+                    "title": "Rencontrez Notre Équipe",
+                    "subtitle": "Les professionnels talentueux derrière notre succès"
+                },
+                "ourJourney": {
+                    "title": "Notre Parcours",
+                    "subtitle": "Jalons clés dans l'évolution de notre entreprise",
+                    "timeline": {
+                        "checkpoint1": "Nous avons fondé l'entreprise avec le siège social à Paris, France",
+                        "checkpoint2": "Nous avons ouvert un bureau de succursale à Yaoundé, Cameroun",
+                        "checkpoint3": "Nous avons ouvert un bureau de succursale à Lagos, Nigeria",
+                        "checkpoint4": "Nous avons lancé nos Produits Matoa & Lyssafi"
+                    }
+                },
+                "ourCoreValues": {
+                    "title": "Nos Valeurs Fondamentales",
+                    "subtitle": "Les principes qui guident tout ce que nous faisons",
+                    "banner": {
+                        "title": "Prêt à Commencer Votre Projet ?",
+                        "subtitle": "Discutons de la façon dont nous pouvons vous aider à obtenir des résultats similaires avec nos services experts d'externalisation IT.",
+                        "cta": "Parlons-en"
+                    }
+                }
+            }
+        },
+        "termsAndConditions": {
+            "title": "Conditions Générales d’Utilisation (CGU)",
+            "sections": {
+                "introduction": {
+                    "title": "Présentation de Makiti Group",
+                    "p1": "Makiti Group est une société spécialisée dans l’<bold>outsourcing stratégique IT</bold>, offrant des services de développement logiciel, d’accompagnement digital, de design UX/UI, de maintenance, et de support technique.",
+                    "p2": "<bold>Makiti Group</bold> est une société de droit français, ayant son siège social à <bold>Paris, France</bold>, avec des <bold>branches à Yaoundé (Cameroun)</bold> et <bold>Lagos (Nigeria)</bold>. Son slogan : <italic>“Your strategic IT outsourcing partner”<italic>."
+                },
+                "termsPurpose": {
+                    "title": "Objet des CGU",
+                    "p1": "Les présentes Conditions Générales d’Utilisation régissent l’accès et l’utilisation du site internet de Makiti Group accessible à l’adresse : <link1>www.makiti-group.com</link1> (ci-après \"le Site\").",
+                    "p2": "En accédant au Site, l’utilisateur accepte sans réserve les présentes CGU."
+                },
+                "siteAccess": {
+                    "title": "Accès au site",
+                    "p1": "L’accès au site est gratuit et ouvert à tous. Makiti Group se réserve le droit de suspendre, modifier ou interrompre l’accès à tout ou partie du Site pour maintenance, mise à jour ou pour toute autre raison technique."
+                },
+                "servicesOffered": {
+                    "title": "Services proposés sur le site",
+                    "p1": "Le Site présente les services proposés par Makiti Group, notamment :",
+                    "ul": [
+                        "Développement de plateformes sur mesure",
+                        "Maintenance d’applications",
+                        "Conception d’architectures logicielles",
+                        "Externalisation de ressources informatiques",
+                        "Solutions digitales pour entreprises et startups"
+                    ],
+                    "p2": "Des formulaires de contact permettent aux utilisateurs de soumettre des demandes d’informations, de devis ou de collaboration."
+                },
+                "userCommitments": {
+                    "title": "Engagements de l’utilisateur",
+                    "p1": "En utilisant le Site, l’utilisateur s’engage à :",
+                    "ul": [
+                        "Ne pas perturber le fonctionnement du Site",
+                        "Ne pas tenter d’accéder frauduleusement à d'autres systèmes informatiques",
+                        "Fournir des informations exactes dans tout formulaire de contact",
+                        "Respecter les droits de propriété intellectuelle relatifs aux contenus diffusés"
+                    ]
+                },
+                "intellectualProperty": {
+                    "title": "Propriété intellectuelle",
+                    "p1": "Le Site, ses contenus, sa structure, ses images, logos, vidéos, textes et éléments graphiques sont la propriété exclusive de Makiti Group, sauf mention contraire.",
+                    "p2": "Toute reproduction, diffusion ou réutilisation, même partielle, sans autorisation écrite, est strictement interdite."
+                },
+                "liability": {
+                    "title": "Responsabilité",
+                    "p1": "Makiti Group s’efforce d’assurer l’exactitude des informations présentes sur le Site. Toutefois, elle ne saurait être tenue responsable :",
+                    "ul": [
+                        "D’éventuelles erreurs ou omissions",
+                        "D’un dysfonctionnement technique ou de l’inaccessibilité du Site",
+                        "Des dommages directs ou indirects subis par l’utilisateur suite à l’utilisation du Site"
+                    ]
+                },
+                "personalData": {
+                    "title": "Données personnelles",
+                    "p1": "Le traitement des données personnelles est régi par la <bold>Politique de Confidentialité<bold> disponible sur le Site.",
+                    "p2": "Conformément au RGPD, l’utilisateur dispose de droits d’accès, de rectification, de suppression et d’opposition."
+                },
+                "hypertextLinks": {
+                    "title": "Liens hypertextes",
+                    "p1": "Le Site peut contenir des liens vers d’autres sites. Makiti Group ne peut être tenue responsable du contenu, de la politique de confidentialité ou des pratiques de ces sites tiers."
+                },
+                "termsAndConditionsModification": {
+                    "title": "Modification des CGU",
+                    "p1": "Makiti Group se réserve le droit de modifier à tout moment les présentes CGU. L’utilisateur est invité à les consulter régulièrement."
+                },
+                "applicableLawAndJuridiction": {
+                    "title": "Loi applicable et juridiction",
+                    "p1": "Les présentes CGU sont régies par le droit français. En cas de litige, compétence est attribuée aux tribunaux compétents de Paris, sauf disposition impérative contraire."
+                }
+            }
+        },
+        "privacyPolicy": {
+            "title": "Politique de Confidentialité de Makiti Group",
+            "sections": {
+                "introduction": {
+                    "title": "Introduction",
+                    "p1": "Chez <bold>Makiti Group</bold>, la protection des données personnelles est une priorité. La présente politique de confidentialité décrit les modalités de collecte, de traitement, de conservation et de protection des données personnelles des utilisateurs, partenaires, clients et collaborateurs dans le cadre de l’utilisation de nos services numériques et de nos prestations d’outsourcing IT.",
+                    "p2": "Makiti Group agit conformément :",
+                    "ul": [
+                        "au <bold>Règlement Général sur la Protection des Données (RGPD)</bold> de l’Union européenne;",
+                        "à la <bold>loi française Informatique et Libertés</bold> du 6 janvier 1978 modifiée;",
+                        "ainsi qu’aux bonnes pratiques en vigueur dans les pays où le groupe est présent (notamment le Cameroun et le Nigeria)."
+                    ]
+                },
+                "personalDataCollected": {
+                    "title": "Données personnelles collectées",
+                    "p1": "Makiti Group est amenée à collecter différentes catégories de données, parmi lesquelles :",
+                    "ul": [
+                        "<bold>Données d’identification :</bold> nom, prénom, adresse email, téléphone, adresse postale.",
+                        "<bold>Données professionnelles :</bold> fonction, nom d’entreprise, secteur d’activité.",
+                        "<bold>Données techniques :</bold> adresse IP, type de navigateur, identifiants de connexion, système d’exploitation.",
+                        "<bold>Données d’usage :</bold> parcours de navigation, préférences, commentaires.",
+                        "<bold>Données financières :</bold> informations relatives aux paiements, factures, hors données bancaires sensibles."
+                    ]
+                },
+                "collectionMethod": {
+                    "title": "Méthodes de collecte",
+                    "p1": "Les données sont collectées via les canaux suivants :",
+                    "ul": [
+                        "Formulaires en ligne sur notre site <link1>www.makiti-group.com</link1>",
+                        "Communications par email, téléphone ou chat",
+                        "Échanges commerciaux (contrats, devis, réunions)",
+                        "Cookies et outils de suivi utilisés sur nos plateformes"
+                    ]
+                },
+                "processingPurposes": {
+                    "title": "Finalités du traitement",
+                    "p1": "Les données personnelles sont utilisées dans les objectifs suivants :",
+                    "ul": [
+                        "Gérer les demandes de contact, de démonstration ou de partenariat",
+                        "Fournir nos prestations techniques, commerciales ou de conseil",
+                        "Suivre les projets, assurer un support client et une assistance technique",
+                        "Améliorer la qualité de nos services et l’expérience utilisateur",
+                        "Respecter nos obligations légales (fiscales, sociales, contractuelles)"
+                    ]
+                },
+                "dataSharing": {
+                    "title": "Communication des données",
+                    "p1": "Makiti Group s’engage à ne jamais vendre vos données. Elles peuvent être partagées uniquement avec :",
+                    "ul": [
+                        "Nos prestataires techniques (hébergeurs, développeurs, outils tiers), sous clause de confidentialité",
+                        "Nos branches ou filiales, dans le strict cadre de la finalité initiale",
+                        "Les autorités administratives ou judiciaires, sur réquisition légale"
+                    ]
+                },
+                "retentionPeriod": {
+                    "title": "Durée de conservation",
+                    "p1": "Les données sont conservées pendant la durée strictement nécessaire à la réalisation des finalités ci-dessus, augmentée des délais légaux en matière de prescription commerciale ou fiscale.",
+                    "p2": "Passé ces délais, elles sont supprimées ou anonymisées de manière sécurisée."
+                },
+                "dataSecurity": {
+                    "title": "Sécurité des données",
+                    "p1": "Makiti Group met en œuvre des mesures techniques et organisationnelles rigoureuses :",
+                    "ul": [
+                        "Authentification sécurisée et contrôle des accès",
+                        "Chiffrement des données sensibles",
+                        "Systèmes de détection d’intrusion",
+                        "Audits réguliers de sécurité"
+                    ]
+                },
+                "yourRights": {
+                    "title": "Vos droits",
+                    "p1": "Conformément au RGPD, vous disposez des droits suivants :",
+                    "ul": [
+                        "Droit d’accès à vos données",
+                        "Droit de rectification ou de suppression",
+                        "Droit d’opposition ou de limitation du traitement",
+                        "Droit à la portabilité de vos données",
+                        "Droit de retirer votre consentement à tout moment"
+                    ],
+                    "p2": "Pour exercer vos droits : <bold><email>contact@makiti.de</email></bold>"
+                },
+                "cookies": {
+                    "title": "Cookies",
+                    "p1": "Des cookies peuvent être utilisés pour :",
+                    "ul": [
+                        "Faciliter votre navigation",
+                        "Analyser l’audience du site",
+                        "Personnaliser les contenus et offres"
+                    ],
+                    "p2": "Vous pouvez modifier vos préférences dans les paramètres de votre navigateur ou via notre bandeau de consentement."
+                },
+                "policyChanges": {
+                    "title": "Modifications de la politique",
+                    "p1": "Cette politique peut être mise à jour pour refléter des évolutions juridiques, techniques ou organisationnelles. La version en vigueur est toujours accessible depuis notre site.",
+                    "p2": "<bold>Dernière mise à jour : 1er août 2025</bold>"
+                }
+            }
+        },
+        "legalNotice": {
+            "title": "Mentions légales – Makiti Group",
+            "sections": {
+                "websitePublisher": {
+                    "title": "Éditeur du site",
+                    "p1": "Ce site est édité par <bold>Makiti Group</bold>, SARL au Capital de 10000 Euro, immatriculée en France, dont le siège social est situé à <bold>Paris</bold> avec des <bold>branches à Yaoundé (Cameroun)</bold> et <bold>Lagos (Nigeria)</bold>.",
+                    "p2": "Makiti Group est spécialisée dans l’<bold>outsourcing stratégique IT</bold>, proposant des services de développement logiciel, d’externalisation, de design UX/UI, de conseil digital et de support technique.",
+                    "p3": "<bold>Directeur(rice) de la publication :</bold> Moati Patou Mache Marie Josee",
+                    "p4": "<bold>SIRET :</bold> 987 482 908 00017",
+                    "p5": "<bold>Numéro TVA Intracommunautaire :</bold> FR60987482908",
+                    "p6": "<bold>Siège social :</bold> Paris"
+                },
+                "makitiGroup": {
+                    "title": "Makiti Group",
+                    "p1": "Adresse complète à Paris : CS 48756 75380 - CEDEX 08 58 RUE DE MONCEAU 75008 PARIS.",
+                    "p2": "Adresse e-mail : <email>contact@makiti.de</email>"
+                },
+                "hosting": {
+                    "title": "Hébergement",
+                    "p1": "Le site est hébergé par: <bold>{{hostName}}</bold>",
+                    "p2": "Adresse : <bold>{{hostAddress}}</bold>",
+                    "p3": "Téléphone : <phone>{{phoneNumber}}</phone>",
+                    "p4": "E-mail : <email>{{mail}}</email>"
+                },
+                "websitePurpose": {
+                    "title": "Objet du site",
+                    "p1": "Le site <link1>www.makiti-group.com</link1> a pour objet de présenter les services et expertises de Makiti Group, notamment dans les domaines suivants :",
+                    "ul": [
+                        "Développement de logiciels sur mesure",
+                        "Externalisation de ressources IT",
+                        "UX/UI Design",
+                        "Maintenance applicative",
+                        "Conseil en digitalisation pour entreprises et startups"
+                    ]
+                },
+                "intellectualProperty": {
+                    "title": "Propriété intellectuelle",
+                    "p1": "L’ensemble des contenus de ce site (textes, images, vidéos, logos, codes sources, architecture) est la propriété exclusive de Makiti Group ou de ses partenaires, sauf mention contraire.",
+                    "p2": "Toute reproduction, représentation ou adaptation, totale ou partielle, sans autorisation écrite préalable de Makiti Group est interdite, conformément au Code de la propriété intellectuelle et aux conventions internationales applicables."
+                },
+                "dataProtection": {
+                    "title": "Protection des données personnelles",
+                    "p1": "Makiti Group s’engage à protéger la vie privée des utilisateurs et à respecter le <bold>Règlement Général sur la Protection des Données (RGPD)</bold>, ainsi que les réglementations locales en vigueur dans ses différentes zones d’activité."
+                },
+                "collectedData": {
+                    "title": "Données collectées",
+                    "p1": "Les données susceptibles d’être collectées incluent : nom, prénom, adresse e-mail, numéro de téléphone, adresse IP, préférences de navigation, données de formulaire, etc."
+                },
+                "processingPurposes": {
+                    "title": "Finalité du traitement",
+                    "p1": "Les données sont traitées pour :",
+                    "ul": [
+                        "Répondre aux demandes de contact",
+                        "Suivre les prospects et projets clients",
+                        "Fournir des services numériques",
+                        "Analyser le trafic et l’usage du site",
+                        "Gérer la relation commerciale"
+                    ]
+                },
+                "retentionPeriod": {
+                    "title": "Durée de conservation",
+                    "p1": "Les données sont conservées pour la durée nécessaire à la réalisation des finalités pour lesquelles elles ont été collectées, ou conformément aux obligations légales."
+                },
+                "userRights": {
+                    "title": "Droits des utilisateurs",
+                    "p1": "Conformément au RGPD, vous disposez des droits suivants : accès, rectification, suppression, opposition, limitation, portabilité. Pour exercer vos droits, vous pouvez nous écrire à <bold><email>contact@makiti.de</email></bold> ou à l’adresse postale du siège."
+                },
+                "dataTransfer": {
+                    "title": "Transfert de données hors UE",
+                    "p1": "Makiti Group peut être amené à transférer des données vers ses succursales en dehors de l’Union européenne, notamment au Cameroun et au Nigeria. Ces transferts sont encadrés par des clauses contractuelles types ou d’autres mécanismes reconnus par la Commission européenne."
+                },
+                "cookies": {
+                    "title": "Cookies",
+                    "p1": "Le site peut déposer des cookies à des fins :",
+                    "ul": [
+                        "Techniques (fonctionnement du site)",
+                        "Statistiques (analyse de trafic)",
+                        "Personnalisation de l’expérience utilisateur"
+                    ],
+                    "p2": "L’utilisateur peut configurer son navigateur pour refuser ou gérer les cookies à tout moment. Pour en savoir plus, consultez la <bold>Politique de confidentialité</bold> du site."
+                },
+                "liability": {
+                    "title": "Responsabilité",
+                    "p1": "Makiti Group s’efforce de fournir des informations à jour, exactes et fiables. Toutefois, aucune garantie n’est donnée quant à l’exhaustivité ou l’exactitude des contenus publiés.",
+                    "p2": "Makiti Group décline toute responsabilité en cas de :",
+                    "ul": [
+                        "dysfonctionnement du site",
+                        "mauvaise utilisation des contenus",
+                        "accès non autorisé aux données"
+                    ]
+                },
+                "applicableLawAndJuridiction": {
+                    "title": "Loi applicable et juridiction compétente",
+                    "p1": "Les présentes mentions légales sont régies par la loi française. En cas de litige, compétence est attribuée aux tribunaux compétents de Paris, sauf disposition impérative contraire."
+                },
+                "contact": {
+                    "title": "Contact",
+                    "p1": "Pour toute question relative aux présentes mentions légales ou à vos données personnelles : <email>contact@makiti.de</email>",
+                    "p2": "Siège social : CS 48756 75380 - CEDEX 08 58 RUE DE MONCEAU 75008 PARIS"
+                }
+            }
+        }
+    },
+    "common": {
+        "backToHomeCta": "Retour à l'accueil",
+        "backToPortfolioCta": "Retour au Portfolio",
+        "values": {
+            "value1": {
+                "title": "Approche Agile",
+                "content": "Développement rapide et itératif avec retours continus et cycles de déploiement rapides."
+            },
+            "value2": {
+                "title": "Conception Durable",
+                "content": "Conception écologique et durable avec focus sur l'efficacité énergétique et la responsabilité environnementale."
+            },
+            "value3": {
+                "title": "Focus Innovation",
+                "content": "Solutions de pointe pilotées par l'IA et approches innovantes pour les défis complexes."
+            },
+            "value4": {
+                "title": "Conseil Expert",
+                "content": "Conseil IT stratégique avec une expertise sectorielle approfondie et des méthodologies éprouvées."
+            },
+            "value5": {
+                "title": "Sécurité d'Abord",
+                "content": "Mesures de sécurité de niveau entreprise et conformité aux normes internationales."
+            },
+            "value6": {
+                "title": "Support 24/7",
+                "content": "Support technique et surveillance 24 heures sur 24 pour les systèmes critiques."
+            },
+            "value7": {
+                "title": "Assurance Qualité",
+                "content": "Processus rigoureux de test et de contrôle qualité garantissant l'excellence de livraison."
+            },
+            "value8": {
+                "title": "Portée Mondiale",
+                "content": "Équipe internationale avec support multilingue et expertise interculturelle."
+            }
+        }
+    }
+}
