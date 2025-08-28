@@ -104,7 +104,7 @@ const LegalNotice: PageComponent = () => {
 					/>
 					<TransParagraph
 						transKey="pages.legalNotice.sections.hosting.p2"
-						values={{ hostAddress: 'Otto-Ostrowski-Str. 710249 Berlin,Allemagne' }}
+						values={{ hostAddress: 'Otto-Ostrowski-Str. 710249 Berlin, Allemagne' }}
 					/>
 					<TransParagraph
 						transKey="pages.legalNotice.sections.hosting.p3"
